@@ -58,5 +58,19 @@
     "compRates": {
       "Login": 100
     }
+  },
+  {
+    "runNum": 5,
+    "runId": "R-5",
+    "rate": 100,
+    "total": 3,
+    "passed": 3,
+    "failed": 0,
+    "flaky": 0,
+    "duration": "—",
+    "generatedAt": "2026-04-03T16:23:44.033Z",
+    "compRates": {
+      "Login": 100
+    }
   }
 ]
