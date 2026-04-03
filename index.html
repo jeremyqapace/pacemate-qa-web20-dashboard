@@ -14,7 +14,6 @@ body{font-family:'Inter',system-ui,sans-serif;-webkit-font-smoothing:antialiased
 svg text{font-family:'Inter',system-ui,sans-serif}
 .qa{max-width:1200px;margin:0 auto}
 
-/* ── Theme tokens ── */
 [data-theme="light"]{
   --bg:#f5f5f3;--card-bg:#fff;--card-bg2:#fafaf9;
   --border:rgba(0,0,0,.1);--border2:rgba(0,0,0,.08);
@@ -41,18 +40,15 @@ svg text{font-family:'Inter',system-ui,sans-serif}
 }
 body{background:var(--bg);color:var(--text)}
 
-/* ── Theme toggle ── */
 .theme-toggle{position:fixed;bottom:1.5rem;right:1.5rem;width:44px;height:44px;border-radius:50%;background:var(--card-bg);border:1.5px solid var(--border);font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 12px rgba(0,0,0,.15);transition:all .2s;z-index:999}
 .theme-toggle:hover{transform:scale(1.1)}
 
-/* ── Loading spinner ── */
 #loader{position:fixed;inset:0;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:9999;transition:opacity .3s}
 #loader.hide{opacity:0;pointer-events:none}
 .spin{width:44px;height:44px;border:3px solid rgba(200,24,74,.2);border-top-color:#C8184A;border-radius:50%;animation:spin .7s linear infinite;margin-bottom:1rem}
 .spin-lbl{font-size:13px;font-weight:500;color:var(--text3);letter-spacing:.3px}
 @keyframes spin{to{transform:rotate(360deg)}}
 
-/* ── Hero ── */
 .hero{background:#0D1620;border-radius:18px;padding:2rem 2.5rem;margin-bottom:0;border-top:3px solid #C8184A;position:relative;overflow:hidden}
 .ecg{position:absolute;bottom:0;left:0;width:100%;pointer-events:none;opacity:.055}
 .hero-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:2rem;flex-wrap:wrap;gap:12px;position:relative}
@@ -70,7 +66,6 @@ body{background:var(--bg);color:var(--text)}
 .hfoot{font-size:12px;color:rgba(255,255,255,.3);letter-spacing:-.1px}
 .hfoot b{color:rgba(255,255,255,.55);font-weight:600}
 
-/* ── View navigation ── */
 .vnav{background:var(--vnav-bg);border:1.5px solid var(--border);border-radius:14px;padding:1.1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;margin:1rem 0;flex-wrap:wrap;gap:12px}
 .vn-title{font-size:22px;font-weight:600;color:var(--text);letter-spacing:-.6px}
 .vn-sub{font-size:12px;color:var(--text3);margin-top:3px}
@@ -78,7 +73,6 @@ body{background:var(--bg);color:var(--text)}
 .vbtn{padding:8px 26px;font-size:13px;font-weight:600;border:none;cursor:pointer;font-family:'Inter',system-ui,sans-serif;color:var(--text3);background:transparent;transition:all .12s}
 .vbtn.on{background:#C8184A;color:#fff}
 
-/* ── Section cards ── */
 .sc{background:var(--card-bg);border:1.5px solid var(--sc-border);border-radius:16px;overflow:hidden;margin-bottom:0}
 .sch{background:var(--card-bg2);padding:13px 20px;border-bottom:2px solid var(--border2);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
 .sct{display:flex;align-items:center;gap:9px;font-size:13px;font-weight:600;color:var(--text);letter-spacing:-.2px}
@@ -86,12 +80,10 @@ body{background:var(--bg);color:var(--text)}
 .scm{font-size:11px;color:var(--text3);font-weight:400}
 .scb{padding:1.25rem 1.5rem}
 
-/* ── Separator ── */
 .sep{display:flex;align-items:center;gap:14px;margin:2rem 0}
 .sep-line{flex:1;height:1.5px;background:var(--sep-line)}
 .sep-dot{width:6px;height:6px;border-radius:50%;background:#C8184A;flex-shrink:0}
 
-/* ── Inner cards ── */
 .card{background:var(--card-bg2);border:1.5px solid var(--border);border-radius:12px;padding:1.25rem 1.5rem}
 .card-title{font-size:14px;font-weight:600;color:var(--text);padding-bottom:.8rem;margin-bottom:.9rem;border-bottom:1.5px solid var(--border2);letter-spacing:-.1px}
 .card-head{display:flex;align-items:center;justify-content:space-between;padding-bottom:.8rem;margin-bottom:.9rem;border-bottom:1.5px solid var(--border2);flex-wrap:wrap;gap:8px}
@@ -100,7 +92,6 @@ body{background:var(--bg);color:var(--text)}
 .li{display:flex;align-items:center;gap:5px;font-size:12px;color:var(--text2)}
 .lsq{width:9px;height:9px;border-radius:2px;flex-shrink:0}
 
-/* ── Comparison ── */
 .cmp-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:1.25rem 1.5rem}
 .cmp-col{padding:1.1rem 1.25rem;border-radius:10px}
 .cmp-col:first-child{background:var(--cmp-prev-bg);border:1.5px solid var(--cmp-prev-border)}
@@ -116,24 +107,20 @@ body{background:var(--bg);color:var(--text)}
 .delta{font-size:12px;font-weight:600;margin-left:7px}
 .d-good{color:#10B981}
 
-/* ── Heat map ── */
 .hmap-wrap{overflow-x:auto}
 .hmap{border-collapse:separate;border-spacing:4px;width:100%}
 .hmap th{font-size:12px;font-weight:600;color:var(--text3);text-align:center;padding:4px 6px}
 .hmap th.hcomp{text-align:left;font-size:13px;font-weight:600;color:var(--text);min-width:85px;padding-right:12px}
 .hcell{border-radius:8px;padding:8px 6px;font-size:12px;font-weight:600;text-align:center;display:block}
 
-/* ── Component cards ── */
 .comp-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}
 .ccard{background:var(--card-bg);border:1.5px solid var(--border);border-left:3px solid #C8184A;border-radius:12px;padding:1.1rem 1rem;text-align:center;transition:transform .12s}
 .ccard:hover{transform:translateY(-2px)}
 .cname{font-size:13px;font-weight:600;color:var(--text);margin-top:8px;margin-bottom:3px;letter-spacing:-.2px}
 .ctag{font-size:11px;font-weight:600;padding:3px 9px;border-radius:99px;display:inline-block;margin-bottom:8px}
 
-/* ── Mid grid ── */
 .mid{display:grid;grid-template-columns:3fr 2fr;gap:12px}
 
-/* ── Flaky ── */
 .fl{padding:12px 0;border-bottom:1.5px solid var(--border2)}
 .fl:last-child{border-bottom:none}
 .fl-top{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:7px}
@@ -144,7 +131,6 @@ body{background:var(--bg);color:var(--text)}
 .fl-sub{display:flex;justify-content:space-between;font-size:11px;color:var(--text3);margin-top:5px;letter-spacing:.3px;font-weight:500}
 .fl-empty{font-size:12px;color:var(--text3);text-align:center;padding:1.5rem 0}
 
-/* ── Filter buttons ── */
 .fbtns{display:flex;gap:8px;flex-wrap:wrap}
 .fbtn{display:inline-flex;align-items:center;gap:7px;padding:7px 15px;font-size:13px;font-weight:500;border-radius:8px;cursor:pointer;border:1.5px solid var(--fbtn-border);background:var(--fbtn-bg);color:var(--text2);font-family:'Inter',system-ui,sans-serif;transition:all .12s}
 .fbtn:hover{border-color:var(--border);background:var(--fbtn-hover)}
@@ -161,7 +147,6 @@ body{background:var(--bg);color:var(--text)}
 .fbtn.f-pass:hover{background:rgba(16,185,129,.12)}
 .fbtn.f-pass.on{background:#10B981;border-color:#10B981;color:#fff}
 
-/* ── Table ── */
 .tt{width:100%;border-collapse:collapse;font-size:13px;table-layout:fixed}
 .tt thead tr{background:var(--tt-head-bg)}
 .tt th{font-size:11px;font-weight:600;color:var(--tt-head-color);text-align:left;padding:11px 10px;border-bottom:2px solid var(--border);border-top:1px solid var(--border2);letter-spacing:.3px;text-transform:uppercase}
@@ -182,7 +167,6 @@ body{background:var(--bg);color:var(--text)}
 .sdot{width:6px;height:6px;border-radius:50%;display:inline-block;margin-right:6px}
 .spill{font-size:11px;font-weight:600;padding:4px 10px;border-radius:99px;display:inline-flex;align-items:center;gap:4px;white-space:nowrap;border:1.5px solid transparent}
 
-/* ── Run History ── */
 .rh-row{display:flex;align-items:flex-start;gap:14px;padding:12px 0;border-bottom:1.5px solid var(--border2)}
 .rh-row:last-child{border-bottom:none}
 .rh-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;margin-top:4px}
@@ -197,7 +181,6 @@ body{background:var(--bg);color:var(--text)}
 .rh-cnt{font-size:11px;font-weight:600;display:flex;align-items:center;gap:4px}
 .rh-empty{font-size:13px;color:var(--text3);text-align:center;padding:2rem 0}
 
-/* ── Responsive ── */
 @media(max-width:700px){
   body{padding:.75rem}
   .hero{padding:1.25rem}
@@ -210,18 +193,15 @@ body{background:var(--bg);color:var(--text)}
 </head>
 <body>
 
-<!-- ── Loader ── -->
 <div id="loader">
   <div class="spin"></div>
   <div class="spin-lbl">Loading dashboard...</div>
 </div>
 
-<!-- ── Theme toggle ── -->
 <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn" title="Toggle light/dark mode">🌙</button>
 
 <div class="qa">
 
-  <!-- ── Hero ── -->
   <div class="hero">
     <svg class="ecg" viewBox="0 0 1200 90" preserveAspectRatio="none">
       <polyline fill="none" stroke="#C8184A" stroke-width="2.5"
@@ -240,9 +220,7 @@ body{background:var(--bg);color:var(--text)}
             <path d="M13 17C13 17 5 12 5 7.5C5 5.6 6.6 4 8.5 4C9.8 4 11 4.8 11.6 6L13 8.5L14.4 6C15 4.8 16.2 4 17.5 4C19.4 4 21 5.6 21 7.5C21 12 13 17 13 17Z" fill="#9C1035" opacity=".5"/>
           </svg>
           <div>
-            <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
-              <div class="hbrand">PaceMateLive &mdash; QA Dashboard</div>
-            </div>
+            <div class="hbrand">PaceMateLive &mdash; QA Dashboard</div>
             <div class="htagline">We never miss a beat.&#174;</div>
           </div>
         </div>
@@ -286,7 +264,6 @@ body{background:var(--bg);color:var(--text)}
     </div>
   </div>
 
-  <!-- ── View nav ── -->
   <div class="vnav">
     <div>
       <div class="vn-title" id="vn-title">Overview</div>
@@ -299,7 +276,6 @@ body{background:var(--bg);color:var(--text)}
     </div>
   </div>
 
-  <!-- ── OVERVIEW ── -->
   <div id="view-ov">
     <div class="sc">
       <div class="sch">
@@ -343,7 +319,6 @@ body{background:var(--bg);color:var(--text)}
     </div>
   </div>
 
-  <!-- ── RUN REPORT ── -->
   <div id="view-rr" style="display:none">
     <div class="sc">
       <div class="sch">
@@ -411,7 +386,6 @@ body{background:var(--bg);color:var(--text)}
     </div>
   </div>
 
-  <!-- ── HISTORY ── -->
   <div id="view-hi" style="display:none">
     <div class="sc">
       <div class="sch">
@@ -424,7 +398,7 @@ body{background:var(--bg);color:var(--text)}
     </div>
   </div>
 
-</div><!-- end .qa -->
+</div>
 
 <footer style="max-width:1200px;margin:2rem auto 0;padding:1.25rem 4rem 1.25rem 0;border-top:1.5px solid var(--sep-line);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px">
   <span style="font-size:12px;color:var(--text3)">PaceMateLive &mdash; QA Dashboard &nbsp;&middot;&nbsp; Built by QA Engineering</span>
@@ -433,8 +407,8 @@ body{background:var(--bg);color:var(--text)}
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script>
-// ── Release Readiness ──
 const RELEASE_THRESHOLD=80;
+
 function renderReadinessBadge(rate){
   const el=document.getElementById('readinessBadge');
   if(!el)return;
@@ -447,7 +421,6 @@ function renderReadinessBadge(rate){
   </span>`;
 }
 
-// ── Theme ──
 function toggleTheme(){
   const html=document.documentElement;
   const next=html.getAttribute('data-theme')==='light'?'dark':'light';
@@ -462,8 +435,6 @@ function toggleTheme(){
     window._trendChart.options.scales.y.grid.color=gc;
     window._trendChart.update();
   }
-
-  document.getElementById('heroMeta').textContent=
 }
 (function(){
   const saved=localStorage.getItem('qa-theme')||'light';
@@ -473,7 +444,6 @@ function toggleTheme(){
   });
 })();
 
-// ── Helpers ──
 const hclr=p=>p>=95?'#10B981':p>=85?'#F59E0B':'#EF4444';
 const fcl=p=>p>=30?'#EF4444':'#F59E0B';
 const SC={passed:'#10B981',failed:'#EF4444',flaky:'#D97706'};
@@ -509,32 +479,19 @@ function sparkSVG(data,co){
   return`<svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}"><polyline points="${pts}" fill="none" stroke="${co}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="${lx}" cy="${ly}" r="2.5" fill="${co}"/></svg>`;
 }
 
-// ── Main render ──
 function renderAll(D){
   const rate=D.summary.rate;
   document.getElementById('heroRate').textContent=rate+'%';
-
-  // Env badge
-  const envBadge=document.getElementById('envBadge');
-  if(envBadge&&D.env){
-    envBadge.textContent=D.env;
-    envBadge.style.display='inline-block';
-    const isProd=/prod/i.test(D.env);
-    const isStaging=/staging|stage|uat/i.test(D.env);
-    envBadge.style.background=isProd?'rgba(239,68,68,.25)':isStaging?'rgba(245,158,11,.25)':'rgba(255,255,255,.1)';
-    envBadge.style.color=isProd?'#FCA5A5':isStaging?'#FCD34D':'rgba(255,255,255,.7)';
-    envBadge.style.borderColor=isProd?'rgba(239,68,68,.5)':isStaging?'rgba(245,158,11,.5)':'rgba(255,255,255,.2)';
-  }
+  document.getElementById('heroMeta').textContent=
     `${D.runId} · completed ${relativeTime(D.generatedAt)} · ${D.branch||'main'} · GitHub Actions`;
   document.getElementById('heroFoot').innerHTML=
     `Avg duration: <b>${D.summary.duration}</b> &nbsp;&middot;&nbsp; Suite: <b>${D.suite||'Full Regression'}</b> &nbsp;&middot;&nbsp; Env: <b>${D.env||'Dev'}</b>`;
 
-  // Stale data warning
   const staleEl=document.getElementById('staleWarning');
   if(staleEl&&D.generatedAt){
-    const hoursSince=(Date.now()-new Date(D.generatedAt))/3600000;
-    if(hoursSince>24){
-      const days=Math.floor(hoursSince/24);
+    const hrs=(Date.now()-new Date(D.generatedAt))/3600000;
+    if(hrs>24){
+      const days=Math.floor(hrs/24);
       staleEl.style.display='block';
       staleEl.textContent=`⚠ Data may be stale — last run was ${days} day${days===1?'':'s'} ago`;
     }
@@ -559,7 +516,6 @@ function renderAll(D){
   countUp(document.getElementById('cn-fail'), D.summary.failed);
   countUp(document.getElementById('cn-flaky'),D.summary.flaky);
 
-  // Comparison
   document.getElementById('cmpMeta').textContent=isFirst?'First run — no previous data yet':`${D.summary.prevRunId} vs ${D.runId}`;
   document.getElementById('cmpPrevId').textContent=isFirst?'No previous run':'Run #'+D.summary.prevRunId+' — Previous';
   document.getElementById('cmpPrevRate').textContent=isFirst?'N/A':(D.summary.prevRate||'—')+'%';
@@ -578,7 +534,6 @@ function renderAll(D){
     `<span style="color:#F59E0B">${D.summary.flaky}</span>${flDelta>0?` <span class="delta d-good">▼ ${flDelta}</span>`:''}`;
   document.getElementById('cmpCurrDur').textContent=D.summary.duration||'—';
 
-  // Heat map
   if(D.hRuns&&D.hRuns.length&&D.comp&&D.comp.length){
     let h=`<tr><th class="hcomp">Component</th>${D.hRuns.map(r=>`<th>${r}</th>`).join('')}</tr>`;
     D.hData.forEach((row,i)=>{
@@ -596,7 +551,6 @@ function renderAll(D){
     document.getElementById('hmapTable').innerHTML=`<tr><td style="color:#888;font-size:12px;padding:1rem 0">Run more test suites to build up history</td></tr>`;
   }
 
-  // Component cards
   if(D.comp&&D.comp.length){
     document.getElementById('compRow').innerHTML=D.comp.map(c=>{
       const co=hclr(c.pct);const issues=c.failed+c.flaky;
@@ -616,7 +570,6 @@ function renderAll(D){
     }).join('');
   }
 
-  // Flaky tracker
   if(D.flaky&&D.flaky.length){
     document.getElementById('flakyList').innerHTML=D.flaky.map(f=>`
       <div class="fl">
@@ -626,7 +579,6 @@ function renderAll(D){
       </div>`).join('');
   }
 
-  // Filter counts
   ['all','failed','flaky','passed'].forEach(s=>{
     document.getElementById('fc-'+s).textContent=
       s==='all'?D.tests.length:D.tests.filter(t=>t.status===s).length;
@@ -645,7 +597,6 @@ function renderAll(D){
   },60000);
 }
 
-// ── Table ──
 let currentFilter='all',expandedTest=null;
 
 function filt(f,btn){
@@ -726,7 +677,6 @@ function expandRow(tr){
   if(ch)ch.style.transform=open?'rotate(90deg)':'rotate(0)';
 }
 
-// ── Trend chart ──
 let trendBuilt=false;
 function buildTrend(trend){
   if(trendBuilt)return;trendBuilt=true;
@@ -742,7 +692,7 @@ function buildTrend(trend){
       {label:'SLA',   data:trend.labels.map(()=>RELEASE_THRESHOLD),borderColor:'rgba(200,24,74,.6)',fill:false,tension:0,pointRadius:0,pointHoverRadius:0,borderWidth:1.5,borderDash:[6,4]},
     ]},
     options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},
-      plugins:{legend:{display:false},tooltip:{backgroundColor:'rgba(13,22,32,.95)',padding:12,cornerRadius:10,titleColor:'rgba(255,255,255,.65)',titleFont:{size:11},bodyColor:'rgba(255,255,255,.88)',bodyFont:{size:12},borderColor:'rgba(200,24,74,.3)',borderWidth:1,callbacks:{label:ctx=>` ${ctx.dataset.label}: ${ctx.raw}`}}},
+      plugins:{legend:{display:false},tooltip:{backgroundColor:'rgba(13,22,32,.95)',padding:12,cornerRadius:10,titleColor:'rgba(255,255,255,.65)',titleFont:{size:11},bodyColor:'rgba(255,255,255,.88)',bodyFont:{size:12},borderColor:'rgba(200,24,74,.3)',borderWidth:1,callbacks:{label:ctx=>ctx.dataset.label==='SLA'?null:` ${ctx.dataset.label}: ${ctx.raw}`}}},
       scales:{
         x:{grid:{display:false},ticks:{font:{size:11},color:tc},border:{display:false}},
         y:{beginAtZero:true,grid:{color:gc},ticks:{font:{size:11},color:tc},border:{display:false}},
@@ -751,7 +701,6 @@ function buildTrend(trend){
   });
 }
 
-// ── Animations ──
 function countUp(el,to,dur=950){
   if(!el)return;
   const s=performance.now();
@@ -784,7 +733,6 @@ function playRing(rate,failed,flaky,total){
   flakyEl.style.strokeDashoffset=(-(passLen+failLen)).toFixed(2);
 }
 
-// ── View switcher ──
 function setView(v){
   ['ov','rr','hi'].forEach(id=>{
     document.getElementById('view-'+id).style.display=v===id?'block':'none';
@@ -810,7 +758,6 @@ function setView(v){
   if(v==='hi')renderHistory();
 }
 
-// ── History ──
 function renderHistory(){
   const runs=window._runs;
   if(!runs||!runs.length){
@@ -848,7 +795,6 @@ function renderHistory(){
   }).join('');
 }
 
-// ── Data fetch ──
 fetch('./data/results.json?t='+Date.now())
   .then(r=>{if(!r.ok)throw new Error(r.status);return r.json();})
   .then(D=>{
