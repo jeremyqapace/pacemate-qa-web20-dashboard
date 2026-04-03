@@ -240,7 +240,10 @@ body{background:var(--bg);color:var(--text)}
             <path d="M13 17C13 17 5 12 5 7.5C5 5.6 6.6 4 8.5 4C9.8 4 11 4.8 11.6 6L13 8.5L14.4 6C15 4.8 16.2 4 17.5 4C19.4 4 21 5.6 21 7.5C21 12 13 17 13 17Z" fill="#9C1035" opacity=".5"/>
           </svg>
           <div>
-            <div class="hbrand">PaceMateLive &mdash; QA Dashboard</div>
+            <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+              <div class="hbrand">PaceMateLive &mdash; QA Dashboard</div>
+              <span id="envBadge" style="display:none;font-size:10px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;padding:2px 8px;border-radius:4px;background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.2)"></span>
+            </div>
             <div class="htagline">We never miss a beat.&#174;</div>
           </div>
         </div>
@@ -502,6 +505,16 @@ function sparkSVG(data,co){
 function renderAll(D){
   const rate=D.summary.rate;
   document.getElementById('heroRate').textContent=rate+'%';
+  const envBadge=document.getElementById('envBadge');
+  if(envBadge&&D.env){
+    envBadge.textContent=D.env;
+    envBadge.style.display='inline-block';
+    const isProd=/prod/i.test(D.env);
+    const isStaging=/staging|stage|uat/i.test(D.env);
+    envBadge.style.background=isProd?'rgba(239,68,68,.25)':isStaging?'rgba(245,158,11,.25)':'rgba(255,255,255,.1)';
+    envBadge.style.color=isProd?'#FCA5A5':isStaging?'#FCD34D':'rgba(255,255,255,.7)';
+    envBadge.style.borderColor=isProd?'rgba(239,68,68,.5)':isStaging?'rgba(245,158,11,.5)':'rgba(255,255,255,.2)';
+  }
   document.getElementById('heroMeta').textContent=
     `${D.runId} · completed ${relativeTime(D.generatedAt)} · ${D.branch||'main'} · GitHub Actions`;
   document.getElementById('heroFoot').innerHTML=
