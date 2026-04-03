@@ -86,5 +86,19 @@
     "compRates": {
       "Login": 67
     }
+  },
+  {
+    "runNum": 7,
+    "runId": "R-7",
+    "rate": 0,
+    "total": 8,
+    "passed": 0,
+    "failed": 8,
+    "flaky": 0,
+    "duration": "—",
+    "generatedAt": "2026-04-03T17:45:42.645Z",
+    "compRates": {
+      "Sidebar": 0
+    }
   }
 ]

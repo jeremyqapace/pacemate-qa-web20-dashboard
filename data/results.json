@@ -1,48 +1,49 @@
 {
-  "runId": "R-6",
-  "generatedAt": "2026-04-03T17:38:22.282Z",
+  "runId": "R-7",
+  "generatedAt": "2026-04-03T17:45:42.645Z",
   "branch": "main",
-  "suite": "Login Tests",
+  "suite": "SidebarNavigation Test",
   "env": "Development",
-  "runUrl": "https://github.com/jeremyqapace/pacemate-web-automation/actions/runs/23955510025",
+  "runUrl": "https://github.com/jeremyqapace/pacemate-web-automation/actions/runs/23955572123",
   "summary": {
-    "total": 3,
-    "passed": 2,
-    "failed": 1,
+    "total": 8,
+    "passed": 0,
+    "failed": 8,
     "flaky": 0,
-    "rate": 66.7,
+    "rate": 0,
     "duration": "—",
-    "prevRunId": "R-5",
-    "prevRate": 100,
+    "prevRunId": "R-6",
+    "prevRate": 66.7,
     "prevTotal": 3,
-    "prevFailed": 0,
+    "prevFailed": 1,
     "prevFlaky": 0,
     "prevDuration": "—",
     "consecutivePassing": 0
   },
   "comp": [
     {
-      "name": "Login",
-      "pct": 67,
+      "name": "Sidebar",
+      "pct": 0,
       "sparks": [
-        67,
-        100,
-        100,
-        100,
-        100,
-        67
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
       ],
-      "total": 3,
-      "failed": 1,
+      "total": 8,
+      "failed": 8,
       "flaky": 0
     }
   ],
   "hRuns": [
-    "R-2",
     "R-3",
     "R-4",
     "R-5",
-    "R-6"
+    "R-6",
+    "R-7"
   ],
   "hData": [
     [
@@ -50,7 +51,7 @@
       100,
       100,
       100,
-      67
+      0
     ]
   ],
   "trend": {
@@ -60,7 +61,8 @@
       "R-3",
       "R-4",
       "R-5",
-      "R-6"
+      "R-6",
+      "R-7"
     ],
     "passed": [
       44,
@@ -68,7 +70,8 @@
       3,
       3,
       3,
-      2
+      2,
+      0
     ],
     "failed": [
       27,
@@ -76,9 +79,11 @@
       0,
       0,
       0,
-      1
+      1,
+      8
     ],
     "flaky": [
+      0,
       0,
       0,
       0,
@@ -90,28 +95,68 @@
   "flaky": [],
   "tests": [
     {
-      "name": "[Login] - PMA-001.4 - Technician Login - Verify Successful Authentication",
-      "comp": "Login",
-      "type": "Auto",
-      "status": "passed",
-      "dur": "—",
-      "err": null
-    },
-    {
-      "name": "[Login] - PMA-0001 - Nurse Login - Verify Navigation After Login",
-      "comp": "Login",
+      "name": "[Sidebar Navigation] - PMA-0002.8 - Verify Analytics Navigation Items",
+      "comp": "Sidebar",
       "type": "Auto",
       "status": "failed",
       "dur": "—",
       "err": "Error: function timed out, ensure the promise resolves within 60000 milliseconds"
     },
     {
-      "name": "[Login] - PMA-001.3 - Nurse Admin Login - Verify Successful Authentication",
-      "comp": "Login",
+      "name": "[Sidebar Navigation] - PMA-0002.1 - Verify Main Navigation Items",
+      "comp": "Sidebar",
       "type": "Auto",
-      "status": "passed",
+      "status": "failed",
       "dur": "—",
-      "err": null
+      "err": "Error: function timed out, ensure the promise resolves within 60000 milliseconds"
+    },
+    {
+      "name": "[Sidebar Navigation] - PMA-0002.4 - Verify Setting Navigation Items",
+      "comp": "Sidebar",
+      "type": "Auto",
+      "status": "failed",
+      "dur": "—",
+      "err": "page.waitForURL: Timeout 20000ms exceeded."
+    },
+    {
+      "name": "[Sidebar Navigation] - PMA-0002.7 - Verify EMR Navigation Items",
+      "comp": "Sidebar",
+      "type": "Auto",
+      "status": "failed",
+      "dur": "—",
+      "err": "page.waitForURL: Timeout 20000ms exceeded."
+    },
+    {
+      "name": "[Sidebar Navigation] - PMA-0002.6 - Verify Alerts Navigation Items",
+      "comp": "Sidebar",
+      "type": "Auto",
+      "status": "failed",
+      "dur": "—",
+      "err": "page.waitForURL: Timeout 20000ms exceeded."
+    },
+    {
+      "name": "[Sidebar Navigation] - PMA-0002.2 - Verify Report Navigation Items (Pre-Extended Reports Menu)",
+      "comp": "Sidebar",
+      "type": "Auto",
+      "status": "failed",
+      "dur": "—",
+      "err": "page.waitForURL: Timeout 20000ms exceeded."
+    },
+    {
+      "name": "[Sidebar Navigation] - PMA-0002.5 - Verify Billing Navigation Items",
+      "comp": "Sidebar",
+      "type": "Auto",
+      "status": "failed",
+      "dur": "—",
+      "err": "page.waitForURL: Timeout 20000ms exceeded."
+    },
+    {
+      "name": "[Sidebar Navigation] - PMA-0002.3 - Verify Patients Navigation Ites",
+      "comp": "Sidebar",
+      "type": "Auto",
+      "status": "failed",
+      "dur": "—",
+      "err": "page.waitForURL: Timeout 20000ms exceeded."
     }
   ]
 }
