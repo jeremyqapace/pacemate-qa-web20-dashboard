@@ -242,7 +242,6 @@ body{background:var(--bg);color:var(--text)}
           <div>
             <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
               <div class="hbrand">PaceMateLive &mdash; QA Dashboard</div>
-              <span id="envBadge" style="display:none;font-size:10px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;padding:2px 8px;border-radius:4px;background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.2)"></span>
             </div>
             <div class="htagline">We never miss a beat.&#174;</div>
           </div>
@@ -252,7 +251,8 @@ body{background:var(--bg);color:var(--text)}
         <div id="readinessBadge" style="margin-top:10px;display:none"></div>
       </div>
       <div style="text-align:right;flex-shrink:0">
-        <div id="heroTrend" style="font-size:14px;font-weight:600;color:#10B981;letter-spacing:-.2px">--</div>
+        <span id="envBadge" style="display:none;font-size:10px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;padding:3px 10px;border-radius:4px;background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.2);margin-bottom:8px;display:inline-block"></span>
+        <div id="heroTrend" style="font-size:14px;font-weight:600;color:#10B981;letter-spacing:-.2px;margin-top:6px">--</div>
         <div id="heroStreak" style="font-size:11px;color:rgba(255,255,255,.32);margin-top:4px;letter-spacing:.1px">--</div>
       </div>
     </div>
@@ -372,6 +372,7 @@ body{background:var(--bg);color:var(--text)}
                 <span class="li"><span class="lsq" style="background:#10B981"></span>Passed</span>
                 <span class="li"><span class="lsq" style="background:#EF4444"></span>Failed</span>
                 <span class="li"><span class="lsq" style="background:#F59E0B"></span>Flaky</span>
+                <span class="li"><span class="lsq" style="background:rgba(200,24,74,.6);border-radius:0"></span>SLA ${RELEASE_THRESHOLD}%</span>
               </div>
             </div>
             <div style="position:relative;width:100%;height:200px"><canvas id="trendChart"></canvas></div>
@@ -523,8 +524,6 @@ function renderAll(D){
     envBadge.style.color=isProd?'#FCA5A5':isStaging?'#FCD34D':'rgba(255,255,255,.7)';
     envBadge.style.borderColor=isProd?'rgba(239,68,68,.5)':isStaging?'rgba(245,158,11,.5)':'rgba(255,255,255,.2)';
   }
-
-  document.getElementById('heroMeta').textContent=
     `${D.runId} · completed ${relativeTime(D.generatedAt)} · ${D.branch||'main'} · GitHub Actions`;
   document.getElementById('heroFoot').innerHTML=
     `Avg duration: <b>${D.summary.duration}</b> &nbsp;&middot;&nbsp; Suite: <b>${D.suite||'Full Regression'}</b> &nbsp;&middot;&nbsp; Env: <b>${D.env||'Dev'}</b>`;
@@ -739,6 +738,7 @@ function buildTrend(trend){
       {label:'Passed',data:trend.passed,borderColor:'#10B981',backgroundColor:'rgba(16,185,129,.07)',fill:true,tension:0.4,pointRadius:0,pointHoverRadius:5,pointHoverBackgroundColor:'#10B981',borderWidth:2.5},
       {label:'Failed',data:trend.failed,borderColor:'#EF4444',fill:false,tension:0.4,pointRadius:0,pointHoverRadius:5,pointHoverBackgroundColor:'#EF4444',borderWidth:2},
       {label:'Flaky', data:trend.flaky, borderColor:'#F59E0B',fill:false,tension:0.4,borderDash:[5,4],pointRadius:0,pointHoverRadius:5,pointHoverBackgroundColor:'#F59E0B',borderWidth:2},
+      {label:'SLA',   data:trend.labels.map(()=>RELEASE_THRESHOLD),borderColor:'rgba(200,24,74,.6)',fill:false,tension:0,pointRadius:0,pointHoverRadius:0,borderWidth:1.5,borderDash:[6,4]},
     ]},
     options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},
       plugins:{legend:{display:false},tooltip:{backgroundColor:'rgba(13,22,32,.95)',padding:12,cornerRadius:10,titleColor:'rgba(255,255,255,.65)',titleFont:{size:11},bodyColor:'rgba(255,255,255,.88)',bodyFont:{size:12},borderColor:'rgba(200,24,74,.3)',borderWidth:1,callbacks:{label:ctx=>` ${ctx.dataset.label}: ${ctx.raw}`}}},
