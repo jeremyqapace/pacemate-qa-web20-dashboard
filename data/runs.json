@@ -1,1 +1,20 @@
-[]
+[
+  {
+    "runNum": 1,
+    "runId": "R-1",
+    "rate": 62,
+    "total": 71,
+    "passed": 44,
+    "failed": 27,
+    "flaky": 0,
+    "duration": "—",
+    "generatedAt": "2026-04-03T15:18:22.273Z",
+    "compRates": {
+      "Auto Promoted Dashboard": 57,
+      "Dashboard Sections": 100,
+      "Billing": 46,
+      "Patients": 67,
+      "Admin and Settings": 100
+    }
+  }
+]
