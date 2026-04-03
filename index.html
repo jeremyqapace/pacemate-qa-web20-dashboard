@@ -2,10 +2,10 @@
 <html lang="en" data-theme="dark">
 <head>
   <link rel="icon" type="image/x-icon" href="./favicon.ico">
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>PaceMateLive — QA Dashboard</title>
-<style>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PaceMateLive — QA Dashboard</title>
+  <style>
 @import url('https://cdn.jsdelivr.net/npm/@fontsource/inter/400.css');
 @import url('https://cdn.jsdelivr.net/npm/@fontsource/inter/500.css');
 @import url('https://cdn.jsdelivr.net/npm/@fontsource/inter/600.css');
@@ -16,62 +16,33 @@ svg text{font-family:'Inter',system-ui,sans-serif}
 
 /* ── Theme tokens ── */
 [data-theme="dark"]{
-  --bg:#f5f5f3;
-  --card-bg:#fff;
-  --card-bg2:#fafaf9;
-  --border:rgba(0,0,0,.1);
-  --border2:rgba(0,0,0,.08);
-  --text:#111;
-  --text2:#666;
-  --text3:#888;
+  --bg:#f5f5f3;--card-bg:#fff;--card-bg2:#fafaf9;
+  --border:rgba(0,0,0,.1);--border2:rgba(0,0,0,.08);
+  --text:#111;--text2:#666;--text3:#888;
   --sc-border:rgba(200,24,74,.28);
-  --cmp-prev-bg:#fafaf9;
-  --cmp-prev-border:rgba(0,0,0,.1);
-  --tt-head-bg:#fafaf9;
-  --tt-head-color:#111;
-  --tt-border:rgba(0,0,0,.06);
-  --tt-hover:#fafaf9;
+  --cmp-prev-bg:#fafaf9;--cmp-prev-border:rgba(0,0,0,.1);
+  --tt-head-bg:#fafaf9;--tt-head-color:#111;
+  --tt-border:rgba(0,0,0,.06);--tt-hover:#fafaf9;
   --sep-line:rgba(0,0,0,.1);
-  --fbtn-bg:#fafaf9;
-  --fbtn-border:rgba(0,0,0,.15);
-  --fbtn-hover:#fff;
+  --fbtn-bg:#fafaf9;--fbtn-border:rgba(0,0,0,.15);--fbtn-hover:#fff;
   --vnav-bg:#fff;
-  --theme-icon:"☀️";
 }
 [data-theme="light"]{
-  --bg:#0f172a;
-  --card-bg:#1e293b;
-  --card-bg2:#162032;
-  --border:rgba(255,255,255,.1);
-  --border2:rgba(255,255,255,.08);
-  --text:rgba(255,255,255,.92);
-  --text2:rgba(255,255,255,.55);
-  --text3:rgba(255,255,255,.35);
+  --bg:#0f172a;--card-bg:#1e293b;--card-bg2:#162032;
+  --border:rgba(255,255,255,.1);--border2:rgba(255,255,255,.08);
+  --text:rgba(255,255,255,.92);--text2:rgba(255,255,255,.55);--text3:rgba(255,255,255,.35);
   --sc-border:rgba(200,24,74,.4);
-  --cmp-prev-bg:#162032;
-  --cmp-prev-border:rgba(255,255,255,.1);
-  --tt-head-bg:#162032;
-  --tt-head-color:rgba(255,255,255,.75);
-  --tt-border:rgba(255,255,255,.07);
-  --tt-hover:#162032;
+  --cmp-prev-bg:#162032;--cmp-prev-border:rgba(255,255,255,.1);
+  --tt-head-bg:#162032;--tt-head-color:rgba(255,255,255,.75);
+  --tt-border:rgba(255,255,255,.07);--tt-hover:#162032;
   --sep-line:rgba(255,255,255,.1);
-  --fbtn-bg:#162032;
-  --fbtn-border:rgba(255,255,255,.15);
-  --fbtn-hover:#1e293b;
+  --fbtn-bg:#162032;--fbtn-border:rgba(255,255,255,.15);--fbtn-hover:#1e293b;
   --vnav-bg:#1e293b;
-  --theme-icon:"🌙";
 }
-
 body{background:var(--bg);color:var(--text)}
 
-/* ── Theme toggle button ── */
-.theme-toggle{
-  position:fixed;bottom:1.5rem;right:1.5rem;
-  width:44px;height:44px;border-radius:50%;
-  background:var(--card-bg);border:1.5px solid var(--border);
-  font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;
-  box-shadow:0 2px 12px rgba(0,0,0,.15);transition:all .2s;z-index:999
-}
+/* ── Theme toggle ── */
+.theme-toggle{position:fixed;bottom:1.5rem;right:1.5rem;width:44px;height:44px;border-radius:50%;background:var(--card-bg);border:1.5px solid var(--border);font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 12px rgba(0,0,0,.15);transition:all .2s;z-index:999}
 .theme-toggle:hover{transform:scale(1.1)}
 
 /* ── Loading spinner ── */
@@ -211,23 +182,47 @@ body{background:var(--bg);color:var(--text)}
 .sdot{width:6px;height:6px;border-radius:50%;display:inline-block;margin-right:6px}
 .spill{font-size:11px;font-weight:600;padding:4px 10px;border-radius:99px;display:inline-flex;align-items:center;gap:4px;white-space:nowrap;border:1.5px solid transparent}
 
+/* ── Run History ── */
+.rh-row{display:flex;align-items:flex-start;gap:14px;padding:12px 0;border-bottom:1.5px solid var(--border2)}
+.rh-row:last-child{border-bottom:none}
+.rh-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;margin-top:4px}
+.rh-body{flex:1;min-width:0}
+.rh-top{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:6px;margin-bottom:4px}
+.rh-id{font-size:13px;font-weight:600;color:var(--text);letter-spacing:-.1px}
+.rh-rate{font-size:20px;font-weight:600;font-variant-numeric:tabular-nums;letter-spacing:-1px}
+.rh-meta{font-size:11px;color:var(--text3);margin-bottom:6px}
+.rh-bar-bg{height:4px;background:var(--border);border-radius:2px;overflow:hidden}
+.rh-bar-fill{height:4px;border-radius:2px}
+.rh-counts{display:flex;gap:12px;margin-top:6px;flex-wrap:wrap}
+.rh-cnt{font-size:11px;font-weight:600;display:flex;align-items:center;gap:4px}
+.rh-link{font-size:11px;font-weight:600;color:#C8184A;padding:3px 10px;border:1.5px solid rgba(200,24,74,.3);border-radius:6px;background:rgba(200,24,74,.06);text-decoration:none;flex-shrink:0;white-space:nowrap}
+.rh-link:hover{background:rgba(200,24,74,.12)}
+.rh-empty{font-size:13px;color:var(--text3);text-align:center;padding:2rem 0}
+
 @media(max-width:700px){
   body{padding:.75rem}
-  .hero{padding:1.25rem}.sn{font-size:38px}
+  .hero{padding:1.25rem}
+  .sn{font-size:38px}
   .comp-row{grid-template-columns:repeat(2,minmax(0,1fr))}
   .mid,.cmp-grid{grid-template-columns:1fr}
   .cmp-col+.cmp-col{border-left:none;border-top:1.5px solid var(--border2)}
 }
-</style>
+  </style>
 </head>
 <body>
+
+<!-- ── Loader ── -->
 <div id="loader">
   <div class="spin"></div>
   <div class="spin-lbl">Loading dashboard...</div>
 </div>
 
+<!-- ── Theme toggle ── -->
+<button class="theme-toggle" onclick="toggleTheme()" id="themeBtn" title="Toggle light/dark mode">☀️</button>
+
 <div class="qa">
 
+  <!-- ── Hero ── -->
   <div class="hero">
     <svg class="ecg" viewBox="0 0 1200 90" preserveAspectRatio="none">
       <polyline fill="none" stroke="#C8184A" stroke-width="2.5"
@@ -288,14 +283,16 @@ body{background:var(--bg);color:var(--text)}
     </div>
   </div>
 
+  <!-- ── View nav ── -->
   <div class="vnav">
     <div>
       <div class="vn-title" id="vn-title">Overview</div>
-      <div class="vn-sub" id="vn-sub">High-level health summary</div>
+      <div class="vn-sub"   id="vn-sub">High-level health summary</div>
     </div>
     <div class="vtog">
       <button class="vbtn on" id="vb-ov" onclick="setView('ov')">Overview</button>
       <button class="vbtn"    id="vb-rr" onclick="setView('rr')">Run Report</button>
+      <button class="vbtn"    id="vb-hi" onclick="setView('hi')">History</button>
     </div>
   </div>
 
@@ -309,11 +306,11 @@ body{background:var(--bg);color:var(--text)}
       <div class="cmp-grid">
         <div class="cmp-col">
           <div class="cmp-run-tag" id="cmpPrevId">Previous run</div>
-          <div class="cmp-rate" id="cmpPrevRate">--</div>
+          <div class="cmp-rate"    id="cmpPrevRate">--</div>
           <div class="cmp-rl">Pass Rate</div>
           <div class="cmp-row"><span class="cmp-lbl">Total tests</span><span class="cmp-val" id="cmpPrevTotal">--</span></div>
           <div class="cmp-row"><span class="cmp-lbl">Failed</span><span class="cmp-val" style="color:#EF4444" id="cmpPrevFailed">--</span></div>
-          <div class="cmp-row"><span class="cmp-lbl">Flaky</span><span class="cmp-val" style="color:#F59E0B" id="cmpPrevFlaky">--</span></div>
+          <div class="cmp-row"><span class="cmp-lbl">Flaky</span><span class="cmp-val"  style="color:#F59E0B" id="cmpPrevFlaky">--</span></div>
           <div class="cmp-row"><span class="cmp-lbl">Duration</span><span class="cmp-val" id="cmpPrevDur">--</span></div>
         </div>
         <div class="cmp-col">
@@ -321,8 +318,8 @@ body{background:var(--bg);color:var(--text)}
           <div class="cmp-rate" id="cmpCurrRate" style="color:#10B981">--</div>
           <div class="cmp-rl">Pass Rate</div>
           <div class="cmp-row"><span class="cmp-lbl">Total tests</span><span class="cmp-val" id="cmpCurrTotal">--</span></div>
-          <div class="cmp-row"><span class="cmp-lbl">Failed</span><span class="cmp-val" id="cmpCurrFailed">--</span></div>
-          <div class="cmp-row"><span class="cmp-lbl">Flaky</span><span class="cmp-val" id="cmpCurrFlaky">--</span></div>
+          <div class="cmp-row"><span class="cmp-lbl">Failed</span><span class="cmp-val"  id="cmpCurrFailed">--</span></div>
+          <div class="cmp-row"><span class="cmp-lbl">Flaky</span><span class="cmp-val"   id="cmpCurrFlaky">--</span></div>
           <div class="cmp-row"><span class="cmp-lbl">Duration</span><span class="cmp-val" id="cmpCurrDur">--</span></div>
         </div>
       </div>
@@ -336,7 +333,9 @@ body{background:var(--bg);color:var(--text)}
         <span class="scm">Pass Rate per Component &middot; Last 5 Runs</span>
       </div>
       <div class="scb">
-        <div class="hmap-wrap"><table class="hmap" id="hmapTable"><tr><td style="color:#888;font-size:12px">Loading...</td></tr></table></div>
+        <div class="hmap-wrap">
+          <table class="hmap" id="hmapTable"><tr><td style="color:#888;font-size:12px">Loading...</td></tr></table>
+        </div>
       </div>
     </div>
   </div>
@@ -387,36 +386,50 @@ body{background:var(--bg);color:var(--text)}
       <div class="sch">
         <div class="sct"><span class="scd"></span>Test Results</div>
         <div class="fbtns">
-          <button class="fbtn on"      onclick="filt('all',   this)">All     <span class="fcnt" id="fc-all">0</span></button>
-          <button class="fbtn f-fail"  onclick="filt('failed',this)">Failed  <span class="fcnt" id="fc-failed">0</span></button>
-          <button class="fbtn f-flaky" onclick="filt('flaky', this)">Flaky   <span class="fcnt" id="fc-flaky">0</span></button>
-          <button class="fbtn f-pass"  onclick="filt('passed',this)">Passed  <span class="fcnt" id="fc-passed">0</span></button>
+          <button class="fbtn on"      onclick="filt('all',   this)">All    <span class="fcnt" id="fc-all">0</span></button>
+          <button class="fbtn f-fail"  onclick="filt('failed',this)">Failed <span class="fcnt" id="fc-failed">0</span></button>
+          <button class="fbtn f-flaky" onclick="filt('flaky', this)">Flaky  <span class="fcnt" id="fc-flaky">0</span></button>
+          <button class="fbtn f-pass"  onclick="filt('passed',this)">Passed <span class="fcnt" id="fc-passed">0</span></button>
         </div>
       </div>
       <div style="padding:0">
         <table class="tt" style="margin:0">
-          <colgroup><col style="width:37%"><col style="width:13%"><col style="width:9%"><col style="width:15%"><col style="width:10%"><col style="width:9%"><col style="width:7%"></colgroup>
-          <thead><tr><th style="padding-left:20px">Test Name</th><th>Component</th><th>Type</th><th>Status</th><th>Duration</th><th>Run</th><th></th></tr></thead>
+          <colgroup>
+            <col style="width:37%"><col style="width:13%"><col style="width:9%">
+            <col style="width:15%"><col style="width:10%"><col style="width:9%"><col style="width:7%">
+          </colgroup>
+          <thead>
+            <tr><th style="padding-left:20px">Test Name</th><th>Component</th><th>Type</th><th>Status</th><th>Duration</th><th>Run</th><th></th></tr>
+          </thead>
           <tbody id="tbody"></tbody>
         </table>
       </div>
     </div>
   </div>
 
-</div>
+  <!-- ── HISTORY ── -->
+  <div id="view-hi" style="display:none">
+    <div class="sc">
+      <div class="sch">
+        <div class="sct"><span class="scd"></span>Run History</div>
+        <span class="scm" id="histMeta">All runs</span>
+      </div>
+      <div class="scb">
+        <div id="histList"><div class="rh-empty">Loading history...</div></div>
+      </div>
+    </div>
+  </div>
 
-<!-- ── Theme toggle ── -->
-<button class="theme-toggle" onclick="toggleTheme()" id="themeBtn" title="Toggle light/dark mode">☀️</button>
+</div><!-- end .qa -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script>
 // ── Theme ──
 function toggleTheme(){
   const html=document.documentElement;
-  const isDark=html.getAttribute('data-theme')==='dark';
-  const next=isDark?'light':'dark';
+  const next=html.getAttribute('data-theme')==='dark'?'light':'dark';
   html.setAttribute('data-theme',next);
-  document.getElementById('themeBtn').textContent=isDark?'🌙':'☀️';
+  document.getElementById('themeBtn').textContent=next==='dark'?'☀️':'🌙';
   localStorage.setItem('qa-theme',next);
   if(window._trendChart){
     const gc=next==='light'?'rgba(255,255,255,.08)':'rgba(0,0,0,.06)';
@@ -435,6 +448,7 @@ function toggleTheme(){
   });
 })();
 
+// ── Helpers ──
 const hclr=p=>p>=95?'#10B981':p>=85?'#F59E0B':'#EF4444';
 const fcl=p=>p>=30?'#EF4444':'#F59E0B';
 const SC={passed:'#10B981',failed:'#EF4444',flaky:'#D97706'};
@@ -470,6 +484,7 @@ function sparkSVG(data,co){
   return`<svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}"><polyline points="${pts}" fill="none" stroke="${co}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="${lx}" cy="${ly}" r="2.5" fill="${co}"/></svg>`;
 }
 
+// ── Main render ──
 function renderAll(D){
   const rate=D.summary.rate;
   document.getElementById('heroRate').textContent=rate+'%';
@@ -477,23 +492,26 @@ function renderAll(D){
     `${D.runId} · completed ${relativeTime(D.generatedAt)} · ${D.branch||'main'} · GitHub Actions`;
   document.getElementById('heroFoot').innerHTML=
     `Avg duration: <b>${D.summary.duration}</b> &nbsp;&middot;&nbsp; Suite: <b>${D.suite||'Full Regression'}</b> &nbsp;&middot;&nbsp; Env: <b>${D.env||'Dev'}</b>`;
+
   const delta=(rate-(D.summary.prevRate||rate)).toFixed(1);
   const isFirst=D.summary.prevRunId==='—';
-  const arrow=delta>=0?'↑':'↓';
   const col=delta>=0?'#10B981':'#EF4444';
   document.getElementById('heroTrend').style.color=isFirst?'rgba(255,255,255,.5)':col;
   document.getElementById('heroTrend').innerHTML=isFirst
-    ?`First run recorded`
-    :`${arrow} ${Math.abs(delta)}% from ${D.summary.prevRunId}`;
+    ?'First run recorded'
+    :`${delta>=0?'↑':'↓'} ${Math.abs(delta)}% from ${D.summary.prevRunId}`;
   document.getElementById('heroStreak').textContent=
     D.summary.consecutivePassing>0
       ?`${D.summary.consecutivePassing} consecutive passing run${D.summary.consecutivePassing===1?'':'s'}`
       :'No previous run to compare';
-  playRing(rate, D.summary.failed, D.summary.flaky, D.summary.total);
+
+  playRing(rate,D.summary.failed,D.summary.flaky,D.summary.total);
   countUp(document.getElementById('cn-total'),D.summary.total);
-  countUp(document.getElementById('cn-pass'),D.summary.passed);
-  countUp(document.getElementById('cn-fail'),D.summary.failed);
+  countUp(document.getElementById('cn-pass'), D.summary.passed);
+  countUp(document.getElementById('cn-fail'), D.summary.failed);
   countUp(document.getElementById('cn-flaky'),D.summary.flaky);
+
+  // Comparison
   document.getElementById('cmpMeta').textContent=isFirst?'First run — no previous data yet':`${D.summary.prevRunId} vs ${D.runId}`;
   document.getElementById('cmpPrevId').textContent=isFirst?'No previous run':'Run #'+D.summary.prevRunId+' — Previous';
   document.getElementById('cmpPrevRate').textContent=isFirst?'N/A':(D.summary.prevRate||'—')+'%';
@@ -505,28 +523,32 @@ function renderAll(D){
   document.getElementById('cmpCurrRate').textContent=rate+'%';
   const fDelta=(D.summary.prevFailed||0)-D.summary.failed;
   const flDelta=(D.summary.prevFlaky||0)-D.summary.flaky;
-  document.getElementById('cmpCurrTotal').innerHTML=`${D.summary.total}`;
+  document.getElementById('cmpCurrTotal').textContent=D.summary.total;
   document.getElementById('cmpCurrFailed').innerHTML=
     `<span style="color:#EF4444">${D.summary.failed}</span>${fDelta>0?` <span class="delta d-good">▼ ${fDelta}</span>`:''}`;
   document.getElementById('cmpCurrFlaky').innerHTML=
     `<span style="color:#F59E0B">${D.summary.flaky}</span>${flDelta>0?` <span class="delta d-good">▼ ${flDelta}</span>`:''}`;
   document.getElementById('cmpCurrDur').textContent=D.summary.duration||'—';
+
+  // Heat map
   if(D.hRuns&&D.hRuns.length&&D.comp&&D.comp.length){
-    let hmHtml=`<tr><th class="hcomp">Component</th>${D.hRuns.map(r=>`<th>${r}</th>`).join('')}</tr>`;
+    let h=`<tr><th class="hcomp">Component</th>${D.hRuns.map(r=>`<th>${r}</th>`).join('')}</tr>`;
     D.hData.forEach((row,i)=>{
       if(!D.comp[i])return;
-      hmHtml+=`<tr><th class="hcomp">${D.comp[i].name}</th>`;
+      h+=`<tr><th class="hcomp">${D.comp[i].name}</th>`;
       row.forEach(p=>{
         const bg=p>=95?`rgba(16,185,129,${(.25+(p-95)/5*.55).toFixed(2)})`:p>=85?`rgba(245,158,11,${(.25+(p-85)/10*.5).toFixed(2)})`:`rgba(239,68,68,${(.35+(100-p)/15*.4).toFixed(2)})`;
         const cl=p>=95?'#064E3B':p>=85?'#78350F':'#7F1D1D';
-        hmHtml+=`<td><div class="hcell" style="background:${bg};color:${cl}">${p}%</div></td>`;
+        h+=`<td><div class="hcell" style="background:${bg};color:${cl}">${p}%</div></td>`;
       });
-      hmHtml+=`</tr>`;
+      h+=`</tr>`;
     });
-    document.getElementById('hmapTable').innerHTML=hmHtml;
+    document.getElementById('hmapTable').innerHTML=h;
   } else {
     document.getElementById('hmapTable').innerHTML=`<tr><td style="color:#888;font-size:12px;padding:1rem 0">Run more test suites to build up history</td></tr>`;
   }
+
+  // Component cards
   if(D.comp&&D.comp.length){
     document.getElementById('compRow').innerHTML=D.comp.map(c=>{
       const co=hclr(c.pct);const issues=c.failed+c.flaky;
@@ -545,6 +567,8 @@ function renderAll(D){
       </div>`;
     }).join('');
   }
+
+  // Flaky tracker
   if(D.flaky&&D.flaky.length){
     document.getElementById('flakyList').innerHTML=D.flaky.map(f=>`
       <div class="fl">
@@ -553,26 +577,36 @@ function renderAll(D){
         <div class="fl-sub"><span>${f.comp}</span><span>Flaky out of last 10 runs</span></div>
       </div>`).join('');
   }
+
+  // Filter counts
   ['all','failed','flaky','passed'].forEach(s=>{
-    const n=s==='all'?D.tests.length:D.tests.filter(t=>t.status===s).length;
-    document.getElementById('fc-'+s).textContent=n;
+    document.getElementById('fc-'+s).textContent=
+      s==='all'?D.tests.length:D.tests.filter(t=>t.status===s).length;
   });
+
   document.getElementById('analysisMeta').textContent=`Last ${D.trend.labels.length} Run${D.trend.labels.length===1?'':'s'}`;
+  document.getElementById('vn-sub').textContent=`High-level health summary · ${D.runId}`;
+
   window._D=D;
   renderTable(D.tests);
   buildTrend(D.trend);
-  document.getElementById('vn-sub').textContent=`High-level health summary · ${D.runId}`;
+
   setInterval(()=>{
     document.getElementById('heroMeta').textContent=
       `${D.runId} · completed ${relativeTime(D.generatedAt)} · ${D.branch||'main'} · GitHub Actions`;
   },60000);
 }
 
+// ── Table ──
 let currentFilter='all',expandedTest=null;
 
 function filt(f,btn){
-  document.querySelectorAll('.fbtn').forEach(b=>{const bc=b.className.match(/f-\w+/)?.[0]||'';b.className='fbtn'+(bc?' '+bc:'');});
-  btn.classList.add('on');currentFilter=f;
+  document.querySelectorAll('.fbtn').forEach(b=>{
+    const bc=b.className.match(/f-\w+/)?.[0]||'';
+    b.className='fbtn'+(bc?' '+bc:'');
+  });
+  btn.classList.add('on');
+  currentFilter=f;
   const D=window._D;if(!D)return;
   renderTable(f==='all'?D.tests:D.tests.filter(t=>t.status===f));
 }
@@ -580,7 +614,12 @@ function filt(f,btn){
 function renderTable(rows){
   const D=window._D;
   if(!rows||!rows.length){
-    const msgs={all:{h:'No tests found',s:'No test data available for this run'},failed:{h:'No failed tests',s:'Every test passed — no hard failures in this run'},flaky:{h:'No flaky tests',s:'All tests ran deterministically in this run'},passed:{h:'No passed tests',s:'No tests recorded a clean pass in this run'}};
+    const msgs={
+      all:   {h:'No tests found',       s:'No test data available for this run'},
+      failed:{h:'No failed tests',      s:'Every test passed — no hard failures in this run'},
+      flaky: {h:'No flaky tests',       s:'All tests ran deterministically in this run'},
+      passed:{h:'No passed tests',      s:'No tests recorded a clean pass in this run'},
+    };
     const m=msgs[currentFilter]||msgs.all;
     document.getElementById('tbody').innerHTML=`<tr><td colspan="7"><div style="text-align:center;padding:2.5rem 1rem">
       <div style="font-size:14px;font-weight:600;color:var(--text);margin-bottom:5px">${m.h}</div>
@@ -591,7 +630,7 @@ function renderTable(rows){
   let html='';
   rows.forEach(t=>{
     const can=t.status!=='passed'&&t.err;
-    const ts=`font-size:11px;padding:2px 8px;border-radius:4px;border:1px solid rgba(55,138,221,.35);background:rgba(55,138,221,.07);color:#185FA5`;
+    const ts='font-size:11px;padding:2px 8px;border-radius:4px;border:1px solid rgba(55,138,221,.35);background:rgba(55,138,221,.07);color:#185FA5';
     html+=`<tr class="trow${can?' can-expand':''}" onclick="expandRow(this)">
       <td title="${t.name}" style="padding-left:20px">${t.name}</td>
       <td style="color:var(--text2)">${t.comp}</td>
@@ -639,6 +678,7 @@ function expandRow(tr){
   if(ch)ch.style.transform=open?'rotate(90deg)':'rotate(0)';
 }
 
+// ── Trend chart ──
 let trendBuilt=false;
 function buildTrend(trend){
   if(trendBuilt)return;trendBuilt=true;
@@ -650,15 +690,19 @@ function buildTrend(trend){
     data:{labels:trend.labels,datasets:[
       {label:'Passed',data:trend.passed,borderColor:'#10B981',backgroundColor:'rgba(16,185,129,.07)',fill:true,tension:0.4,pointRadius:0,pointHoverRadius:5,pointHoverBackgroundColor:'#10B981',borderWidth:2.5},
       {label:'Failed',data:trend.failed,borderColor:'#EF4444',fill:false,tension:0.4,pointRadius:0,pointHoverRadius:5,pointHoverBackgroundColor:'#EF4444',borderWidth:2},
-      {label:'Flaky', data:trend.flaky, borderColor:'#F59E0B',fill:false,tension:0.4,borderDash:[5,4],pointRadius:0,pointHoverRadius:5,pointHoverBackgroundColor:'#F59E0B',borderWidth:2}
+      {label:'Flaky', data:trend.flaky, borderColor:'#F59E0B',fill:false,tension:0.4,borderDash:[5,4],pointRadius:0,pointHoverRadius:5,pointHoverBackgroundColor:'#F59E0B',borderWidth:2},
     ]},
     options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},
       plugins:{legend:{display:false},tooltip:{backgroundColor:'rgba(13,22,32,.95)',padding:12,cornerRadius:10,titleColor:'rgba(255,255,255,.65)',titleFont:{size:11},bodyColor:'rgba(255,255,255,.88)',bodyFont:{size:12},borderColor:'rgba(200,24,74,.3)',borderWidth:1,callbacks:{label:ctx=>` ${ctx.dataset.label}: ${ctx.raw}`}}},
-      scales:{x:{grid:{display:false},ticks:{font:{size:11},color:tc},border:{display:false}},y:{beginAtZero:true,grid:{color:gc},ticks:{font:{size:11},color:tc},border:{display:false}}}
-    }
+      scales:{
+        x:{grid:{display:false},ticks:{font:{size:11},color:tc},border:{display:false}},
+        y:{beginAtZero:true,grid:{color:gc},ticks:{font:{size:11},color:tc},border:{display:false}},
+      },
+    },
   });
 }
 
+// ── Animations ──
 function countUp(el,to,dur=950){
   if(!el)return;
   const s=performance.now();
@@ -691,25 +735,69 @@ function playRing(rate,failed,flaky,total){
   flakyEl.style.strokeDashoffset=(-(passLen+failLen)).toFixed(2);
 }
 
+// ── View switcher ──
 function setView(v){
-  document.getElementById('view-ov').style.display=v==='ov'?'block':'none';
-  document.getElementById('view-rr').style.display=v==='rr'?'block':'none';
-  document.getElementById('vb-ov').classList.toggle('on',v==='ov');
-  document.getElementById('vb-rr').classList.toggle('on',v==='rr');
-  document.getElementById('vn-title').textContent=v==='ov'?'Overview':'Run Report';
+  ['ov','rr','hi'].forEach(id=>{
+    document.getElementById('view-'+id).style.display=v===id?'block':'none';
+    document.getElementById('vb-'+id).classList.toggle('on',v===id);
+  });
   const D=window._D;
-  document.getElementById('vn-sub').textContent=v==='ov'
-    ?`High-level health summary · ${D?D.runId:'loading...'}`
-    :`Full test detail · ${D?D.runId:'loading...'} · ${D?D.tests.length:0} tests`;
+  const titles={ov:'Overview',rr:'Run Report',hi:'History'};
+  const subs={
+    ov:`High-level health summary · ${D?D.runId:'loading...'}`,
+    rr:`Full test detail · ${D?D.runId:'loading...'} · ${D?D.tests.length:0} tests`,
+    hi:`All recorded runs · ${window._runs?window._runs.length:0} total`,
+  };
+  document.getElementById('vn-title').textContent=titles[v];
+  document.getElementById('vn-sub').textContent=subs[v];
   if(v==='ov'&&D){
     playRing(D.summary.rate,D.summary.failed,D.summary.flaky,D.summary.total);
     countUp(document.getElementById('cn-total'),D.summary.total);
-    countUp(document.getElementById('cn-pass'),D.summary.passed);
-    countUp(document.getElementById('cn-fail'),D.summary.failed);
+    countUp(document.getElementById('cn-pass'), D.summary.passed);
+    countUp(document.getElementById('cn-fail'), D.summary.failed);
     countUp(document.getElementById('cn-flaky'),D.summary.flaky);
   }
+  if(v==='hi')renderHistory();
 }
 
+// ── History ──
+function renderHistory(){
+  const runs=window._runs;
+  if(!runs||!runs.length){
+    document.getElementById('histList').innerHTML='<div class="rh-empty">No run history yet — complete more test runs to build history.</div>';
+    return;
+  }
+  document.getElementById('histMeta').textContent=`${runs.length} run${runs.length===1?'':'s'} recorded`;
+  document.getElementById('histList').innerHTML=runs.slice().reverse().map(r=>{
+    const rate=r.passRate??r.rate??0;
+    const col=hclr(rate);
+    const passed=r.passed??0,failed=r.failed??0,flaky=r.flaky??0,total=r.total??0;
+    const ago=r.timestamp?relativeTime(r.timestamp):'';
+    const ghUrl=r.runUrl||`https://github.com/jeremyqapace/pacemate-web-automation/actions/runs/${r.runId||''}`;
+    return`<div class="rh-row">
+      <div class="rh-dot" style="background:${col}"></div>
+      <div class="rh-body">
+        <div class="rh-top">
+          <span class="rh-id">Run #${r.run??r.runNumber??'—'} &nbsp;<span style="font-size:11px;font-weight:400;color:var(--text3)">${r.suite||'Login Tests'} · ${r.env||'Dev'}</span></span>
+          <span class="rh-rate" style="color:${col}">${rate}%</span>
+        </div>
+        <div class="rh-meta">${ago?ago+' · ':''}${r.branch||'main'} · ${r.duration||'—'}</div>
+        <div class="rh-bar-bg"><div class="rh-bar-fill" style="width:${rate}%;background:${col}"></div></div>
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-top:6px;flex-wrap:wrap;gap:6px">
+          <div class="rh-counts">
+            <span class="rh-cnt" style="color:#10B981"><span class="sdot" style="background:#10B981"></span>${passed} passed</span>
+            ${failed?`<span class="rh-cnt" style="color:#EF4444"><span class="sdot" style="background:#EF4444"></span>${failed} failed</span>`:''}
+            ${flaky?`<span class="rh-cnt" style="color:#F59E0B"><span class="sdot" style="background:#F59E0B"></span>${flaky} flaky</span>`:''}
+            <span class="rh-cnt" style="color:var(--text3)">${total} total</span>
+          </div>
+          <a class="rh-link" href="${ghUrl}" target="_blank">View in GitHub &rarr;</a>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+// ── Data fetch ──
 fetch('./data/results.json?t='+Date.now())
   .then(r=>{if(!r.ok)throw new Error(r.status);return r.json();})
   .then(D=>{
@@ -726,8 +814,14 @@ fetch('./data/results.json?t='+Date.now())
     document.getElementById('heroRate').textContent='—';
     document.getElementById('heroTrend').textContent='';
     document.getElementById('heroStreak').textContent=isEmpty?'Deploy your first test run to populate the dashboard':'';
+    document.getElementById('loader').classList.add('hide');
     console.error('Dashboard fetch error:',err);
   });
+
+fetch('./data/runs.json?t='+Date.now())
+  .then(r=>{if(!r.ok)throw new Error(r.status);return r.json();})
+  .then(runs=>{window._runs=Array.isArray(runs)?runs:runs.runs||[];})
+  .catch(()=>{window._runs=[];});
 </script>
 </body>
 </html>
