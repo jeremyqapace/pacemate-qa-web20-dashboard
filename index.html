@@ -74,6 +74,13 @@ body{background:var(--bg);color:var(--text)}
 }
 .theme-toggle:hover{transform:scale(1.1)}
 
+/* ── Loading spinner ── */
+#loader{position:fixed;inset:0;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:9999;transition:opacity .3s}
+#loader.hide{opacity:0;pointer-events:none}
+.spin{width:44px;height:44px;border:3px solid rgba(200,24,74,.2);border-top-color:#C8184A;border-radius:50%;animation:spin .7s linear infinite;margin-bottom:1rem}
+.spin-lbl{font-size:13px;font-weight:500;color:var(--text3);letter-spacing:.3px}
+@keyframes spin{to{transform:rotate(360deg)}}
+
 /* ── Hero ── */
 .hero{background:#0D1620;border-radius:18px;padding:2rem 2.5rem;margin-bottom:0;border-top:3px solid #C8184A;position:relative;overflow:hidden}
 .ecg{position:absolute;bottom:0;left:0;width:100%;pointer-events:none;opacity:.055}
@@ -214,6 +221,11 @@ body{background:var(--bg);color:var(--text)}
 </style>
 </head>
 <body>
+<div id="loader">
+  <div class="spin"></div>
+  <div class="spin-lbl">Loading dashboard...</div>
+</div>
+
 <div class="qa">
 
   <div class="hero">
@@ -703,6 +715,7 @@ fetch('./data/results.json?t='+Date.now())
   .then(D=>{
     if(!D||!D.runId)throw new Error('Empty data');
     renderAll(D);
+    document.getElementById('loader').classList.add('hide');
   })
   .catch(err=>{
     const isEmpty=err.message==='Empty data';
