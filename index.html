@@ -248,6 +248,7 @@ body{background:var(--bg);color:var(--text)}
           </div>
         </div>
         <div class="hmeta"><span class="hpulse"></span><span class="hmt" id="heroMeta">Loading...</span></div>
+        <div id="staleWarning" style="display:none;margin-top:7px;font-size:11px;font-weight:600;color:#F59E0B;letter-spacing:.1px"></div>
         <div id="readinessBadge" style="margin-top:10px;display:none"></div>
       </div>
       <div style="text-align:right;flex-shrink:0">
@@ -510,6 +511,8 @@ function sparkSVG(data,co){
 function renderAll(D){
   const rate=D.summary.rate;
   document.getElementById('heroRate').textContent=rate+'%';
+
+  // Env badge
   const envBadge=document.getElementById('envBadge');
   if(envBadge&&D.env){
     envBadge.textContent=D.env;
@@ -520,10 +523,22 @@ function renderAll(D){
     envBadge.style.color=isProd?'#FCA5A5':isStaging?'#FCD34D':'rgba(255,255,255,.7)';
     envBadge.style.borderColor=isProd?'rgba(239,68,68,.5)':isStaging?'rgba(245,158,11,.5)':'rgba(255,255,255,.2)';
   }
+
   document.getElementById('heroMeta').textContent=
     `${D.runId} · completed ${relativeTime(D.generatedAt)} · ${D.branch||'main'} · GitHub Actions`;
   document.getElementById('heroFoot').innerHTML=
     `Avg duration: <b>${D.summary.duration}</b> &nbsp;&middot;&nbsp; Suite: <b>${D.suite||'Full Regression'}</b> &nbsp;&middot;&nbsp; Env: <b>${D.env||'Dev'}</b>`;
+
+  // Stale data warning
+  const staleEl=document.getElementById('staleWarning');
+  if(staleEl&&D.generatedAt){
+    const hoursSince=(Date.now()-new Date(D.generatedAt))/3600000;
+    if(hoursSince>24){
+      const days=Math.floor(hoursSince/24);
+      staleEl.style.display='block';
+      staleEl.textContent=`⚠ Data may be stale — last run was ${days} day${days===1?'':'s'} ago`;
+    }
+  }
 
   const delta=(rate-(D.summary.prevRate||rate)).toFixed(1);
   const isFirst=D.summary.prevRunId==='—';
