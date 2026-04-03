@@ -128,5 +128,19 @@
     "compRates": {
       "Login": 33
     }
+  },
+  {
+    "runNum": 10,
+    "runId": "R-10",
+    "rate": 66.7,
+    "total": 3,
+    "passed": 2,
+    "failed": 1,
+    "flaky": 0,
+    "duration": "1m 21s",
+    "generatedAt": "2026-04-03T18:31:46.823Z",
+    "compRates": {
+      "Login": 67
+    }
   }
 ]
