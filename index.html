@@ -251,8 +251,7 @@ body{background:var(--bg);color:var(--text)}
         <div id="readinessBadge" style="margin-top:10px;display:none"></div>
       </div>
       <div style="text-align:right;flex-shrink:0">
-        <span id="envBadge" style="display:none;font-size:10px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;padding:3px 10px;border-radius:4px;background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.2);margin-bottom:8px;display:inline-block"></span>
-        <div id="heroTrend" style="font-size:14px;font-weight:600;color:#10B981;letter-spacing:-.2px;margin-top:6px">--</div>
+        <div id="heroTrend" style="font-size:14px;font-weight:600;color:#10B981;letter-spacing:-.2px">--</div>
         <div id="heroStreak" style="font-size:11px;color:rgba(255,255,255,.32);margin-top:4px;letter-spacing:.1px">--</div>
       </div>
     </div>
@@ -372,7 +371,7 @@ body{background:var(--bg);color:var(--text)}
                 <span class="li"><span class="lsq" style="background:#10B981"></span>Passed</span>
                 <span class="li"><span class="lsq" style="background:#EF4444"></span>Failed</span>
                 <span class="li"><span class="lsq" style="background:#F59E0B"></span>Flaky</span>
-                <span class="li"><span class="lsq" style="background:rgba(200,24,74,.6);border-radius:0"></span>SLA ${RELEASE_THRESHOLD}%</span>
+                <span class="li" id="slaLegend"><span class="lsq" style="background:rgba(200,24,74,.6);border-radius:0"></span>SLA 80%</span>
               </div>
             </div>
             <div style="position:relative;width:100%;height:200px"><canvas id="trendChart"></canvas></div>
@@ -463,6 +462,8 @@ function toggleTheme(){
     window._trendChart.options.scales.y.grid.color=gc;
     window._trendChart.update();
   }
+
+  document.getElementById('heroMeta').textContent=
 }
 (function(){
   const saved=localStorage.getItem('qa-theme')||'light';
