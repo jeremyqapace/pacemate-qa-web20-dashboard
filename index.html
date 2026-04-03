@@ -637,7 +637,7 @@ function setView(v){
 }
 
 // ── Fetch data ──
-fetch('./data/results.json')
+fetch('./data/results.json?t=' + Date.now())
   .then(r=>{if(!r.ok)throw new Error(r.status);return r.json();})
   .then(D=>{
     if(!D||!D.runId)throw new Error('Empty data');
