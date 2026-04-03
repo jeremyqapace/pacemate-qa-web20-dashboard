@@ -1,0 +1,91 @@
+{
+  "runId": "R-2",
+  "generatedAt": "2026-04-03T13:43:29.830Z",
+  "branch": "main",
+  "suite": "Full Regression",
+  "env": "Dev",
+  "runUrl": "https://github.com/jeremyqapace/pacemate-web-automation/actions",
+  "summary": {
+    "total": 3,
+    "passed": 3,
+    "failed": 0,
+    "flaky": 0,
+    "rate": 100,
+    "duration": "—",
+    "prevRunId": "R-1",
+    "prevRate": 100,
+    "prevTotal": 3,
+    "prevFailed": 0,
+    "prevFlaky": 0,
+    "prevDuration": "—",
+    "consecutivePassing": 2
+  },
+  "comp": [
+    {
+      "name": "Login",
+      "pct": 100,
+      "sparks": [
+        100,
+        100
+      ],
+      "total": 3,
+      "failed": 0,
+      "flaky": 0
+    }
+  ],
+  "hRuns": [
+    "R-1",
+    "R-2"
+  ],
+  "hData": [
+    [
+      100,
+      100
+    ]
+  ],
+  "trend": {
+    "labels": [
+      "R-1",
+      "R-2"
+    ],
+    "passed": [
+      3,
+      3
+    ],
+    "failed": [
+      0,
+      0
+    ],
+    "flaky": [
+      0,
+      0
+    ]
+  },
+  "flaky": [],
+  "tests": [
+    {
+      "name": "Nurse admin performs a task",
+      "comp": "Login",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "—",
+      "err": null
+    },
+    {
+      "name": "Technician performs a task",
+      "comp": "Login",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "—",
+      "err": null
+    },
+    {
+      "name": "[Login] - PMA-0001 - Nurse Login - Verify Navigation After Login",
+      "comp": "Login",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "—",
+      "err": null
+    }
+  ]
+}
