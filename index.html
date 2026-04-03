@@ -769,16 +769,17 @@ function renderHistory(){
   }
   document.getElementById('histMeta').textContent=`${runs.length} run${runs.length===1?'':'s'} recorded`;
   document.getElementById('histList').innerHTML=runs.slice().reverse().map(r=>{
-    const rate=r.passRate??r.rate??0;
+    const rate=r.rate??0;
     const col=hclr(rate);
     const passed=r.passed??0,failed=r.failed??0,flaky=r.flaky??0,total=r.total??0;
-    const ago=r.timestamp?relativeTime(r.timestamp):'';
-    const ghUrl=r.runUrl||`https://github.com/jeremyqapace/pacemate-web-automation/actions/runs/${r.runId||''}`;
+    const ago=r.generatedAt?relativeTime(r.generatedAt):'';
+    const runLabel=r.runNum?`Run #${r.runNum}`:'—';
+    const runId=r.runId||'';
     return`<div class="rh-row">
       <div class="rh-dot" style="background:${col}"></div>
       <div class="rh-body">
         <div class="rh-top">
-          <span class="rh-id">Run #${r.run??r.runNumber??'—'} &nbsp;<span style="font-size:11px;font-weight:400;color:var(--text3)">${r.suite||'Login Tests'} · ${r.env||'Dev'}</span></span>
+          <span class="rh-id">${runLabel} &nbsp;<span style="font-size:11px;font-weight:400;color:var(--text3)">${r.suite||'Login Tests'} · ${r.env||'Dev'}</span></span>
           <span class="rh-rate" style="color:${col}">${rate}%</span>
         </div>
         <div class="rh-meta">${ago?ago+' · ':''}${r.branch||'main'} · ${r.duration||'—'}</div>
@@ -790,7 +791,7 @@ function renderHistory(){
             ${flaky?`<span class="rh-cnt" style="color:#F59E0B"><span class="sdot" style="background:#F59E0B"></span>${flaky} flaky</span>`:''}
             <span class="rh-cnt" style="color:var(--text3)">${total} total</span>
           </div>
-          <a class="rh-link" href="${ghUrl}" target="_blank">View in GitHub &rarr;</a>
+          <span style="font-size:11px;font-weight:600;color:var(--text3);background:var(--card-bg2);border:1.5px solid var(--border);border-radius:6px;padding:3px 10px;letter-spacing:.3px">${runId}</span>
         </div>
       </div>
     </div>`;
