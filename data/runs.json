@@ -44,5 +44,19 @@
     "compRates": {
       "Login": 100
     }
+  },
+  {
+    "runNum": 4,
+    "runId": "R-4",
+    "rate": 100,
+    "total": 3,
+    "passed": 3,
+    "failed": 0,
+    "flaky": 0,
+    "duration": "—",
+    "generatedAt": "2026-04-03T16:08:35.501Z",
+    "compRates": {
+      "Login": 100
+    }
   }
 ]

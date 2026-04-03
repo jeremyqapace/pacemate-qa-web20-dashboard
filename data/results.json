@@ -1,10 +1,10 @@
 {
-  "runId": "R-3",
-  "generatedAt": "2026-04-03T15:50:37.415Z",
+  "runId": "R-4",
+  "generatedAt": "2026-04-03T16:08:35.501Z",
   "branch": "main",
   "suite": "Login Tests",
   "env": "Development",
-  "runUrl": "https://github.com/jeremyqapace/pacemate-web-automation/actions/runs/23952162225",
+  "runUrl": "https://github.com/jeremyqapace/pacemate-web-automation/actions/runs/23952686075",
   "summary": {
     "total": 3,
     "passed": 3,
@@ -12,19 +12,20 @@
     "flaky": 0,
     "rate": 100,
     "duration": "—",
-    "prevRunId": "R-2",
+    "prevRunId": "R-3",
     "prevRate": 100,
     "prevTotal": 3,
     "prevFailed": 0,
     "prevFlaky": 0,
     "prevDuration": "—",
-    "consecutivePassing": 2
+    "consecutivePassing": 3
   },
   "comp": [
     {
       "name": "Login",
       "pct": 100,
       "sparks": [
+        100,
         100,
         100,
         100
@@ -37,10 +38,12 @@
   "hRuns": [
     "R-1",
     "R-2",
-    "R-3"
+    "R-3",
+    "R-4"
   ],
   "hData": [
     [
+      100,
       100,
       100,
       100
@@ -50,19 +53,23 @@
     "labels": [
       "R-1",
       "R-2",
-      "R-3"
+      "R-3",
+      "R-4"
     ],
     "passed": [
       44,
+      3,
       3,
       3
     ],
     "failed": [
       27,
       0,
+      0,
       0
     ],
     "flaky": [
+      0,
       0,
       0,
       0
@@ -71,7 +78,7 @@
   "flaky": [],
   "tests": [
     {
-      "name": "[Login] - PMA-001.3 - Nurse Admin Login - Verify Successful Authentication",
+      "name": "[Login] - PMA-001.4 - Technician Login - Verify Successful Authentication",
       "comp": "Login",
       "type": "Auto",
       "status": "passed",
@@ -79,7 +86,7 @@
       "err": null
     },
     {
-      "name": "[Login] - PMA-001.4 - Technician Login - Verify Successful Authentication",
+      "name": "[Login] - PMA-001.3 - Nurse Admin Login - Verify Successful Authentication",
       "comp": "Login",
       "type": "Auto",
       "status": "passed",
