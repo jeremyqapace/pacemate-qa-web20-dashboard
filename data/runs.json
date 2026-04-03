@@ -1,19 +1,5 @@
 [
   {
-    "runNum": 5,
-    "runId": "R-5",
-    "rate": 100,
-    "total": 3,
-    "passed": 3,
-    "failed": 0,
-    "flaky": 0,
-    "duration": "—",
-    "generatedAt": "2026-04-03T16:23:44.033Z",
-    "compRates": {
-      "Login": 100
-    }
-  },
-  {
     "runNum": 6,
     "runId": "R-6",
     "rate": 66.7,
@@ -136,6 +122,26 @@
     "duration": "13s",
     "generatedAt": "2026-04-03T20:36:59.884Z",
     "compRates": {
+      "Login": 100
+    }
+  },
+  {
+    "runNum": 15,
+    "runId": "R-15",
+    "rate": 93.2,
+    "total": 133,
+    "passed": 124,
+    "failed": 9,
+    "flaky": 0,
+    "duration": "51m 43s",
+    "generatedAt": "2026-04-03T22:15:05.793Z",
+    "compRates": {
+      "Remotes": 92,
+      "Billing": 100,
+      "Sidebar": 100,
+      "Patients": 93,
+      "Filter Bar": 100,
+      "Auto Promoted": 78,
       "Login": 100
     }
   }
