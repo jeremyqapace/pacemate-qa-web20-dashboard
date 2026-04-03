@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
   <link rel="icon" type="image/x-icon" href="./favicon.ico">
   <meta charset="UTF-8"/>
@@ -427,13 +427,13 @@ body{background:var(--bg);color:var(--text)}
 // ── Theme ──
 function toggleTheme(){
   const html=document.documentElement;
-  const next=html.getAttribute('data-theme')==='dark'?'light':'dark';
+  const next=html.getAttribute('data-theme')==='light'?'dark':'light';
   html.setAttribute('data-theme',next);
   document.getElementById('themeBtn').textContent=next==='dark'?'☀️':'🌙';
   localStorage.setItem('qa-theme',next);
   if(window._trendChart){
-    const gc=next==='light'?'rgba(255,255,255,.08)':'rgba(0,0,0,.06)';
-    const tc=next==='light'?'rgba(255,255,255,.4)':'#888780';
+    const gc=next==='dark'?'rgba(255,255,255,.08)':'rgba(0,0,0,.06)';
+    const tc=next==='dark'?'rgba(255,255,255,.4)':'#888780';
     window._trendChart.options.scales.x.ticks.color=tc;
     window._trendChart.options.scales.y.ticks.color=tc;
     window._trendChart.options.scales.y.grid.color=gc;
@@ -441,7 +441,7 @@ function toggleTheme(){
   }
 }
 (function(){
-  const saved=localStorage.getItem('qa-theme')||'dark';
+  const saved=localStorage.getItem('qa-theme')||'light';
   document.documentElement.setAttribute('data-theme',saved);
   document.addEventListener('DOMContentLoaded',()=>{
     document.getElementById('themeBtn').textContent=saved==='dark'?'☀️':'🌙';
@@ -683,8 +683,8 @@ let trendBuilt=false;
 function buildTrend(trend){
   if(trendBuilt)return;trendBuilt=true;
   const isDark=document.documentElement.getAttribute('data-theme')==='dark';
-  const gc=isDark?'rgba(0,0,0,.06)':'rgba(255,255,255,.08)';
-  const tc=isDark?'#888780':'rgba(255,255,255,.4)';
+  const gc=isDark?'rgba(255,255,255,.08)':'rgba(0,0,0,.06)';
+  const tc=isDark?'rgba(255,255,255,.4)':'#888780';
   window._trendChart=new Chart(document.getElementById('trendChart'),{
     type:'line',
     data:{labels:trend.labels,datasets:[
