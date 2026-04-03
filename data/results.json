@@ -1,65 +1,64 @@
 {
-  "runId": "R-10",
-  "generatedAt": "2026-04-03T18:31:46.823Z",
+  "runId": "R-11",
+  "generatedAt": "2026-04-03T18:32:02.014Z",
   "branch": "main",
   "suite": "Login Tests",
   "env": "Development",
-  "runUrl": "https://github.com/jeremyqapace/pacemate-web-automation/actions/runs/23957252164",
+  "runUrl": "https://github.com/jeremyqapace/pacemate-web-automation/actions/runs/23957209234",
   "summary": {
     "total": 3,
-    "passed": 2,
-    "failed": 1,
+    "passed": 1,
+    "failed": 2,
     "flaky": 0,
-    "rate": 66.7,
-    "duration": "1m 21s",
-    "prevRunId": "R-9",
-    "prevRate": 33.3,
+    "rate": 33.3,
+    "duration": "3m 3s",
+    "prevRunId": "R-10",
+    "prevRate": 66.7,
     "prevTotal": 3,
-    "prevFailed": 2,
+    "prevFailed": 1,
     "prevFlaky": 0,
-    "prevDuration": "—",
+    "prevDuration": "1m 21s",
     "consecutivePassing": 0
   },
   "comp": [
     {
       "name": "Login",
-      "pct": 67,
+      "pct": 33,
       "sparks": [
-        67,
         100,
         100,
         100,
         100,
-        67,
-        67,
         67,
         33,
-        67
+        67,
+        33,
+        67,
+        33
       ],
       "total": 3,
-      "failed": 1,
+      "failed": 2,
       "flaky": 0
     }
   ],
   "hRuns": [
-    "R-6",
     "R-7",
     "R-8",
     "R-9",
-    "R-10"
+    "R-10",
+    "R-11"
   ],
   "hData": [
     [
-      67,
       100,
       67,
       33,
-      67
+      67,
+      33
     ]
   ],
   "trend": {
     "labels": [
-      "R-1",
       "R-2",
       "R-3",
       "R-4",
@@ -68,10 +67,10 @@
       "R-7",
       "R-8",
       "R-9",
-      "R-10"
+      "R-10",
+      "R-11"
     ],
     "passed": [
-      44,
       3,
       3,
       3,
@@ -80,10 +79,10 @@
       0,
       2,
       1,
-      2
+      2,
+      1
     ],
     "failed": [
-      27,
       0,
       0,
       0,
@@ -92,7 +91,8 @@
       8,
       1,
       2,
-      1
+      1,
+      2
     ],
     "flaky": [
       0,
@@ -110,28 +110,28 @@
   "flaky": [],
   "tests": [
     {
-      "name": "[Login] - PMA-0001 - Nurse Login - Verify Navigation After Login",
-      "comp": "Login",
-      "type": "Auto",
-      "status": "failed",
-      "dur": "58s",
-      "err": "page.waitForURL: Timeout 20000ms exceeded."
-    },
-    {
       "name": "[Login] - PMA-001.4 - Technician Login - Verify Successful Authentication",
       "comp": "Login",
       "type": "Auto",
-      "status": "passed",
-      "dur": "8s",
-      "err": null
+      "status": "failed",
+      "dur": "1m",
+      "err": "Error: function timed out, ensure the promise resolves within 60000 milliseconds"
     },
     {
       "name": "[Login] - PMA-001.3 - Nurse Admin Login - Verify Successful Authentication",
       "comp": "Login",
       "type": "Auto",
       "status": "passed",
-      "dur": "15s",
+      "dur": "49s",
       "err": null
+    },
+    {
+      "name": "[Login] - PMA-0001 - Nurse Login - Verify Navigation After Login",
+      "comp": "Login",
+      "type": "Auto",
+      "status": "failed",
+      "dur": "1m 14s",
+      "err": "page.waitForURL: Timeout 20000ms exceeded."
     }
   ]
 }
