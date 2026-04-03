@@ -15,29 +15,49 @@ svg text{font-family:'Inter',system-ui,sans-serif}
 .qa{max-width:1200px;margin:0 auto}
 
 /* ── Theme tokens ── */
-[data-theme="dark"]{
-  --bg:#f5f5f3;--card-bg:#fff;--card-bg2:#fafaf9;
-  --border:rgba(0,0,0,.1);--border2:rgba(0,0,0,.08);
-  --text:#111;--text2:#666;--text3:#888;
+[data-theme="light"]{
+  --bg:#f5f5f3;
+  --card-bg:#fff;
+  --card-bg2:#fafaf9;
+  --border:rgba(0,0,0,.1);
+  --border2:rgba(0,0,0,.08);
+  --text:#111;
+  --text2:#666;
+  --text3:#888;
   --sc-border:rgba(200,24,74,.28);
-  --cmp-prev-bg:#fafaf9;--cmp-prev-border:rgba(0,0,0,.1);
-  --tt-head-bg:#fafaf9;--tt-head-color:#111;
-  --tt-border:rgba(0,0,0,.06);--tt-hover:#fafaf9;
+  --cmp-prev-bg:#fafaf9;
+  --cmp-prev-border:rgba(0,0,0,.1);
+  --tt-head-bg:#fafaf9;
+  --tt-head-color:#111;
+  --tt-border:rgba(0,0,0,.06);
+  --tt-hover:#fafaf9;
   --sep-line:rgba(0,0,0,.1);
-  --fbtn-bg:#fafaf9;--fbtn-border:rgba(0,0,0,.15);--fbtn-hover:#fff;
+  --fbtn-bg:#fafaf9;
+  --fbtn-border:rgba(0,0,0,.15);
+  --fbtn-hover:#fff;
   --vnav-bg:#fff;
 }
-[data-theme="light"]{
-  --bg:#0f172a;--card-bg:#1e293b;--card-bg2:#162032;
-  --border:rgba(255,255,255,.1);--border2:rgba(255,255,255,.08);
-  --text:rgba(255,255,255,.92);--text2:rgba(255,255,255,.55);--text3:rgba(255,255,255,.35);
-  --sc-border:rgba(200,24,74,.4);
-  --cmp-prev-bg:#162032;--cmp-prev-border:rgba(255,255,255,.1);
-  --tt-head-bg:#162032;--tt-head-color:rgba(255,255,255,.75);
-  --tt-border:rgba(255,255,255,.07);--tt-hover:#162032;
-  --sep-line:rgba(255,255,255,.1);
-  --fbtn-bg:#162032;--fbtn-border:rgba(255,255,255,.15);--fbtn-hover:#1e293b;
-  --vnav-bg:#1e293b;
+[data-theme="dark"]{
+  --bg:#0a0f1e;
+  --card-bg:#131929;
+  --card-bg2:#1a2236;
+  --border:rgba(255,255,255,.12);
+  --border2:rgba(255,255,255,.07);
+  --text:rgba(255,255,255,.95);
+  --text2:rgba(255,255,255,.6);
+  --text3:rgba(255,255,255,.38);
+  --sc-border:rgba(200,24,74,.45);
+  --cmp-prev-bg:#1a2236;
+  --cmp-prev-border:rgba(255,255,255,.12);
+  --tt-head-bg:#1a2236;
+  --tt-head-color:rgba(255,255,255,.8);
+  --tt-border:rgba(255,255,255,.07);
+  --tt-hover:#1a2236;
+  --sep-line:rgba(255,255,255,.12);
+  --fbtn-bg:#1a2236;
+  --fbtn-border:rgba(255,255,255,.18);
+  --fbtn-hover:#202840;
+  --vnav-bg:#131929;
 }
 body{background:var(--bg);color:var(--text)}
 
@@ -195,10 +215,9 @@ body{background:var(--bg);color:var(--text)}
 .rh-bar-fill{height:4px;border-radius:2px}
 .rh-counts{display:flex;gap:12px;margin-top:6px;flex-wrap:wrap}
 .rh-cnt{font-size:11px;font-weight:600;display:flex;align-items:center;gap:4px}
-.rh-link{font-size:11px;font-weight:600;color:#C8184A;padding:3px 10px;border:1.5px solid rgba(200,24,74,.3);border-radius:6px;background:rgba(200,24,74,.06);text-decoration:none;flex-shrink:0;white-space:nowrap}
-.rh-link:hover{background:rgba(200,24,74,.12)}
 .rh-empty{font-size:13px;color:var(--text3);text-align:center;padding:2rem 0}
 
+/* ── Responsive ── */
 @media(max-width:700px){
   body{padding:.75rem}
   .hero{padding:1.25rem}
@@ -218,7 +237,7 @@ body{background:var(--bg);color:var(--text)}
 </div>
 
 <!-- ── Theme toggle ── -->
-<button class="theme-toggle" onclick="toggleTheme()" id="themeBtn" title="Toggle light/dark mode">☀️</button>
+<button class="theme-toggle" onclick="toggleTheme()" id="themeBtn" title="Toggle light/dark mode">🌙</button>
 
 <div class="qa">
 
@@ -310,7 +329,7 @@ body{background:var(--bg);color:var(--text)}
           <div class="cmp-rl">Pass Rate</div>
           <div class="cmp-row"><span class="cmp-lbl">Total tests</span><span class="cmp-val" id="cmpPrevTotal">--</span></div>
           <div class="cmp-row"><span class="cmp-lbl">Failed</span><span class="cmp-val" style="color:#EF4444" id="cmpPrevFailed">--</span></div>
-          <div class="cmp-row"><span class="cmp-lbl">Flaky</span><span class="cmp-val"  style="color:#F59E0B" id="cmpPrevFlaky">--</span></div>
+          <div class="cmp-row"><span class="cmp-lbl">Flaky</span><span class="cmp-val" style="color:#F59E0B" id="cmpPrevFlaky">--</span></div>
           <div class="cmp-row"><span class="cmp-lbl">Duration</span><span class="cmp-val" id="cmpPrevDur">--</span></div>
         </div>
         <div class="cmp-col">
@@ -318,8 +337,8 @@ body{background:var(--bg);color:var(--text)}
           <div class="cmp-rate" id="cmpCurrRate" style="color:#10B981">--</div>
           <div class="cmp-rl">Pass Rate</div>
           <div class="cmp-row"><span class="cmp-lbl">Total tests</span><span class="cmp-val" id="cmpCurrTotal">--</span></div>
-          <div class="cmp-row"><span class="cmp-lbl">Failed</span><span class="cmp-val"  id="cmpCurrFailed">--</span></div>
-          <div class="cmp-row"><span class="cmp-lbl">Flaky</span><span class="cmp-val"   id="cmpCurrFlaky">--</span></div>
+          <div class="cmp-row"><span class="cmp-lbl">Failed</span><span class="cmp-val" id="cmpCurrFailed">--</span></div>
+          <div class="cmp-row"><span class="cmp-lbl">Flaky</span><span class="cmp-val" id="cmpCurrFlaky">--</span></div>
           <div class="cmp-row"><span class="cmp-lbl">Duration</span><span class="cmp-val" id="cmpCurrDur">--</span></div>
         </div>
       </div>
@@ -615,10 +634,10 @@ function renderTable(rows){
   const D=window._D;
   if(!rows||!rows.length){
     const msgs={
-      all:   {h:'No tests found',       s:'No test data available for this run'},
-      failed:{h:'No failed tests',      s:'Every test passed — no hard failures in this run'},
-      flaky: {h:'No flaky tests',       s:'All tests ran deterministically in this run'},
-      passed:{h:'No passed tests',      s:'No tests recorded a clean pass in this run'},
+      all:   {h:'No tests found',  s:'No test data available for this run'},
+      failed:{h:'No failed tests', s:'Every test passed — no hard failures in this run'},
+      flaky: {h:'No flaky tests',  s:'All tests ran deterministically in this run'},
+      passed:{h:'No passed tests', s:'No tests recorded a clean pass in this run'},
     };
     const m=msgs[currentFilter]||msgs.all;
     document.getElementById('tbody').innerHTML=`<tr><td colspan="7"><div style="text-align:center;padding:2.5rem 1rem">
