@@ -16,47 +16,27 @@ svg text{font-family:'Inter',system-ui,sans-serif}
 
 /* ── Theme tokens ── */
 [data-theme="light"]{
-  --bg:#f5f5f3;
-  --card-bg:#fff;
-  --card-bg2:#fafaf9;
-  --border:rgba(0,0,0,.1);
-  --border2:rgba(0,0,0,.08);
-  --text:#111;
-  --text2:#666;
-  --text3:#888;
+  --bg:#f5f5f3;--card-bg:#fff;--card-bg2:#fafaf9;
+  --border:rgba(0,0,0,.1);--border2:rgba(0,0,0,.08);
+  --text:#111;--text2:#666;--text3:#888;
   --sc-border:rgba(200,24,74,.28);
-  --cmp-prev-bg:#fafaf9;
-  --cmp-prev-border:rgba(0,0,0,.1);
-  --tt-head-bg:#fafaf9;
-  --tt-head-color:#111;
-  --tt-border:rgba(0,0,0,.06);
-  --tt-hover:#fafaf9;
+  --cmp-prev-bg:#fafaf9;--cmp-prev-border:rgba(0,0,0,.1);
+  --tt-head-bg:#fafaf9;--tt-head-color:#111;
+  --tt-border:rgba(0,0,0,.06);--tt-hover:#fafaf9;
   --sep-line:rgba(0,0,0,.1);
-  --fbtn-bg:#fafaf9;
-  --fbtn-border:rgba(0,0,0,.15);
-  --fbtn-hover:#fff;
+  --fbtn-bg:#fafaf9;--fbtn-border:rgba(0,0,0,.15);--fbtn-hover:#fff;
   --vnav-bg:#fff;
 }
 [data-theme="dark"]{
-  --bg:#0a0f1e;
-  --card-bg:#131929;
-  --card-bg2:#1a2236;
-  --border:rgba(255,255,255,.12);
-  --border2:rgba(255,255,255,.07);
-  --text:rgba(255,255,255,.95);
-  --text2:rgba(255,255,255,.6);
-  --text3:rgba(255,255,255,.38);
+  --bg:#0a0f1e;--card-bg:#131929;--card-bg2:#1a2236;
+  --border:rgba(255,255,255,.12);--border2:rgba(255,255,255,.07);
+  --text:rgba(255,255,255,.95);--text2:rgba(255,255,255,.6);--text3:rgba(255,255,255,.38);
   --sc-border:rgba(200,24,74,.45);
-  --cmp-prev-bg:#1a2236;
-  --cmp-prev-border:rgba(255,255,255,.12);
-  --tt-head-bg:#1a2236;
-  --tt-head-color:rgba(255,255,255,.8);
-  --tt-border:rgba(255,255,255,.07);
-  --tt-hover:#1a2236;
+  --cmp-prev-bg:#1a2236;--cmp-prev-border:rgba(255,255,255,.12);
+  --tt-head-bg:#1a2236;--tt-head-color:rgba(255,255,255,.8);
+  --tt-border:rgba(255,255,255,.07);--tt-hover:#1a2236;
   --sep-line:rgba(255,255,255,.12);
-  --fbtn-bg:#1a2236;
-  --fbtn-border:rgba(255,255,255,.18);
-  --fbtn-hover:#202840;
+  --fbtn-bg:#1a2236;--fbtn-border:rgba(255,255,255,.18);--fbtn-hover:#202840;
   --vnav-bg:#131929;
 }
 body{background:var(--bg);color:var(--text)}
@@ -265,6 +245,7 @@ body{background:var(--bg);color:var(--text)}
           </div>
         </div>
         <div class="hmeta"><span class="hpulse"></span><span class="hmt" id="heroMeta">Loading...</span></div>
+        <div id="readinessBadge" style="margin-top:10px;display:none"></div>
       </div>
       <div style="text-align:right;flex-shrink:0">
         <div id="heroTrend" style="font-size:14px;font-weight:600;color:#10B981;letter-spacing:-.2px">--</div>
@@ -443,6 +424,20 @@ body{background:var(--bg);color:var(--text)}
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script>
+// ── Release Readiness ──
+const RELEASE_THRESHOLD=80;
+function renderReadinessBadge(rate){
+  const el=document.getElementById('readinessBadge');
+  if(!el)return;
+  const ready=rate>=RELEASE_THRESHOLD;
+  el.style.display='block';
+  el.innerHTML=`<span style="display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;padding:5px 13px;border-radius:99px;background:${ready?'rgba(16,185,129,.18)':'rgba(239,68,68,.18)'};color:${ready?'#10B981':'#EF4444'};border:1.5px solid ${ready?'rgba(16,185,129,.5)':'rgba(239,68,68,.5)'}">
+    <span style="font-size:14px">${ready?'✓':'✗'}</span>
+    ${ready?'Ready to Deploy':'Not Ready'}
+    <span style="font-size:10px;font-weight:500;opacity:.7">${rate}% / ${RELEASE_THRESHOLD}% threshold</span>
+  </span>`;
+}
+
 // ── Theme ──
 function toggleTheme(){
   const html=document.documentElement;
@@ -525,6 +520,7 @@ function renderAll(D){
       :'No previous run to compare';
 
   playRing(rate,D.summary.failed,D.summary.flaky,D.summary.total);
+  renderReadinessBadge(rate);
   countUp(document.getElementById('cn-total'),D.summary.total);
   countUp(document.getElementById('cn-pass'), D.summary.passed);
   countUp(document.getElementById('cn-fail'), D.summary.failed);
@@ -771,6 +767,7 @@ function setView(v){
   document.getElementById('vn-sub').textContent=subs[v];
   if(v==='ov'&&D){
     playRing(D.summary.rate,D.summary.failed,D.summary.flaky,D.summary.total);
+    renderReadinessBadge(D.summary.rate);
     countUp(document.getElementById('cn-total'),D.summary.total);
     countUp(document.getElementById('cn-pass'), D.summary.passed);
     countUp(document.getElementById('cn-fail'), D.summary.failed);
