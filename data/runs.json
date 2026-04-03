@@ -1,19 +1,5 @@
 [
   {
-    "runNum": 3,
-    "runId": "R-3",
-    "rate": 100,
-    "total": 3,
-    "passed": 3,
-    "failed": 0,
-    "flaky": 0,
-    "duration": "—",
-    "generatedAt": "2026-04-03T15:50:37.415Z",
-    "compRates": {
-      "Login": 100
-    }
-  },
-  {
     "runNum": 4,
     "runId": "R-4",
     "rate": 100,
@@ -135,6 +121,20 @@
     "flaky": 0,
     "duration": "19s",
     "generatedAt": "2026-04-03T19:46:50.288Z",
+    "compRates": {
+      "Login": 100
+    }
+  },
+  {
+    "runNum": 13,
+    "runId": "R-13",
+    "rate": 100,
+    "total": 3,
+    "passed": 3,
+    "failed": 0,
+    "flaky": 0,
+    "duration": "15s",
+    "generatedAt": "2026-04-03T20:31:40.933Z",
     "compRates": {
       "Login": 100
     }

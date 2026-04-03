@@ -1,24 +1,24 @@
 {
-  "runId": "R-12",
-  "generatedAt": "2026-04-03T19:46:50.288Z",
+  "runId": "R-13",
+  "generatedAt": "2026-04-03T20:31:40.933Z",
   "branch": "main",
   "suite": "Login Tests",
   "env": "Development",
-  "runUrl": "https://github.com/jeremyqapace/pacemate-web-automation/actions/runs/23959611359",
+  "runUrl": "https://github.com/jeremyqapace/pacemate-web-automation/actions/runs/23960998297",
   "summary": {
     "total": 3,
     "passed": 3,
     "failed": 0,
     "flaky": 0,
     "rate": 100,
-    "duration": "19s",
-    "prevRunId": "R-11",
-    "prevRate": 33.3,
+    "duration": "15s",
+    "prevRunId": "R-12",
+    "prevRate": 100,
     "prevTotal": 3,
-    "prevFailed": 2,
+    "prevFailed": 0,
     "prevFlaky": 0,
-    "prevDuration": "3m 3s",
-    "consecutivePassing": 1
+    "prevDuration": "19s",
+    "consecutivePassing": 2
   },
   "comp": [
     {
@@ -27,13 +27,13 @@
       "sparks": [
         100,
         100,
-        100,
         67,
         100,
         67,
         33,
         67,
         33,
+        100,
         100
       ],
       "total": 3,
@@ -42,24 +42,23 @@
     }
   ],
   "hRuns": [
-    "R-8",
     "R-9",
     "R-10",
     "R-11",
-    "R-12"
+    "R-12",
+    "R-13"
   ],
   "hData": [
     [
-      67,
       33,
       67,
       33,
+      100,
       100
     ]
   ],
   "trend": {
     "labels": [
-      "R-3",
       "R-4",
       "R-5",
       "R-6",
@@ -68,22 +67,22 @@
       "R-9",
       "R-10",
       "R-11",
-      "R-12"
+      "R-12",
+      "R-13"
     ],
     "passed": [
       3,
       3,
-      3,
       2,
       0,
       2,
       1,
       2,
       1,
+      3,
       3
     ],
     "failed": [
-      0,
       0,
       0,
       1,
@@ -92,6 +91,7 @@
       2,
       1,
       2,
+      0,
       0
     ],
     "flaky": [
@@ -110,19 +110,19 @@
   "flaky": [],
   "tests": [
     {
+      "name": "[Login] - PMA-0001 - Nurse Login - Verify Navigation After Login",
+      "comp": "Login",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "12s",
+      "err": null
+    },
+    {
       "name": "[Login] - PMA-001.4 - Technician Login - Verify Successful Authentication",
       "comp": "Login",
       "type": "Auto",
       "status": "passed",
       "dur": "2s",
-      "err": null
-    },
-    {
-      "name": "[Login] - PMA-0001 - Nurse Login - Verify Navigation After Login",
-      "comp": "Login",
-      "type": "Auto",
-      "status": "passed",
-      "dur": "15s",
       "err": null
     },
     {
