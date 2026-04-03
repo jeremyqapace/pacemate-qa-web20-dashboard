@@ -1,21 +1,21 @@
 {
-  "runId": "R-8",
-  "generatedAt": "2026-04-03T18:05:46.061Z",
+  "runId": "R-9",
+  "generatedAt": "2026-04-03T18:24:00.307Z",
   "branch": "main",
   "suite": "Login Tests",
   "env": "Development",
-  "runUrl": "https://github.com/jeremyqapace/pacemate-web-automation/actions/runs/23956343366",
+  "runUrl": "https://github.com/jeremyqapace/pacemate-web-automation/actions/runs/23956968440",
   "summary": {
     "total": 3,
-    "passed": 2,
-    "failed": 1,
+    "passed": 1,
+    "failed": 2,
     "flaky": 0,
-    "rate": 66.7,
+    "rate": 33.3,
     "duration": "—",
-    "prevRunId": "R-7",
+    "prevRunId": "R-8",
     "prevRate": 66.7,
-    "prevTotal": 8,
-    "prevFailed": 8,
+    "prevTotal": 3,
+    "prevFailed": 1,
     "prevFlaky": 0,
     "prevDuration": "—",
     "consecutivePassing": 0
@@ -23,36 +23,37 @@
   "comp": [
     {
       "name": "Login",
-      "pct": 67,
+      "pct": 33,
       "sparks": [
-        67,
+        33,
         100,
         100,
         100,
         100,
         67,
+        33,
         67,
-        67
+        33
       ],
       "total": 3,
-      "failed": 1,
+      "failed": 2,
       "flaky": 0
     }
   ],
   "hRuns": [
-    "R-4",
     "R-5",
     "R-6",
     "R-7",
-    "R-8"
+    "R-8",
+    "R-9"
   ],
   "hData": [
     [
       100,
-      100,
       67,
       100,
-      67
+      67,
+      33
     ]
   ],
   "trend": {
@@ -64,7 +65,8 @@
       "R-5",
       "R-6",
       "R-7",
-      "R-8"
+      "R-8",
+      "R-9"
     ],
     "passed": [
       44,
@@ -74,7 +76,8 @@
       3,
       2,
       0,
-      2
+      2,
+      1
     ],
     "failed": [
       27,
@@ -84,9 +87,11 @@
       0,
       1,
       8,
-      1
+      1,
+      2
     ],
     "flaky": [
+      0,
       0,
       0,
       0,
@@ -105,15 +110,7 @@
       "type": "Auto",
       "status": "failed",
       "dur": "—",
-      "err": "page.waitForURL: Timeout 20000ms exceeded."
-    },
-    {
-      "name": "[Login] - PMA-001.3 - Nurse Admin Login - Verify Successful Authentication",
-      "comp": "Login",
-      "type": "Auto",
-      "status": "passed",
-      "dur": "—",
-      "err": null
+      "err": "Error: function timed out, ensure the promise resolves within 60000 milliseconds"
     },
     {
       "name": "[Login] - PMA-001.4 - Technician Login - Verify Successful Authentication",
@@ -122,6 +119,14 @@
       "status": "passed",
       "dur": "—",
       "err": null
+    },
+    {
+      "name": "[Login] - PMA-001.3 - Nurse Admin Login - Verify Successful Authentication",
+      "comp": "Login",
+      "type": "Auto",
+      "status": "failed",
+      "dur": "—",
+      "err": "Error: function timed out, ensure the promise resolves within 60000 milliseconds"
     }
   ]
 }
