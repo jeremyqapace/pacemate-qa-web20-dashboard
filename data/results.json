@@ -1,676 +1,87 @@
 {
-  "runId": "R-1",
-  "generatedAt": "2026-04-03T15:18:22.273Z",
+  "runId": "R-2",
+  "generatedAt": "2026-04-03T15:31:45.651Z",
   "branch": "main",
   "suite": "Login Tests",
   "env": "Development",
-  "runUrl": "https://github.com/jeremyqapace/pacemate-web-automation/actions/runs/23950900230",
+  "runUrl": "https://github.com/jeremyqapace/pacemate-web-automation/actions/runs/23951496401",
   "summary": {
-    "total": 71,
-    "passed": 44,
-    "failed": 27,
+    "total": 3,
+    "passed": 3,
+    "failed": 0,
     "flaky": 0,
-    "rate": 62,
+    "rate": 100,
     "duration": "—",
-    "prevRunId": "—",
+    "prevRunId": "R-1",
     "prevRate": 62,
     "prevTotal": 71,
-    "prevFailed": 0,
+    "prevFailed": 27,
     "prevFlaky": 0,
     "prevDuration": "—",
-    "consecutivePassing": 0
+    "consecutivePassing": 1
   },
   "comp": [
     {
-      "name": "Auto Promoted Dashboard",
-      "pct": 57,
-      "sparks": [
-        57
-      ],
-      "total": 21,
-      "failed": 9,
-      "flaky": 0
-    },
-    {
-      "name": "Dashboard Sections",
+      "name": "Login",
       "pct": 100,
       "sparks": [
+        100,
         100
       ],
-      "total": 6,
-      "failed": 0,
-      "flaky": 0
-    },
-    {
-      "name": "Billing",
-      "pct": 46,
-      "sparks": [
-        46
-      ],
-      "total": 26,
-      "failed": 14,
-      "flaky": 0
-    },
-    {
-      "name": "Patients",
-      "pct": 67,
-      "sparks": [
-        67
-      ],
-      "total": 12,
-      "failed": 4,
-      "flaky": 0
-    },
-    {
-      "name": "Admin and Settings",
-      "pct": 100,
-      "sparks": [
-        100
-      ],
-      "total": 6,
+      "total": 3,
       "failed": 0,
       "flaky": 0
     }
   ],
   "hRuns": [
-    "R-1"
+    "R-1",
+    "R-2"
   ],
   "hData": [
     [
-      57
-    ],
-    [
-      100
-    ],
-    [
-      46
-    ],
-    [
-      67
-    ],
-    [
+      100,
       100
     ]
   ],
   "trend": {
     "labels": [
-      "R-1"
+      "R-1",
+      "R-2"
     ],
     "passed": [
-      44
+      44,
+      3
     ],
     "failed": [
-      27
+      27,
+      0
     ],
     "flaky": [
+      0,
       0
     ]
   },
   "flaky": [],
   "tests": [
     {
-      "name": "[Auto Promoted] - Access Observations from Summary Enhanced in Auto Promoted Dashboard",
-      "comp": "Auto Promoted Dashboard",
+      "name": "Technician performs a task",
+      "comp": "Login",
       "type": "Auto",
       "status": "passed",
       "dur": "—",
       "err": null
     },
     {
-      "name": "[Dashboard] - Remotes for E-Signing - E-Sign Transmission",
-      "comp": "Dashboard Sections",
+      "name": "Nurse admin performs a task",
+      "comp": "Login",
       "type": "Auto",
       "status": "passed",
       "dur": "—",
       "err": null
     },
     {
-      "name": "[Billing] - Billing Search - Billing Mgmt to Completed Billing Page - Adjust Window Width",
-      "comp": "Billing",
-      "type": "Auto",
-      "status": "passed",
-      "dur": "—",
-      "err": null
-    },
-    {
-      "name": "[Patients] - Edit Information on Patient Details Page From Report Details",
-      "comp": "Patients",
-      "type": "Auto",
-      "status": "passed",
-      "dur": "—",
-      "err": null
-    },
-    {
-      "name": "[Billing] - Verify Loading of Missed Follow-Up Page",
-      "comp": "Billing",
-      "type": "Auto",
-      "status": "failed",
-      "dur": "—",
-      "err": "Error: Credentials not found for role: nurse_clinic_admin. Please check your .env file."
-    },
-    {
-      "name": "[Billing] - Report Viewer - Access Next Billing Date Page from Report Viewer",
-      "comp": "Billing",
-      "type": "Auto",
-      "status": "failed",
-      "dur": "—",
-      "err": "Error: Credentials not found for role: nurse_clinic_admin. Please check your .env file."
-    },
-    {
-      "name": "[Patients] - Create New Patient",
-      "comp": "Patients",
-      "type": "Auto",
-      "status": "passed",
-      "dur": "—",
-      "err": null
-    },
-    {
-      "name": "[Billing] - Billing Search - Billing Mgmt to Completed Billing Page - Page Up",
-      "comp": "Billing",
-      "type": "Auto",
-      "status": "passed",
-      "dur": "—",
-      "err": null
-    },
-    {
-      "name": "[Auto Promoted] - Dismiss Transmission from Dashboard with Blue Checkmark",
-      "comp": "Auto Promoted Dashboard",
-      "type": "Auto",
-      "status": "passed",
-      "dur": "—",
-      "err": null
-    },
-    {
-      "name": "[Billing] - Export from Due for Approval page",
-      "comp": "Billing",
-      "type": "Auto",
-      "status": "failed",
-      "dur": "—",
-      "err": "Error: Credentials not found for role: nurse_clinic_admin. Please check your .env file."
-    },
-    {
-      "name": "[Auto Promoted] - Un-dismiss Transmission from Dismissed Dashboard",
-      "comp": "Auto Promoted Dashboard",
-      "type": "Auto",
-      "status": "passed",
-      "dur": "—",
-      "err": null
-    },
-    {
-      "name": "[Billing] - Billing Events for Review",
-      "comp": "Billing",
-      "type": "Auto",
-      "status": "failed",
-      "dur": "—",
-      "err": "Error: Credentials not found for role: nurse_clinic_admin. Please check your .env file."
-    },
-    {
-      "name": "[Auto Promoted] - Open Auto Promote Transmission and Retrieve Evaluation Form",
-      "comp": "Auto Promoted Dashboard",
-      "type": "Auto",
-      "status": "failed",
-      "dur": "—",
-      "err": "Error: Credentials not found for role: TECHNICIAN. Please check your .env file."
-    },
-    {
-      "name": "[Billing] - Billing Search - Billing Mgmt to Search Billing",
-      "comp": "Billing",
-      "type": "Auto",
-      "status": "passed",
-      "dur": "—",
-      "err": null
-    },
-    {
-      "name": "[Auto Promoted] - Edit Observation for Auto Promoted Transmission",
-      "comp": "Auto Promoted Dashboard",
-      "type": "Auto",
-      "status": "failed",
-      "dur": "—",
-      "err": "Error: Credentials not found for role: TECHNICIAN. Please check your .env file."
-    },
-    {
-      "name": "[Dashboard] - Unresolved Remotes - Column Sorting Function",
-      "comp": "Dashboard Sections",
-      "type": "Auto",
-      "status": "passed",
-      "dur": "—",
-      "err": null
-    },
-    {
-      "name": "[Settings] - ADMIN Dashboard - Clinic Setting for E-Signing Dashboards Bulk Action Control - Verify E-Signing Settings",
-      "comp": "Admin and Settings",
-      "type": "Auto",
-      "status": "passed",
-      "dur": "—",
-      "err": null
-    },
-    {
-      "name": "[Billing] - Billing Search - Billing Mgmt to Completed Billing Page - Individually Approve",
-      "comp": "Billing",
-      "type": "Auto",
-      "status": "passed",
-      "dur": "—",
-      "err": null
-    },
-    {
-      "name": "[Settings] - ADMIN Dashboard - Clinic Setting for e-Signing Dashboards Bulk Action Control - Verify Extended Dashboard",
-      "comp": "Admin and Settings",
-      "type": "Auto",
-      "status": "passed",
-      "dur": "—",
-      "err": null
-    },
-    {
-      "name": "[Dashboard] - Heart Failure for Approval - Verify text of column names",
-      "comp": "Dashboard Sections",
-      "type": "Auto",
-      "status": "passed",
-      "dur": "—",
-      "err": null
-    },
-    {
-      "name": "[Auto Promoted] - Access Hospitalizations in Auto Promoted Summary Viewer",
-      "comp": "Auto Promoted Dashboard",
-      "type": "Auto",
-      "status": "passed",
-      "dur": "—",
-      "err": null
-    },
-    {
-      "name": "[Billing] - Report Viewer - Access Previous Billing Date from Report Viewer",
-      "comp": "Billing",
-      "type": "Auto",
-      "status": "failed",
-      "dur": "—",
-      "err": "Error: Credentials not found for role: nurse_clinic_admin. Please check your .env file."
-    },
-    {
-      "name": "[Auto Promoted] - Sort Date of Service in Observations from Summary Enhanced",
-      "comp": "Auto Promoted Dashboard",
-      "type": "Auto",
-      "status": "passed",
-      "dur": "—",
-      "err": null
-    },
-    {
-      "name": "[Billing] - Report Viewer - Verify Patient Information Labels in Reports Details",
-      "comp": "Billing",
-      "type": "Auto",
-      "status": "failed",
-      "dur": "—",
-      "err": "Error: Credentials not found for role: nurse_clinic_admin. Please check your .env file."
-    },
-    {
-      "name": "[Billing] - Report Viewer - Verify No Previous Billing Date Link When First Transmission",
-      "comp": "Billing",
-      "type": "Auto",
-      "status": "passed",
-      "dur": "—",
-      "err": null
-    },
-    {
-      "name": "[Auto Promoted] - Dismiss and Archive from Auto Promoted Dashboard",
-      "comp": "Auto Promoted Dashboard",
-      "type": "Auto",
-      "status": "failed",
-      "dur": "—",
-      "err": "Error: Credentials not found for role: TECHNICIAN. Please check your .env file."
-    },
-    {
-      "name": "[Billing] - Billing Search - Billing Mgmt to Completed Billing Page - Notes",
-      "comp": "Billing",
-      "type": "Auto",
-      "status": "passed",
-      "dur": "—",
-      "err": null
-    },
-    {
-      "name": "[Patients] - Patient Details - Edit Patient Name from Patient Details from Report Details",
-      "comp": "Patients",
-      "type": "Auto",
-      "status": "passed",
-      "dur": "—",
-      "err": null
-    },
-    {
-      "name": "[Auto Promoted] - Add link to Auto Promoted Transmission summary",
-      "comp": "Auto Promoted Dashboard",
-      "type": "Auto",
-      "status": "passed",
-      "dur": "—",
-      "err": null
-    },
-    {
-      "name": "[Dashboard] - Access Auto Promote Board",
-      "comp": "Dashboard Sections",
-      "type": "Auto",
-      "status": "passed",
-      "dur": "—",
-      "err": null
-    },
-    {
-      "name": "[Auto Promoted] - Access Report Details Page for Transmission",
-      "comp": "Auto Promoted Dashboard",
-      "type": "Auto",
-      "status": "passed",
-      "dur": "—",
-      "err": null
-    },
-    {
-      "name": "[AdminUI] - AdminUI verify only external users are visible Nurse + Clinic Admin",
-      "comp": "Admin and Settings",
-      "type": "Auto",
-      "status": "passed",
-      "dur": "—",
-      "err": null
-    },
-    {
-      "name": "[Auto Promoted] - Dismiss from Auto Promoted Dashboard",
-      "comp": "Auto Promoted Dashboard",
-      "type": "Auto",
-      "status": "failed",
-      "dur": "—",
-      "err": "Error: Credentials not found for role: TECHNICIAN. Please check your .env file."
-    },
-    {
-      "name": "[Auto Promoted] - Save Observation in Auto Promoted Transmission",
-      "comp": "Auto Promoted Dashboard",
-      "type": "Auto",
-      "status": "failed",
-      "dur": "—",
-      "err": "Error: Credentials not found for role: TECHNICIAN. Please check your .env file."
-    },
-    {
-      "name": "[Auto Promoted] - New and Dismiss from Auto Promoted Dashboard",
-      "comp": "Auto Promoted Dashboard",
-      "type": "Auto",
-      "status": "failed",
-      "dur": "—",
-      "err": "Error: Credentials not found for role: TECHNICIAN. Please check your .env file."
-    },
-    {
-      "name": "[Patients] - Patient search - verify search",
-      "comp": "Patients",
-      "type": "Auto",
-      "status": "passed",
-      "dur": "—",
-      "err": null
-    },
-    {
-      "name": "[Billing] - Verify Proper Loading of Due for Pre-Approval Page",
-      "comp": "Billing",
-      "type": "Auto",
-      "status": "failed",
-      "dur": "—",
-      "err": "Error: Credentials not found for role: nurse_clinic_admin. Please check your .env file."
-    },
-    {
-      "name": "[Billing] - Billing Search - Billing Mgmt to Completed Billing Page - Evaluation Form",
-      "comp": "Billing",
-      "type": "Auto",
-      "status": "passed",
-      "dur": "—",
-      "err": null
-    },
-    {
-      "name": "[Billing] - Billing Search - Billing Mgmt to Pending Billing",
-      "comp": "Billing",
-      "type": "Auto",
-      "status": "passed",
-      "dur": "—",
-      "err": null
-    },
-    {
-      "name": "[Billing] - Report Viewer - Verify Billing Item Page Content After Navigation",
-      "comp": "Billing",
-      "type": "Auto",
-      "status": "passed",
-      "dur": "—",
-      "err": null
-    },
-    {
-      "name": "[Patients] - Patient Details - Access Patient Details Page from Report Details (second)",
-      "comp": "Patients",
-      "type": "Auto",
-      "status": "passed",
-      "dur": "—",
-      "err": null
-    },
-    {
-      "name": "[Patients] - Patient Details - Change Date of Birth from Patient Details Page from Report Details",
-      "comp": "Patients",
-      "type": "Auto",
-      "status": "passed",
-      "dur": "—",
-      "err": null
-    },
-    {
-      "name": "[Auto Promoted] - Open Evaluation Form from Auto Promoted Board",
-      "comp": "Auto Promoted Dashboard",
-      "type": "Auto",
-      "status": "failed",
-      "dur": "—",
-      "err": "Error: Credentials not found for role: TECHNICIAN. Please check your .env file."
-    },
-    {
-      "name": "[Dashboard] - Pending Notes - Dismiss Pending Notes from Dashboard",
-      "comp": "Dashboard Sections",
-      "type": "Auto",
-      "status": "passed",
-      "dur": "—",
-      "err": null
-    },
-    {
-      "name": "[Patients] - Clinic Group Management - delete and create group",
-      "comp": "Patients",
-      "type": "Auto",
-      "status": "failed",
-      "dur": "—",
-      "err": "Error: Credentials not found for role: NURSE_CLINIC_ADMIN. Please check your .env file."
-    },
-    {
-      "name": "[Billing] - Dismiss Selected from Due for Pre-Approval Page",
-      "comp": "Billing",
-      "type": "Auto",
-      "status": "failed",
-      "dur": "—",
-      "err": "Error: Credentials not found for role: nurse_clinic_admin. Please check your .env file."
-    },
-    {
-      "name": "[Auto Promoted] - Exit Auto Promote Transmission with Esc Key",
-      "comp": "Auto Promoted Dashboard",
-      "type": "Auto",
-      "status": "failed",
-      "dur": "—",
-      "err": "Error: Credentials not found for role: TECHNICIAN. Please check your .env file."
-    },
-    {
-      "name": "[Billing] - Billing Search - Billing Mgmt to Completed Billing Page - Diagnosis Codes",
-      "comp": "Billing",
-      "type": "Auto",
-      "status": "passed",
-      "dur": "—",
-      "err": null
-    },
-    {
-      "name": "[Billing] - Billing Search - Billing Mgmt to Completed Billing Page - Filters",
-      "comp": "Billing",
-      "type": "Auto",
-      "status": "failed",
-      "dur": "—",
-      "err": "Error: Credentials not found for role: nurse_clinic_admin. Please check your .env file."
-    },
-    {
-      "name": "[Patients] - My Favorite Patients - verify page loads",
-      "comp": "Patients",
-      "type": "Auto",
-      "status": "passed",
-      "dur": "—",
-      "err": null
-    },
-    {
-      "name": "[Patients] - Recent Patients - verify page loads",
-      "comp": "Patients",
-      "type": "Auto",
-      "status": "failed",
-      "dur": "—",
-      "err": "Error: Credentials not found for role: NURSE_CLINIC_ADMIN. Please check your .env file."
-    },
-    {
-      "name": "[Auto Promoted] - Access Medications Tab from Summary Enhanced",
-      "comp": "Auto Promoted Dashboard",
-      "type": "Auto",
-      "status": "passed",
-      "dur": "—",
-      "err": null
-    },
-    {
-      "name": "[Billing] - Billing Search - Billing Mgmt to Completed Billing Page - Columns",
-      "comp": "Billing",
-      "type": "Auto",
-      "status": "failed",
-      "dur": "—",
-      "err": "Error: Credentials not found for role: nurse_clinic_admin. Please check your .env file."
-    },
-    {
-      "name": "[Auto Promoted] - See Presenting EGM by clicking Presenting EGM button",
-      "comp": "Auto Promoted Dashboard",
-      "type": "Auto",
-      "status": "passed",
-      "dur": "—",
-      "err": null
-    },
-    {
-      "name": "[AdminUI] - AdminUI verify sidebar menu Nurse + Clinic Admin",
-      "comp": "Admin and Settings",
-      "type": "Auto",
-      "status": "passed",
-      "dur": "—",
-      "err": null
-    },
-    {
-      "name": "[Auto Promoted] - Filter Auto Promoted Dashboard by Dismissed Transmissions",
-      "comp": "Auto Promoted Dashboard",
-      "type": "Auto",
-      "status": "passed",
-      "dur": "—",
-      "err": null
-    },
-    {
-      "name": "[Patients] - Unassigned to a group - search and assign to a group",
-      "comp": "Patients",
-      "type": "Auto",
-      "status": "failed",
-      "dur": "—",
-      "err": "Error: Credentials not found for role: NURSE_CLINIC_ADMIN. Please check your .env file."
-    },
-    {
-      "name": "[Billing] - Load Missed Follow Up Snoozed Page from Billing Sidebar",
-      "comp": "Billing",
-      "type": "Auto",
-      "status": "failed",
-      "dur": "—",
-      "err": "Error: Credentials not found for role: nurse_clinic_admin. Please check your .env file."
-    },
-    {
-      "name": "[Patients] - Patient Details - Add Note to Patient Profile in Patient Details",
-      "comp": "Patients",
-      "type": "Auto",
-      "status": "failed",
-      "dur": "—",
-      "err": "page.waitForLoadState: Target page, context or browser has been closed"
-    },
-    {
-      "name": "[Auto Promoted] - Review from Auto Promoted Dashboard",
-      "comp": "Auto Promoted Dashboard",
-      "type": "Auto",
-      "status": "failed",
-      "dur": "—",
-      "err": "Error: Credentials not found for role: TECHNICIAN. Please check your .env file."
-    },
-    {
-      "name": "[Auto Promoted] - Enter Note from Auto Promoted Summary Enhanced Page",
-      "comp": "Auto Promoted Dashboard",
-      "type": "Auto",
-      "status": "passed",
-      "dur": "—",
-      "err": null
-    },
-    {
-      "name": "[Billing] - Billing Search - Billing Mgmt to Pending Billing Page - Columns",
-      "comp": "Billing",
-      "type": "Auto",
-      "status": "failed",
-      "dur": "—",
-      "err": "Error: Credentials not found for role: nurse_clinic_admin. Please check your .env file."
-    },
-    {
-      "name": "[Billing] - Billing Search - Billing Mgmt to Completed Billing Page - Approved",
-      "comp": "Billing",
-      "type": "Auto",
-      "status": "failed",
-      "dur": "—",
-      "err": "Error: Credentials not found for role: nurse_clinic_admin. Please check your .env file."
-    },
-    {
-      "name": "[Billing] - Report Viewer - Verify No Next Billing Date Link When Latest Transmission",
-      "comp": "Billing",
-      "type": "Auto",
-      "status": "passed",
-      "dur": "—",
-      "err": null
-    },
-    {
-      "name": "[Billing] - Billing Search - Billing Mgmt to Completed Billing Page - Hide Filters",
-      "comp": "Billing",
-      "type": "Auto",
-      "status": "passed",
-      "dur": "—",
-      "err": null
-    },
-    {
-      "name": "[Dashboard] - Upload Remote Transmissions from Upload Remote Transmissions Page",
-      "comp": "Dashboard Sections",
-      "type": "Auto",
-      "status": "passed",
-      "dur": "—",
-      "err": null
-    },
-    {
-      "name": "[Billing] - Billing Search - Billing Mgmt to Review Billing",
-      "comp": "Billing",
-      "type": "Auto",
-      "status": "failed",
-      "dur": "—",
-      "err": "Error: Credentials not found for role: nurse_clinic_admin. Please check your .env file."
-    },
-    {
-      "name": "[Settings] - ADMIN Dashboard - Clinic Setting for e-Signing Dashboards Bulk Action Control - Verify HF Dashboard",
-      "comp": "Admin and Settings",
-      "type": "Auto",
-      "status": "passed",
-      "dur": "—",
-      "err": null
-    },
-    {
-      "name": "[AdminUI] - AdminUI verify sidebar menu - technician + technician supervisor roles",
-      "comp": "Admin and Settings",
-      "type": "Auto",
-      "status": "passed",
-      "dur": "—",
-      "err": null
-    },
-    {
-      "name": "[Auto Promoted] - Review and Dismiss Transmission from Dashboard",
-      "comp": "Auto Promoted Dashboard",
-      "type": "Auto",
-      "status": "passed",
-      "dur": "—",
-      "err": null
-    },
-    {
-      "name": "[Patients] - Patients without provider",
-      "comp": "Patients",
+      "name": "[Login] - PMA-0001 - Nurse Login - Verify Navigation After Login",
+      "comp": "Login",
       "type": "Auto",
       "status": "passed",
       "dur": "—",
