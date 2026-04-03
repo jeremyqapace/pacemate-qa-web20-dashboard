@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <link rel="icon" type="image/x-icon" href="./favicon.ico">
 <meta charset="UTF-8"/>
@@ -10,9 +10,69 @@
 @import url('https://cdn.jsdelivr.net/npm/@fontsource/inter/500.css');
 @import url('https://cdn.jsdelivr.net/npm/@fontsource/inter/600.css');
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Inter',system-ui,sans-serif;-webkit-font-smoothing:antialiased;background:#f5f5f3;min-height:100vh;padding:1.5rem}
+body{font-family:'Inter',system-ui,sans-serif;-webkit-font-smoothing:antialiased;min-height:100vh;padding:1.5rem;transition:background .2s,color .2s}
 svg text{font-family:'Inter',system-ui,sans-serif}
 .qa{max-width:1200px;margin:0 auto}
+
+/* ── Theme tokens ── */
+[data-theme="dark"]{
+  --bg:#f5f5f3;
+  --card-bg:#fff;
+  --card-bg2:#fafaf9;
+  --border:rgba(0,0,0,.1);
+  --border2:rgba(0,0,0,.08);
+  --text:#111;
+  --text2:#666;
+  --text3:#888;
+  --sc-border:rgba(200,24,74,.28);
+  --cmp-prev-bg:#fafaf9;
+  --cmp-prev-border:rgba(0,0,0,.1);
+  --tt-head-bg:#fafaf9;
+  --tt-head-color:#111;
+  --tt-border:rgba(0,0,0,.06);
+  --tt-hover:#fafaf9;
+  --sep-line:rgba(0,0,0,.1);
+  --fbtn-bg:#fafaf9;
+  --fbtn-border:rgba(0,0,0,.15);
+  --fbtn-hover:#fff;
+  --vnav-bg:#fff;
+  --theme-icon:"☀️";
+}
+[data-theme="light"]{
+  --bg:#0f172a;
+  --card-bg:#1e293b;
+  --card-bg2:#162032;
+  --border:rgba(255,255,255,.1);
+  --border2:rgba(255,255,255,.08);
+  --text:rgba(255,255,255,.92);
+  --text2:rgba(255,255,255,.55);
+  --text3:rgba(255,255,255,.35);
+  --sc-border:rgba(200,24,74,.4);
+  --cmp-prev-bg:#162032;
+  --cmp-prev-border:rgba(255,255,255,.1);
+  --tt-head-bg:#162032;
+  --tt-head-color:rgba(255,255,255,.75);
+  --tt-border:rgba(255,255,255,.07);
+  --tt-hover:#162032;
+  --sep-line:rgba(255,255,255,.1);
+  --fbtn-bg:#162032;
+  --fbtn-border:rgba(255,255,255,.15);
+  --fbtn-hover:#1e293b;
+  --vnav-bg:#1e293b;
+  --theme-icon:"🌙";
+}
+
+body{background:var(--bg);color:var(--text)}
+
+/* ── Theme toggle button ── */
+.theme-toggle{
+  position:fixed;bottom:1.5rem;right:1.5rem;
+  width:44px;height:44px;border-radius:50%;
+  background:var(--card-bg);border:1.5px solid var(--border);
+  font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 2px 12px rgba(0,0,0,.15);transition:all .2s;z-index:999
+}
+.theme-toggle:hover{transform:scale(1.1)}
 
 /* ── Hero ── */
 .hero{background:#0D1620;border-radius:18px;padding:2rem 2.5rem;margin-bottom:0;border-top:3px solid #C8184A;position:relative;overflow:hidden}
@@ -33,84 +93,84 @@ svg text{font-family:'Inter',system-ui,sans-serif}
 .hfoot b{color:rgba(255,255,255,.55);font-weight:600}
 
 /* ── View navigation ── */
-.vnav{background:#fff;border:1.5px solid rgba(0,0,0,.1);border-radius:14px;padding:1.1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;margin:1rem 0;flex-wrap:wrap;gap:12px}
-.vn-title{font-size:22px;font-weight:600;color:#111;letter-spacing:-.6px}
-.vn-sub{font-size:12px;color:#888;margin-top:3px}
+.vnav{background:var(--vnav-bg);border:1.5px solid var(--border);border-radius:14px;padding:1.1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;margin:1rem 0;flex-wrap:wrap;gap:12px}
+.vn-title{font-size:22px;font-weight:600;color:var(--text);letter-spacing:-.6px}
+.vn-sub{font-size:12px;color:var(--text3);margin-top:3px}
 .vtog{display:flex;border:1.5px solid #C8184A;border-radius:10px;overflow:hidden}
-.vbtn{padding:8px 26px;font-size:13px;font-weight:600;border:none;cursor:pointer;font-family:'Inter',system-ui,sans-serif;color:#888;background:transparent;transition:all .12s}
+.vbtn{padding:8px 26px;font-size:13px;font-weight:600;border:none;cursor:pointer;font-family:'Inter',system-ui,sans-serif;color:var(--text3);background:transparent;transition:all .12s}
 .vbtn.on{background:#C8184A;color:#fff}
 
 /* ── Section cards ── */
-.sc{background:#fff;border:1.5px solid rgba(200,24,74,.28);border-radius:16px;overflow:hidden;margin-bottom:0}
-.sch{background:#fafaf9;padding:13px 20px;border-bottom:2px solid rgba(0,0,0,.08);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
-.sct{display:flex;align-items:center;gap:9px;font-size:13px;font-weight:600;color:#111;letter-spacing:-.2px}
+.sc{background:var(--card-bg);border:1.5px solid var(--sc-border);border-radius:16px;overflow:hidden;margin-bottom:0}
+.sch{background:var(--card-bg2);padding:13px 20px;border-bottom:2px solid var(--border2);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.sct{display:flex;align-items:center;gap:9px;font-size:13px;font-weight:600;color:var(--text);letter-spacing:-.2px}
 .scd{width:7px;height:7px;border-radius:50%;background:#C8184A;flex-shrink:0}
-.scm{font-size:11px;color:#888;font-weight:400}
+.scm{font-size:11px;color:var(--text3);font-weight:400}
 .scb{padding:1.25rem 1.5rem}
 
 /* ── Separator ── */
 .sep{display:flex;align-items:center;gap:14px;margin:2rem 0}
-.sep-line{flex:1;height:1.5px;background:rgba(0,0,0,.1)}
+.sep-line{flex:1;height:1.5px;background:var(--sep-line)}
 .sep-dot{width:6px;height:6px;border-radius:50%;background:#C8184A;flex-shrink:0}
 
 /* ── Inner cards ── */
-.card{background:#fafaf9;border:1.5px solid rgba(0,0,0,.1);border-radius:12px;padding:1.25rem 1.5rem}
-.card-title{font-size:14px;font-weight:600;color:#111;padding-bottom:.8rem;margin-bottom:.9rem;border-bottom:1.5px solid rgba(0,0,0,.08);letter-spacing:-.1px}
-.card-head{display:flex;align-items:center;justify-content:space-between;padding-bottom:.8rem;margin-bottom:.9rem;border-bottom:1.5px solid rgba(0,0,0,.08);flex-wrap:wrap;gap:8px}
-.cht{font-size:14px;font-weight:600;color:#111;letter-spacing:-.1px}
+.card{background:var(--card-bg2);border:1.5px solid var(--border);border-radius:12px;padding:1.25rem 1.5rem}
+.card-title{font-size:14px;font-weight:600;color:var(--text);padding-bottom:.8rem;margin-bottom:.9rem;border-bottom:1.5px solid var(--border2);letter-spacing:-.1px}
+.card-head{display:flex;align-items:center;justify-content:space-between;padding-bottom:.8rem;margin-bottom:.9rem;border-bottom:1.5px solid var(--border2);flex-wrap:wrap;gap:8px}
+.cht{font-size:14px;font-weight:600;color:var(--text);letter-spacing:-.1px}
 .leg{display:flex;gap:12px;flex-wrap:wrap}
-.li{display:flex;align-items:center;gap:5px;font-size:12px;color:#666}
+.li{display:flex;align-items:center;gap:5px;font-size:12px;color:var(--text2)}
 .lsq{width:9px;height:9px;border-radius:2px;flex-shrink:0}
 
 /* ── Comparison ── */
 .cmp-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:1.25rem 1.5rem}
 .cmp-col{padding:1.1rem 1.25rem;border-radius:10px}
-.cmp-col:first-child{background:#fafaf9;border:1.5px solid rgba(0,0,0,.1)}
+.cmp-col:first-child{background:var(--cmp-prev-bg);border:1.5px solid var(--cmp-prev-border)}
 .cmp-col+.cmp-col{background:rgba(16,185,129,.05);border:1.5px solid rgba(16,185,129,.38)}
-.cmp-run-tag{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:#666;background:#fff;border:1.5px solid rgba(0,0,0,.1);border-radius:6px;padding:4px 10px;margin-bottom:14px}
+.cmp-run-tag{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:var(--text2);background:var(--card-bg);border:1.5px solid var(--border);border-radius:6px;padding:4px 10px;margin-bottom:14px}
 .cmp-run-tag.curr{color:#C8184A;background:rgba(200,24,74,.07);border-color:rgba(200,24,74,.25)}
-.cmp-rate{font-size:52px;font-weight:600;letter-spacing:-3px;line-height:1;margin-bottom:4px;font-variant-numeric:tabular-nums}
-.cmp-rl{font-size:11px;color:#888;text-transform:uppercase;letter-spacing:.7px;margin-bottom:18px;font-weight:600}
-.cmp-row{display:flex;align-items:center;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(0,0,0,.07)}
+.cmp-rate{font-size:52px;font-weight:600;letter-spacing:-3px;line-height:1;margin-bottom:4px;font-variant-numeric:tabular-nums;color:var(--text)}
+.cmp-rl{font-size:11px;color:var(--text3);text-transform:uppercase;letter-spacing:.7px;margin-bottom:18px;font-weight:600}
+.cmp-row{display:flex;align-items:center;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--border2)}
 .cmp-row:last-child{border-bottom:none}
-.cmp-lbl{font-size:13px;color:#666}
-.cmp-val{font-size:16px;font-weight:600;color:#111;font-variant-numeric:tabular-nums}
+.cmp-lbl{font-size:13px;color:var(--text2)}
+.cmp-val{font-size:16px;font-weight:600;color:var(--text);font-variant-numeric:tabular-nums}
 .delta{font-size:12px;font-weight:600;margin-left:7px}
 .d-good{color:#10B981}
 
 /* ── Heat map ── */
 .hmap-wrap{overflow-x:auto}
 .hmap{border-collapse:separate;border-spacing:4px;width:100%}
-.hmap th{font-size:12px;font-weight:600;color:#666;text-align:center;padding:4px 6px}
-.hmap th.hcomp{text-align:left;font-size:13px;font-weight:600;color:#111;min-width:85px;padding-right:12px}
+.hmap th{font-size:12px;font-weight:600;color:var(--text3);text-align:center;padding:4px 6px}
+.hmap th.hcomp{text-align:left;font-size:13px;font-weight:600;color:var(--text);min-width:85px;padding-right:12px}
 .hcell{border-radius:8px;padding:8px 6px;font-size:12px;font-weight:600;text-align:center;display:block}
 
 /* ── Component cards ── */
 .comp-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}
-.ccard{background:#fff;border:1.5px solid rgba(0,0,0,.1);border-left:3px solid #C8184A;border-radius:12px;padding:1.1rem 1rem;text-align:center;transition:transform .12s}
+.ccard{background:var(--card-bg);border:1.5px solid var(--border);border-left:3px solid #C8184A;border-radius:12px;padding:1.1rem 1rem;text-align:center;transition:transform .12s}
 .ccard:hover{transform:translateY(-2px)}
-.cname{font-size:13px;font-weight:600;color:#111;margin-top:8px;margin-bottom:3px;letter-spacing:-.2px}
+.cname{font-size:13px;font-weight:600;color:var(--text);margin-top:8px;margin-bottom:3px;letter-spacing:-.2px}
 .ctag{font-size:11px;font-weight:600;padding:3px 9px;border-radius:99px;display:inline-block;margin-bottom:8px}
 
 /* ── Mid grid ── */
 .mid{display:grid;grid-template-columns:3fr 2fr;gap:12px}
 
 /* ── Flaky ── */
-.fl{padding:12px 0;border-bottom:1.5px solid rgba(0,0,0,.07)}
+.fl{padding:12px 0;border-bottom:1.5px solid var(--border2)}
 .fl:last-child{border-bottom:none}
 .fl-top{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:7px}
-.fl-name{font-size:13px;font-weight:600;color:#111;line-height:1.4;letter-spacing:-.1px}
+.fl-name{font-size:13px;font-weight:600;color:var(--text);line-height:1.4;letter-spacing:-.1px}
 .fl-pct{font-size:14px;font-weight:600;flex-shrink:0;font-variant-numeric:tabular-nums}
-.fl-bg{height:5px;background:rgba(0,0,0,.08);border-radius:3px}
+.fl-bg{height:5px;background:var(--border);border-radius:3px}
 .fl-bar{height:5px;border-radius:3px}
-.fl-sub{display:flex;justify-content:space-between;font-size:11px;color:#888;margin-top:5px;letter-spacing:.3px;font-weight:500}
-.fl-empty{font-size:12px;color:#888;text-align:center;padding:1.5rem 0}
+.fl-sub{display:flex;justify-content:space-between;font-size:11px;color:var(--text3);margin-top:5px;letter-spacing:.3px;font-weight:500}
+.fl-empty{font-size:12px;color:var(--text3);text-align:center;padding:1.5rem 0}
 
 /* ── Filter buttons ── */
 .fbtns{display:flex;gap:8px;flex-wrap:wrap}
-.fbtn{display:inline-flex;align-items:center;gap:7px;padding:7px 15px;font-size:13px;font-weight:500;border-radius:8px;cursor:pointer;border:1.5px solid rgba(0,0,0,.15);background:#fafaf9;color:#666;font-family:'Inter',system-ui,sans-serif;transition:all .12s}
-.fbtn:hover{border-color:rgba(0,0,0,.25);background:#fff}
-.fcnt{font-size:12px;background:rgba(0,0,0,.07);color:#888;padding:1px 7px;border-radius:4px;font-weight:400}
+.fbtn{display:inline-flex;align-items:center;gap:7px;padding:7px 15px;font-size:13px;font-weight:500;border-radius:8px;cursor:pointer;border:1.5px solid var(--fbtn-border);background:var(--fbtn-bg);color:var(--text2);font-family:'Inter',system-ui,sans-serif;transition:all .12s}
+.fbtn:hover{border-color:var(--border);background:var(--fbtn-hover)}
+.fcnt{font-size:12px;background:var(--border);color:var(--text3);padding:1px 7px;border-radius:4px;font-weight:400}
 .fbtn.on{background:#C8184A;border-color:#C8184A;color:#fff}
 .fbtn.on .fcnt{background:rgba(255,255,255,.2);color:rgba(255,255,255,.9)}
 .fbtn.f-fail{background:rgba(239,68,68,.07);border-color:rgba(239,68,68,.45);color:#DC2626}
@@ -125,20 +185,20 @@ svg text{font-family:'Inter',system-ui,sans-serif}
 
 /* ── Table ── */
 .tt{width:100%;border-collapse:collapse;font-size:13px;table-layout:fixed}
-.tt thead tr{background:#fafaf9}
-.tt th{font-size:11px;font-weight:600;color:#111;text-align:left;padding:11px 10px;border-bottom:2px solid rgba(0,0,0,.1);border-top:1px solid rgba(0,0,0,.06);letter-spacing:.3px;text-transform:uppercase}
-.tt td{padding:11px 10px;border-bottom:1.5px solid rgba(0,0,0,.06);color:#111;vertical-align:middle;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.tt thead tr{background:var(--tt-head-bg)}
+.tt th{font-size:11px;font-weight:600;color:var(--tt-head-color);text-align:left;padding:11px 10px;border-bottom:2px solid var(--border);border-top:1px solid var(--border2);letter-spacing:.3px;text-transform:uppercase}
+.tt td{padding:11px 10px;border-bottom:1.5px solid var(--tt-border);color:var(--text);vertical-align:middle;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .tt tr:last-child td{border-bottom:none}
 .trow.can-expand{cursor:pointer}
-.trow.can-expand:hover td{background:#fafaf9}
+.trow.can-expand:hover td{background:var(--tt-hover)}
 .chev{display:inline-block;transition:transform .2s;font-size:15px;color:#aaa}
-.exp-row td{padding:0;border-bottom:1.5px solid rgba(0,0,0,.06)}
+.exp-row td{padding:0;border-bottom:1.5px solid var(--tt-border)}
 .exp-panel{padding:14px 16px;background:rgba(239,68,68,.04);border-left:3px solid #EF4444}
 .exp-panel.fp{background:rgba(245,158,11,.04);border-left-color:#F59E0B}
-.exp-lbl{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.8px;color:#888;margin-bottom:6px}
-.exp-msg{font-size:12px;color:#111;font-family:monospace;line-height:1.75;margin-bottom:12px;word-break:break-word;white-space:normal}
+.exp-lbl{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.8px;color:var(--text3);margin-bottom:6px}
+.exp-msg{font-size:12px;color:var(--text);font-family:monospace;line-height:1.75;margin-bottom:12px;word-break:break-word;white-space:normal}
 .exp-foot{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
-.exp-meta{font-size:12px;color:#888}
+.exp-meta{font-size:12px;color:var(--text3)}
 .exp-link{font-size:12px;font-weight:600;color:#C8184A;padding:5px 12px;border:1.5px solid rgba(200,24,74,.35);border-radius:7px;background:rgba(200,24,74,.06);cursor:pointer;transition:background .12s;text-decoration:none}
 .exp-link:hover{background:rgba(200,24,74,.12)}
 .sdot{width:6px;height:6px;border-radius:50%;display:inline-block;margin-right:6px}
@@ -149,7 +209,7 @@ svg text{font-family:'Inter',system-ui,sans-serif}
   .hero{padding:1.25rem}.sn{font-size:38px}
   .comp-row{grid-template-columns:repeat(2,minmax(0,1fr))}
   .mid,.cmp-grid{grid-template-columns:1fr}
-  .cmp-col+.cmp-col{border-left:none;border-top:1.5px solid rgba(0,0,0,.08)}
+  .cmp-col+.cmp-col{border-left:none;border-top:1.5px solid var(--border2)}
 }
 </style>
 </head>
@@ -237,7 +297,7 @@ svg text{font-family:'Inter',system-ui,sans-serif}
       <div class="cmp-grid">
         <div class="cmp-col">
           <div class="cmp-run-tag" id="cmpPrevId">Previous run</div>
-          <div class="cmp-rate" id="cmpPrevRate" style="color:#111">--</div>
+          <div class="cmp-rate" id="cmpPrevRate">--</div>
           <div class="cmp-rl">Pass Rate</div>
           <div class="cmp-row"><span class="cmp-lbl">Total tests</span><span class="cmp-val" id="cmpPrevTotal">--</span></div>
           <div class="cmp-row"><span class="cmp-lbl">Failed</span><span class="cmp-val" style="color:#EF4444" id="cmpPrevFailed">--</span></div>
@@ -333,8 +393,36 @@ svg text{font-family:'Inter',system-ui,sans-serif}
 
 </div>
 
+<!-- ── Theme toggle ── -->
+<button class="theme-toggle" onclick="toggleTheme()" id="themeBtn" title="Toggle light/dark mode">☀️</button>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script>
+// ── Theme ──
+function toggleTheme(){
+  const html=document.documentElement;
+  const isDark=html.getAttribute('data-theme')==='dark';
+  const next=isDark?'light':'dark';
+  html.setAttribute('data-theme',next);
+  document.getElementById('themeBtn').textContent=isDark?'🌙':'☀️';
+  localStorage.setItem('qa-theme',next);
+  if(window._trendChart){
+    const gc=next==='light'?'rgba(255,255,255,.08)':'rgba(0,0,0,.06)';
+    const tc=next==='light'?'rgba(255,255,255,.4)':'#888780';
+    window._trendChart.options.scales.x.ticks.color=tc;
+    window._trendChart.options.scales.y.ticks.color=tc;
+    window._trendChart.options.scales.y.grid.color=gc;
+    window._trendChart.update();
+  }
+}
+(function(){
+  const saved=localStorage.getItem('qa-theme')||'dark';
+  document.documentElement.setAttribute('data-theme',saved);
+  document.addEventListener('DOMContentLoaded',()=>{
+    document.getElementById('themeBtn').textContent=saved==='dark'?'☀️':'🌙';
+  });
+})();
+
 const hclr=p=>p>=95?'#10B981':p>=85?'#F59E0B':'#EF4444';
 const fcl=p=>p>=30?'#EF4444':'#F59E0B';
 const SC={passed:'#10B981',failed:'#EF4444',flaky:'#D97706'};
@@ -372,15 +460,11 @@ function sparkSVG(data,co){
 
 function renderAll(D){
   const rate=D.summary.rate;
-
-  // ── Hero SVG text ──
   document.getElementById('heroRate').textContent=rate+'%';
   document.getElementById('heroMeta').textContent=
     `${D.runId} · completed ${relativeTime(D.generatedAt)} · ${D.branch||'main'} · GitHub Actions`;
   document.getElementById('heroFoot').innerHTML=
     `Avg duration: <b>${D.summary.duration}</b> &nbsp;&middot;&nbsp; Suite: <b>${D.suite||'Full Regression'}</b> &nbsp;&middot;&nbsp; Env: <b>${D.env||'Dev'}</b>`;
-
-  // ── Trend indicator ──
   const delta=(rate-(D.summary.prevRate||rate)).toFixed(1);
   const isFirst=D.summary.prevRunId==='—';
   const arrow=delta>=0?'↑':'↓';
@@ -393,17 +477,11 @@ function renderAll(D){
     D.summary.consecutivePassing>0
       ?`${D.summary.consecutivePassing} consecutive passing run${D.summary.consecutivePassing===1?'':'s'}`
       :'No previous run to compare';
-
-  // ── Ring animation ──
   playRing(rate, D.summary.failed, D.summary.flaky, D.summary.total);
-
-  // ── Count-up ──
   countUp(document.getElementById('cn-total'),D.summary.total);
   countUp(document.getElementById('cn-pass'),D.summary.passed);
   countUp(document.getElementById('cn-fail'),D.summary.failed);
   countUp(document.getElementById('cn-flaky'),D.summary.flaky);
-
-  // ── Run comparison ──
   document.getElementById('cmpMeta').textContent=isFirst?'First run — no previous data yet':`${D.summary.prevRunId} vs ${D.runId}`;
   document.getElementById('cmpPrevId').textContent=isFirst?'No previous run':'Run #'+D.summary.prevRunId+' — Previous';
   document.getElementById('cmpPrevRate').textContent=isFirst?'N/A':(D.summary.prevRate||'—')+'%';
@@ -421,8 +499,6 @@ function renderAll(D){
   document.getElementById('cmpCurrFlaky').innerHTML=
     `<span style="color:#F59E0B">${D.summary.flaky}</span>${flDelta>0?` <span class="delta d-good">▼ ${flDelta}</span>`:''}`;
   document.getElementById('cmpCurrDur').textContent=D.summary.duration||'—';
-
-  // ── Heat map ──
   if(D.hRuns&&D.hRuns.length&&D.comp&&D.comp.length){
     let hmHtml=`<tr><th class="hcomp">Component</th>${D.hRuns.map(r=>`<th>${r}</th>`).join('')}</tr>`;
     D.hData.forEach((row,i)=>{
@@ -439,8 +515,6 @@ function renderAll(D){
   } else {
     document.getElementById('hmapTable').innerHTML=`<tr><td style="color:#888;font-size:12px;padding:1rem 0">Run more test suites to build up history</td></tr>`;
   }
-
-  // ── Component cards ──
   if(D.comp&&D.comp.length){
     document.getElementById('compRow').innerHTML=D.comp.map(c=>{
       const co=hclr(c.pct);const issues=c.failed+c.flaky;
@@ -459,8 +533,6 @@ function renderAll(D){
       </div>`;
     }).join('');
   }
-
-  // ── Flaky tracker ──
   if(D.flaky&&D.flaky.length){
     document.getElementById('flakyList').innerHTML=D.flaky.map(f=>`
       <div class="fl">
@@ -469,23 +541,15 @@ function renderAll(D){
         <div class="fl-sub"><span>${f.comp}</span><span>Flaky out of last 10 runs</span></div>
       </div>`).join('');
   }
-
-  // ── Filter counts ──
   ['all','failed','flaky','passed'].forEach(s=>{
     const n=s==='all'?D.tests.length:D.tests.filter(t=>t.status===s).length;
     document.getElementById('fc-'+s).textContent=n;
   });
-
-  // ── Trend sub label ──
   document.getElementById('analysisMeta').textContent=`Last ${D.trend.labels.length} Run${D.trend.labels.length===1?'':'s'}`;
-
   window._D=D;
   renderTable(D.tests);
   buildTrend(D.trend);
-
   document.getElementById('vn-sub').textContent=`High-level health summary · ${D.runId}`;
-
-  // ── Timestamp refresh ──
   setInterval(()=>{
     document.getElementById('heroMeta').textContent=
       `${D.runId} · completed ${relativeTime(D.generatedAt)} · ${D.branch||'main'} · GitHub Actions`;
@@ -507,8 +571,8 @@ function renderTable(rows){
     const msgs={all:{h:'No tests found',s:'No test data available for this run'},failed:{h:'No failed tests',s:'Every test passed — no hard failures in this run'},flaky:{h:'No flaky tests',s:'All tests ran deterministically in this run'},passed:{h:'No passed tests',s:'No tests recorded a clean pass in this run'}};
     const m=msgs[currentFilter]||msgs.all;
     document.getElementById('tbody').innerHTML=`<tr><td colspan="7"><div style="text-align:center;padding:2.5rem 1rem">
-      <div style="font-size:14px;font-weight:600;color:#111;margin-bottom:5px">${m.h}</div>
-      <div style="font-size:12px;color:#888;max-width:300px;margin:0 auto;line-height:1.5">${m.s}</div>
+      <div style="font-size:14px;font-weight:600;color:var(--text);margin-bottom:5px">${m.h}</div>
+      <div style="font-size:12px;color:var(--text3);max-width:300px;margin:0 auto;line-height:1.5">${m.s}</div>
     </div></td></tr>`;
     return;
   }
@@ -518,11 +582,11 @@ function renderTable(rows){
     const ts=`font-size:11px;padding:2px 8px;border-radius:4px;border:1px solid rgba(55,138,221,.35);background:rgba(55,138,221,.07);color:#185FA5`;
     html+=`<tr class="trow${can?' can-expand':''}" onclick="expandRow(this)">
       <td title="${t.name}" style="padding-left:20px">${t.name}</td>
-      <td style="color:#666">${t.comp}</td>
+      <td style="color:var(--text2)">${t.comp}</td>
       <td><span style="${ts}">${t.type}</span></td>
       <td><span class="spill" style="background:${SB[t.status].bg};color:${SB[t.status].cl};border-color:${SB[t.status].bd}"><span class="sdot" style="background:${SC[t.status]}"></span>${SL[t.status]}</span></td>
-      <td style="color:#666">${t.dur}</td>
-      <td style="color:#aaa">${(D&&D.runId)||'—'}</td>
+      <td style="color:var(--text2)">${t.dur}</td>
+      <td style="color:var(--text3)">${(D&&D.runId)||'—'}</td>
       <td style="text-align:right;padding-right:14px">${can?'<span class="chev">&#x203A;</span>':''}</td>
     </tr>`;
     if(can){
@@ -566,7 +630,10 @@ function expandRow(tr){
 let trendBuilt=false;
 function buildTrend(trend){
   if(trendBuilt)return;trendBuilt=true;
-  new Chart(document.getElementById('trendChart'),{
+  const isDark=document.documentElement.getAttribute('data-theme')==='dark';
+  const gc=isDark?'rgba(0,0,0,.06)':'rgba(255,255,255,.08)';
+  const tc=isDark?'#888780':'rgba(255,255,255,.4)';
+  window._trendChart=new Chart(document.getElementById('trendChart'),{
     type:'line',
     data:{labels:trend.labels,datasets:[
       {label:'Passed',data:trend.passed,borderColor:'#10B981',backgroundColor:'rgba(16,185,129,.07)',fill:true,tension:0.4,pointRadius:0,pointHoverRadius:5,pointHoverBackgroundColor:'#10B981',borderWidth:2.5},
@@ -575,7 +642,7 @@ function buildTrend(trend){
     ]},
     options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},
       plugins:{legend:{display:false},tooltip:{backgroundColor:'rgba(13,22,32,.95)',padding:12,cornerRadius:10,titleColor:'rgba(255,255,255,.65)',titleFont:{size:11},bodyColor:'rgba(255,255,255,.88)',bodyFont:{size:12},borderColor:'rgba(200,24,74,.3)',borderWidth:1,callbacks:{label:ctx=>` ${ctx.dataset.label}: ${ctx.raw}`}}},
-      scales:{x:{grid:{display:false},ticks:{font:{size:11},color:'#888780'},border:{display:false}},y:{beginAtZero:true,grid:{color:'rgba(0,0,0,.06)'},ticks:{font:{size:11},color:'#888780'},border:{display:false}}}
+      scales:{x:{grid:{display:false},ticks:{font:{size:11},color:tc},border:{display:false}},y:{beginAtZero:true,grid:{color:gc},ticks:{font:{size:11},color:tc},border:{display:false}}}
     }
   });
 }
@@ -589,11 +656,9 @@ function countUp(el,to,dur=950){
 
 function playRing(rate,failed,flaky,total){
   const C=502.7;
-  const passLen  = C*(rate/100);
-  const failLen  = total>0?C*(failed/total):0;
-  const flakyLen = total>0?C*(flaky/total):0;
-
-  // Animate pass arc
+  const passLen=C*(rate/100);
+  const failLen=total>0?C*(failed/total):0;
+  const flakyLen=total>0?C*(flaky/total):0;
   const el=document.getElementById('rPass');
   let t0=null;
   function ease(t){return 1-Math.pow(1-t,3)}
@@ -606,13 +671,9 @@ function playRing(rate,failed,flaky,total){
   }
   el.style.strokeDasharray='0 502.7';
   requestAnimationFrame(step);
-
-  // Position fail arc right after pass arc
   const failEl=document.getElementById('rFail');
   failEl.style.strokeDasharray=`${failLen.toFixed(2)} ${(C-failLen).toFixed(2)}`;
   failEl.style.strokeDashoffset=(-passLen).toFixed(2);
-
-  // Position flaky arc right after fail arc
   const flakyEl=document.getElementById('rFlaky');
   flakyEl.style.strokeDasharray=`${flakyLen.toFixed(2)} ${(C-flakyLen).toFixed(2)}`;
   flakyEl.style.strokeDashoffset=(-(passLen+failLen)).toFixed(2);
@@ -637,8 +698,7 @@ function setView(v){
   }
 }
 
-// ── Fetch data ──
-fetch('./data/results.json?t=' + Date.now())
+fetch('./data/results.json?t='+Date.now())
   .then(r=>{if(!r.ok)throw new Error(r.status);return r.json();})
   .then(D=>{
     if(!D||!D.runId)throw new Error('Empty data');
