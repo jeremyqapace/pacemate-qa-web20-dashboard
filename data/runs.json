@@ -100,5 +100,19 @@
     "compRates": {
       "Sidebar": 0
     }
+  },
+  {
+    "runNum": 8,
+    "runId": "R-8",
+    "rate": 66.7,
+    "total": 3,
+    "passed": 2,
+    "failed": 1,
+    "flaky": 0,
+    "duration": "—",
+    "generatedAt": "2026-04-03T18:05:46.061Z",
+    "compRates": {
+      "Login": 67
+    }
   }
 ]
