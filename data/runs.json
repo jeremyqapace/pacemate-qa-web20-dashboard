@@ -1,19 +1,5 @@
 [
   {
-    "runNum": 7,
-    "runId": "R-7",
-    "rate": 0,
-    "total": 8,
-    "passed": 0,
-    "failed": 8,
-    "flaky": 0,
-    "duration": "—",
-    "generatedAt": "2026-04-03T17:45:42.645Z",
-    "compRates": {
-      "Sidebar": 0
-    }
-  },
-  {
     "runNum": 8,
     "runId": "R-8",
     "rate": 66.7,
@@ -148,6 +134,23 @@
       "Filter Bar": 100,
       "Patients": 73,
       "Sidebar": 100,
+      "Login": 100
+    }
+  },
+  {
+    "runNum": 17,
+    "runId": "R-17",
+    "rate": 100,
+    "total": 3,
+    "passed": 3,
+    "failed": 0,
+    "flaky": 0,
+    "duration": "14s",
+    "generatedAt": "2026-04-04T15:54:10.552Z",
+    "suite": "Login Tests",
+    "env": "DEV2",
+    "branch": "main",
+    "compRates": {
       "Login": 100
     }
   }
