@@ -1,19 +1,5 @@
 [
   {
-    "runNum": 9,
-    "runId": "R-9",
-    "rate": 33.3,
-    "total": 3,
-    "passed": 1,
-    "failed": 2,
-    "flaky": 0,
-    "duration": "—",
-    "generatedAt": "2026-04-03T18:24:00.307Z",
-    "compRates": {
-      "Login": 33
-    }
-  },
-  {
     "runNum": 10,
     "runId": "R-10",
     "rate": 66.7,
@@ -150,6 +136,23 @@
     "flaky": 0,
     "duration": "18s",
     "generatedAt": "2026-04-04T16:05:11.551Z",
+    "suite": "Login Tests",
+    "env": "DEV2",
+    "branch": "main",
+    "compRates": {
+      "Login": 100
+    }
+  },
+  {
+    "runNum": 19,
+    "runId": "R-19",
+    "rate": 100,
+    "total": 3,
+    "passed": 3,
+    "failed": 0,
+    "flaky": 0,
+    "duration": "16s",
+    "generatedAt": "2026-04-06T20:55:24.633Z",
     "suite": "Login Tests",
     "env": "DEV2",
     "branch": "main",
