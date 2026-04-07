@@ -607,6 +607,7 @@ function positionTip(e){
   _tip.style.left = x + 'px';
   _tip.style.top  = y + 'px';
 }
+document.addEventListener('visibilitychange', () => { if(document.hidden) hideTip(); });
 const RELEASE_THRESHOLD = 80;
 const VIEW_ORDER = ['ov','rr','hi'];
 const isMobile = () => window.innerWidth < 640;
@@ -1183,6 +1184,7 @@ function toggleCard(el, i){
 }
 
 function expandRowDesktop(tr){
+  hideTip();
   if(!tr.classList.contains('can-expand')) return;
   const er = tr.nextElementSibling;
   if(!er || !er.classList.contains('exp-row')) return;
