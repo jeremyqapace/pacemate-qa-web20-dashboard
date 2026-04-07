@@ -1,19 +1,5 @@
 [
   {
-    "runNum": 12,
-    "runId": "R-12",
-    "rate": 100,
-    "total": 3,
-    "passed": 3,
-    "failed": 0,
-    "flaky": 0,
-    "duration": "19s",
-    "generatedAt": "2026-04-03T19:46:50.288Z",
-    "compRates": {
-      "Login": 100
-    }
-  },
-  {
     "runNum": 13,
     "runId": "R-13",
     "rate": 100,
@@ -170,6 +156,29 @@
     "branch": "main",
     "compRates": {
       "Login": 100
+    }
+  },
+  {
+    "runNum": 22,
+    "runId": "R-22",
+    "rate": 97.1,
+    "total": 137,
+    "passed": 133,
+    "failed": 4,
+    "flaky": 0,
+    "duration": "47m 14s",
+    "generatedAt": "2026-04-07T14:14:31.337Z",
+    "suite": "Complete Tests",
+    "env": "DEV2",
+    "branch": "main",
+    "compRates": {
+      "Remotes": 100,
+      "Sidebar": 100,
+      "Billing": 100,
+      "Filter Bar": 100,
+      "Patients": 73,
+      "Login": 100,
+      "Auto Promoted": 100
     }
   }
 ]
