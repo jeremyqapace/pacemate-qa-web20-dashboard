@@ -198,7 +198,7 @@ body{background:var(--bg);color:var(--text)}
 /* ── COMPONENT DRILL-DOWN PANEL ── */
 .cdrill{overflow:hidden;max-height:0;transition:max-height .4s cubic-bezier(.22,.68,0,1),opacity .3s ease;
   opacity:0;margin-top:0}
-.cdrill.open{max-height:2000px;opacity:1;margin-top:10px}
+.cdrill.open{opacity:1;margin-top:10px}
 @media(prefers-reduced-motion:reduce){.cdrill{transition:none}}
 .cdrill-inner{background:var(--card-bg);border:1.5px solid var(--sc-border);border-radius:14px;overflow:hidden}
 .cdrill-head{background:var(--card-bg2);padding:12px 14px;border-bottom:2px solid var(--border2);
@@ -1104,13 +1104,25 @@ function openDrill(compName){
     </table>`;
   }
 
-  /* open panel and scroll it into view */
+  /* set exact height from content so no cut-off regardless of test count */
+  drill.style.maxHeight = '0';
   drill.classList.add('open');
+  requestAnimationFrame(() => {
+    const h = drill.scrollHeight;
+    drill.style.maxHeight = h + 'px';
+    /* after transition ends, release to auto so re-renders (expand rows etc) grow freely */
+    setTimeout(() => { drill.style.maxHeight = 'none'; }, 420);
+  });
   setTimeout(() => drill.scrollIntoView({ behavior:'smooth', block:'nearest' }), 420);
 }
 
 function closeDrill(){
-  document.getElementById('compDrill').classList.remove('open');
+  const drill = document.getElementById('compDrill');
+  /* snapshot current height then animate to 0 */
+  drill.style.maxHeight = drill.scrollHeight + 'px';
+  void drill.offsetWidth;
+  drill.style.maxHeight = '0';
+  drill.classList.remove('open');
   document.querySelectorAll('.ccard').forEach(el => el.classList.remove('active'));
   _activeDrillComp = null;
 }
