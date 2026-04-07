@@ -1,19 +1,5 @@
 [
   {
-    "runNum": 11,
-    "runId": "R-11",
-    "rate": 33.3,
-    "total": 3,
-    "passed": 1,
-    "failed": 2,
-    "flaky": 0,
-    "duration": "3m 3s",
-    "generatedAt": "2026-04-03T18:32:02.014Z",
-    "compRates": {
-      "Login": 33
-    }
-  },
-  {
     "runNum": 12,
     "runId": "R-12",
     "rate": 100,
@@ -166,6 +152,23 @@
       "Auto Promoted": 100,
       "Sidebar": 100,
       "Filter Bar": 100,
+      "Login": 100
+    }
+  },
+  {
+    "runNum": 21,
+    "runId": "R-21",
+    "rate": 100,
+    "total": 3,
+    "passed": 3,
+    "failed": 0,
+    "flaky": 0,
+    "duration": "22s",
+    "generatedAt": "2026-04-07T09:36:10.715Z",
+    "suite": "Login Tests",
+    "env": "DEV2",
+    "branch": "main",
+    "compRates": {
       "Login": 100
     }
   }
