@@ -18,7 +18,6 @@ body{font-family:'Inter',system-ui,sans-serif;-webkit-font-smoothing:antialiased
 svg text{font-family:'Inter',system-ui,sans-serif}
 .qa{max-width:1200px;margin:0 auto;padding:12px 12px 80px}
 
-/* ── THEMES ── */
 [data-theme="light"]{
   --bg:#f5f5f3;--card-bg:#fff;--card-bg2:#fafaf9;
   --border:rgba(0,0,0,.1);--border2:rgba(0,0,0,.08);
@@ -81,8 +80,7 @@ body{background:var(--bg);color:var(--text)}
 .hbrand{font-size:15px;font-weight:600;color:rgba(255,255,255,.95);letter-spacing:-.3px;line-height:1.3}
 .htagline{font-size:10px;color:#C8184A;margin-top:2px}
 .hmeta{display:flex;align-items:center;gap:6px;margin-top:8px}
-.hpulse{width:6px;height:6px;border-radius:50%;background:#10B981;flex-shrink:0;
-  animation:pulse 2s ease-in-out infinite}
+.hpulse{width:6px;height:6px;border-radius:50%;background:#10B981;flex-shrink:0;animation:pulse 2s ease-in-out infinite}
 @media(prefers-reduced-motion:reduce){.hpulse{animation:none}}
 .hmt{font-size:11px;color:rgba(255,255,255,.3);line-height:1.4}
 .hero-top-right{display:flex;flex-direction:column;align-items:flex-end;gap:8px}
@@ -96,15 +94,12 @@ body{background:var(--bg);color:var(--text)}
   padding:5px 11px;border-radius:99px;border:1px solid rgba(255,255,255,.1)}
 .hero-stats{width:100%}
 .srow{display:grid;grid-template-columns:1fr 1fr;gap:1rem 1.5rem}
-
-/* ── STAT FADE-UP (staggered) ── */
 .srow>div{opacity:0;animation:fadeUp .5s ease forwards}
 .srow>div:nth-child(1){animation-delay:.05s}
 .srow>div:nth-child(2){animation-delay:.15s}
 .srow>div:nth-child(3){animation-delay:.25s}
 .srow>div:nth-child(4){animation-delay:.35s}
 @media(prefers-reduced-motion:reduce){.srow>div{opacity:1;animation:none}}
-
 .sn{font-size:44px;font-weight:600;line-height:1;letter-spacing:-2.5px;font-variant-numeric:tabular-nums}
 .sl{font-size:10px;color:rgba(255,255,255,.42);margin-top:5px;text-transform:uppercase;letter-spacing:.9px;font-weight:600}
 .hdiv{height:1px;background:rgba(255,255,255,.09);margin:14px 0}
@@ -115,7 +110,7 @@ body{background:var(--bg);color:var(--text)}
 .vnav{background:var(--vnav-bg);border:1.5px solid var(--border);border-radius:14px;
   padding:.9rem 1rem;display:flex;align-items:center;justify-content:space-between;
   margin:10px 0;gap:10px;
-  position:sticky;top:calc(env(safe-area-inset-top) + 8px);z-index:100}
+  position:sticky;top:calc(env(safe-area-inset-top,0px) + 8px);z-index:100}
 .vn-info{min-width:0;flex:1}
 .vn-title{font-size:18px;font-weight:600;color:var(--text);letter-spacing:-.5px;
   white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -129,17 +124,13 @@ body{background:var(--bg);color:var(--text)}
 .vbtn.on{background:#C8184A;color:#fff}
 .vbtn:active{opacity:.8}
 
-/* ── VIEW ANIMATION ── */
-.view-panel{animation:slideInRight .28s cubic-bezier(.22,.68,0,1.1) forwards}
-.view-panel.slide-left{animation-name:slideInLeft}
-@media(prefers-reduced-motion:reduce){.view-panel{animation:fadeIn .2s ease forwards}}
-
-/* ── SCROLL-REVEAL for .sc cards ── */
+/* ── SECTION CARDS — always visible; will-reveal opt-in for scroll anim ── */
 .sc{background:var(--card-bg);border:1.5px solid var(--sc-border);border-radius:14px;
   overflow:hidden;margin-bottom:0;
-  opacity:0;transform:translateY(12px);transition:opacity .45s ease,transform .45s ease}
+  opacity:1;transform:none;transition:opacity .45s ease,transform .45s ease}
+.sc.will-reveal{opacity:0;transform:translateY(12px)}
 .sc.visible{opacity:1;transform:translateY(0)}
-@media(prefers-reduced-motion:reduce){.sc{opacity:1;transform:none;transition:none}}
+@media(prefers-reduced-motion:reduce){.sc.will-reveal{opacity:1;transform:none;transition:none}}
 
 .sch{background:var(--card-bg2);padding:12px 14px;border-bottom:2px solid var(--border2);
   display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
@@ -152,7 +143,7 @@ body{background:var(--bg);color:var(--text)}
 .sep-line{flex:1;height:1.5px;background:var(--sep-line)}
 .sep-dot{width:6px;height:6px;border-radius:50%;background:#C8184A;flex-shrink:0}
 
-/* ── CARDS ── */
+/* ── INNER CARDS ── */
 .card{background:var(--card-bg2);border:1.5px solid var(--border);border-radius:12px;padding:1rem}
 .card-title{font-size:13px;font-weight:600;color:var(--text);padding-bottom:.7rem;
   margin-bottom:.8rem;border-bottom:1.5px solid var(--border2);letter-spacing:-.1px}
@@ -174,10 +165,8 @@ body{background:var(--bg);color:var(--text)}
 .cmp-run-tag.curr{color:#C8184A;background:rgba(200,24,74,.07);border-color:rgba(200,24,74,.25)}
 .cmp-rate{font-size:40px;font-weight:600;letter-spacing:-2.5px;line-height:1;
   margin-bottom:3px;font-variant-numeric:tabular-nums;color:var(--text)}
-.cmp-rl{font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:.6px;
-  margin-bottom:14px;font-weight:600}
-.cmp-row{display:flex;align-items:center;justify-content:space-between;
-  padding:8px 0;border-bottom:1px solid var(--border2)}
+.cmp-rl{font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:.6px;margin-bottom:14px;font-weight:600}
+.cmp-row{display:flex;align-items:center;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border2)}
 .cmp-row:last-child{border-bottom:none}
 .cmp-lbl{font-size:12px;color:var(--text2)}
 .cmp-val{font-size:14px;font-weight:600;color:var(--text);font-variant-numeric:tabular-nums}
@@ -196,14 +185,31 @@ body{background:var(--bg);color:var(--text)}
 /* ── COMPONENT CARDS ── */
 .comp-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:8px}
 .ccard{background:var(--card-bg);border:1.5px solid var(--border);border-left:3px solid #C8184A;
-  border-radius:12px;padding:.9rem .8rem;text-align:center;
-  transition:transform .18s cubic-bezier(.22,.68,0,1.2),box-shadow .18s;
-  opacity:0;animation:fadeUp .4s ease forwards}
+  border-radius:4px 12px 12px 4px;padding:.9rem .8rem;text-align:center;
+  transition:transform .18s cubic-bezier(.22,.68,0,1.2),border-color .15s;
+  opacity:0;animation:fadeUp .4s ease forwards;cursor:pointer}
 .ccard:hover{transform:translateY(-3px)}
 .ccard:active{transform:scale(.96)}
+.ccard.active{border-color:#C8184A;border-width:2px;background:rgba(200,24,74,.04)}
 @media(prefers-reduced-motion:reduce){.ccard{opacity:1;animation:none}}
 .cname{font-size:12px;font-weight:600;color:var(--text);margin-top:7px;margin-bottom:2px;letter-spacing:-.2px}
 .ctag{font-size:10px;font-weight:600;padding:2px 8px;border-radius:99px;display:inline-block;margin-bottom:7px}
+
+/* ── COMPONENT DRILL-DOWN PANEL ── */
+.cdrill{overflow:hidden;max-height:0;transition:max-height .4s cubic-bezier(.22,.68,0,1),opacity .3s ease;
+  opacity:0;margin-top:0}
+.cdrill.open{max-height:2000px;opacity:1;margin-top:10px}
+@media(prefers-reduced-motion:reduce){.cdrill{transition:none}}
+.cdrill-inner{background:var(--card-bg);border:1.5px solid var(--sc-border);border-radius:14px;overflow:hidden}
+.cdrill-head{background:var(--card-bg2);padding:12px 14px;border-bottom:2px solid var(--border2);
+  display:flex;align-items:center;justify-content:space-between;gap:10px}
+.cdrill-title{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--text)}
+.cdrill-close{width:28px;height:28px;border-radius:50%;background:var(--border);border:none;
+  cursor:pointer;font-size:14px;color:var(--text2);display:flex;align-items:center;
+  justify-content:center;transition:background .15s;flex-shrink:0;font-family:system-ui}
+.cdrill-close:hover{background:var(--border2)}
+.cdrill-close:active{transform:scale(.9)}
+.cdrill-body{padding:0}
 
 /* ── MID GRID ── */
 .mid{display:flex;flex-direction:column;gap:10px}
@@ -217,8 +223,7 @@ body{background:var(--bg);color:var(--text)}
 .fl-bg{height:5px;background:var(--border);border-radius:3px;overflow:hidden}
 .fl-bar{height:5px;border-radius:3px;width:0;animation:barGrow .65s cubic-bezier(.22,.68,0,1) forwards}
 @media(prefers-reduced-motion:reduce){.fl-bar{animation:none;width:var(--bar-w)!important}}
-.fl-sub{display:flex;justify-content:space-between;font-size:10px;color:var(--text3);
-  margin-top:4px;letter-spacing:.2px;font-weight:500}
+.fl-sub{display:flex;justify-content:space-between;font-size:10px;color:var(--text3);margin-top:4px;letter-spacing:.2px;font-weight:500}
 .fl-empty{font-size:12px;color:var(--text3);text-align:center;padding:1.5rem 0}
 
 /* ── FILTER BUTTONS ── */
@@ -237,7 +242,7 @@ body{background:var(--bg);color:var(--text)}
 .fbtn.f-pass{background:rgba(16,185,129,.07);border-color:rgba(16,185,129,.45);color:#059669}
 .fbtn.f-pass.on{background:#10B981;border-color:#10B981;color:#fff}
 
-/* ── STATUS PILLS with shimmer ── */
+/* ── STATUS PILLS ── */
 .spill{font-size:11px;font-weight:600;padding:3px 8px;border-radius:99px;
   display:inline-flex;align-items:center;gap:3px;white-space:nowrap;border:1.5px solid transparent;
   position:relative;overflow:hidden}
@@ -256,22 +261,19 @@ body{background:var(--bg);color:var(--text)}
 /* ── MOBILE TEST CARDS ── */
 .tt-mobile{display:flex;flex-direction:column}
 .tt-card{padding:12px 14px;border-bottom:1.5px solid var(--tt-border);cursor:pointer;
-  transition:background .1s;
-  opacity:0;animation:fadeUp .3s ease forwards}
-@media(prefers-reduced-motion:reduce){.tt-card{opacity:1;animation:none}}
+  transition:background .1s;opacity:0;animation:fadeUp .3s ease forwards}
 .tt-card:last-child{border-bottom:none}
 .tt-card:active{background:var(--tt-hover)}
+@media(prefers-reduced-motion:reduce){.tt-card{opacity:1;animation:none}}
 .tt-card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:6px}
 .tt-card-name{font-size:13px;font-weight:600;color:var(--text);line-height:1.4;flex:1;min-width:0;
   overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
 .tt-card-meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .tt-card-comp{font-size:11px;color:var(--text3)}
 .tt-card-dur{font-size:11px;color:var(--text3)}
-.tt-exp{padding:10px 0 6px;border-top:1px solid var(--border2);margin-top:8px;
-  display:none;animation:fadeIn .2s ease}
-.tt-exp.open{display:block}
-.tt-exp-lbl{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.8px;
-  color:var(--text3);margin-bottom:5px}
+.tt-exp{padding:10px 0 6px;border-top:1px solid var(--border2);margin-top:8px;display:none}
+.tt-exp.open{display:block;animation:fadeIn .2s ease}
+.tt-exp-lbl{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.8px;color:var(--text3);margin-bottom:5px}
 .tt-exp-msg{font-size:12px;color:var(--text);font-family:monospace;line-height:1.7;
   word-break:break-word;white-space:pre-wrap;margin-bottom:10px}
 .tt-exp-link{font-size:12px;font-weight:600;color:#C8184A;padding:6px 12px;
@@ -282,8 +284,7 @@ body{background:var(--bg);color:var(--text)}
 .tt{width:100%;border-collapse:collapse;font-size:13px;table-layout:fixed}
 .tt thead tr{background:var(--tt-head-bg)}
 .tt th{font-size:11px;font-weight:600;color:var(--tt-head-color);text-align:left;
-  padding:11px 10px;border-bottom:2px solid var(--border);border-top:1px solid var(--border2);
-  letter-spacing:.3px;text-transform:uppercase}
+  padding:11px 10px;border-bottom:2px solid var(--border);letter-spacing:.3px;text-transform:uppercase}
 .tt td{padding:11px 10px;border-bottom:1.5px solid var(--tt-border);color:var(--text);
   vertical-align:middle;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .tt tr:last-child td{border-bottom:none}
@@ -294,10 +295,9 @@ body{background:var(--bg);color:var(--text)}
 
 /* ── RUN HISTORY ── */
 .rh-row{display:flex;align-items:flex-start;gap:12px;padding:12px 0;
-  border-bottom:1.5px solid var(--border2);
-  opacity:0;animation:fadeUp .35s ease forwards}
-@media(prefers-reduced-motion:reduce){.rh-row{opacity:1;animation:none}}
+  border-bottom:1.5px solid var(--border2);opacity:0;animation:fadeUp .35s ease forwards}
 .rh-row:last-child{border-bottom:none}
+@media(prefers-reduced-motion:reduce){.rh-row{opacity:1;animation:none}}
 .rh-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;margin-top:4px}
 .rh-body{flex:1;min-width:0}
 .rh-top{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:6px;margin-bottom:4px}
@@ -313,12 +313,11 @@ body{background:var(--bg);color:var(--text)}
 .run-id-badge{font-size:11px;font-weight:600;color:var(--text3);background:var(--card-bg2);
   border:1.5px solid var(--border);border-radius:6px;padding:3px 8px;letter-spacing:.3px}
 
-/* ── DESKTOP OVERRIDES ── */
+/* ── DESKTOP BREAKPOINTS ── */
 @media(min-width:640px){
   .qa{padding:16px 20px 80px}
   .hero{padding:1.5rem 2rem}
   .hero-body{flex-direction:row;align-items:center;gap:2rem}
-  .hero-ring-wrap{align-items:center}
   .sn{font-size:52px}
   .cmp-rate{font-size:48px}
   .mid{flex-direction:row}
@@ -345,7 +344,6 @@ body{background:var(--bg);color:var(--text)}
 
 <div class="qa">
 
-  <!-- HERO -->
   <div class="hero">
     <svg class="ecg" viewBox="0 0 1200 90" preserveAspectRatio="none">
       <polyline fill="none" stroke="#C8184A" stroke-width="2.5"
@@ -380,7 +378,6 @@ body{background:var(--bg);color:var(--text)}
         </div>
       </div>
     </div>
-
     <div class="hero-body">
       <div class="hero-ring-wrap">
         <svg width="180" height="180" viewBox="0 0 220 220">
@@ -399,7 +396,6 @@ body{background:var(--bg);color:var(--text)}
           <span class="hero-pill"><span style="width:7px;height:7px;border-radius:50%;background:#F59E0B;flex-shrink:0"></span>Flaky</span>
         </div>
       </div>
-
       <div class="hero-stats">
         <div class="srow">
           <div><div class="sn" id="cn-total" style="color:rgba(255,255,255,.92)">--</div><div class="sl">Total Tests</div></div>
@@ -413,16 +409,15 @@ body{background:var(--bg);color:var(--text)}
     </div>
   </div>
 
-  <!-- STICKY NAV -->
   <div class="vnav">
     <div class="vn-info">
       <div class="vn-title" id="vn-title">Overview</div>
       <div class="vn-sub"   id="vn-sub">Health summary</div>
     </div>
     <div class="vtog">
-      <button class="vbtn on" id="vb-ov" onclick="setView('ov',this)">Overview</button>
-      <button class="vbtn"    id="vb-rr" onclick="setView('rr',this)">Report</button>
-      <button class="vbtn"    id="vb-hi" onclick="setView('hi',this)">History</button>
+      <button class="vbtn on" id="vb-ov" onclick="setView('ov')">Overview</button>
+      <button class="vbtn"    id="vb-rr" onclick="setView('rr')">Report</button>
+      <button class="vbtn"    id="vb-hi" onclick="setView('hi')">History</button>
     </div>
   </div>
 
@@ -454,9 +449,7 @@ body{background:var(--bg);color:var(--text)}
         </div>
       </div>
     </div>
-
     <div class="sep"><div class="sep-line"></div><div class="sep-dot"></div><div class="sep-line"></div></div>
-
     <div class="sc">
       <div class="sch">
         <div class="sct"><span class="scd"></span>Component Health Map</div>
@@ -479,11 +472,22 @@ body{background:var(--bg);color:var(--text)}
       </div>
       <div class="scb">
         <div class="comp-row" id="compRow"><div style="color:#888;font-size:12px">Loading...</div></div>
+        <div class="cdrill" id="compDrill">
+          <div class="cdrill-inner">
+            <div class="cdrill-head">
+              <div class="cdrill-title">
+                <span class="scd"></span>
+                <span id="drillTitle">Tests</span>
+                <span id="drillCount" style="font-size:11px;font-weight:400;color:var(--text3)"></span>
+              </div>
+              <button class="cdrill-close" onclick="closeDrill()" title="Close">✕</button>
+            </div>
+            <div class="cdrill-body" id="drillBody"></div>
+          </div>
+        </div>
       </div>
     </div>
-
     <div class="sep"><div class="sep-line"></div><div class="sep-dot"></div><div class="sep-line"></div></div>
-
     <div class="sc">
       <div class="sch">
         <div class="sct"><span class="scd"></span>Run Analysis</div>
@@ -510,9 +514,7 @@ body{background:var(--bg);color:var(--text)}
         </div>
       </div>
     </div>
-
     <div class="sep"><div class="sep-line"></div><div class="sep-dot"></div><div class="sep-line"></div></div>
-
     <div class="sc">
       <div class="sch">
         <div class="sct"><span class="scd"></span>Test Results</div>
@@ -542,7 +544,8 @@ body{background:var(--bg);color:var(--text)}
 
 </div>
 
-<footer style="max-width:1200px;margin:0 auto;padding:1rem 12px calc(1rem + env(safe-area-inset-bottom));
+<footer style="max-width:1200px;margin:0 auto;
+  padding:1rem 12px calc(1rem + env(safe-area-inset-bottom,0px));
   border-top:1.5px solid var(--sep-line);display:flex;align-items:center;
   justify-content:space-between;flex-wrap:wrap;gap:6px">
   <span style="font-size:11px;color:var(--text3)">PaceMateLive — QA Dashboard · Built by QA Engineering</span>
@@ -551,48 +554,180 @@ body{background:var(--bg);color:var(--text)}
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script>
-const RELEASE_THRESHOLD=80;
-const isMobile=()=>window.innerWidth<640;
-let _heroInterval;
+/* ─────────────────────────────────────────
+   CONSTANTS & MODULE-LEVEL STATE
+───────────────────────────────────────── */
+const RELEASE_THRESHOLD = 80;
+const VIEW_ORDER = ['ov','rr','hi'];
+const isMobile = () => window.innerWidth < 640;
 
-/* ── SCROLL REVEAL ── */
-const revealObs=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');revealObs.unobserve(e.target);}});
-},{threshold:.08,rootMargin:'0px 0px -30px 0px'});
-function observeCards(){document.querySelectorAll('.sc:not(.visible)').forEach(el=>revealObs.observe(el));}
+let currentView   = 'ov';
+let currentFilter = 'all';
+let trendBuilt    = false;
+let _heroInterval = null;
+let _resizeTimer  = null;
 
-/* ── THEME ── */
-function toggleTheme(){
-  const html=document.documentElement;
-  const next=html.getAttribute('data-theme')==='light'?'dark':'light';
-  html.setAttribute('data-theme',next);
-  document.getElementById('themeBtn').textContent=next==='dark'?'☀️':'🌙';
-  localStorage.setItem('qa-theme',next);
-  if(window._trendChart){
-    const gc=next==='dark'?'rgba(255,255,255,.08)':'rgba(0,0,0,.06)';
-    const tc=next==='dark'?'rgba(255,255,255,.4)':'#888780';
-    window._trendChart.options.scales.x.ticks.color=tc;
-    window._trendChart.options.scales.y.ticks.color=tc;
-    window._trendChart.options.scales.y.grid.color=gc;
-    window._trendChart.update();
-  }
-}
+/* ─────────────────────────────────────────
+   THEME
+───────────────────────────────────────── */
 (function(){
-  const saved=localStorage.getItem('qa-theme')||'light';
-  document.documentElement.setAttribute('data-theme',saved);
-  document.addEventListener('DOMContentLoaded',()=>{
-    document.getElementById('themeBtn').textContent=saved==='dark'?'☀️':'🌙';
+  const saved = localStorage.getItem('qa-theme') || 'light';
+  document.documentElement.setAttribute('data-theme', saved);
+  document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('themeBtn').textContent = saved === 'dark' ? '☀️' : '🌙';
   });
 })();
 
-/* ── READINESS BADGE ── */
+function toggleTheme(){
+  const html = document.documentElement;
+  const next = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+  html.setAttribute('data-theme', next);
+  document.getElementById('themeBtn').textContent = next === 'dark' ? '☀️' : '🌙';
+  localStorage.setItem('qa-theme', next);
+  if(window._trendChart){
+    const gc = next==='dark' ? 'rgba(255,255,255,.08)' : 'rgba(0,0,0,.06)';
+    const tc = next==='dark' ? 'rgba(255,255,255,.4)'  : '#888780';
+    window._trendChart.options.scales.x.ticks.color = tc;
+    window._trendChart.options.scales.y.ticks.color = tc;
+    window._trendChart.options.scales.y.grid.color  = gc;
+    window._trendChart.update();
+  }
+}
+
+/* ─────────────────────────────────────────
+   SCROLL REVEAL
+   Only opts cards IN to reveal when the
+   view is actually visible. Cards in
+   hidden views are never touched.
+───────────────────────────────────────── */
+const revealObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if(e.isIntersecting){
+      e.target.classList.add('visible');
+      e.target.classList.remove('will-reveal');
+      revealObs.unobserve(e.target);
+    }
+  });
+}, { threshold: .08, rootMargin: '0px 0px -30px 0px' });
+
+function armReveal(viewId){
+  document.querySelectorAll('#view-' + viewId + ' .sc').forEach(el => {
+    el.classList.remove('visible');
+    el.classList.add('will-reveal');
+    revealObs.unobserve(el);
+    revealObs.observe(el);
+  });
+}
+
+/* ─────────────────────────────────────────
+   HELPERS
+───────────────────────────────────────── */
+const hclr = p => p >= 95 ? '#10B981' : p >= 85 ? '#F59E0B' : '#EF4444';
+const fcl  = p => p >= 30 ? '#EF4444' : '#F59E0B';
+
+const SC = { passed:'#10B981', failed:'#EF4444', flaky:'#D97706' };
+const SL = { passed:'Passed',  failed:'Failed',  flaky:'Flaky'   };
+const SB = {
+  passed:{ bg:'rgba(16,185,129,.1)',  cl:'#059669', bd:'rgba(16,185,129,.7)' },
+  failed:{ bg:'rgba(239,68,68,.1)',   cl:'#DC2626', bd:'rgba(239,68,68,.7)'  },
+  flaky: { bg:'rgba(245,158,11,.1)',  cl:'#92400E', bd:'rgba(245,158,11,.7)' },
+};
+
+function ring(p, r=28){
+  const C = 2*Math.PI*r;
+  const d = C * p / 100;
+  return `${d.toFixed(1)} ${(C-d).toFixed(1)}`;
+}
+
+function relativeTime(iso){
+  const diff = Math.floor((Date.now() - new Date(iso)) / 1000);
+  if(diff < 60)    return `${diff}s ago`;
+  if(diff < 3600)  return `${Math.floor(diff/60)}m ago`;
+  if(diff < 86400) return `${Math.floor(diff/3600)}h ago`;
+  return `${Math.floor(diff/86400)}d ago`;
+}
+
+function sparkSVG(data, co){
+  if(!data || data.length < 2) return '';
+  const w=60, h=18, pad=2;
+  const mn = Math.min(...data)-1, mx = Math.max(...data)+1;
+  if(mx === mn) return '';
+  const pts = data.map((v,i) => {
+    const x = (i/(data.length-1))*(w-pad*2)+pad;
+    const y = h-pad-((v-mn)/(mx-mn))*(h-pad*2);
+    return `${x.toFixed(1)},${y.toFixed(1)}`;
+  }).join(' ');
+  const lx = (w-pad).toFixed(1);
+  const ly = (h-pad-((data[data.length-1]-mn)/(mx-mn))*(h-pad*2)).toFixed(1);
+  return `<svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}">
+    <polyline points="${pts}" fill="none" stroke="${co}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="${lx}" cy="${ly}" r="2.5" fill="${co}"/>
+  </svg>`;
+}
+
+/* ─────────────────────────────────────────
+   ANIMATIONS
+───────────────────────────────────────── */
+function countUp(el, to, dur=950){
+  if(!el) return;
+  const s = performance.now();
+  const step = n => {
+    const p = Math.min((n-s)/dur, 1);
+    const e = 1 - Math.pow(1-p, 3);
+    el.textContent = Math.round(to * e);
+    if(p < 1) requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
+}
+
+function countUpText(el, to, suffix='', dur=500){
+  if(!el) return;
+  const s = performance.now();
+  const step = n => {
+    const p = Math.min((n-s)/dur, 1);
+    const e = 1 - Math.pow(1-p, 3);
+    el.textContent = Math.round(to * e) + suffix;
+    if(p < 1) requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
+}
+
+function playRing(rate, failed, flaky, total){
+  const C = 502.7;
+  const passLen  = C * (rate / 100);
+  const failLen  = total > 0 ? C * (failed / total) : 0;
+  const flakyLen = total > 0 ? C * (flaky  / total) : 0;
+  const el = document.getElementById('rPass');
+  let t0 = null;
+  const ease = t => 1 - Math.pow(1-t, 3);
+  const step = ts => {
+    if(!t0) t0 = ts;
+    const p   = Math.min((ts-t0)/1400, 1);
+    const len = passLen * ease(p);
+    el.style.strokeDasharray = `${len.toFixed(2)} ${(C-len).toFixed(2)}`;
+    if(p < 1) requestAnimationFrame(step);
+  };
+  el.style.strokeDasharray = '0 502.7';
+  requestAnimationFrame(step);
+  const failEl  = document.getElementById('rFail');
+  const flakyEl = document.getElementById('rFlaky');
+  failEl.style.strokeDasharray  = `${failLen.toFixed(2)} ${(C-failLen).toFixed(2)}`;
+  failEl.style.strokeDashoffset = (-passLen).toFixed(2);
+  flakyEl.style.strokeDasharray  = `${flakyLen.toFixed(2)} ${(C-flakyLen).toFixed(2)}`;
+  flakyEl.style.strokeDashoffset = (-(passLen+failLen)).toFixed(2);
+}
+
+/* ─────────────────────────────────────────
+   READINESS BADGE
+───────────────────────────────────────── */
 function renderReadinessBadge(rate){
-  const el=document.getElementById('readinessBadge');
-  if(!el)return;
-  const ready=rate>=RELEASE_THRESHOLD;
-  el.style.display='block';
-  el.innerHTML=`<span style="display:inline-flex;align-items:center;gap:5px;font-size:10px;font-weight:700;
-    letter-spacing:.5px;text-transform:uppercase;padding:4px 11px;border-radius:99px;
+  const el = document.getElementById('readinessBadge');
+  if(!el) return;
+  const ready = rate >= RELEASE_THRESHOLD;
+  el.style.display = 'block';
+  el.innerHTML = `<span style="display:inline-flex;align-items:center;gap:5px;font-size:10px;
+    font-weight:700;letter-spacing:.5px;text-transform:uppercase;padding:4px 11px;
+    border-radius:99px;
     background:${ready?'rgba(16,185,129,.18)':'rgba(239,68,68,.18)'};
     color:${ready?'#10B981':'#EF4444'};
     border:1.5px solid ${ready?'rgba(16,185,129,.5)':'rgba(239,68,68,.5)'}">
@@ -601,120 +736,121 @@ function renderReadinessBadge(rate){
   </span>`;
 }
 
-const hclr=p=>p>=95?'#10B981':p>=85?'#F59E0B':'#EF4444';
-const fcl=p=>p>=30?'#EF4444':'#F59E0B';
-const SC={passed:'#10B981',failed:'#EF4444',flaky:'#D97706'};
-const SL={passed:'Passed',failed:'Failed',flaky:'Flaky'};
-const SB={
-  passed:{bg:'rgba(16,185,129,.1)',cl:'#059669',bd:'rgba(16,185,129,.7)'},
-  failed:{bg:'rgba(239,68,68,.1)', cl:'#DC2626',bd:'rgba(239,68,68,.7)'},
-  flaky: {bg:'rgba(245,158,11,.1)',cl:'#92400E',bd:'rgba(245,158,11,.7)'},
-};
-
-function ring(p,r=28){const C=2*Math.PI*r;const d=C*p/100;return`${d.toFixed(1)} ${(C-d).toFixed(1)}`}
-
-function relativeTime(iso){
-  const diff=Math.floor((Date.now()-new Date(iso))/1000);
-  if(diff<60)return`${diff}s ago`;
-  if(diff<3600)return`${Math.floor(diff/60)}m ago`;
-  if(diff<86400)return`${Math.floor(diff/3600)}h ago`;
-  return`${Math.floor(diff/86400)}d ago`;
-}
-
-function sparkSVG(data,co){
-  if(!data||data.length<2)return'';
-  const w=60,h=18,pad=2;
-  const mn=Math.min(...data)-1,mx=Math.max(...data)+1;
-  if(mx===mn)return'';
-  const pts=data.map((v,i)=>{
-    const x=(i/(data.length-1))*(w-pad*2)+pad;
-    const y=h-pad-((v-mn)/(mx-mn))*(h-pad*2);
-    return`${x.toFixed(1)},${y.toFixed(1)}`;
-  }).join(' ');
-  const lx=(w-pad).toFixed(1);
-  const ly=(h-pad-((data[data.length-1]-mn)/(mx-mn))*(h-pad*2)).toFixed(1);
-  return`<svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}"><polyline points="${pts}" fill="none" stroke="${co}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="${lx}" cy="${ly}" r="2.5" fill="${co}"/></svg>`;
-}
-
+/* ─────────────────────────────────────────
+   RENDER ALL — called once after data loads
+───────────────────────────────────────── */
 function renderAll(D){
-  const rate=D.summary.rate;
-  document.getElementById('heroRate').textContent=rate+'%';
-  document.getElementById('heroMeta').textContent=
+  const rate = D.summary.rate;
+
+  /* hero */
+  document.getElementById('heroRate').textContent = rate + '%';
+  document.getElementById('heroMeta').textContent =
     `${D.runId} · ${relativeTime(D.generatedAt)} · ${D.branch||'main'}`;
-  document.getElementById('heroFoot').innerHTML=
+  document.getElementById('heroFoot').innerHTML =
     `Avg: <b>${D.summary.duration}</b> &nbsp;·&nbsp; Suite: <b>${D.suite||'Full Regression'}</b> &nbsp;·&nbsp; Env: <b>${D.env||'Dev'}</b>`;
 
-  const staleEl=document.getElementById('staleWarning');
-  if(staleEl&&D.generatedAt){
-    const hrs=(Date.now()-new Date(D.generatedAt))/3600000;
-    if(hrs>24){const days=Math.floor(hrs/24);staleEl.style.display='block';staleEl.textContent=`⚠ Stale — last run ${days} day${days===1?'':'s'} ago`;}
+  const staleEl = document.getElementById('staleWarning');
+  if(staleEl && D.generatedAt){
+    const hrs = (Date.now() - new Date(D.generatedAt)) / 3600000;
+    staleEl.style.display = 'none';
+    staleEl.textContent = '';
+    if(hrs > 24){
+      const days = Math.floor(hrs/24);
+      staleEl.style.display = 'block';
+      staleEl.textContent = `⚠ Stale — last run ${days} day${days===1?'':'s'} ago`;
+    }
   }
 
-  const delta=(rate-(D.summary.prevRate||rate)).toFixed(1);
-  const isFirst=D.summary.prevRunId==='—';
-  const col=delta>=0?'#10B981':'#EF4444';
-  document.getElementById('heroTrend').style.color=isFirst?'rgba(255,255,255,.5)':col;
-  document.getElementById('heroTrend').innerHTML=isFirst?'First run':`${delta>=0?'↑':'↓'} ${Math.abs(delta)}% vs ${D.summary.prevRunId}`;
-  document.getElementById('heroStreak').textContent=D.summary.consecutivePassing>0?`${D.summary.consecutivePassing} passing streak`:'No previous run';
+  const delta   = (rate - (D.summary.prevRate||rate)).toFixed(1);
+  const isFirst = D.summary.prevRunId === '—';
+  const col     = delta >= 0 ? '#10B981' : '#EF4444';
+  document.getElementById('heroTrend').style.color = isFirst ? 'rgba(255,255,255,.5)' : col;
+  document.getElementById('heroTrend').innerHTML   = isFirst
+    ? 'First run'
+    : `${delta>=0?'↑':'↓'} ${Math.abs(delta)}% vs ${D.summary.prevRunId}`;
+  document.getElementById('heroStreak').textContent = D.summary.consecutivePassing > 0
+    ? `${D.summary.consecutivePassing} passing streak`
+    : 'No previous run';
 
-  playRing(rate,D.summary.failed,D.summary.flaky,D.summary.total);
+  playRing(rate, D.summary.failed, D.summary.flaky, D.summary.total);
   renderReadinessBadge(rate);
-  countUp(document.getElementById('cn-total'),D.summary.total);
-  countUp(document.getElementById('cn-pass'), D.summary.passed);
-  countUp(document.getElementById('cn-fail'), D.summary.failed);
-  countUp(document.getElementById('cn-flaky'),D.summary.flaky);
+  countUp(document.getElementById('cn-total'), D.summary.total);
+  countUp(document.getElementById('cn-pass'),  D.summary.passed);
+  countUp(document.getElementById('cn-fail'),  D.summary.failed);
+  countUp(document.getElementById('cn-flaky'), D.summary.flaky);
 
-  /* ── Comparison panel ── */
-  document.getElementById('cmpMeta').textContent=isFirst?'First run':`${D.summary.prevRunId} vs ${D.runId}`;
-  document.getElementById('cmpPrevId').textContent=isFirst?'No previous run':'#'+D.summary.prevRunId+' — Prev';
-  document.getElementById('cmpPrevRate').textContent=isFirst?'N/A':(D.summary.prevRate||'—')+'%';
-  document.getElementById('cmpPrevTotal').textContent=isFirst?'N/A':D.summary.prevTotal||'—';
-  document.getElementById('cmpPrevFailed').textContent=isFirst?'N/A':D.summary.prevFailed||'0';
-  document.getElementById('cmpPrevFlaky').textContent=isFirst?'N/A':D.summary.prevFlaky||'0';
-  document.getElementById('cmpPrevDur').textContent=isFirst?'N/A':D.summary.prevDuration||'—';
-  document.getElementById('cmpCurrId').textContent=`#${D.runId} — Current`;
+  /* comparison panel */
+  document.getElementById('cmpMeta').textContent    = isFirst ? 'First run' : `${D.summary.prevRunId} vs ${D.runId}`;
+  document.getElementById('cmpPrevId').textContent  = isFirst ? 'No previous run' : '#'+D.summary.prevRunId+' — Prev';
+  document.getElementById('cmpPrevTotal').textContent  = isFirst ? 'N/A' : D.summary.prevTotal   || '—';
+  document.getElementById('cmpPrevFailed').textContent = isFirst ? 'N/A' : D.summary.prevFailed  || '0';
+  document.getElementById('cmpPrevFlaky').textContent  = isFirst ? 'N/A' : D.summary.prevFlaky   || '0';
+  document.getElementById('cmpPrevDur').textContent    = isFirst ? 'N/A' : D.summary.prevDuration|| '—';
 
-  /* countUp for comparison rates */
-  if(!isFirst){
-    countUpText(document.getElementById('cmpPrevRate'),D.summary.prevRate||0,'%',400);
-    setTimeout(()=>countUpText(document.getElementById('cmpCurrRate'),rate,'%',500),120);
+  if(isFirst){
+    document.getElementById('cmpPrevRate').textContent = 'N/A';
+    document.getElementById('cmpCurrRate').textContent = rate + '%';
   } else {
-    document.getElementById('cmpCurrRate').textContent=rate+'%';
+    countUpText(document.getElementById('cmpPrevRate'), D.summary.prevRate||0, '%', 400);
+    setTimeout(() => countUpText(document.getElementById('cmpCurrRate'), rate, '%', 500), 120);
   }
 
-  const fDelta=(D.summary.prevFailed||0)-D.summary.failed;
-  const flDelta=(D.summary.prevFlaky||0)-D.summary.flaky;
-  document.getElementById('cmpCurrTotal').textContent=D.summary.total;
-  document.getElementById('cmpCurrFailed').innerHTML=`<span style="color:#EF4444">${D.summary.failed}</span>${fDelta>0?` <span class="delta d-good">▼${fDelta}</span>`:''}`;
-  document.getElementById('cmpCurrFlaky').innerHTML=`<span style="color:#F59E0B">${D.summary.flaky}</span>${flDelta>0?` <span class="delta d-good">▼${flDelta}</span>`:''}`;
-  document.getElementById('cmpCurrDur').textContent=D.summary.duration||'—';
+  document.getElementById('cmpCurrId').textContent   = `#${D.runId} — Current`;
+  document.getElementById('cmpCurrTotal').textContent = D.summary.total;
+  const fDelta  = (D.summary.prevFailed||0) - D.summary.failed;
+  const flDelta = (D.summary.prevFlaky||0)  - D.summary.flaky;
+  document.getElementById('cmpCurrFailed').innerHTML =
+    `<span style="color:#EF4444">${D.summary.failed}</span>${fDelta>0?` <span class="delta d-good">▼${fDelta}</span>`:''}`;
+  document.getElementById('cmpCurrFlaky').innerHTML  =
+    `<span style="color:#F59E0B">${D.summary.flaky}</span>${flDelta>0?` <span class="delta d-good">▼${flDelta}</span>`:''}`;
+  document.getElementById('cmpCurrDur').textContent  = D.summary.duration || '—';
 
-  /* ── Health map with staggered cell fade ── */
-  if(D.hRuns&&D.hRuns.length&&D.comp&&D.comp.length){
-    let h=`<tr><th class="hcomp">Component</th>${D.hRuns.map(r=>`<th>${r}</th>`).join('')}</tr>`;
-    D.hData.forEach((row,i)=>{
-      if(!D.comp[i])return;
-      h+=`<tr><th class="hcomp">${D.comp[i].name}</th>`;
-      row.forEach((p,j)=>{
-        const bg=p>=95?`rgba(16,185,129,${(.25+(p-95)/5*.55).toFixed(2)})`:p>=85?`rgba(245,158,11,${(.25+(p-85)/10*.5).toFixed(2)})`:`rgba(239,68,68,${(.35+(100-p)/15*.4).toFixed(2)})`;
-        const cl=p>=95?'#064E3B':p>=85?'#78350F':'#7F1D1D';
-        const delay=((i*row.length+j)*0.04).toFixed(2);
-        h+=`<td><div class="hcell" style="background:${bg};color:${cl};animation-delay:${delay}s">${p}%</div></td>`;
+  /* health map */
+  if(D.hRuns && D.hRuns.length && D.comp && D.comp.length){
+    let h = `<tr><th class="hcomp">Component</th>${D.hRuns.map(r=>`<th>${r}</th>`).join('')}</tr>`;
+    D.hData.forEach((row, i) => {
+      if(!D.comp[i]) return;
+      h += `<tr><th class="hcomp">${D.comp[i].name}</th>`;
+      row.forEach((p, j) => {
+        const bg = p>=95
+          ? `rgba(16,185,129,${(.25+(p-95)/5*.55).toFixed(2)})`
+          : p>=85
+            ? `rgba(245,158,11,${(.25+(p-85)/10*.5).toFixed(2)})`
+            : `rgba(239,68,68,${(.35+(100-p)/15*.4).toFixed(2)})`;
+        const cl = p>=95 ? '#064E3B' : p>=85 ? '#78350F' : '#7F1D1D';
+        const delay = ((i * row.length + j) * 0.04).toFixed(2);
+        h += `<td><div class="hcell" style="background:${bg};color:${cl};animation-delay:${delay}s">${p}%</div></td>`;
       });
-      h+=`</tr>`;
+      h += '</tr>';
     });
-    document.getElementById('hmapTable').innerHTML=h;
-  }else{
-    document.getElementById('hmapTable').innerHTML=`<tr><td style="color:#888;font-size:12px;padding:1rem 0">Run more suites to build history</td></tr>`;
+    document.getElementById('hmapTable').innerHTML = h;
+  } else {
+    document.getElementById('hmapTable').innerHTML =
+      `<tr><td style="color:#888;font-size:12px;padding:1rem 0">Run more suites to build history</td></tr>`;
   }
 
-  /* ── Component cards with stagger ── */
-  if(D.comp&&D.comp.length){
-    document.getElementById('compRow').innerHTML=D.comp.map((c,i)=>{
-      const co=hclr(c.pct);const issues=c.failed+c.flaky;
-      const tb=issues?(c.pct<90?'rgba(239,68,68,.1)':'rgba(245,158,11,.1)'):'rgba(16,185,129,.1)';
-      const tc=issues?(c.pct<90?'#DC2626':'#B45309'):'#059669';
-      return`<div class="ccard" style="animation-delay:${(i*.06).toFixed(2)}s">
+  /* component health cards */
+  if(D.comp && D.comp.length){
+    document.getElementById('compRow').innerHTML = D.comp.map((c, i) => {
+      const co = hclr(c.pct);
+      const issues = c.failed + c.flaky;
+      const total  = c.total  ?? null;
+      const _derived = (total != null && c.failed != null && c.flaky != null)
+        ? Math.min(Math.max(0, total - c.failed - c.flaky), total)
+        : null;
+      const passed = c.passed != null ? Math.min(c.passed, total ?? c.passed) : _derived;
+      const tb = issues ? (c.pct<90 ? 'rgba(239,68,68,.1)' : 'rgba(245,158,11,.1)') : 'rgba(16,185,129,.1)';
+      const tc = issues ? (c.pct<90 ? '#DC2626' : '#B45309') : '#059669';
+
+      const tagLabel = issues
+        ? `${issues} issue${issues>1?'s':''}`
+        : passed !== null && total !== null
+          ? `${passed} / ${total} passed`
+          : passed !== null
+            ? `${passed} passed`
+            : 'All Passing';
+
+      return `<div class="ccard" data-comp="${c.name}" style="animation-delay:${(i*.06).toFixed(2)}s" onclick="openDrill(this.dataset.comp)">
         <svg width="64" height="64" viewBox="0 0 72 72">
           <circle cx="36" cy="36" r="28" fill="none" stroke="rgba(0,0,0,.1)" stroke-width="5"/>
           <circle cx="36" cy="36" r="28" fill="none" stroke="${co}" stroke-width="5"
@@ -722,73 +858,73 @@ function renderAll(D){
           <text x="36" y="40" text-anchor="middle" fill="${co}" font-size="12" font-weight="600">${c.pct}%</text>
         </svg>
         <div class="cname">${c.name}</div>
-        <span class="ctag" style="background:${tb};color:${tc}">${issues?`${issues} issue${issues>1?'s':''}`:'All Passing'}</span>
+        <span class="ctag" style="background:${tb};color:${tc}">${tagLabel}</span>
         <div style="margin-top:6px;display:flex;justify-content:center">${sparkSVG(c.sparks,co)}</div>
       </div>`;
     }).join('');
   }
 
-  /* ── Flaky bars ── */
-  if(D.flaky&&D.flaky.length){
-    document.getElementById('flakyList').innerHTML=D.flaky.map((f,i)=>`
+  /* flaky tracker */
+  if(D.flaky && D.flaky.length){
+    document.getElementById('flakyList').innerHTML = D.flaky.map((f, i) => `
       <div class="fl">
-        <div class="fl-top"><span class="fl-name">${f.name}</span><span class="fl-pct" style="color:${fcl(f.pct)}">${f.label}</span></div>
-        <div class="fl-bg"><div class="fl-bar" style="--bar-w:${f.pct}%;background:${fcl(f.pct)};animation-delay:${(.1+i*.08).toFixed(2)}s"></div></div>
+        <div class="fl-top">
+          <span class="fl-name">${f.name}</span>
+          <span class="fl-pct" style="color:${fcl(f.pct)}">${f.label}</span>
+        </div>
+        <div class="fl-bg">
+          <div class="fl-bar" style="--bar-w:${f.pct}%;background:${fcl(f.pct)};animation-delay:${(.1+i*.08).toFixed(2)}s"></div>
+        </div>
         <div class="fl-sub"><span>${f.comp}</span><span>Last 10 runs</span></div>
       </div>`).join('');
   }
 
-  ['all','failed','flaky','passed'].forEach(s=>{
-    document.getElementById('fc-'+s).textContent=s==='all'?D.tests.length:D.tests.filter(t=>t.status===s).length;
+  /* filter counts */
+  ['all','failed','flaky','passed'].forEach(s => {
+    document.getElementById('fc-'+s).textContent =
+      s === 'all' ? D.tests.length : D.tests.filter(t => t.status === s).length;
   });
 
-  document.getElementById('analysisMeta').textContent=`Last ${D.trend.labels.length} Run${D.trend.labels.length===1?'':'s'}`;
-  document.getElementById('vn-sub').textContent=`Health summary · ${D.runId}`;
+  document.getElementById('analysisMeta').textContent =
+    `Last ${D.trend.labels.length} Run${D.trend.labels.length===1?'':'s'}`;
+  document.getElementById('vn-sub').textContent = `Health summary · ${D.runId}`;
 
-  window._D=D;
+  window._D = D;
+
+  /* render test results into the (currently hidden) Report view —
+     rendered into DOM now so it's ready when user taps Report */
   renderTestResults(D.tests);
   buildTrend(D.trend);
-  setTimeout(observeCards,60);
 
+  /* arm scroll-reveal only for the active (Overview) view */
+  setTimeout(() => armReveal('ov'), 60);
+
+  /* hero meta refresh — module-scoped, clearable */
   clearInterval(_heroInterval);
-  _heroInterval=setInterval(()=>{
-    document.getElementById('heroMeta').textContent=`${D.runId} · ${relativeTime(D.generatedAt)} · ${D.branch||'main'}`;
-  },60000);
+  _heroInterval = setInterval(() => {
+    document.getElementById('heroMeta').textContent =
+      `${D.runId} · ${relativeTime(D.generatedAt)} · ${D.branch||'main'}`;
+  }, 60000);
 }
 
-/* ── countUp helpers ── */
-function countUp(el,to,dur=950){
-  if(!el)return;
-  const s=performance.now();
-  function step(n){const p=Math.min((n-s)/dur,1);const e=1-Math.pow(1-p,3);el.textContent=Math.round(to*e);if(p<1)requestAnimationFrame(step);}
-  requestAnimationFrame(step);
-}
-function countUpText(el,to,suffix='',dur=500){
-  if(!el)return;
-  const s=performance.now();
-  function step(n){const p=Math.min((n-s)/dur,1);const e=1-Math.pow(1-p,3);el.textContent=Math.round(to*e)+suffix;if(p<1)requestAnimationFrame(step);}
-  requestAnimationFrame(step);
-}
-
-let currentFilter='all';
-function filt(f,btn){
-  document.querySelectorAll('.fbtn').forEach(b=>{b.classList.remove('on');});
-  btn.classList.add('on');
-  currentFilter=f;
-  const D=window._D;if(!D)return;
-  renderTestResults(f==='all'?D.tests:D.tests.filter(t=>t.status===f));
-}
-
+/* ─────────────────────────────────────────
+   TEST RESULTS RENDER
+   Mobile → card list   Desktop → table
+───────────────────────────────────────── */
 function renderTestResults(rows){
-  const D=window._D;
-  const wrap=document.getElementById('testResultsWrap');
-  if(!rows||!rows.length){
-    const msgs={all:{h:'No tests found',s:'No test data available'},
-      failed:{h:'No failures',s:'Every test passed'},
-      flaky:{h:'No flaky tests',s:'All tests deterministic'},
-      passed:{h:'No passed tests',s:'No clean passes recorded'}};
-    const m=msgs[currentFilter]||msgs.all;
-    wrap.innerHTML=`<div style="text-align:center;padding:2.5rem 1rem">
+  const D    = window._D;
+  const wrap = document.getElementById('testResultsWrap');
+  if(!wrap) return;
+
+  if(!rows || !rows.length){
+    const msgs = {
+      all:    { h:'No tests found',   s:'No test data available for this run' },
+      failed: { h:'No failures',      s:'Every test passed — no hard failures' },
+      flaky:  { h:'No flaky tests',   s:'All tests ran deterministically' },
+      passed: { h:'No passed tests',  s:'No clean passes recorded in this run' },
+    };
+    const m = msgs[currentFilter] || msgs.all;
+    wrap.innerHTML = `<div style="text-align:center;padding:2.5rem 1rem">
       <div style="font-size:14px;font-weight:600;color:var(--text);margin-bottom:5px">${m.h}</div>
       <div style="font-size:12px;color:var(--text3);max-width:280px;margin:0 auto;line-height:1.5">${m.s}</div>
     </div>`;
@@ -796,9 +932,10 @@ function renderTestResults(rows){
   }
 
   if(isMobile()){
-    wrap.innerHTML=`<div class="tt-mobile">${rows.map((t,i)=>{
-      const can=t.status!=='passed'&&t.err;
-      return`<div class="tt-card" style="animation-delay:${(i*.03).toFixed(2)}s" onclick="toggleCard(this,${i})">
+    /* ── MOBILE CARD LIST ── */
+    wrap.innerHTML = `<div class="tt-mobile">${rows.map((t, i) => {
+      const can = t.status !== 'passed' && t.err;
+      return `<div class="tt-card" style="animation-delay:${(i*.03).toFixed(2)}s" onclick="toggleCard(this,${i})">
         <div class="tt-card-top">
           <div class="tt-card-name">${t.name}</div>
           <span class="spill" style="background:${SB[t.status].bg};color:${SB[t.status].cl};border-color:${SB[t.status].bd};flex-shrink:0">
@@ -810,207 +947,380 @@ function renderTestResults(rows){
           <span class="type-tag">${t.type}</span>
           <span class="tt-card-dur">${t.dur}</span>
         </div>
-        ${can?`<div class="tt-exp" id="ttexp-${i}">
+        ${can ? `<div class="tt-exp" id="ttexp-${i}">
           <div class="tt-exp-lbl">${t.status==='flaky'?'Flakiness Detail':'Error Detail'}</div>
           <div class="tt-exp-msg">${t.err}</div>
-          <a class="tt-exp-link" href="${D&&D.runUrl||'#'}" target="_blank" onclick="event.stopPropagation()">View in GitHub Actions →</a>
-        </div>`:''}
+          <a class="tt-exp-link" href="${D&&D.runUrl||'#'}" target="_blank"
+             onclick="event.stopPropagation()">View in GitHub Actions →</a>
+        </div>` : ''}
       </div>`;
     }).join('')}</div>`;
+
   } else {
-    let html='';
-    rows.forEach(t=>{
-      const can=t.status!=='passed'&&t.err;
-      const ts='font-size:11px;padding:2px 8px;border-radius:4px;border:1px solid rgba(55,138,221,.35);background:rgba(55,138,221,.07);color:#185FA5';
-      html+=`<tr class="trow${can?' can-expand':''}" onclick="expandRowDesktop(this)">
+    /* ── DESKTOP TABLE ── */
+    let html = '';
+    rows.forEach(t => {
+      const can = t.status !== 'passed' && t.err;
+      const ts  = 'font-size:11px;padding:2px 8px;border-radius:4px;border:1px solid rgba(55,138,221,.35);background:rgba(55,138,221,.07);color:#185FA5';
+      html += `<tr class="trow${can?' can-expand':''}" onclick="expandRowDesktop(this)">
         <td title="${t.name}" style="padding-left:20px">${t.name}</td>
         <td style="color:var(--text2)">${t.comp}</td>
         <td><span style="${ts}">${t.type}</span></td>
-        <td><span class="spill" style="background:${SB[t.status].bg};color:${SB[t.status].cl};border-color:${SB[t.status].bd}"><span class="sdot" style="background:${SC[t.status]}"></span>${SL[t.status]}</span></td>
+        <td><span class="spill" style="background:${SB[t.status].bg};color:${SB[t.status].cl};border-color:${SB[t.status].bd}">
+          <span class="sdot" style="background:${SC[t.status]}"></span>${SL[t.status]}
+        </span></td>
         <td style="color:var(--text2)">${t.dur}</td>
-        <td style="color:var(--text3)">${(D&&D.runId)||'—'}</td>
+        <td style="color:var(--text3)">${D?.runId||'—'}</td>
         <td style="text-align:right;padding-right:14px">${can?'<span class="chev">›</span>':''}</td>
       </tr>`;
       if(can){
-        const isFl=t.status==='flaky';
-        html+=`<tr class="exp-row" style="display:none"><td colspan="7">
-          <div style="padding:14px 16px;background:${isFl?'rgba(245,158,11,.04)':'rgba(239,68,68,.04)'};border-left:3px solid ${isFl?'#F59E0B':'#EF4444'};margin-left:20px">
+        const isFl = t.status === 'flaky';
+        html += `<tr class="exp-row" style="display:none"><td colspan="7">
+          <div style="padding:14px 16px;margin-left:20px;
+            background:${isFl?'rgba(245,158,11,.04)':'rgba(239,68,68,.04)'};
+            border-left:3px solid ${isFl?'#F59E0B':'#EF4444'}">
             <div class="tt-exp-lbl" style="margin-bottom:5px">${isFl?'Flakiness Detail':'Error Detail'}</div>
             <div class="tt-exp-msg">${t.err}</div>
             <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px">
               <span style="font-size:12px;color:var(--text3)">${t.comp} · ${t.type} · ${t.dur}</span>
-              <a class="tt-exp-link" href="${D&&D.runUrl||'#'}" target="_blank" onclick="event.stopPropagation()">View in GitHub Actions →</a>
+              <a class="tt-exp-link" href="${D?.runUrl||'#'}" target="_blank"
+                 onclick="event.stopPropagation()">View in GitHub Actions →</a>
             </div>
           </div>
         </td></tr>`;
       }
     });
-    wrap.innerHTML=`<table class="tt" style="margin:0">
+    wrap.innerHTML = `<table class="tt" style="margin:0">
       <colgroup>
         <col style="width:37%"><col style="width:14%"><col style="width:9%">
         <col style="width:14%"><col style="width:10%"><col style="width:9%"><col style="width:7%">
       </colgroup>
       <thead><tr>
-        <th style="padding-left:20px">Test Name</th><th>Component</th><th>Type</th>
-        <th>Status</th><th>Duration</th><th>Run</th><th></th>
+        <th style="padding-left:20px">Test Name</th>
+        <th>Component</th><th>Type</th><th>Status</th>
+        <th>Duration</th><th>Run</th><th></th>
       </tr></thead>
-      <tbody id="tbody">${html}</tbody>
+      <tbody>${html}</tbody>
     </table>`;
   }
 }
 
-function toggleCard(el,i){
-  const exp=document.getElementById('ttexp-'+i);
-  if(!exp)return;
+/* ─────────────────────────────────────────
+   COMPONENT DRILL-DOWN
+───────────────────────────────────────── */
+let _activeDrillComp = null;
+
+function openDrill(compName){
+  const D = window._D;
+  if(!D || !compName) return;
+
+  const drill  = document.getElementById('compDrill');
+  const title  = document.getElementById('drillTitle');
+  const count  = document.getElementById('drillCount');
+  const body   = document.getElementById('drillBody');
+
+  /* toggle off if same card tapped again */
+  if(_activeDrillComp === compName && drill.classList.contains('open')){
+    closeDrill();
+    return;
+  }
+
+  /* mark active card, clear others */
+  document.querySelectorAll('.ccard').forEach(el => {
+    el.classList.toggle('active', el.dataset.comp === compName);
+  });
+  _activeDrillComp = compName;
+
+  const tests = D.tests.filter(t => t.comp === compName);
+
+  title.textContent = compName;
+  count.textContent = `· ${tests.length} test${tests.length===1?'':'s'}`;
+  body.scrollTop = 0;
+  drill.scrollTop = 0;
+
+  /* render using same mobile/desktop pattern */
+  if(!tests.length){
+    body.innerHTML = `<div style="text-align:center;padding:2rem 1rem;font-size:13px;color:var(--text3)">No tests found for this component</div>`;
+  } else if(isMobile()){
+    body.innerHTML = `<div class="tt-mobile">${tests.map((t,i) => {
+      const can = t.status !== 'passed' && t.err;
+      return `<div class="tt-card" style="animation-delay:${(i*.025).toFixed(2)}s" onclick="toggleDrillCard(this,${i})">
+        <div class="tt-card-top">
+          <div class="tt-card-name">${t.name}</div>
+          <span class="spill" style="background:${SB[t.status].bg};color:${SB[t.status].cl};border-color:${SB[t.status].bd};flex-shrink:0">
+            <span class="sdot" style="background:${SC[t.status]}"></span>${SL[t.status]}
+          </span>
+        </div>
+        <div class="tt-card-meta">
+          <span class="type-tag">${t.type}</span>
+          <span class="tt-card-dur">${t.dur}</span>
+        </div>
+        ${can ? `<div class="tt-exp" id="ttexp-drill-${i}">
+          <div class="tt-exp-lbl">${t.status==='flaky'?'Flakiness Detail':'Error Detail'}</div>
+          <div class="tt-exp-msg">${t.err}</div>
+          <a class="tt-exp-link" href="${D.runUrl||'#'}" target="_blank"
+             onclick="event.stopPropagation()">View in GitHub Actions →</a>
+        </div>` : ''}
+      </div>`;
+    }).join('')}</div>`;
+  } else {
+    let html = '';
+    tests.forEach(t => {
+      const can = t.status !== 'passed' && t.err;
+      const ts  = 'font-size:11px;padding:2px 8px;border-radius:4px;border:1px solid rgba(55,138,221,.35);background:rgba(55,138,221,.07);color:#185FA5';
+      html += `<tr class="trow${can?' can-expand':''}" onclick="expandRowDesktop(this)">
+        <td title="${t.name}" style="padding-left:20px">${t.name}</td>
+        <td><span style="${ts}">${t.type}</span></td>
+        <td><span class="spill" style="background:${SB[t.status].bg};color:${SB[t.status].cl};border-color:${SB[t.status].bd}">
+          <span class="sdot" style="background:${SC[t.status]}"></span>${SL[t.status]}
+        </span></td>
+        <td style="color:var(--text2)">${t.dur}</td>
+        <td style="text-align:right;padding-right:14px">${can?'<span class="chev">›</span>':''}</td>
+      </tr>`;
+      if(can){
+        const isFl = t.status === 'flaky';
+        html += `<tr class="exp-row" style="display:none"><td colspan="5">
+          <div style="padding:14px 16px;margin-left:20px;
+            background:${isFl?'rgba(245,158,11,.04)':'rgba(239,68,68,.04)'};
+            border-left:3px solid ${isFl?'#F59E0B':'#EF4444'}">
+            <div class="tt-exp-lbl" style="margin-bottom:5px">${isFl?'Flakiness Detail':'Error Detail'}</div>
+            <div class="tt-exp-msg">${t.err}</div>
+            <a class="tt-exp-link" href="${D.runUrl||'#'}" target="_blank"
+               onclick="event.stopPropagation()">View in GitHub Actions →</a>
+          </div>
+        </td></tr>`;
+      }
+    });
+    body.innerHTML = `<table class="tt" style="margin:0">
+      <colgroup>
+        <col style="width:50%"><col style="width:12%"><col style="width:16%">
+        <col style="width:14%"><col style="width:8%">
+      </colgroup>
+      <thead><tr>
+        <th style="padding-left:20px">Test Name</th>
+        <th>Type</th><th>Status</th><th>Duration</th><th></th>
+      </tr></thead>
+      <tbody>${html}</tbody>
+    </table>`;
+  }
+
+  /* open panel and scroll it into view */
+  drill.classList.add('open');
+  setTimeout(() => drill.scrollIntoView({ behavior:'smooth', block:'nearest' }), 420);
+}
+
+function closeDrill(){
+  document.getElementById('compDrill').classList.remove('open');
+  document.querySelectorAll('.ccard').forEach(el => el.classList.remove('active'));
+  _activeDrillComp = null;
+}
+
+/* mobile drill-down card expand (separate id namespace from main results) */
+function toggleDrillCard(el, i){
+  const exp = document.getElementById('ttexp-drill-' + i);
+  if(!exp) return;
   exp.classList.toggle('open');
 }
-function expandRowDesktop(tr){
-  if(!tr.classList.contains('can-expand'))return;
-  const er=tr.nextElementSibling;
-  if(!er||!er.classList.contains('exp-row'))return;
-  const open=er.style.display==='none'||!er.style.display;
-  er.style.display=open?'table-row':'none';
-  const ch=tr.querySelector('.chev');
-  if(ch)ch.style.transform=open?'rotate(90deg)':'rotate(0)';
+function toggleCard(el, i){
+  const exp = document.getElementById('ttexp-' + i);
+  if(!exp) return;
+  exp.classList.toggle('open');
 }
 
-let _rt;
-window.addEventListener('resize',()=>{
-  clearTimeout(_rt);
-  _rt=setTimeout(()=>{
-    const D=window._D;if(!D)return;
-    renderTestResults(currentFilter==='all'?D.tests:D.tests.filter(t=>t.status===currentFilter));
-  },150);
+function expandRowDesktop(tr){
+  if(!tr.classList.contains('can-expand')) return;
+  const er = tr.nextElementSibling;
+  if(!er || !er.classList.contains('exp-row')) return;
+  const open = er.style.display === 'none' || !er.style.display;
+  er.style.display = open ? 'table-row' : 'none';
+  const ch = tr.querySelector('.chev');
+  if(ch) ch.style.transform = open ? 'rotate(90deg)' : 'rotate(0)';
+}
+
+/* ─────────────────────────────────────────
+   FILTER
+───────────────────────────────────────── */
+function filt(f, btn){
+  document.querySelectorAll('.fbtn').forEach(b => b.classList.remove('on'));
+  btn.classList.add('on');
+  currentFilter = f;
+  const D = window._D;
+  if(!D) return;
+  renderTestResults(f === 'all' ? D.tests : D.tests.filter(t => t.status === f));
+}
+
+/* ─────────────────────────────────────────
+   RESIZE — debounced, re-renders test list
+───────────────────────────────────────── */
+window.addEventListener('resize', () => {
+  clearTimeout(_resizeTimer);
+  _resizeTimer = setTimeout(() => {
+    const D = window._D;
+    if(!D) return;
+    renderTestResults(
+      currentFilter === 'all' ? D.tests : D.tests.filter(t => t.status === currentFilter)
+    );
+    if(_activeDrillComp) openDrill(_activeDrillComp);
+  }, 150);
 });
 
-let trendBuilt=false;
+/* ─────────────────────────────────────────
+   TREND CHART
+───────────────────────────────────────── */
 function buildTrend(trend){
-  if(trendBuilt)return;trendBuilt=true;
-  const isDark=document.documentElement.getAttribute('data-theme')==='dark';
-  const gc=isDark?'rgba(255,255,255,.08)':'rgba(0,0,0,.06)';
-  const tc=isDark?'rgba(255,255,255,.4)':'#888780';
-  window._trendChart=new Chart(document.getElementById('trendChart'),{
-    type:'line',
-    data:{labels:trend.labels,datasets:[
-      {label:'Passed',data:trend.passed,borderColor:'#10B981',backgroundColor:'rgba(16,185,129,.07)',fill:true,tension:0.4,pointRadius:0,pointHoverRadius:5,pointHoverBackgroundColor:'#10B981',borderWidth:2.5},
-      {label:'Failed',data:trend.failed,borderColor:'#EF4444',fill:false,tension:0.4,pointRadius:0,pointHoverRadius:5,pointHoverBackgroundColor:'#EF4444',borderWidth:2},
-      {label:'Flaky', data:trend.flaky, borderColor:'#F59E0B',fill:false,tension:0.4,borderDash:[5,4],pointRadius:0,pointHoverRadius:5,pointHoverBackgroundColor:'#F59E0B',borderWidth:2},
-      {label:'SLA',   data:trend.labels.map(()=>RELEASE_THRESHOLD),borderColor:'rgba(200,24,74,.6)',fill:false,tension:0,pointRadius:0,borderWidth:1.5,borderDash:[6,4]},
+  if(trendBuilt) return;
+  trendBuilt = true;
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  const gc = isDark ? 'rgba(255,255,255,.08)' : 'rgba(0,0,0,.06)';
+  const tc = isDark ? 'rgba(255,255,255,.4)'  : '#888780';
+  window._trendChart = new Chart(document.getElementById('trendChart'), {
+    type: 'line',
+    data: { labels: trend.labels, datasets: [
+      { label:'Passed', data:trend.passed, borderColor:'#10B981', backgroundColor:'rgba(16,185,129,.07)',
+        fill:true, tension:0.4, pointRadius:0, pointHoverRadius:5, pointHoverBackgroundColor:'#10B981', borderWidth:2.5 },
+      { label:'Failed', data:trend.failed, borderColor:'#EF4444',
+        fill:false, tension:0.4, pointRadius:0, pointHoverRadius:5, pointHoverBackgroundColor:'#EF4444', borderWidth:2 },
+      { label:'Flaky',  data:trend.flaky,  borderColor:'#F59E0B',
+        fill:false, tension:0.4, borderDash:[5,4], pointRadius:0, pointHoverRadius:5, pointHoverBackgroundColor:'#F59E0B', borderWidth:2 },
+      { label:'SLA', data:trend.labels.map(()=>RELEASE_THRESHOLD),
+        borderColor:'rgba(200,24,74,.6)', fill:false, tension:0, pointRadius:0, borderWidth:1.5, borderDash:[6,4] },
     ]},
-    options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},
-      animation:{duration:900,easing:'easeOutQuart'},
-      plugins:{legend:{display:false},tooltip:{backgroundColor:'rgba(13,22,32,.95)',padding:10,cornerRadius:10,titleColor:'rgba(255,255,255,.65)',titleFont:{size:11},bodyColor:'rgba(255,255,255,.88)',bodyFont:{size:12},borderColor:'rgba(200,24,74,.3)',borderWidth:1,callbacks:{label:ctx=>ctx.dataset.label==='SLA'?null:` ${ctx.dataset.label}: ${ctx.raw}`}}},
+    options:{
+      responsive:true, maintainAspectRatio:false,
+      animation:{ duration:900, easing:'easeOutQuart' },
+      interaction:{ mode:'index', intersect:false },
+      plugins:{
+        legend:{ display:false },
+        tooltip:{
+          backgroundColor:'rgba(13,22,32,.95)', padding:10, cornerRadius:10,
+          titleColor:'rgba(255,255,255,.65)', titleFont:{size:11},
+          bodyColor:'rgba(255,255,255,.88)',  bodyFont:{size:12},
+          borderColor:'rgba(200,24,74,.3)',   borderWidth:1,
+          callbacks:{ label: ctx => ctx.dataset.label==='SLA' ? null : ` ${ctx.dataset.label}: ${ctx.raw}` }
+        }
+      },
       scales:{
-        x:{grid:{display:false},ticks:{font:{size:10},color:tc,maxRotation:0},border:{display:false}},
-        y:{beginAtZero:true,grid:{color:gc},ticks:{font:{size:10},color:tc},border:{display:false}},
+        x:{ grid:{display:false}, ticks:{font:{size:10},color:tc,maxRotation:0}, border:{display:false} },
+        y:{ beginAtZero:true, grid:{color:gc}, ticks:{font:{size:10},color:tc}, border:{display:false} },
       },
     },
   });
 }
 
-function playRing(rate,failed,flaky,total){
-  const C=502.7;
-  const passLen=C*(rate/100);
-  const failLen=total>0?C*(failed/total):0;
-  const flakyLen=total>0?C*(flaky/total):0;
-  const el=document.getElementById('rPass');
-  let t0=null;
-  function ease(t){return 1-Math.pow(1-t,3)}
-  function step(ts){
-    if(!t0)t0=ts;
-    const p=Math.min((ts-t0)/1400,1);
-    const len=passLen*ease(p);
-    el.style.strokeDasharray=`${len.toFixed(2)} ${(C-len).toFixed(2)}`;
-    if(p<1)requestAnimationFrame(step);
-  }
-  el.style.strokeDasharray='0 502.7';
-  requestAnimationFrame(step);
-  const failEl=document.getElementById('rFail');
-  failEl.style.strokeDasharray=`${failLen.toFixed(2)} ${(C-failLen).toFixed(2)}`;
-  failEl.style.strokeDashoffset=(-passLen).toFixed(2);
-  const flakyEl=document.getElementById('rFlaky');
-  flakyEl.style.strokeDasharray=`${flakyLen.toFixed(2)} ${(C-flakyLen).toFixed(2)}`;
-  flakyEl.style.strokeDashoffset=(-(passLen+failLen)).toFixed(2);
-}
+/* ─────────────────────────────────────────
+   VIEW SWITCHING
+───────────────────────────────────────── */
+function setView(v){
+  if(v === currentView) return;
 
-/* ── VIEW SWITCHING with direction ── */
-const viewOrder=['ov','rr','hi'];
-let currentView='ov';
-function setView(v,btn){
-  const prev=currentView;
-  const prevIdx=viewOrder.indexOf(prev);
-  const nextIdx=viewOrder.indexOf(v);
-  const goRight=nextIdx>prevIdx;
+  /* close drill panel when leaving Report tab */
+  if(currentView === 'rr') closeDrill();
 
-  ['ov','rr','hi'].forEach(id=>{
-    document.getElementById('vb-'+id).classList.toggle('on',id===v);
-  });
+  const prevIdx = VIEW_ORDER.indexOf(currentView);
+  const nextIdx = VIEW_ORDER.indexOf(v);
+  const goRight = nextIdx > prevIdx;
 
-  const outEl=document.getElementById('view-'+prev);
-  const inEl=document.getElementById('view-'+v);
-  outEl.style.display='none';
-  inEl.style.display='block';
-  inEl.style.animation='none';
+  /* toggle nav buttons */
+  VIEW_ORDER.forEach(id =>
+    document.getElementById('vb-'+id).classList.toggle('on', id === v)
+  );
+
+  /* hide outgoing, show incoming */
+  document.getElementById('view-' + currentView).style.display = 'none';
+  const inEl = document.getElementById('view-' + v);
+  inEl.style.display = 'block';
+
+  /* WebKit-safe animation re-trigger */
+  inEl.style.animation = 'none';
   void inEl.offsetWidth;
-  const animName=goRight?'slideInRight':'slideInLeft';
-  inEl.style.animation=`${animName} .28s cubic-bezier(.22,.68,0,1.1) forwards`;
+  inEl.style.animation =
+    `${goRight?'slideInRight':'slideInLeft'} .28s cubic-bezier(.22,.68,0,1.1) forwards`;
 
-  currentView=v;
-  const D=window._D;
-  const titles={ov:'Overview',rr:'Run Report',hi:'History'};
-  const subs={
-    ov:`Health summary · ${D?D.runId:'loading...'}`,
-    rr:`Test detail · ${D?D.runId:'...'} · ${D?D.tests.length:0} tests`,
-    hi:`All runs · ${window._runs?window._runs.length:0} total`,
+  currentView = v;
+
+  /* update nav labels */
+  const D = window._D;
+  const titles = { ov:'Overview', rr:'Run Report', hi:'History' };
+  const subs   = {
+    ov: `Health summary · ${D?D.runId:'loading...'}`,
+    rr: `Test detail · ${D?D.runId:'...'} · ${D?D.tests.length:0} tests`,
+    hi: `All runs · ${window._runs?window._runs.length:0} total`,
   };
-  document.getElementById('vn-title').textContent=titles[v];
-  document.getElementById('vn-sub').textContent=subs[v];
+  document.getElementById('vn-title').textContent = titles[v];
+  document.getElementById('vn-sub').textContent   = subs[v];
 
-  if(v==='ov'&&D){
-    playRing(D.summary.rate,D.summary.failed,D.summary.flaky,D.summary.total);
+  /* re-trigger overview-specific animations */
+  if(v === 'ov' && D){
+    playRing(D.summary.rate, D.summary.failed, D.summary.flaky, D.summary.total);
     renderReadinessBadge(D.summary.rate);
-    countUp(document.getElementById('cn-total'),D.summary.total);
-    countUp(document.getElementById('cn-pass'), D.summary.passed);
-    countUp(document.getElementById('cn-fail'), D.summary.failed);
-    countUp(document.getElementById('cn-flaky'),D.summary.flaky);
+    countUp(document.getElementById('cn-total'), D.summary.total);
+    countUp(document.getElementById('cn-pass'),  D.summary.passed);
+    countUp(document.getElementById('cn-fail'),  D.summary.failed);
+    countUp(document.getElementById('cn-flaky'), D.summary.flaky);
   }
-  if(v==='hi')renderHistory();
-  window.scrollTo({top:0,behavior:'smooth'});
-  setTimeout(()=>{
-    document.querySelectorAll('#view-'+v+' .sc').forEach(el=>{
-      el.classList.remove('visible');
-      revealObs.unobserve(el);
-      revealObs.observe(el);
-    });
-  },80);
+
+  if(v === 'hi') renderHistory();
+
+  /* render comp cards fresh on first Report open so fadeUp stagger
+     plays on visible elements — not on display:none during renderAll */
+  if(v === 'rr' && window._D) renderCompCards(window._D.comp);
+
+  window.scrollTo({ top:0, behavior:'smooth' });
+
+  /* arm scroll-reveal for cards now in view */
+  setTimeout(() => armReveal(v), 80);
 }
 
+/* ─────────────────────────────────────────
+   RUN HISTORY
+───────────────────────────────────────── */
 function renderHistory(){
-  const runs=window._runs;
-  if(!runs||!runs.length){
-    document.getElementById('histList').innerHTML='<div class="rh-empty">No run history yet.</div>';
+  const runs = window._runs;
+  document.getElementById('histMeta').textContent = (runs && runs.length)
+    ? `${runs.length} run${runs.length===1?'':'s'} recorded`
+    : '0 runs recorded';
+  if(!runs || !runs.length){
+    document.getElementById('histList').innerHTML =
+      '<div class="rh-empty">No run history yet — run more test suites to build history.</div>';
     return;
   }
-  document.getElementById('histMeta').textContent=`${runs.length} run${runs.length===1?'':'s'} recorded`;
-  document.getElementById('histList').innerHTML=runs.slice().reverse().map((r,i)=>{
-    const rate=r.rate??0;const col=hclr(rate);
-    const passed=r.passed??0,failed=r.failed??0,flaky=r.flaky??0,total=r.total??0;
-    const ago=r.generatedAt?relativeTime(r.generatedAt):'';
-    const runLabel=r.runNum?`Run #${r.runNum}`:'—';
-    return`<div class="rh-row" style="animation-delay:${(i*.06).toFixed(2)}s">
+  document.getElementById('histList').innerHTML = runs.slice().reverse().map((r, i) => {
+    const rate   = r.rate ?? 0;
+    const col    = hclr(rate);
+    const passed = r.passed ?? 0;
+    const failed = r.failed ?? 0;
+    const flaky  = r.flaky  ?? 0;
+    const total  = r.total  ?? 0;
+    const ago    = r.generatedAt ? relativeTime(r.generatedAt) : '';
+    const label  = r.runNum ? `Run #${r.runNum}` : '—';
+    return `<div class="rh-row" style="animation-delay:${(i*.06).toFixed(2)}s">
       <div class="rh-dot" style="background:${col}"></div>
       <div class="rh-body">
         <div class="rh-top">
-          <span class="rh-id">${runLabel} <span style="font-size:11px;font-weight:400;color:var(--text3)">${r.suite||'Login Tests'} · ${r.env||'Dev'}</span></span>
+          <span class="rh-id">${label}
+            <span style="font-size:11px;font-weight:400;color:var(--text3)">
+              ${r.suite||'Login Tests'} · ${r.env||'Dev'}
+            </span>
+          </span>
           <span class="rh-rate" style="color:${col}">${rate}%</span>
         </div>
         <div class="rh-meta">${ago?ago+' · ':''}${r.branch||'main'} · ${r.duration||'—'}</div>
-        <div class="rh-bar-bg"><div class="rh-bar-fill" style="--bar-w:${rate}%;background:${col};animation-delay:${(.1+i*.06).toFixed(2)}s"></div></div>
+        <div class="rh-bar-bg">
+          <div class="rh-bar-fill"
+            style="--bar-w:${rate}%;background:${col};animation-delay:${(.1+i*.06).toFixed(2)}s">
+          </div>
+        </div>
         <div style="display:flex;align-items:center;justify-content:space-between;margin-top:6px;flex-wrap:wrap;gap:6px">
           <div class="rh-counts">
-            <span class="rh-cnt" style="color:#10B981"><span class="sdot" style="background:#10B981"></span>${passed} passed</span>
-            ${failed?`<span class="rh-cnt" style="color:#EF4444"><span class="sdot" style="background:#EF4444"></span>${failed} failed</span>`:''}
-            ${flaky?`<span class="rh-cnt" style="color:#F59E0B"><span class="sdot" style="background:#F59E0B"></span>${flaky} flaky</span>`:''}
+            <span class="rh-cnt" style="color:#10B981">
+              <span class="sdot" style="background:#10B981"></span>${passed} passed
+            </span>
+            ${failed?`<span class="rh-cnt" style="color:#EF4444">
+              <span class="sdot" style="background:#EF4444"></span>${failed} failed
+            </span>`:''}
+            ${flaky?`<span class="rh-cnt" style="color:#F59E0B">
+              <span class="sdot" style="background:#F59E0B"></span>${flaky} flaky
+            </span>`:''}
             <span class="rh-cnt" style="color:var(--text3)">${total} total</span>
           </div>
           <span class="run-id-badge">${r.runId||''}</span>
@@ -1020,29 +1330,35 @@ function renderHistory(){
   }).join('');
 }
 
-fetch('./data/results.json?t='+Date.now())
-  .then(r=>{if(!r.ok)throw new Error(r.status);return r.json();})
-  .then(D=>{
-    if(!D||!D.runId)throw new Error('Empty data');
+/* ─────────────────────────────────────────
+   DATA FETCH
+───────────────────────────────────────── */
+fetch('./data/results.json?t=' + Date.now())
+  .then(r => { if(!r.ok) throw new Error(r.status); return r.json(); })
+  .then(D => {
+    if(!D || !D.runId) throw new Error('Empty data');
     renderAll(D);
     document.getElementById('loader').classList.add('hide');
   })
-  .catch(err=>{
-    const isEmpty=err.message==='Empty data';
-    document.getElementById('heroMeta').textContent=isEmpty?'Waiting for first run...':'Data unavailable — check CI pipeline';
-    document.getElementById('heroMeta').style.color=isEmpty?'rgba(255,255,255,.3)':'#EF4444';
-    document.getElementById('heroRate').textContent='—';
-    document.getElementById('heroTrend').textContent='';
-    document.getElementById('heroStreak').textContent=isEmpty?'Run your first test suite':'';
+  .catch(err => {
+    const isEmpty = err.message === 'Empty data';
+    document.getElementById('heroMeta').textContent =
+      isEmpty ? 'Waiting for first run...' : 'Data unavailable — check CI pipeline';
+    document.getElementById('heroMeta').style.color =
+      isEmpty ? 'rgba(255,255,255,.3)' : '#EF4444';
+    document.getElementById('heroRate').textContent  = '—';
+    document.getElementById('heroTrend').textContent = '';
+    document.getElementById('heroStreak').textContent =
+      isEmpty ? 'Run your first test suite' : 'Check CI pipeline for errors';
     document.getElementById('loader').classList.add('hide');
-    setTimeout(observeCards,60);
-    console.error('Dashboard fetch error:',err);
+    setTimeout(() => armReveal('ov'), 60);
+    console.error('Dashboard fetch error:', err);
   });
 
-fetch('./data/runs.json?t='+Date.now())
-  .then(r=>{if(!r.ok)throw new Error(r.status);return r.json();})
-  .then(runs=>{window._runs=Array.isArray(runs)?runs:runs.runs||[];})
-  .catch(()=>{window._runs=[];});
+fetch('./data/runs.json?t=' + Date.now())
+  .then(r => { if(!r.ok) throw new Error(r.status); return r.json(); })
+  .then(runs => { window._runs = Array.isArray(runs) ? runs : runs.runs || []; })
+  .catch(() => { window._runs = []; });
 </script>
 </body>
 </html>
