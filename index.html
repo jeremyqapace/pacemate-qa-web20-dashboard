@@ -183,17 +183,29 @@ body{background:var(--bg);color:var(--text)}
 @media(prefers-reduced-motion:reduce){.hcell{opacity:1;animation:none}}
 
 /* ── COMPONENT CARDS ── */
-.comp-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:8px}
-.ccard{background:var(--card-bg);border:1.5px solid var(--border);border-left:3px solid #C8184A;
-  border-radius:4px 12px 12px 4px;padding:.9rem .8rem;text-align:center;
-  transition:transform .18s cubic-bezier(.22,.68,0,1.2),border-color .15s;
-  opacity:0;animation:fadeUp .4s ease forwards;cursor:pointer}
+.comp-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px}
+.ccard{background:var(--card-bg);border:1.5px solid var(--border);
+  border-top:3px solid transparent;
+  border-radius:12px;padding:1rem .9rem .8rem;
+  display:flex;flex-direction:column;align-items:center;gap:0;
+  transition:transform .18s cubic-bezier(.22,.68,0,1.2),border-color .15s,box-shadow .15s;
+  opacity:0;animation:fadeUp .4s ease forwards;cursor:pointer;text-align:center}
 .ccard:hover{transform:translateY(-3px)}
 .ccard:active{transform:scale(.96)}
-.ccard.active{border-color:#C8184A;border-width:2px;background:rgba(200,24,74,.04)}
+.ccard.active{outline:2px solid #C8184A;outline-offset:1px}
+.ccard.status-pass{border-top-color:#10B981}
+.ccard.status-warn{border-top-color:#F59E0B}
+.ccard.status-fail{border-top-color:#EF4444}
 @media(prefers-reduced-motion:reduce){.ccard{opacity:1;animation:none}}
-.cname{font-size:12px;font-weight:600;color:var(--text);margin-top:7px;margin-bottom:2px;letter-spacing:-.2px}
-.ctag{font-size:10px;font-weight:600;padding:2px 8px;border-radius:99px;display:inline-block;margin-bottom:7px}
+
+.ccard-ring{margin-bottom:8px}
+.cname{font-size:13px;font-weight:600;color:var(--text);margin-bottom:6px;
+  letter-spacing:-.2px;line-height:1.3;width:100%}
+.ctag{font-size:11px;font-weight:600;padding:3px 9px;border-radius:99px;
+  display:inline-flex;align-items:center;gap:4px;margin-bottom:10px;white-space:nowrap}
+.ctag-dot{width:5px;height:5px;border-radius:50%;flex-shrink:0}
+.cspark{display:flex;justify-content:center;width:100%;
+  border-top:1px solid var(--border2);padding-top:8px;margin-top:auto}
 
 /* ── COMPONENT DRILL-DOWN PANEL ── */
 .cdrill{overflow:hidden;max-height:0;transition:max-height .4s cubic-bezier(.22,.68,0,1),opacity .3s ease;
@@ -335,7 +347,7 @@ body{background:var(--bg);color:var(--text)}
   .mid{flex-direction:row}
   .mid .card:first-child{flex:3}
   .mid .card:last-child{flex:2}
-  .comp-row{grid-template-columns:repeat(auto-fill,minmax(130px,1fr))}
+  .comp-row{grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}
   .vnav{padding:1rem 1.25rem}
   .vbtn{padding:8px 22px;font-size:13px}
   .scb{padding:1.25rem 1.5rem}
