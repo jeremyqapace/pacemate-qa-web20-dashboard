@@ -1,25 +1,5 @@
 [
   {
-    "runNum": 15,
-    "runId": "R-15",
-    "rate": 93.2,
-    "total": 133,
-    "passed": 124,
-    "failed": 9,
-    "flaky": 0,
-    "duration": "51m 43s",
-    "generatedAt": "2026-04-03T22:15:05.793Z",
-    "compRates": {
-      "Remotes": 92,
-      "Billing": 100,
-      "Sidebar": 100,
-      "Patients": 93,
-      "Filter Bar": 100,
-      "Auto Promoted": 78,
-      "Login": 100
-    }
-  },
-  {
     "runNum": 16,
     "runId": "R-16",
     "rate": 91,
@@ -190,6 +170,23 @@
       "Filter Bar": 100,
       "Sidebar": 100,
       "Patients": 93,
+      "Login": 100
+    }
+  },
+  {
+    "runNum": 25,
+    "runId": "R-25",
+    "rate": 100,
+    "total": 3,
+    "passed": 3,
+    "failed": 0,
+    "flaky": 0,
+    "duration": "15s",
+    "generatedAt": "2026-04-08T20:00:08.503Z",
+    "suite": "Login Tests",
+    "env": "DEV2",
+    "branch": "1/merge",
+    "compRates": {
       "Login": 100
     }
   }
