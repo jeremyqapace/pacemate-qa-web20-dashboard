@@ -1,19 +1,5 @@
 [
   {
-    "runNum": 13,
-    "runId": "R-13",
-    "rate": 100,
-    "total": 3,
-    "passed": 3,
-    "failed": 0,
-    "flaky": 0,
-    "duration": "15s",
-    "generatedAt": "2026-04-03T20:31:40.933Z",
-    "compRates": {
-      "Login": 100
-    }
-  },
-  {
     "runNum": 14,
     "runId": "R-14",
     "rate": 100,
@@ -179,6 +165,23 @@
       "Patients": 73,
       "Login": 100,
       "Auto Promoted": 100
+    }
+  },
+  {
+    "runNum": 23,
+    "runId": "R-23",
+    "rate": 100,
+    "total": 3,
+    "passed": 3,
+    "failed": 0,
+    "flaky": 0,
+    "duration": "21s",
+    "generatedAt": "2026-04-08T09:37:25.267Z",
+    "suite": "Login Tests",
+    "env": "DEV2",
+    "branch": "main",
+    "compRates": {
+      "Login": 100
     }
   }
 ]
