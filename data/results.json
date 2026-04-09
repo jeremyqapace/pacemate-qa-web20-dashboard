@@ -1,24 +1,24 @@
 {
-  "runId": "R-27",
-  "generatedAt": "2026-04-09T18:48:13.588Z",
+  "runId": "R-28",
+  "generatedAt": "2026-04-09T18:49:23.150Z",
   "branch": "main",
   "suite": "Login Tests",
   "env": "DEV2",
-  "runUrl": "https://github.com/PaceMateLive/legacy_webAutomation_PaceMateLive/actions/runs/24207260676",
+  "runUrl": "https://github.com/PaceMateLive/legacy_webAutomation_PaceMateLive/actions/runs/24207356200",
   "summary": {
     "total": 3,
     "passed": 3,
     "failed": 0,
     "flaky": 0,
     "rate": 100,
-    "duration": "16s",
-    "prevRunId": "R-26",
+    "duration": "15s",
+    "prevRunId": "R-27",
     "prevRate": 100,
     "prevTotal": 3,
     "prevFailed": 0,
     "prevFlaky": 0,
-    "prevDuration": "23s",
-    "consecutivePassing": 3
+    "prevDuration": "16s",
+    "consecutivePassing": 4
   },
   "comp": [
     {
@@ -43,11 +43,11 @@
     }
   ],
   "hRuns": [
-    "R-23",
     "R-24",
     "R-25",
     "R-26",
-    "R-27"
+    "R-27",
+    "R-28"
   ],
   "hData": [
     [
@@ -60,7 +60,6 @@
   ],
   "trend": {
     "labels": [
-      "R-18",
       "R-19",
       "R-20",
       "R-21",
@@ -69,10 +68,10 @@
       "R-24",
       "R-25",
       "R-26",
-      "R-27"
+      "R-27",
+      "R-28"
     ],
     "passed": [
-      3,
       3,
       135,
       3,
@@ -81,16 +80,17 @@
       136,
       3,
       3,
+      3,
       3
     ],
     "failed": [
-      0,
       0,
       2,
       0,
       4,
       0,
       1,
+      0,
       0,
       0,
       0
@@ -119,19 +119,19 @@
       "err": null
     },
     {
-      "name": "[Login] - PMA-0001 - Nurse Login - Verify Navigation After Login",
-      "comp": "Login",
-      "type": "Auto",
-      "status": "passed",
-      "dur": "13s",
-      "err": null
-    },
-    {
       "name": "[Login] - PMA-001.4 - Technician Login - Verify Successful Authentication",
       "comp": "Login",
       "type": "Auto",
       "status": "passed",
-      "dur": "2s",
+      "dur": "1s",
+      "err": null
+    },
+    {
+      "name": "[Login] - PMA-0001 - Nurse Login - Verify Navigation After Login",
+      "comp": "Login",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "12s",
       "err": null
     }
   ]
