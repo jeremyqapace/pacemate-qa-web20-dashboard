@@ -1,29 +1,33 @@
 {
-  "runId": "R-26",
-  "generatedAt": "2026-04-09T09:40:04.494Z",
+  "runId": "R-27",
+  "generatedAt": "2026-04-09T18:48:13.588Z",
   "branch": "main",
   "suite": "Login Tests",
   "env": "DEV2",
-  "runUrl": "https://github.com/PaceMateLive/legacy_webAutomation_PaceMateLive/actions/runs/24183245170",
+  "runUrl": "https://github.com/PaceMateLive/legacy_webAutomation_PaceMateLive/actions/runs/24207260676",
   "summary": {
     "total": 3,
     "passed": 3,
     "failed": 0,
     "flaky": 0,
     "rate": 100,
-    "duration": "23s",
-    "prevRunId": "R-25",
+    "duration": "16s",
+    "prevRunId": "R-26",
     "prevRate": 100,
     "prevTotal": 3,
     "prevFailed": 0,
     "prevFlaky": 0,
-    "prevDuration": "15s",
-    "consecutivePassing": 2
+    "prevDuration": "23s",
+    "consecutivePassing": 3
   },
   "comp": [
     {
       "name": "Login",
       "pct": 100,
+      "passed": 3,
+      "total": 3,
+      "failed": 0,
+      "flaky": 0,
       "sparks": [
         100,
         100,
@@ -35,18 +39,15 @@
         100,
         100,
         100
-      ],
-      "total": 3,
-      "failed": 0,
-      "flaky": 0
+      ]
     }
   ],
   "hRuns": [
-    "R-22",
     "R-23",
     "R-24",
     "R-25",
-    "R-26"
+    "R-26",
+    "R-27"
   ],
   "hData": [
     [
@@ -59,7 +60,6 @@
   ],
   "trend": {
     "labels": [
-      "R-17",
       "R-18",
       "R-19",
       "R-20",
@@ -68,10 +68,10 @@
       "R-23",
       "R-24",
       "R-25",
-      "R-26"
+      "R-26",
+      "R-27"
     ],
     "passed": [
-      3,
       3,
       3,
       135,
@@ -80,10 +80,10 @@
       3,
       136,
       3,
+      3,
       3
     ],
     "failed": [
-      0,
       0,
       0,
       2,
@@ -91,6 +91,7 @@
       4,
       0,
       1,
+      0,
       0,
       0
     ],
@@ -114,7 +115,7 @@
       "comp": "Login",
       "type": "Auto",
       "status": "passed",
-      "dur": "1s",
+      "dur": "2s",
       "err": null
     },
     {
@@ -122,7 +123,7 @@
       "comp": "Login",
       "type": "Auto",
       "status": "passed",
-      "dur": "20s",
+      "dur": "13s",
       "err": null
     },
     {
