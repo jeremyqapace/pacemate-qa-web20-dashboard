@@ -1,28 +1,5 @@
 [
   {
-    "runNum": 20,
-    "runId": "R-20",
-    "rate": 98.5,
-    "total": 137,
-    "passed": 135,
-    "failed": 2,
-    "flaky": 0,
-    "duration": "44m 37s",
-    "generatedAt": "2026-04-06T21:45:50.166Z",
-    "suite": "Completed Test",
-    "env": "DEV2",
-    "branch": "main",
-    "compRates": {
-      "Billing": 100,
-      "Remotes": 99,
-      "Patients": 93,
-      "Auto Promoted": 100,
-      "Sidebar": 100,
-      "Filter Bar": 100,
-      "Login": 100
-    }
-  },
-  {
     "runNum": 21,
     "runId": "R-21",
     "rate": 100,
@@ -244,6 +221,29 @@
         "failed": 0,
         "flaky": 0,
         "total": 6
+      }
+    }
+  },
+  {
+    "runNum": 30,
+    "runId": "R-30",
+    "rate": 100,
+    "total": 3,
+    "passed": 3,
+    "failed": 0,
+    "flaky": 0,
+    "duration": "16s",
+    "generatedAt": "2026-04-10T09:39:03.762Z",
+    "suite": "Login Tests",
+    "env": "DEV2",
+    "branch": "main",
+    "compRates": {
+      "Login": {
+        "rate": 100,
+        "passed": 3,
+        "failed": 0,
+        "flaky": 0,
+        "total": 3
       }
     }
   }
