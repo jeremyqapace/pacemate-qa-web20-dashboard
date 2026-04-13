@@ -1,24 +1,24 @@
 {
-  "runId": "R-30",
-  "generatedAt": "2026-04-10T09:39:03.762Z",
+  "runId": "R-31",
+  "generatedAt": "2026-04-13T09:51:01.300Z",
   "branch": "main",
   "suite": "Login Tests",
   "env": "DEV2",
-  "runUrl": "https://github.com/PaceMateLive/legacy_webAutomation_PaceMateLive/actions/runs/24236510402",
+  "runUrl": "https://github.com/PaceMateLive/legacy_webAutomation_PaceMateLive/actions/runs/24336704957",
   "summary": {
     "total": 3,
     "passed": 3,
     "failed": 0,
     "flaky": 0,
     "rate": 100,
-    "duration": "16s",
-    "prevRunId": "R-29",
-    "prevRate": 94.9,
-    "prevTotal": 138,
-    "prevFailed": 7,
+    "duration": "17s",
+    "prevRunId": "R-30",
+    "prevRate": 100,
+    "prevTotal": 3,
+    "prevFailed": 0,
     "prevFlaky": 0,
-    "prevDuration": "42m 50s",
-    "consecutivePassing": 1
+    "prevDuration": "16s",
+    "consecutivePassing": 2
   },
   "comp": [
     {
@@ -43,11 +43,11 @@
     }
   ],
   "hRuns": [
-    "R-26",
     "R-27",
     "R-28",
     "R-29",
-    "R-30"
+    "R-30",
+    "R-31"
   ],
   "hData": [
     [
@@ -60,7 +60,6 @@
   ],
   "trend": {
     "labels": [
-      "R-21",
       "R-22",
       "R-23",
       "R-24",
@@ -69,10 +68,10 @@
       "R-27",
       "R-28",
       "R-29",
-      "R-30"
+      "R-30",
+      "R-31"
     ],
     "passed": [
-      3,
       133,
       3,
       136,
@@ -81,10 +80,10 @@
       3,
       3,
       131,
+      3,
       3
     ],
     "failed": [
-      0,
       4,
       0,
       1,
@@ -93,6 +92,7 @@
       0,
       0,
       7,
+      0,
       0
     ],
     "flaky": [
@@ -111,11 +111,11 @@
   "flaky": [],
   "tests": [
     {
-      "name": "[Login] - PMA-001.4 - Technician Login - Verify Successful Authentication",
+      "name": "[Login] - PMA-0001 - Nurse Login - Verify Navigation After Login",
       "comp": "Login",
       "type": "Auto",
       "status": "passed",
-      "dur": "2s",
+      "dur": "14s",
       "err": null
     },
     {
@@ -127,11 +127,11 @@
       "err": null
     },
     {
-      "name": "[Login] - PMA-0001 - Nurse Login - Verify Navigation After Login",
+      "name": "[Login] - PMA-001.4 - Technician Login - Verify Successful Authentication",
       "comp": "Login",
       "type": "Auto",
       "status": "passed",
-      "dur": "12s",
+      "dur": "1s",
       "err": null
     }
   ]
