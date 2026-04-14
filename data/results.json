@@ -1,24 +1,24 @@
 {
-  "runId": "R-31",
-  "generatedAt": "2026-04-13T09:51:01.300Z",
+  "runId": "R-32",
+  "generatedAt": "2026-04-14T09:43:33.345Z",
   "branch": "main",
   "suite": "Login Tests",
   "env": "DEV2",
-  "runUrl": "https://github.com/PaceMateLive/legacy_webAutomation_PaceMateLive/actions/runs/24336704957",
+  "runUrl": "https://github.com/PaceMateLive/legacy_webAutomation_PaceMateLive/actions/runs/24392001075",
   "summary": {
     "total": 3,
     "passed": 3,
     "failed": 0,
     "flaky": 0,
     "rate": 100,
-    "duration": "17s",
-    "prevRunId": "R-30",
+    "duration": "15s",
+    "prevRunId": "R-31",
     "prevRate": 100,
     "prevTotal": 3,
     "prevFailed": 0,
     "prevFlaky": 0,
-    "prevDuration": "16s",
-    "consecutivePassing": 2
+    "prevDuration": "17s",
+    "consecutivePassing": 3
   },
   "comp": [
     {
@@ -43,11 +43,11 @@
     }
   ],
   "hRuns": [
-    "R-27",
     "R-28",
     "R-29",
     "R-30",
-    "R-31"
+    "R-31",
+    "R-32"
   ],
   "hData": [
     [
@@ -60,7 +60,6 @@
   ],
   "trend": {
     "labels": [
-      "R-22",
       "R-23",
       "R-24",
       "R-25",
@@ -69,10 +68,10 @@
       "R-28",
       "R-29",
       "R-30",
-      "R-31"
+      "R-31",
+      "R-32"
     ],
     "passed": [
-      133,
       3,
       136,
       3,
@@ -81,10 +80,10 @@
       3,
       131,
       3,
+      3,
       3
     ],
     "failed": [
-      4,
       0,
       1,
       0,
@@ -92,6 +91,7 @@
       0,
       0,
       7,
+      0,
       0,
       0
     ],
@@ -115,7 +115,7 @@
       "comp": "Login",
       "type": "Auto",
       "status": "passed",
-      "dur": "14s",
+      "dur": "12s",
       "err": null
     },
     {
@@ -131,7 +131,7 @@
       "comp": "Login",
       "type": "Auto",
       "status": "passed",
-      "dur": "1s",
+      "dur": "2s",
       "err": null
     }
   ]
