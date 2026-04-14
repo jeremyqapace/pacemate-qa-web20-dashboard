@@ -1,22 +1,5 @@
 [
   {
-    "runNum": 23,
-    "runId": "R-23",
-    "rate": 100,
-    "total": 3,
-    "passed": 3,
-    "failed": 0,
-    "flaky": 0,
-    "duration": "21s",
-    "generatedAt": "2026-04-08T09:37:25.267Z",
-    "suite": "Login Tests",
-    "env": "DEV2",
-    "branch": "main",
-    "compRates": {
-      "Login": 100
-    }
-  },
-  {
     "runNum": 24,
     "runId": "R-24",
     "rate": 99.3,
@@ -250,6 +233,64 @@
         "failed": 0,
         "flaky": 0,
         "total": 3
+      }
+    }
+  },
+  {
+    "runNum": 33,
+    "runId": "R-33",
+    "rate": 98.3,
+    "total": 120,
+    "passed": 118,
+    "failed": 2,
+    "flaky": 0,
+    "duration": "40m 46s",
+    "generatedAt": "2026-04-14T17:48:36.016Z",
+    "suite": "Smoke Tests",
+    "env": "DEV2",
+    "branch": "main",
+    "compRates": {
+      "Remotes": {
+        "rate": 100,
+        "passed": 77,
+        "failed": 0,
+        "flaky": 0,
+        "total": 77
+      },
+      "Patients": {
+        "rate": 86,
+        "passed": 12,
+        "failed": 2,
+        "flaky": 0,
+        "total": 14
+      },
+      "Auto Promoted": {
+        "rate": 100,
+        "passed": 12,
+        "failed": 0,
+        "flaky": 0,
+        "total": 12
+      },
+      "Sidebar": {
+        "rate": 100,
+        "passed": 8,
+        "failed": 0,
+        "flaky": 0,
+        "total": 8
+      },
+      "Login": {
+        "rate": 100,
+        "passed": 3,
+        "failed": 0,
+        "flaky": 0,
+        "total": 3
+      },
+      "Filter Bar": {
+        "rate": 100,
+        "passed": 6,
+        "failed": 0,
+        "flaky": 0,
+        "total": 6
       }
     }
   }
