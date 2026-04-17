@@ -1,26 +1,46 @@
 {
-  "runId": "R-41",
-  "generatedAt": "2026-04-17T13:49:43.560Z",
-  "branch": "2/merge",
-  "suite": "Login Tests",
+  "runId": "R-42",
+  "generatedAt": "2026-04-17T14:27:24.342Z",
+  "branch": "main",
+  "suite": "Complete Tests",
   "env": "DEV2",
-  "runUrl": "https://github.com/PaceMateLive/legacy_webAutomation_PaceMateLive/actions/runs/24568247511",
+  "runUrl": "https://github.com/PaceMateLive/legacy_webAutomation_PaceMateLive/actions/runs/24567772309",
   "summary": {
-    "total": 3,
-    "passed": 3,
-    "failed": 0,
+    "total": 138,
+    "passed": 126,
+    "failed": 12,
     "flaky": 0,
-    "rate": 100,
-    "duration": "17s",
-    "prevRunId": "R-40",
-    "prevRate": 89.1,
-    "prevTotal": 138,
-    "prevFailed": 15,
+    "rate": 91.3,
+    "duration": "50m 29s",
+    "prevRunId": "R-41",
+    "prevRate": 100,
+    "prevTotal": 3,
+    "prevFailed": 0,
     "prevFlaky": 0,
-    "prevDuration": "57m 35s",
-    "consecutivePassing": 1
+    "prevDuration": "17s",
+    "consecutivePassing": 0
   },
   "comp": [
+    {
+      "name": "Remotes",
+      "pct": 88,
+      "passed": 68,
+      "total": 77,
+      "failed": 9,
+      "flaky": 0,
+      "sparks": [
+        100,
+        100,
+        100,
+        95,
+        88,
+        91,
+        88,
+        96,
+        88,
+        88
+      ]
+    },
     {
       "name": "Login",
       "pct": 100,
@@ -40,16 +60,158 @@
         100,
         100
       ]
+    },
+    {
+      "name": "Filter Bar",
+      "pct": 100,
+      "passed": 6,
+      "total": 6,
+      "failed": 0,
+      "flaky": 0,
+      "sparks": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ]
+    },
+    {
+      "name": "Patients",
+      "pct": 80,
+      "passed": 12,
+      "total": 15,
+      "failed": 3,
+      "flaky": 0,
+      "sparks": [
+        86,
+        93,
+        79,
+        71,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "Billing",
+      "pct": 100,
+      "passed": 17,
+      "total": 17,
+      "failed": 0,
+      "flaky": 0,
+      "sparks": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        82,
+        100,
+        100
+      ]
+    },
+    {
+      "name": "Auto Promoted",
+      "pct": 100,
+      "passed": 12,
+      "total": 12,
+      "failed": 0,
+      "flaky": 0,
+      "sparks": [
+        100,
+        83,
+        50,
+        100,
+        100,
+        100,
+        100,
+        50,
+        100,
+        100
+      ]
+    },
+    {
+      "name": "Sidebar",
+      "pct": 100,
+      "passed": 8,
+      "total": 8,
+      "failed": 0,
+      "flaky": 0,
+      "sparks": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ]
     }
   ],
   "hRuns": [
-    "R-37",
     "R-38",
     "R-39",
     "R-40",
-    "R-41"
+    "R-41",
+    "R-42"
   ],
   "hData": [
+    [
+      91,
+      100,
+      96,
+      100,
+      88
+    ],
+    [
+      100,
+      100,
+      100,
+      100,
+      100
+    ],
+    [
+      100,
+      100,
+      100,
+      100,
+      100
+    ],
+    [
+      80,
+      100,
+      80,
+      100,
+      80
+    ],
+    [
+      100,
+      100,
+      82,
+      100,
+      100
+    ],
+    [
+      100,
+      100,
+      50,
+      100,
+      100
+    ],
     [
       100,
       100,
@@ -60,7 +222,6 @@
   ],
   "trend": {
     "labels": [
-      "R-32",
       "R-33",
       "R-34",
       "R-35",
@@ -69,10 +230,10 @@
       "R-38",
       "R-39",
       "R-40",
-      "R-41"
+      "R-41",
+      "R-42"
     ],
     "passed": [
-      3,
       118,
       117,
       111,
@@ -81,10 +242,10 @@
       128,
       3,
       123,
-      3
+      3,
+      126
     ],
     "failed": [
-      0,
       2,
       3,
       9,
@@ -93,7 +254,8 @@
       10,
       0,
       15,
-      0
+      0,
+      12
     ],
     "flaky": [
       0,
@@ -111,11 +273,67 @@
   "flaky": [],
   "tests": [
     {
+      "name": "[Remotes for Approval] = PMA-004.21 - Dismiss Note from Notes in Report Viewer",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "failed",
+      "dur": "55s",
+      "err": "Error: Notes tab content failed to load after 3 attempts"
+    },
+    {
+      "name": "[Remotes for Approval] = PMA-004.20 - Update EMR Info from Expandable Header in Report Viewer",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "23s",
+      "err": null
+    },
+    {
       "name": "[Login] - PMA-001.4 - Technician Login - Verify Successful Authentication",
       "comp": "Login",
       "type": "Auto",
       "status": "passed",
       "dur": "2s",
+      "err": null
+    },
+    {
+      "name": "[Filter Bar] - PMA-0003.6 - Verify Following Providers Field Input",
+      "comp": "Filter Bar",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "33s",
+      "err": null
+    },
+    {
+      "name": "[Patients] - Patient Details - Add Note to Patient Profile in Patient Details",
+      "comp": "Patients",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "33s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.08 - Verify Folder Icon Opens Report Details",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "22s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.23 - Add Edit Delete Alert Episode Type AT",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "23s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.23 - Add Edit Delete Alert Episode Type VF",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "25s",
       "err": null
     },
     {
@@ -127,11 +345,1035 @@
       "err": null
     },
     {
+      "name": "[Patients] - Clinic Group Management - delete and create group",
+      "comp": "Patients",
+      "type": "Auto",
+      "status": "failed",
+      "dur": "13s",
+      "err": "locator.waitFor: Timeout 10000ms exceeded."
+    },
+    {
+      "name": "[Billing] - Billing Search - Billing Mgmt to Search Billing",
+      "comp": "Billing",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "6s",
+      "err": null
+    },
+    {
+      "name": "[Auto Promoted] - Review and Dismiss Transmission from Dashboard",
+      "comp": "Auto Promoted",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "7s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.16 - Verify Generate Template from Report Viewer",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "failed",
+      "dur": "23s",
+      "err": "locator.waitFor: Timeout 10000ms exceeded."
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.23 - Add Edit Delete Alert Episode Type AF",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "30s",
+      "err": null
+    },
+    {
+      "name": "[Sidebar Navigation] - PMA-0002.2 - Verify Report Navigation Items (Pre-Extended Reports Menu)",
+      "comp": "Sidebar",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "35s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.23 - Add Edit Delete Alert Episode Type Lead noise: RV lead",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "29s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.25 - Verify Observation Box is Editable in Report Viewer",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "failed",
+      "dur": "22s",
+      "err": "locator.waitFor: Timeout 10000ms exceeded."
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.37 - Verify Previous Report Link Opens Correct Report Details",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "failed",
+      "dur": "19s",
+      "err": "locator.waitFor: Timeout 10000ms exceeded."
+    },
+    {
+      "name": "[Patients] - Recent Patients - verify page loads",
+      "comp": "Patients",
+      "type": "Auto",
+      "status": "failed",
+      "dur": "13s",
+      "err": "locator.waitFor: Timeout 10000ms exceeded."
+    },
+    {
+      "name": "[Billing] - Verify Loading of Missed Follow-Up Page",
+      "comp": "Billing",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "7s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.14 - Verify PDF Removal from Report",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "37s",
+      "err": null
+    },
+    {
+      "name": "[Auto Promoted] - Dismiss Transmission from Dashboard with Blue Checkmark",
+      "comp": "Auto Promoted",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "7s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.13 - Verify PDF Addition to Report",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "32s",
+      "err": null
+    },
+    {
+      "name": "[Auto Promoted] - Save Observation in Auto Promoted Transmission",
+      "comp": "Auto Promoted",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "15s",
+      "err": null
+    },
+    {
+      "name": "[Billing] - Load Missed Follow Up Snoozed Page from Billing Sidebar",
+      "comp": "Billing",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "10s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.04.1 - Verify Export Button Downloads File",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "21s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.09.2 - Verify Device Information Labels Display",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "24s",
+      "err": null
+    },
+    {
+      "name": "[Patients] - Patient Details - Edit Patient Name from Patient Details from Report Details",
+      "comp": "Patients",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "32s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.23 - Add Edit Delete Alert Episode Type Shock delivered",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "30s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.27 - Verify Edit Patient Clinical Information",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "failed",
+      "dur": "19s",
+      "err": "locator.waitFor: Timeout 10000ms exceeded."
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.23 - Add Edit Delete Alert Episode Type Loss of Capture: LV lead",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "30s",
+      "err": null
+    },
+    {
+      "name": "[Auto Promoted] - Review from Auto Promoted Dashboard",
+      "comp": "Auto Promoted",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "8s",
+      "err": null
+    },
+    {
+      "name": "[Billing] - Export from Due for Approval page",
+      "comp": "Billing",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "8s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.17 - Verify Pin Note Functionality in Report Viewer",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "failed",
+      "dur": "50s",
+      "err": "Error: Notes tab content failed to load after 3 attempts"
+    },
+    {
+      "name": "[Auto Promoted] - Add link to Auto Promoted Transmission summary",
+      "comp": "Auto Promoted",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "11s",
+      "err": null
+    },
+    {
+      "name": "[Filter Bar] - PMA-0003.2 - Verify Multiple Severity Selection",
+      "comp": "Filter Bar",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "38s",
+      "err": null
+    },
+    {
+      "name": "[Patients] - Unassigned to a group - search and assign to a group",
+      "comp": "Patients",
+      "type": "Auto",
+      "status": "failed",
+      "dur": "13s",
+      "err": "locator.waitFor: Timeout 10000ms exceeded."
+    },
+    {
+      "name": "[Billing] - Billing Search - Billing Mgmt to Pending Billing",
+      "comp": "Billing",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "5s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.23 - Add Edit Delete Alert Episode Type Vendor Check",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "27s",
+      "err": null
+    },
+    {
+      "name": "[Patients] - Patient Details - Access Patient Details Page from Report Details (second)",
+      "comp": "Patients",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "20s",
+      "err": null
+    },
+    {
+      "name": "[Billing] - Billing Search - Billing Mgmt to Completed Billing Page - Columns",
+      "comp": "Billing",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "5s",
+      "err": null
+    },
+    {
+      "name": "[Patients] - My Favorite Patients - verify page loads",
+      "comp": "Patients",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "20s",
+      "err": null
+    },
+    {
       "name": "[Login] - PMA-0001 - Nurse Login - Verify Navigation After Login",
       "comp": "Login",
       "type": "Auto",
       "status": "passed",
+      "dur": "8s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.07 - Verify E Button Opens Evaluation Form in New Tab",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "27s",
+      "err": null
+    },
+    {
+      "name": "[Patients] - Patient Details - Change Patient Gender from Patient Details Page",
+      "comp": "Patients",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "30s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.23 - Add Edit Delete Alert Episode Type BRADY",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "25s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.23 - Add Edit Delete Alert Episode Type AMS",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "23s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.30 - Adding Diagnosis Codes from Report Viewer",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
       "dur": "13s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.38 - Verify Patient Details Match Between Report Details and Patient Edit",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "27s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.23 - Add Edit Delete Alert Episode Type Loss of Capture : RA lead",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "28s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.23 - Add Edit Delete Alert Episode Type Other",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "27s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.11 - Verify Removing Diagnosis Codes from Report Details",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "36s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.03.3 - Check Specific Transmissions by Index",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "11s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.23 - Add Edit Delete Alert Episode Type Virtual Visit",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "25s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.04.3 - Verify Archive Selected Button Works",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "10s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] = PMA-004.19 - Update EMR Patient Info from Expandable Header in Report Viewer",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "36s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.26 - Verify Changing Interpreting Provider from Expandable Header",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "37s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.24 - Add Link to Transmission Text in Report Viewer",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "31s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.28 - Verify Data Loading in Expandable Header in Report Viewer",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "33s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.23 - Add Edit Delete Alert Episode Type Device in backup mode",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "24s",
+      "err": null
+    },
+    {
+      "name": "[Billing] - Billing Events for Review",
+      "comp": "Billing",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "6s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.10 - Verify Alert Flag Opens Report Details and Re-add Removed Alerts",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "37s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.23 - Add Edit Delete Alert Episode Type VT",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "24s",
+      "err": null
+    },
+    {
+      "name": "[Sidebar Navigation] - PMA-0002.1 - Verify Main Navigation Items",
+      "comp": "Sidebar",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "10s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.23 - Add Edit Delete Alert Episode Type FVT",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "25s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.23 - Add Edit Delete Alert Episode Type Possible HF",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "38s",
+      "err": null
+    },
+    {
+      "name": "Click Alrt Flag to open Report Details",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "17s",
+      "err": null
+    },
+    {
+      "name": "[Patients] - Patients without provider",
+      "comp": "Patients",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "17s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.23 - Add Edit Delete Alert Episode Type Lead noise: RA lead",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "26s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.36 - Verify Current Report Link Opens Correct Report Details",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "failed",
+      "dur": "33s",
+      "err": "Error: expect(received).toContain(expected) // indexOf"
+    },
+    {
+      "name": "[Billing] - Report Viewer - Verify Patient Information Labels in Reports Details",
+      "comp": "Billing",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "31s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.23 - Add Edit Delete Alert Episode Type TACHY",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "44s",
+      "err": null
+    },
+    {
+      "name": "[Billing] - Report Viewer - Access Previous Billing Date from Report Viewer",
+      "comp": "Billing",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "17s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.32 - Change Following Provider using EMR Info From Expandable Header in Report Viewer",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "24s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.23 - Add Edit Delete Alert Episode Type SVT",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "30s",
+      "err": null
+    },
+    {
+      "name": "[Sidebar Navigation] - PMA-0002.4 - Verify Setting Navigation Items",
+      "comp": "Sidebar",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "16s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-004.34 -Change Department ID from Expandable Header in Report Viewer",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "23s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.06 - Verify PDF Icon Opens Unified Report in New Tab",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "12s",
+      "err": null
+    },
+    {
+      "name": "[Billing] - Billing Search - Billing Mgmt to Completed Billing Page - Approved",
+      "comp": "Billing",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "9s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.23 - Add Edit Delete Alert Episode Type Loss of Capture: RV lead",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "30s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.05 - Verify Postcard Icon Opens Report Viewer",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "19s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.03.1 - Check and Uncheck All Transmissions",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "11s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.02 - Verify Column Header Titles Visibility",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "8s",
+      "err": null
+    },
+    {
+      "name": "[Auto Promoted] - Open Auto Promote Transmission and Retrieve Evaluation Form",
+      "comp": "Auto Promoted",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "15s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-004.33 - Update EMR Patient Info from Expandable Header in Report Viewer",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "24s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.23 - Add Edit Delete Alert Episode Type Symptom",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "29s",
+      "err": null
+    },
+    {
+      "name": "[Billing] - Verify Proper Loading of Due for Pre-Approval Page",
+      "comp": "Billing",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "7s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] = PMA-004.22 - Adding Alert Flags From Report Viewer",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "19s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.23 - Add Edit Delete Alert Episode Type AF w/rapid ventricular response",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "30s",
+      "err": null
+    },
+    {
+      "name": "[Auto Promoted] - Dismiss and Archive from Auto Promoted Dashboard",
+      "comp": "Auto Promoted",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "7s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.37 - Verify Previous Report Link Opens Correct Report Details",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "failed",
+      "dur": "19s",
+      "err": "locator.waitFor: Timeout 10000ms exceeded."
+    },
+    {
+      "name": "[Auto Promoted] - New and Dismiss from Auto Promoted Dashboard",
+      "comp": "Auto Promoted",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "7s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.23 - Add Edit Delete Alert Episode Type ATP delivered",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "25s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.01.2 - Check and Uncheck Non-Billable Only Filter",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "9s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.23 - Add Edit Delete Alert Episode Type HVR",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "27s",
+      "err": null
+    },
+    {
+      "name": "[Patients] - Edit Information on Patient Details Page From Report Details",
+      "comp": "Patients",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "25s",
+      "err": null
+    },
+    {
+      "name": "[Billing] - Billing Search - Billing Mgmt to Completed Billing Page - Filters",
+      "comp": "Billing",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "5s",
+      "err": null
+    },
+    {
+      "name": "[Sidebar Navigation] - PMA-0002.5 - Verify Billing Navigation Items",
+      "comp": "Sidebar",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "18s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.38 - Verify Patient Details Match Between Report Details and Patient Edit",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "27s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.29 - Verify Edit Date of Birth in Patient Edit Section",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "40s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.04.2 - Verify Approve Selected Button Works",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "9s",
+      "err": null
+    },
+    {
+      "name": "[Patients] - Patient Details - Change Date of Birth from Patient Details Page from Report Details",
+      "comp": "Patients",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "27s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.23 - Add Edit Delete Alert Episode Type AT/AF",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "26s",
+      "err": null
+    },
+    {
+      "name": "[Sidebar Navigation] - PMA-0002.6 - Verify Alerts Navigation Items",
+      "comp": "Sidebar",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "10s",
+      "err": null
+    },
+    {
+      "name": "[Billing] - Billing Search - Billing Mgmt to Pending Billing Page - Columns",
+      "comp": "Billing",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "5s",
+      "err": null
+    },
+    {
+      "name": "[Billing] - Report Viewer - Access Next Billing Date Page from Report Viewer",
+      "comp": "Billing",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "16s",
+      "err": null
+    },
+    {
+      "name": "[Patients] - Patient Details - Edit Patient Status from Patient Details page",
+      "comp": "Patients",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "39s",
+      "err": null
+    },
+    {
+      "name": "[Filter Bar] - PMA-0003.4 - Verify Multiple Device Type Selection",
+      "comp": "Filter Bar",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "35s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.12 - Verify Addition Diagnosis Codes from Report Details",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "38s",
+      "err": null
+    },
+    {
+      "name": "[Patients] - Patient search - verify search",
+      "comp": "Patients",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "14s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.23 - Add Edit Delete Alert Episode Type Needs Review",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "34s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.03.2 - Check Individual Transmission Checkbox",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "12s",
+      "err": null
+    },
+    {
+      "name": "[Sidebar Navigation] - PMA-0002.8 - Verify Analytics Navigation Items",
+      "comp": "Sidebar",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "11s",
+      "err": null
+    },
+    {
+      "name": "[Billing] - Billing Search - Billing Mgmt to Pending Billing Page- Individually Approve",
+      "comp": "Billing",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "6s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.23 - Add Edit Delete Alert Episode Type PAUSE",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "35s",
+      "err": null
+    },
+    {
+      "name": "[Sidebar Navigation] - PMA-0002.7 - Verify EMR Navigation Items",
+      "comp": "Sidebar",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "18s",
+      "err": null
+    },
+    {
+      "name": "[Patients] - Create New Patient",
+      "comp": "Patients",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "14s",
+      "err": null
+    },
+    {
+      "name": "[Patients] - Patient Details - Edit Patient Email from Patient Details",
+      "comp": "Patients",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "30s",
+      "err": null
+    },
+    {
+      "name": "[Auto Promoted] - Edit Observation for Auto Promoted Transmission",
+      "comp": "Auto Promoted",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "11s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.23 - Add Edit Delete Alert Episode Type Non-sustained VT",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "28s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.36 - Verify Current Report Link Opens Correct Report Details",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "45s",
+      "err": null
+    },
+    {
+      "name": "[Filter Bar] - PMA-0003.5 - Verify Groups Field Input",
+      "comp": "Filter Bar",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "34s",
+      "err": null
+    },
+    {
+      "name": "[Filter Bar] - PMA-0003.1 - Verify Multiple Clinic Selection",
+      "comp": "Filter Bar",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "35s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.31 - Removing Diagnosis Codes from Report Viewer",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "11s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.01.3 - Verify Initial State of Filter Checkboxes",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "8s",
+      "err": null
+    },
+    {
+      "name": "[Filter Bar] - PMA-0003.3 - Verify Multiple Vendor Selection",
+      "comp": "Filter Bar",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "38s",
+      "err": null
+    },
+    {
+      "name": "[Auto Promoted] - Exit Auto Promote Transmission with Esc Key",
+      "comp": "Auto Promoted",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "9s",
+      "err": null
+    },
+    {
+      "name": "[Billing] - Dismiss Selected from Due for Pre-Approval Page",
+      "comp": "Billing",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "7s",
+      "err": null
+    },
+    {
+      "name": "[Sidebar Navigation] - PMA-0002.3 - Verify Patients Navigation Ites",
+      "comp": "Sidebar",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "34s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.18 - Verify Add New Note to Notes in Report Viewer",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "failed",
+      "dur": "48s",
+      "err": "Error: Notes tab content failed to load after 3 attempts"
+    },
+    {
+      "name": "[Billing] - Billing Search - Billing Mgmt to Review Billing",
+      "comp": "Billing",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "5s",
+      "err": null
+    },
+    {
+      "name": "[[Remotes for Approval] - PMA-0004.01.1 - Check and Uncheck Billable Only Filter",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "11s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.09.1 - Verify Patient Information Labels Display",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "27s",
+      "err": null
+    },
+    {
+      "name": "[Auto Promoted] - Dismiss from Auto Promoted Dashboard",
+      "comp": "Auto Promoted",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "8s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.23 - Add Edit Delete Alert Episode Type Stat Read",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "28s",
+      "err": null
+    },
+    {
+      "name": "[Auto Promoted] - Open Evaluation Form from Auto Promoted Board",
+      "comp": "Auto Promoted",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "9s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.15 - Verify Re-Add Removed PDF to Report",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "49s",
+      "err": null
+    },
+    {
+      "name": "[Remotes for Approval] - PMA-0004.23 - Add Edit Delete Alert Episode Type Provider Review",
+      "comp": "Remotes",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "33s",
       "err": null
     }
   ]
