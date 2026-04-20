@@ -1,63 +1,5 @@
 [
   {
-    "runNum": 35,
-    "runId": "R-35",
-    "rate": 92.5,
-    "total": 120,
-    "passed": 111,
-    "failed": 9,
-    "flaky": 0,
-    "duration": "46m 10s",
-    "generatedAt": "2026-04-15T18:20:06.161Z",
-    "suite": "Smoke Tests",
-    "env": "DEV2",
-    "branch": "main",
-    "compRates": {
-      "Auto Promoted": {
-        "rate": 50,
-        "passed": 6,
-        "failed": 6,
-        "flaky": 0,
-        "total": 12
-      },
-      "Remotes": {
-        "rate": 100,
-        "passed": 77,
-        "failed": 0,
-        "flaky": 0,
-        "total": 77
-      },
-      "Sidebar": {
-        "rate": 100,
-        "passed": 8,
-        "failed": 0,
-        "flaky": 0,
-        "total": 8
-      },
-      "Filter Bar": {
-        "rate": 100,
-        "passed": 6,
-        "failed": 0,
-        "flaky": 0,
-        "total": 6
-      },
-      "Patients": {
-        "rate": 79,
-        "passed": 11,
-        "failed": 3,
-        "flaky": 0,
-        "total": 14
-      },
-      "Login": {
-        "rate": 100,
-        "passed": 3,
-        "failed": 0,
-        "flaky": 0,
-        "total": 3
-      }
-    }
-  },
-  {
     "runNum": 36,
     "runId": "R-36",
     "rate": 93.3,
@@ -458,6 +400,71 @@
     "env": "DEV2",
     "branch": "main",
     "compRates": {
+      "Login": {
+        "rate": 100,
+        "passed": 3,
+        "failed": 0,
+        "flaky": 0,
+        "total": 3
+      }
+    }
+  },
+  {
+    "runNum": 45,
+    "runId": "R-45",
+    "rate": 96.5,
+    "total": 142,
+    "passed": 137,
+    "failed": 5,
+    "flaky": 0,
+    "duration": "59m 47s",
+    "generatedAt": "2026-04-20T14:39:10.522Z",
+    "suite": "Complete Tests",
+    "env": "DEV2",
+    "branch": "main",
+    "compRates": {
+      "Remotes": {
+        "rate": 96,
+        "passed": 74,
+        "failed": 3,
+        "flaky": 0,
+        "total": 77
+      },
+      "Sidebar": {
+        "rate": 67,
+        "passed": 2,
+        "failed": 1,
+        "flaky": 0,
+        "total": 3
+      },
+      "Billing": {
+        "rate": 100,
+        "passed": 17,
+        "failed": 0,
+        "flaky": 0,
+        "total": 17
+      },
+      "Auto Promoted": {
+        "rate": 100,
+        "passed": 21,
+        "failed": 0,
+        "flaky": 0,
+        "total": 21
+      },
+      "Filter Bar": {
+        "rate": 100,
+        "passed": 6,
+        "failed": 0,
+        "flaky": 0,
+        "total": 6
+      },
+      "Patients": {
+        "rate": 93,
+        "passed": 14,
+        "failed": 1,
+        "flaky": 0,
+        "total": 15
+      },
       "Login": {
         "rate": 100,
         "passed": 3,
