@@ -1,28 +1,5 @@
 [
   {
-    "runNum": 41,
-    "runId": "R-41",
-    "rate": 100,
-    "total": 3,
-    "passed": 3,
-    "failed": 0,
-    "flaky": 0,
-    "duration": "17s",
-    "generatedAt": "2026-04-17T13:49:43.560Z",
-    "suite": "Login Tests",
-    "env": "DEV2",
-    "branch": "2/merge",
-    "compRates": {
-      "Login": {
-        "rate": 100,
-        "passed": 3,
-        "failed": 0,
-        "flaky": 0,
-        "total": 3
-      }
-    }
-  },
-  {
     "runNum": 42,
     "runId": "R-42",
     "rate": 91.3,
@@ -436,6 +413,57 @@
         "failed": 0,
         "flaky": 0,
         "total": 3
+      }
+    }
+  },
+  {
+    "runNum": 51,
+    "runId": "R-51",
+    "rate": 89.3,
+    "total": 131,
+    "passed": 117,
+    "failed": 14,
+    "flaky": 0,
+    "duration": "59m 47s",
+    "generatedAt": "2026-04-21T19:10:11.198Z",
+    "suite": "Complete Tests",
+    "env": "DEV2",
+    "branch": "main",
+    "compRates": {
+      "Remotes": {
+        "rate": 89,
+        "passed": 68,
+        "failed": 8,
+        "flaky": 0,
+        "total": 76
+      },
+      "Auto Promoted": {
+        "rate": 100,
+        "passed": 22,
+        "failed": 0,
+        "flaky": 0,
+        "total": 22
+      },
+      "Billing": {
+        "rate": 100,
+        "passed": 17,
+        "failed": 0,
+        "flaky": 0,
+        "total": 17
+      },
+      "Patients": {
+        "rate": 67,
+        "passed": 10,
+        "failed": 5,
+        "flaky": 0,
+        "total": 15
+      },
+      "In Clinic Worklist": {
+        "rate": 0,
+        "passed": 0,
+        "failed": 1,
+        "flaky": 0,
+        "total": 1
       }
     }
   }
