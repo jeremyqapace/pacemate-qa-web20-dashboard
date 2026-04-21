@@ -1,28 +1,5 @@
 [
   {
-    "runNum": 39,
-    "runId": "R-39",
-    "rate": 100,
-    "total": 3,
-    "passed": 3,
-    "failed": 0,
-    "flaky": 0,
-    "duration": "16s",
-    "generatedAt": "2026-04-16T16:13:38.782Z",
-    "suite": "Login Tests",
-    "env": "DEV2",
-    "branch": "main",
-    "compRates": {
-      "Login": {
-        "rate": 100,
-        "passed": 3,
-        "failed": 0,
-        "flaky": 0,
-        "total": 3
-      }
-    }
-  },
-  {
     "runNum": 40,
     "runId": "R-40",
     "rate": 89.1,
@@ -471,6 +448,29 @@
     "suite": "Login Tests",
     "env": "DEV2",
     "branch": "main",
+    "compRates": {
+      "Login": {
+        "rate": 100,
+        "passed": 3,
+        "failed": 0,
+        "flaky": 0,
+        "total": 3
+      }
+    }
+  },
+  {
+    "runNum": 49,
+    "runId": "R-49",
+    "rate": 100,
+    "total": 3,
+    "passed": 3,
+    "failed": 0,
+    "flaky": 0,
+    "duration": "14s",
+    "generatedAt": "2026-04-21T16:16:27.324Z",
+    "suite": "Login Tests",
+    "env": "DEV2",
+    "branch": "3/merge",
     "compRates": {
       "Login": {
         "rate": 100,
