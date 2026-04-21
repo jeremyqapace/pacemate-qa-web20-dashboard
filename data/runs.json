@@ -1,70 +1,5 @@
 [
   {
-    "runNum": 40,
-    "runId": "R-40",
-    "rate": 89.1,
-    "total": 138,
-    "passed": 123,
-    "failed": 15,
-    "flaky": 0,
-    "duration": "57m 35s",
-    "generatedAt": "2026-04-16T22:18:01.801Z",
-    "suite": "Complete Tests",
-    "env": "DEV2",
-    "branch": "main",
-    "compRates": {
-      "Remotes": {
-        "rate": 96,
-        "passed": 74,
-        "failed": 3,
-        "flaky": 0,
-        "total": 77
-      },
-      "Billing": {
-        "rate": 82,
-        "passed": 14,
-        "failed": 3,
-        "flaky": 0,
-        "total": 17
-      },
-      "Auto Promoted": {
-        "rate": 50,
-        "passed": 6,
-        "failed": 6,
-        "flaky": 0,
-        "total": 12
-      },
-      "Patients": {
-        "rate": 80,
-        "passed": 12,
-        "failed": 3,
-        "flaky": 0,
-        "total": 15
-      },
-      "Sidebar": {
-        "rate": 100,
-        "passed": 8,
-        "failed": 0,
-        "flaky": 0,
-        "total": 8
-      },
-      "Filter Bar": {
-        "rate": 100,
-        "passed": 6,
-        "failed": 0,
-        "flaky": 0,
-        "total": 6
-      },
-      "Login": {
-        "rate": 100,
-        "passed": 3,
-        "failed": 0,
-        "flaky": 0,
-        "total": 3
-      }
-    }
-  },
-  {
     "runNum": 41,
     "runId": "R-41",
     "rate": 100,
@@ -471,6 +406,29 @@
     "suite": "Login Tests",
     "env": "DEV2",
     "branch": "3/merge",
+    "compRates": {
+      "Login": {
+        "rate": 100,
+        "passed": 3,
+        "failed": 0,
+        "flaky": 0,
+        "total": 3
+      }
+    }
+  },
+  {
+    "runNum": 50,
+    "runId": "R-50",
+    "rate": 100,
+    "total": 3,
+    "passed": 3,
+    "failed": 0,
+    "flaky": 0,
+    "duration": "15s",
+    "generatedAt": "2026-04-21T18:02:24.052Z",
+    "suite": "Login Tests",
+    "env": "DEV2",
+    "branch": "main",
     "compRates": {
       "Login": {
         "rate": 100,
