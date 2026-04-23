@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cp '/c/Users/JeremyYuen/OneDrive - PaceMate/Desktop/pacemate-qa-web20-dashboard/pacemate-qa-dashboard/index.html' '/c/Users/JeremyYuen/OneDrive - PaceMate/Desktop/pacemate-qa-web20-dashboard/')",
+      "Bash(cp '/c/Users/JeremyYuen/OneDrive - PaceMate/Desktop/pacemate-qa-web20-dashboard/pacemate-qa-dashboard/404.html' '/c/Users/JeremyYuen/OneDrive - PaceMate/Desktop/pacemate-qa-web20-dashboard/')",
+      "Bash(cp '/c/Users/JeremyYuen/OneDrive - PaceMate/Desktop/pacemate-qa-web20-dashboard/pacemate-qa-dashboard/favicon.ico' '/c/Users/JeremyYuen/OneDrive - PaceMate/Desktop/pacemate-qa-web20-dashboard/')",
+      "Bash(cp '/c/Users/JeremyYuen/OneDrive - PaceMate/Desktop/pacemate-qa-web20-dashboard/pacemate-qa-dashboard/robots.txt' '/c/Users/JeremyYuen/OneDrive - PaceMate/Desktop/pacemate-qa-web20-dashboard/')",
+      "Bash(cp '/c/Users/JeremyYuen/OneDrive - PaceMate/Desktop/pacemate-qa-web20-dashboard/pacemate-qa-dashboard/vercel.json' '/c/Users/JeremyYuen/OneDrive - PaceMate/Desktop/pacemate-qa-web20-dashboard/')",
+      "Bash(echo '[]')",
+      "Bash(echo '{}')"
+    ]
+  }
+}
