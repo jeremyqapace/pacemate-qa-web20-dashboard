@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "runNum": 1,
+    "runId": "R-1",
+    "rate": 100,
+    "total": 7,
+    "passed": 7,
+    "failed": 0,
+    "flaky": 0,
+    "duration": "33s",
+    "generatedAt": "2026-04-27T15:35:50.324Z",
+    "suite": "Web20 Test",
+    "env": "QA",
+    "branch": "main",
+    "compRates": {
+      "Customize List Panel": {
+        "rate": 100,
+        "passed": 2,
+        "failed": 0,
+        "flaky": 0,
+        "total": 2
+      },
+      "Patients Module Smoke": {
+        "rate": 100,
+        "passed": 5,
+        "failed": 0,
+        "flaky": 0,
+        "total": 5
+      }
+    }
+  }
+]

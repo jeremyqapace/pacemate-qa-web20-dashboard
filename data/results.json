@@ -1,1 +1,131 @@
-{}
+{
+  "runId": "R-1",
+  "generatedAt": "2026-04-27T15:35:50.324Z",
+  "branch": "main",
+  "suite": "Web20 Test",
+  "env": "QA",
+  "runUrl": "https://github.com/PaceMateLive/web20_webAutomation_PaceMateLive/actions/runs/25004113823",
+  "summary": {
+    "total": 7,
+    "passed": 7,
+    "failed": 0,
+    "flaky": 0,
+    "rate": 100,
+    "duration": "33s",
+    "prevRunId": "—",
+    "prevRate": 100,
+    "prevTotal": 7,
+    "prevFailed": 0,
+    "prevFlaky": 0,
+    "prevDuration": "—",
+    "consecutivePassing": 1
+  },
+  "comp": [
+    {
+      "name": "Customize List Panel",
+      "pct": 100,
+      "passed": 2,
+      "total": 2,
+      "failed": 0,
+      "flaky": 0,
+      "sparks": [
+        100
+      ]
+    },
+    {
+      "name": "Patients Module Smoke",
+      "pct": 100,
+      "passed": 5,
+      "total": 5,
+      "failed": 0,
+      "flaky": 0,
+      "sparks": [
+        100
+      ]
+    }
+  ],
+  "hRuns": [
+    "R-1"
+  ],
+  "hData": [
+    [
+      100
+    ],
+    [
+      100
+    ]
+  ],
+  "trend": {
+    "labels": [
+      "R-1"
+    ],
+    "passed": [
+      7
+    ],
+    "failed": [
+      0
+    ],
+    "flaky": [
+      0
+    ]
+  },
+  "flaky": [],
+  "tests": [
+    {
+      "name": "[Smoke] PMW-103.1 - Customize List panel opens successfully",
+      "comp": "Customize List Panel",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "10s",
+      "err": null
+    },
+    {
+      "name": "[Smoke] PMW-102.4 - Without Provider tab loads",
+      "comp": "Patients Module Smoke",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "3s",
+      "err": null
+    },
+    {
+      "name": "[Smoke] PMW-102.6 - Communications Hub tab loads",
+      "comp": "Patients Module Smoke",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "3s",
+      "err": null
+    },
+    {
+      "name": "[Smoke] PMW-102.5 - Unassigned to a Group tab loads",
+      "comp": "Patients Module Smoke",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "3s",
+      "err": null
+    },
+    {
+      "name": "[Smoke] PMW-102.3 - My Favorites tab loads",
+      "comp": "Patients Module Smoke",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "4s",
+      "err": null
+    },
+    {
+      "name": "[Smoke] PMW-103.2 - Customize List panel closes on X click",
+      "comp": "Customize List Panel",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "4s",
+      "err": null
+    },
+    {
+      "name": "[Smoke] PMW-102.2 - Recently Added tab loads",
+      "comp": "Patients Module Smoke",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "4s",
+      "err": null
+    }
+  ]
+}
