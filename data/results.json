@@ -1,37 +1,26 @@
 {
-  "runId": "R-1",
-  "generatedAt": "2026-04-27T15:35:50.324Z",
+  "runId": "R-2",
+  "generatedAt": "2026-04-28T09:58:51.783Z",
   "branch": "main",
-  "suite": "Web20 Test",
+  "suite": "Smoke Tests",
   "env": "QA",
-  "runUrl": "https://github.com/PaceMateLive/web20_webAutomation_PaceMateLive/actions/runs/25004113823",
+  "runUrl": "https://github.com/PaceMateLive/web20_webAutomation_PaceMateLive/actions/runs/25046116515",
   "summary": {
-    "total": 7,
-    "passed": 7,
-    "failed": 0,
+    "total": 11,
+    "passed": 10,
+    "failed": 1,
     "flaky": 0,
-    "rate": 100,
-    "duration": "33s",
-    "prevRunId": "—",
+    "rate": 90.9,
+    "duration": "43s",
+    "prevRunId": "R-1",
     "prevRate": 100,
     "prevTotal": 7,
     "prevFailed": 0,
     "prevFlaky": 0,
-    "prevDuration": "—",
-    "consecutivePassing": 1
+    "prevDuration": "33s",
+    "consecutivePassing": 0
   },
   "comp": [
-    {
-      "name": "Customize List Panel",
-      "pct": 100,
-      "passed": 2,
-      "total": 2,
-      "failed": 0,
-      "flaky": 0,
-      "sparks": [
-        100
-      ]
-    },
     {
       "name": "Patients Module Smoke",
       "pct": 100,
@@ -40,43 +29,111 @@
       "failed": 0,
       "flaky": 0,
       "sparks": [
+        100,
         100
+      ]
+    },
+    {
+      "name": "Customize List Panel",
+      "pct": 100,
+      "passed": 2,
+      "total": 2,
+      "failed": 0,
+      "flaky": 0,
+      "sparks": [
+        100,
+        100
+      ]
+    },
+    {
+      "name": "Login",
+      "pct": 75,
+      "passed": 3,
+      "total": 4,
+      "failed": 1,
+      "flaky": 0,
+      "sparks": [
+        75,
+        75
       ]
     }
   ],
   "hRuns": [
-    "R-1"
+    "R-1",
+    "R-2"
   ],
   "hData": [
     [
+      100,
       100
     ],
     [
+      100,
       100
+    ],
+    [
+      100,
+      75
     ]
   ],
   "trend": {
     "labels": [
-      "R-1"
+      "R-1",
+      "R-2"
     ],
     "passed": [
-      7
+      7,
+      10
     ],
     "failed": [
-      0
+      0,
+      1
     ],
     "flaky": [
+      0,
       0
     ]
   },
   "flaky": [],
   "tests": [
     {
+      "name": "[Smoke] PMW-102.5 - Unassigned to a Group tab loads",
+      "comp": "Patients Module Smoke",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "3s",
+      "err": null
+    },
+    {
       "name": "[Smoke] PMW-103.1 - Customize List panel opens successfully",
       "comp": "Customize List Panel",
       "type": "Auto",
       "status": "passed",
-      "dur": "10s",
+      "dur": "7s",
+      "err": null
+    },
+    {
+      "name": "[Login] - PMW-001.3 - Technician Login - Verify Successful Authentication",
+      "comp": "Login",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "7s",
+      "err": null
+    },
+    {
+      "name": "[Login] - PMW-001.2 - Nurse Admin Login - Verify Successful Authentication",
+      "comp": "Login",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "5s",
+      "err": null
+    },
+    {
+      "name": "[Smoke] PMW-103.2 - Customize List panel closes on X click",
+      "comp": "Customize List Panel",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "5s",
       "err": null
     },
     {
@@ -88,15 +145,31 @@
       "err": null
     },
     {
+      "name": "[Login] - PMW-001.1 - Nurse Login - Verify Navigation After Login",
+      "comp": "Login",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "6s",
+      "err": null
+    },
+    {
+      "name": "[Login] - PMW-001.4 - Doctor Login - Verify Successful Authentication",
+      "comp": "Login",
+      "type": "Auto",
+      "status": "failed",
+      "dur": "0s",
+      "err": "Error: Credentials not found for role: doctor. Please check your .env file."
+    },
+    {
       "name": "[Smoke] PMW-102.6 - Communications Hub tab loads",
       "comp": "Patients Module Smoke",
       "type": "Auto",
       "status": "passed",
-      "dur": "3s",
+      "dur": "2s",
       "err": null
     },
     {
-      "name": "[Smoke] PMW-102.5 - Unassigned to a Group tab loads",
+      "name": "[Smoke] PMW-102.2 - Recently Added tab loads",
       "comp": "Patients Module Smoke",
       "type": "Auto",
       "status": "passed",
@@ -108,23 +181,7 @@
       "comp": "Patients Module Smoke",
       "type": "Auto",
       "status": "passed",
-      "dur": "4s",
-      "err": null
-    },
-    {
-      "name": "[Smoke] PMW-103.2 - Customize List panel closes on X click",
-      "comp": "Customize List Panel",
-      "type": "Auto",
-      "status": "passed",
-      "dur": "4s",
-      "err": null
-    },
-    {
-      "name": "[Smoke] PMW-102.2 - Recently Added tab loads",
-      "comp": "Patients Module Smoke",
-      "type": "Auto",
-      "status": "passed",
-      "dur": "4s",
+      "dur": "3s",
       "err": null
     }
   ]
