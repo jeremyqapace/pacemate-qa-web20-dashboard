@@ -65,5 +65,42 @@
         "total": 4
       }
     }
+  },
+  {
+    "runNum": 3,
+    "runId": "R-3",
+    "rate": 90.9,
+    "total": 11,
+    "passed": 10,
+    "failed": 1,
+    "flaky": 0,
+    "duration": "42s",
+    "generatedAt": "2026-04-29T09:53:37.064Z",
+    "suite": "Smoke Tests",
+    "env": "QA",
+    "branch": "main",
+    "compRates": {
+      "Patients Module Smoke": {
+        "rate": 100,
+        "passed": 5,
+        "failed": 0,
+        "flaky": 0,
+        "total": 5
+      },
+      "Login": {
+        "rate": 75,
+        "passed": 3,
+        "failed": 1,
+        "flaky": 0,
+        "total": 4
+      },
+      "Customize List Panel": {
+        "rate": 100,
+        "passed": 2,
+        "failed": 0,
+        "flaky": 0,
+        "total": 2
+      }
+    }
   }
 ]
