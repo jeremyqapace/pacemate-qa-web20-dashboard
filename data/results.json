@@ -1,23 +1,23 @@
 {
-  "runId": "R-5",
-  "generatedAt": "2026-04-30T17:44:21.484Z",
+  "runId": "R-6",
+  "generatedAt": "2026-05-01T09:43:57.689Z",
   "branch": "main",
   "suite": "Smoke Tests",
   "env": "QA",
-  "runUrl": "https://github.com/PaceMateLive/web20_webAutomation_PaceMateLive/actions/runs/25180182164",
+  "runUrl": "https://github.com/PaceMateLive/web20_webAutomation_PaceMateLive/actions/runs/25209888368",
   "summary": {
     "total": 11,
     "passed": 10,
     "failed": 1,
     "flaky": 0,
     "rate": 90.9,
-    "duration": "47s",
-    "prevRunId": "R-4",
+    "duration": "53s",
+    "prevRunId": "R-5",
     "prevRate": 90.9,
     "prevTotal": 11,
     "prevFailed": 1,
     "prevFlaky": 0,
-    "prevDuration": "46s",
+    "prevDuration": "47s",
     "consecutivePassing": 0
   },
   "comp": [
@@ -33,22 +33,8 @@
         75,
         75,
         75,
+        75,
         75
-      ]
-    },
-    {
-      "name": "Patients Module Smoke",
-      "pct": 100,
-      "passed": 5,
-      "total": 5,
-      "failed": 0,
-      "flaky": 0,
-      "sparks": [
-        100,
-        100,
-        100,
-        100,
-        100
       ]
     },
     {
@@ -63,20 +49,37 @@
         100,
         100,
         100,
+        100,
+        100
+      ]
+    },
+    {
+      "name": "Patients Module Smoke",
+      "pct": 100,
+      "passed": 5,
+      "total": 5,
+      "failed": 0,
+      "flaky": 0,
+      "sparks": [
+        100,
+        100,
+        100,
+        100,
+        100,
         100
       ]
     }
   ],
   "hRuns": [
-    "R-1",
     "R-2",
     "R-3",
     "R-4",
-    "R-5"
+    "R-5",
+    "R-6"
   ],
   "hData": [
     [
-      100,
+      75,
       75,
       75,
       75,
@@ -103,10 +106,12 @@
       "R-2",
       "R-3",
       "R-4",
-      "R-5"
+      "R-5",
+      "R-6"
     ],
     "passed": [
       7,
+      10,
       10,
       10,
       10,
@@ -117,9 +122,11 @@
       1,
       1,
       1,
+      1,
       1
     ],
     "flaky": [
+      0,
       0,
       0,
       0,
@@ -130,67 +137,11 @@
   "flaky": [],
   "tests": [
     {
-      "name": "[Login] - PMW-001.4 - Doctor Login - Verify Successful Authentication",
-      "comp": "Login",
-      "type": "Auto",
-      "status": "failed",
-      "dur": "0s",
-      "err": "Error: Credentials not found for role: doctor. Please check your .env file."
-    },
-    {
-      "name": "[Smoke] PMW-102.4 - Without Provider tab loads",
-      "comp": "Patients Module Smoke",
-      "type": "Auto",
-      "status": "passed",
-      "dur": "3s",
-      "err": null
-    },
-    {
-      "name": "[Login] - PMW-001.1 - Nurse Login - Verify Navigation After Login",
+      "name": "[Login] - PMW-001.3 - Technician Login - Verify Successful Authentication",
       "comp": "Login",
       "type": "Auto",
       "status": "passed",
-      "dur": "6s",
-      "err": null
-    },
-    {
-      "name": "[Smoke] PMW-102.5 - Unassigned to a Group tab loads",
-      "comp": "Patients Module Smoke",
-      "type": "Auto",
-      "status": "passed",
-      "dur": "3s",
-      "err": null
-    },
-    {
-      "name": "[Smoke] PMW-102.6 - Communications Hub tab loads",
-      "comp": "Patients Module Smoke",
-      "type": "Auto",
-      "status": "passed",
-      "dur": "3s",
-      "err": null
-    },
-    {
-      "name": "[Login] - PMW-001.2 - Nurse Admin Login - Verify Successful Authentication",
-      "comp": "Login",
-      "type": "Auto",
-      "status": "passed",
-      "dur": "5s",
-      "err": null
-    },
-    {
-      "name": "[Smoke] PMW-103.1 - Customize List panel opens successfully",
-      "comp": "Customize List Panel",
-      "type": "Auto",
-      "status": "passed",
-      "dur": "9s",
-      "err": null
-    },
-    {
-      "name": "[Smoke] PMW-102.3 - My Favorites tab loads",
-      "comp": "Patients Module Smoke",
-      "type": "Auto",
-      "status": "passed",
-      "dur": "3s",
+      "dur": "7s",
       "err": null
     },
     {
@@ -202,7 +153,7 @@
       "err": null
     },
     {
-      "name": "[Smoke] PMW-102.2 - Recently Added tab loads",
+      "name": "[Smoke] PMW-102.4 - Without Provider tab loads",
       "comp": "Patients Module Smoke",
       "type": "Auto",
       "status": "passed",
@@ -210,12 +161,68 @@
       "err": null
     },
     {
-      "name": "[Login] - PMW-001.3 - Technician Login - Verify Successful Authentication",
+      "name": "[Login] - PMW-001.1 - Nurse Login - Verify Navigation After Login",
       "comp": "Login",
       "type": "Auto",
       "status": "passed",
-      "dur": "7s",
+      "dur": "6s",
       "err": null
+    },
+    {
+      "name": "[Smoke] PMW-102.6 - Communications Hub tab loads",
+      "comp": "Patients Module Smoke",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "6s",
+      "err": null
+    },
+    {
+      "name": "[Smoke] PMW-102.2 - Recently Added tab loads",
+      "comp": "Patients Module Smoke",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "3s",
+      "err": null
+    },
+    {
+      "name": "[Smoke] PMW-103.1 - Customize List panel opens successfully",
+      "comp": "Customize List Panel",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "8s",
+      "err": null
+    },
+    {
+      "name": "[Smoke] PMW-102.3 - My Favorites tab loads",
+      "comp": "Patients Module Smoke",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "4s",
+      "err": null
+    },
+    {
+      "name": "[Smoke] PMW-102.5 - Unassigned to a Group tab loads",
+      "comp": "Patients Module Smoke",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "5s",
+      "err": null
+    },
+    {
+      "name": "[Login] - PMW-001.2 - Nurse Admin Login - Verify Successful Authentication",
+      "comp": "Login",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "5s",
+      "err": null
+    },
+    {
+      "name": "[Login] - PMW-001.4 - Doctor Login - Verify Successful Authentication",
+      "comp": "Login",
+      "type": "Auto",
+      "status": "failed",
+      "dur": "0s",
+      "err": "Error: Credentials not found for role: doctor. Please check your .env file."
     }
   ]
 }
