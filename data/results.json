@@ -1,44 +1,26 @@
 {
-  "runId": "R-8",
-  "generatedAt": "2026-05-01T14:38:09.152Z",
+  "runId": "R-9",
+  "generatedAt": "2026-05-04T09:57:26.740Z",
   "branch": "main",
   "suite": "Smoke Tests",
   "env": "QA",
-  "runUrl": "https://github.com/PaceMateLive/web20_webAutomation_PaceMateLive/actions/runs/25218296531",
+  "runUrl": "https://github.com/PaceMateLive/web20_webAutomation_PaceMateLive/actions/runs/25312481949",
   "summary": {
     "total": 11,
     "passed": 10,
     "failed": 1,
     "flaky": 0,
     "rate": 90.9,
-    "duration": "44s",
-    "prevRunId": "R-7",
+    "duration": "46s",
+    "prevRunId": "R-8",
     "prevRate": 90.9,
     "prevTotal": 11,
     "prevFailed": 1,
     "prevFlaky": 0,
-    "prevDuration": "42s",
+    "prevDuration": "44s",
     "consecutivePassing": 0
   },
   "comp": [
-    {
-      "name": "Login",
-      "pct": 75,
-      "passed": 3,
-      "total": 4,
-      "failed": 1,
-      "flaky": 0,
-      "sparks": [
-        75,
-        75,
-        75,
-        75,
-        75,
-        75,
-        75,
-        75
-      ]
-    },
     {
       "name": "Customize List Panel",
       "pct": 100,
@@ -47,6 +29,7 @@
       "failed": 0,
       "flaky": 0,
       "sparks": [
+        100,
         100,
         100,
         100,
@@ -72,38 +55,58 @@
         100,
         100,
         100,
+        100,
         100
+      ]
+    },
+    {
+      "name": "Login",
+      "pct": 75,
+      "passed": 3,
+      "total": 4,
+      "failed": 1,
+      "flaky": 0,
+      "sparks": [
+        75,
+        75,
+        75,
+        75,
+        75,
+        75,
+        75,
+        75,
+        75
       ]
     }
   ],
   "hRuns": [
-    "R-4",
     "R-5",
     "R-6",
     "R-7",
-    "R-8"
+    "R-8",
+    "R-9"
   ],
   "hData": [
+    [
+      100,
+      100,
+      100,
+      100,
+      100
+    ],
+    [
+      100,
+      100,
+      100,
+      100,
+      100
+    ],
     [
       75,
       75,
       75,
       75,
       75
-    ],
-    [
-      100,
-      100,
-      100,
-      100,
-      100
-    ],
-    [
-      100,
-      100,
-      100,
-      100,
-      100
     ]
   ],
   "trend": {
@@ -115,10 +118,12 @@
       "R-5",
       "R-6",
       "R-7",
-      "R-8"
+      "R-8",
+      "R-9"
     ],
     "passed": [
       7,
+      10,
       10,
       10,
       10,
@@ -135,9 +140,11 @@
       1,
       1,
       1,
+      1,
       1
     ],
     "flaky": [
+      0,
       0,
       0,
       0,
@@ -151,27 +158,11 @@
   "flaky": [],
   "tests": [
     {
-      "name": "[Login] - PMW-001.3 - Technician Login - Verify Successful Authentication",
-      "comp": "Login",
-      "type": "Auto",
-      "status": "passed",
-      "dur": "9s",
-      "err": null
-    },
-    {
       "name": "[Smoke] PMW-103.2 - Customize List panel closes on X click",
       "comp": "Customize List Panel",
       "type": "Auto",
       "status": "passed",
       "dur": "4s",
-      "err": null
-    },
-    {
-      "name": "[Smoke] PMW-102.2 - Recently Added tab loads",
-      "comp": "Patients Module Smoke",
-      "type": "Auto",
-      "status": "passed",
-      "dur": "3s",
       "err": null
     },
     {
@@ -191,20 +182,12 @@
       "err": null
     },
     {
-      "name": "[Smoke] PMW-102.3 - My Favorites tab loads",
-      "comp": "Patients Module Smoke",
+      "name": "[Login] - PMW-001.4 - Doctor Login - Verify Successful Authentication",
+      "comp": "Login",
       "type": "Auto",
-      "status": "passed",
-      "dur": "3s",
-      "err": null
-    },
-    {
-      "name": "[Smoke] PMW-103.1 - Customize List panel opens successfully",
-      "comp": "Customize List Panel",
-      "type": "Auto",
-      "status": "passed",
-      "dur": "6s",
-      "err": null
+      "status": "failed",
+      "dur": "0s",
+      "err": "Error: Credentials not found for role: doctor. Please check your .env file."
     },
     {
       "name": "[Login] - PMW-001.2 - Nurse Admin Login - Verify Successful Authentication",
@@ -215,15 +198,7 @@
       "err": null
     },
     {
-      "name": "[Login] - PMW-001.4 - Doctor Login - Verify Successful Authentication",
-      "comp": "Login",
-      "type": "Auto",
-      "status": "failed",
-      "dur": "0s",
-      "err": "Error: Credentials not found for role: doctor. Please check your .env file."
-    },
-    {
-      "name": "[Smoke] PMW-102.4 - Without Provider tab loads",
+      "name": "[Smoke] PMW-102.2 - Recently Added tab loads",
       "comp": "Patients Module Smoke",
       "type": "Auto",
       "status": "passed",
@@ -236,6 +211,38 @@
       "type": "Auto",
       "status": "passed",
       "dur": "3s",
+      "err": null
+    },
+    {
+      "name": "[Smoke] PMW-103.1 - Customize List panel opens successfully",
+      "comp": "Customize List Panel",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "7s",
+      "err": null
+    },
+    {
+      "name": "[Smoke] PMW-102.3 - My Favorites tab loads",
+      "comp": "Patients Module Smoke",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "3s",
+      "err": null
+    },
+    {
+      "name": "[Smoke] PMW-102.4 - Without Provider tab loads",
+      "comp": "Patients Module Smoke",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "3s",
+      "err": null
+    },
+    {
+      "name": "[Login] - PMW-001.3 - Technician Login - Verify Successful Authentication",
+      "comp": "Login",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "8s",
       "err": null
     }
   ]
