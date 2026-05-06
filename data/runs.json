@@ -1,35 +1,5 @@
 [
   {
-    "runNum": 1,
-    "runId": "R-1",
-    "rate": 100,
-    "total": 7,
-    "passed": 7,
-    "failed": 0,
-    "flaky": 0,
-    "duration": "33s",
-    "generatedAt": "2026-04-27T15:35:50.324Z",
-    "suite": "Web20 Test",
-    "env": "QA",
-    "branch": "main",
-    "compRates": {
-      "Customize List Panel": {
-        "rate": 100,
-        "passed": 2,
-        "failed": 0,
-        "flaky": 0,
-        "total": 2
-      },
-      "Patients Module Smoke": {
-        "rate": 100,
-        "passed": 5,
-        "failed": 0,
-        "flaky": 0,
-        "total": 5
-      }
-    }
-  },
-  {
     "runNum": 2,
     "runId": "R-2",
     "rate": 90.9,
@@ -359,6 +329,43 @@
         "failed": 2,
         "flaky": 0,
         "total": 2
+      }
+    }
+  },
+  {
+    "runNum": 11,
+    "runId": "R-11",
+    "rate": 27.3,
+    "total": 11,
+    "passed": 3,
+    "failed": 8,
+    "flaky": 0,
+    "duration": "2m 15s",
+    "generatedAt": "2026-05-06T09:58:52.578Z",
+    "suite": "Smoke Tests",
+    "env": "QA",
+    "branch": "main",
+    "compRates": {
+      "Customize List Panel": {
+        "rate": 0,
+        "passed": 0,
+        "failed": 2,
+        "flaky": 0,
+        "total": 2
+      },
+      "Login": {
+        "rate": 75,
+        "passed": 3,
+        "failed": 1,
+        "flaky": 0,
+        "total": 4
+      },
+      "Patients Module Smoke": {
+        "rate": 0,
+        "passed": 0,
+        "failed": 5,
+        "flaky": 0,
+        "total": 5
       }
     }
   }

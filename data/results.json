@@ -1,32 +1,32 @@
 {
-  "runId": "R-10",
-  "generatedAt": "2026-05-05T09:49:08.604Z",
+  "runId": "R-11",
+  "generatedAt": "2026-05-06T09:58:52.578Z",
   "branch": "main",
   "suite": "Smoke Tests",
   "env": "QA",
-  "runUrl": "https://github.com/PaceMateLive/web20_webAutomation_PaceMateLive/actions/runs/25369127889",
+  "runUrl": "https://github.com/PaceMateLive/web20_webAutomation_PaceMateLive/actions/runs/25428343704",
   "summary": {
     "total": 11,
     "passed": 3,
     "failed": 8,
     "flaky": 0,
     "rate": 27.3,
-    "duration": "2m 12s",
-    "prevRunId": "R-9",
-    "prevRate": 90.9,
+    "duration": "2m 15s",
+    "prevRunId": "R-10",
+    "prevRate": 27.3,
     "prevTotal": 11,
-    "prevFailed": 1,
+    "prevFailed": 8,
     "prevFlaky": 0,
-    "prevDuration": "46s",
+    "prevDuration": "2m 12s",
     "consecutivePassing": 0
   },
   "comp": [
     {
-      "name": "Patients Module Smoke",
+      "name": "Customize List Panel",
       "pct": 0,
       "passed": 0,
-      "total": 5,
-      "failed": 5,
+      "total": 2,
+      "failed": 2,
       "flaky": 0,
       "sparks": [
         100,
@@ -37,7 +37,7 @@
         100,
         100,
         100,
-        100,
+        0,
         0
       ]
     },
@@ -62,11 +62,11 @@
       ]
     },
     {
-      "name": "Customize List Panel",
+      "name": "Patients Module Smoke",
       "pct": 0,
       "passed": 0,
-      "total": 2,
-      "failed": 2,
+      "total": 5,
+      "failed": 5,
       "flaky": 0,
       "sparks": [
         100,
@@ -77,24 +77,24 @@
         100,
         100,
         100,
-        100,
+        0,
         0
       ]
     }
   ],
   "hRuns": [
-    "R-6",
     "R-7",
     "R-8",
     "R-9",
-    "R-10"
+    "R-10",
+    "R-11"
   ],
   "hData": [
     [
       100,
       100,
       100,
-      100,
+      0,
       0
     ],
     [
@@ -108,13 +108,12 @@
       100,
       100,
       100,
-      100,
+      0,
       0
     ]
   ],
   "trend": {
     "labels": [
-      "R-1",
       "R-2",
       "R-3",
       "R-4",
@@ -123,10 +122,10 @@
       "R-7",
       "R-8",
       "R-9",
-      "R-10"
+      "R-10",
+      "R-11"
     ],
     "passed": [
-      7,
       10,
       10,
       10,
@@ -135,10 +134,10 @@
       10,
       10,
       10,
+      3,
       3
     ],
     "failed": [
-      0,
       1,
       1,
       1,
@@ -147,6 +146,7 @@
       1,
       1,
       1,
+      8,
       8
     ],
     "flaky": [
@@ -165,20 +165,12 @@
   "flaky": [],
   "tests": [
     {
-      "name": "[Smoke] PMW-102.6 - Communications Hub tab loads",
-      "comp": "Patients Module Smoke",
+      "name": "[Smoke] PMW-103.1 - Customize List panel opens successfully",
+      "comp": "Customize List Panel",
       "type": "Auto",
       "status": "failed",
-      "dur": "17s",
+      "dur": "20s",
       "err": "page.waitForURL: Timeout 15000ms exceeded."
-    },
-    {
-      "name": "[Login] - PMW-001.2 - Nurse Admin Login - Verify Successful Authentication",
-      "comp": "Login",
-      "type": "Auto",
-      "status": "passed",
-      "dur": "3s",
-      "err": null
     },
     {
       "name": "[Login] - PMW-001.3 - Technician Login - Verify Successful Authentication",
@@ -189,27 +181,11 @@
       "err": null
     },
     {
-      "name": "[Login] - PMW-001.4 - Doctor Login - Verify Successful Authentication",
-      "comp": "Login",
-      "type": "Auto",
-      "status": "failed",
-      "dur": "0s",
-      "err": "Error: Credentials not found for role: doctor. Please check your .env file."
-    },
-    {
-      "name": "[Smoke] PMW-102.5 - Unassigned to a Group tab loads",
+      "name": "[Smoke] PMW-102.3 - My Favorites tab loads",
       "comp": "Patients Module Smoke",
       "type": "Auto",
       "status": "failed",
       "dur": "17s",
-      "err": "page.waitForURL: Timeout 15000ms exceeded."
-    },
-    {
-      "name": "[Smoke] PMW-103.2 - Customize List panel closes on X click",
-      "comp": "Customize List Panel",
-      "type": "Auto",
-      "status": "failed",
-      "dur": "18s",
       "err": "page.waitForURL: Timeout 15000ms exceeded."
     },
     {
@@ -221,19 +197,27 @@
       "err": "page.waitForURL: Timeout 15000ms exceeded."
     },
     {
-      "name": "[Smoke] PMW-102.3 - My Favorites tab loads",
+      "name": "[Login] - PMW-001.4 - Doctor Login - Verify Successful Authentication",
+      "comp": "Login",
+      "type": "Auto",
+      "status": "failed",
+      "dur": "2s",
+      "err": "Error: Credentials not found for role: doctor. Please check your .env file."
+    },
+    {
+      "name": "[Login] - PMW-001.2 - Nurse Admin Login - Verify Successful Authentication",
+      "comp": "Login",
+      "type": "Auto",
+      "status": "passed",
+      "dur": "4s",
+      "err": null
+    },
+    {
+      "name": "[Smoke] PMW-102.5 - Unassigned to a Group tab loads",
       "comp": "Patients Module Smoke",
       "type": "Auto",
       "status": "failed",
       "dur": "17s",
-      "err": "page.waitForURL: Timeout 15000ms exceeded."
-    },
-    {
-      "name": "[Smoke] PMW-103.1 - Customize List panel opens successfully",
-      "comp": "Customize List Panel",
-      "type": "Auto",
-      "status": "failed",
-      "dur": "21s",
       "err": "page.waitForURL: Timeout 15000ms exceeded."
     },
     {
@@ -243,6 +227,22 @@
       "status": "passed",
       "dur": "3s",
       "err": null
+    },
+    {
+      "name": "[Smoke] PMW-103.2 - Customize List panel closes on X click",
+      "comp": "Customize List Panel",
+      "type": "Auto",
+      "status": "failed",
+      "dur": "17s",
+      "err": "page.waitForURL: Timeout 15000ms exceeded."
+    },
+    {
+      "name": "[Smoke] PMW-102.6 - Communications Hub tab loads",
+      "comp": "Patients Module Smoke",
+      "type": "Auto",
+      "status": "failed",
+      "dur": "17s",
+      "err": "page.waitForURL: Timeout 15000ms exceeded."
     },
     {
       "name": "[Smoke] PMW-102.4 - Without Provider tab loads",
