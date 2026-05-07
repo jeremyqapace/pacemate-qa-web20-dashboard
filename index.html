@@ -13,11 +13,16 @@
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
 body{font-family:'Inter',system-ui,sans-serif;-webkit-font-smoothing:antialiased;min-height:100vh;
+  /* env() insets keep content clear of iOS notch/home-bar; overscroll-behavior-y stops Safari pull-to-refresh */
   padding:env(safe-area-inset-top,0) env(safe-area-inset-right,0) env(safe-area-inset-bottom,0) env(safe-area-inset-left,0);
   transition:background .25s,color .25s;overscroll-behavior-y:none}
 svg text{font-family:'Inter',system-ui,sans-serif}
 .qa{max-width:1200px;margin:0 auto;padding:12px 12px 80px}
 
+/* ── THEME TOKENS ───────────────────────────────────────────────────────────
+   All colours/surfaces are CSS custom properties. Swapping data-theme on <html>
+   is the only thing needed to switch the full palette — no JS class toggles.
+──────────────────────────────────────────────────────────────────────────── */
 [data-theme="light"]{
   --bg:#f5f5f3;--card-bg:#fff;--card-bg2:#fafaf9;
   --border:rgba(0,0,0,.1);--border2:rgba(0,0,0,.08);
@@ -124,7 +129,12 @@ body{background:var(--bg);color:var(--text)}
 .vbtn.on{background:#C8184A;color:#fff}
 .vbtn:active{opacity:.8}
 
-/* ── SECTION CARDS — always visible; will-reveal opt-in for scroll anim ── */
+/* ── SECTION CARDS ─────────────────────────────────────────────────────────
+   Cards default to fully visible (opacity:1) so they show on initial load.
+   armReveal() opts cards into the IntersectionObserver animation only for
+   the currently active view panel. Cards inside display:none panels are
+   never armed — prevents the observer from firing on off-screen content.
+────────────────────────────────────────────────────────────────────────── */
 .sc{background:var(--card-bg);border:1.5px solid var(--sc-border);border-radius:14px;
   overflow:hidden;margin-bottom:0;
   opacity:1;transform:none;transition:opacity .45s ease,transform .45s ease}
@@ -210,7 +220,10 @@ body{background:var(--bg);color:var(--text)}
 .cspark{display:flex;justify-content:center;width:100%;
   border-top:1px solid var(--border);padding-top:8px;margin-top:auto}
 
-/* ── COMPONENT DRILL-DOWN PANEL ── */
+/* ── COMPONENT DRILL-DOWN PANEL ─────────────────────────────────────────────
+   max-height animates instead of height because CSS can't transition to/from
+   height:auto. 2000px is a safe upper bound; real content never gets close.
+────────────────────────────────────────────────────────────────────────── */
 .cdrill{overflow:hidden;max-height:0;transition:max-height .4s cubic-bezier(.22,.68,0,1),opacity .3s ease;
   opacity:0;margin-top:0}
 .cdrill.open{max-height:2000px;opacity:1;margin-top:10px}
@@ -623,19 +636,34 @@ function positionTip(e){
   _tip.style.top  = y + 'px';
 }
 document.addEventListener('visibilitychange', () => { if(document.hidden) hideTip(); });
+
+/* ─────────────────────────────────────────
+   CONFIG
+   RELEASE_THRESHOLD is a business SLA. The deploy-readiness badge,
+   the SLA line on the trend chart, and the colour thresholds all
+   read from here — one place to change the bar.
+───────────────────────────────────────── */
 const RELEASE_THRESHOLD = 80;
-const VIEW_ORDER = ['ov','rr','hi'];
+const VIEW_ORDER = ['ov','rr','hi']; // ordered left→right; index diff drives slide direction
 const isMobile = () => window.innerWidth < 640;
 
+/* ─────────────────────────────────────────
+   STATE
+   window._D and window._runs are intentional globals. With no
+   framework, they let renderAll, filt, setView, and renderHistory
+   share fetched data without prop-drilling through onclick handlers.
+───────────────────────────────────────── */
 let currentView   = 'ov';
 let currentFilter = 'all';
-let trendBuilt    = false;
-let _heroInterval = null;
+let trendBuilt    = false;   // Chart.js can't init on a display:none canvas — build once, update in place
+let _heroInterval = null;    // stored so we can clearInterval on re-render without stacking timers
 let _resizeTimer  = null;
 
 /* ─────────────────────────────────────────
    THEME
 ───────────────────────────────────────── */
+// IIFE runs synchronously so the correct data-theme is set before first
+// paint, preventing a flash of the wrong theme on page load.
 (function(){
   const saved = localStorage.getItem('qa-theme') || 'light';
   document.documentElement.setAttribute('data-theme', saved);
@@ -699,6 +727,8 @@ const SB = {
   flaky: { bg:'rgba(245,158,11,.1)',  cl:'#92400E', bd:'rgba(245,158,11,.7)' },
 };
 
+// Returns an SVG stroke-dasharray string for a % fill on a circle of radius r.
+// dash = arc length to fill, gap = remaining circumference.
 function ring(p, r=28){
   const C = 2*Math.PI*r;
   const d = C * p / 100;
@@ -713,11 +743,13 @@ function relativeTime(iso){
   return `${Math.floor(diff/86400)}d ago`;
 }
 
+// Renders an inline SVG polyline from an array of pass-rate values (component sparkline).
+// ±1 padding on min/max prevents the polyline from clipping at the SVG edges.
 function sparkSVG(data, co){
   if(!data || data.length < 2) return '';
   const w=60, h=18, pad=2;
   const mn = Math.min(...data)-1, mx = Math.max(...data)+1;
-  if(mx === mn) return '';
+  if(mx === mn) return ''; // flat line — no meaningful trend to show
   const pts = data.map((v,i) => {
     const x = (i/(data.length-1))*(w-pad*2)+pad;
     const y = h-pad-((v-mn)/(mx-mn))*(h-pad*2);
@@ -758,14 +790,18 @@ function countUpText(el, to, suffix='', dur=500){
   requestAnimationFrame(step);
 }
 
+// Animates the hero SVG donut ring. The pass arc grows via rAF to draw the eye;
+// fail and flaky arcs are set instantly as static context — competing animations
+// would fight for attention. Negative dashoffset staggers each arc around the ring:
+// fail starts where pass ends, flaky starts where fail ends.
 function playRing(rate, failed, flaky, total){
-  const C = 502.7;
+  const C = 502.7; // 2 * π * 80 (circumference of r=80 SVG circle)
   const passLen  = C * (rate / 100);
   const failLen  = total > 0 ? C * (failed / total) : 0;
   const flakyLen = total > 0 ? C * (flaky  / total) : 0;
   const el = document.getElementById('rPass');
   let t0 = null;
-  const ease = t => 1 - Math.pow(1-t, 3);
+  const ease = t => 1 - Math.pow(1-t, 3); // cubic ease-out
   const step = ts => {
     if(!t0) t0 = ts;
     const p   = Math.min((ts-t0)/1400, 1);
@@ -778,9 +814,9 @@ function playRing(rate, failed, flaky, total){
   const failEl  = document.getElementById('rFail');
   const flakyEl = document.getElementById('rFlaky');
   failEl.style.strokeDasharray  = `${failLen.toFixed(2)} ${(C-failLen).toFixed(2)}`;
-  failEl.style.strokeDashoffset = (-passLen).toFixed(2);
+  failEl.style.strokeDashoffset = (-passLen).toFixed(2);           // start right after pass arc
   flakyEl.style.strokeDasharray  = `${flakyLen.toFixed(2)} ${(C-flakyLen).toFixed(2)}`;
-  flakyEl.style.strokeDashoffset = (-(passLen+failLen)).toFixed(2);
+  flakyEl.style.strokeDashoffset = (-(passLen+failLen)).toFixed(2); // start right after fail arc
 }
 
 /* ─────────────────────────────────────────
@@ -828,7 +864,7 @@ function renderAll(D){
   }
 
   const delta   = (rate - (D.summary.prevRate||rate)).toFixed(1);
-  const isFirst = D.summary.prevRunId === '—';
+  const isFirst = D.summary.prevRunId === '—'; // CI writes a literal em-dash when there's no prior run
   const col     = delta >= 0 ? '#10B981' : '#EF4444';
   document.getElementById('heroTrend').style.color = isFirst ? 'rgba(255,255,255,.5)' : col;
   document.getElementById('heroTrend').innerHTML   = isFirst
@@ -878,6 +914,8 @@ function renderAll(D){
       if(!D.comp[i]) return;
       h += `<tr><th class="hcomp">${D.comp[i].name}</th>`;
       row.forEach((p, j) => {
+        // Alpha scales with distance from the threshold boundary so cells
+        // become visually more saturated the better (or worse) the score.
         const bg = p>=95
           ? `rgba(16,185,129,${(.25+(p-95)/5*.55).toFixed(2)})`
           : p>=85
@@ -895,40 +933,9 @@ function renderAll(D){
       `<tr><td style="color:#888;font-size:12px;padding:1rem 0">Run more suites to build history</td></tr>`;
   }
 
-  /* component health cards */
-  if(D.comp && D.comp.length){
-    document.getElementById('compRow').innerHTML = D.comp.map((c, i) => {
-      const co = hclr(c.pct);
-      const issues = c.failed + c.flaky;
-      const total  = c.total  ?? null;
-      const _derived = (total != null && c.failed != null && c.flaky != null)
-        ? Math.min(Math.max(0, total - c.failed - c.flaky), total)
-        : null;
-      const passed = c.passed != null ? Math.min(c.passed, total ?? c.passed) : _derived;
-      const tb = issues ? (c.pct<90 ? 'rgba(239,68,68,.1)' : 'rgba(245,158,11,.1)') : 'rgba(16,185,129,.1)';
-      const tc = issues ? (c.pct<90 ? '#DC2626' : '#B45309') : '#059669';
-
-      const tagLabel = issues
-        ? `${issues} issue${issues>1?'s':''}`
-        : passed !== null && total !== null
-          ? `${passed} / ${total} passed`
-          : passed !== null
-            ? `${passed} passed`
-            : 'All Passing';
-
-      return `<div class="ccard" data-comp="${c.name}" style="animation-delay:${(i*.06).toFixed(2)}s" onclick="openDrill(this.dataset.comp)">
-        <svg width="64" height="64" viewBox="0 0 72 72">
-          <circle cx="36" cy="36" r="28" fill="none" stroke="rgba(0,0,0,.1)" stroke-width="5"/>
-          <circle cx="36" cy="36" r="28" fill="none" stroke="${co}" stroke-width="5"
-            stroke-dasharray="${ring(c.pct)}" transform="rotate(-90 36 36)" stroke-linecap="butt"/>
-          <text x="36" y="40" text-anchor="middle" fill="${co}" font-size="12" font-weight="600">${c.pct}%</text>
-        </svg>
-        <div class="cname">${c.name}</div>
-        <span class="ctag" style="background:${tb};color:${tc}">${tagLabel}</span>
-        <div style="margin-top:6px;display:flex;justify-content:center">${sparkSVG(c.sparks,co)}</div>
-      </div>`;
-    }).join('');
-  }
+  /* component health cards — extracted to renderCompCards() so setView('rr')
+     can re-render them on a visible element and replay the fadeUp stagger */
+  renderCompCards(D.comp);
 
   /* flaky tracker */
   if(D.flaky && D.flaky.length){
@@ -971,6 +978,47 @@ function renderAll(D){
     document.getElementById('heroMeta').textContent =
       `${D.runId} · ${relativeTime(D.generatedAt)} · ${D.branch||'main'}`;
   }, 60000);
+}
+
+/* ─────────────────────────────────────────
+   COMPONENT CARDS RENDER
+   Called from renderAll() on data load AND from setView('rr') so the
+   fadeUp stagger animation plays on visible elements, not display:none ones.
+───────────────────────────────────────── */
+function renderCompCards(comp){
+  if(!comp || !comp.length) return;
+  document.getElementById('compRow').innerHTML = comp.map((c, i) => {
+    const co     = hclr(c.pct);
+    const issues = c.failed + c.flaky;
+    const total  = c.total ?? null;
+    // _derived calculates passed count when the CI doesn't send it explicitly
+    const _derived = (total != null && c.failed != null && c.flaky != null)
+      ? Math.min(Math.max(0, total - c.failed - c.flaky), total)
+      : null;
+    const passed = c.passed != null ? Math.min(c.passed, total ?? c.passed) : _derived;
+    const tb = issues ? (c.pct<90 ? 'rgba(239,68,68,.1)' : 'rgba(245,158,11,.1)') : 'rgba(16,185,129,.1)';
+    const tc = issues ? (c.pct<90 ? '#DC2626' : '#B45309') : '#059669';
+
+    const tagLabel = issues
+      ? `${issues} issue${issues>1?'s':''}`
+      : passed !== null && total !== null
+        ? `${passed} / ${total} passed`
+        : passed !== null
+          ? `${passed} passed`
+          : 'All Passing';
+
+    return `<div class="ccard" data-comp="${c.name}" style="animation-delay:${(i*.06).toFixed(2)}s" onclick="openDrill(this.dataset.comp)">
+      <svg width="64" height="64" viewBox="0 0 72 72">
+        <circle cx="36" cy="36" r="28" fill="none" stroke="rgba(0,0,0,.1)" stroke-width="5"/>
+        <circle cx="36" cy="36" r="28" fill="none" stroke="${co}" stroke-width="5"
+          stroke-dasharray="${ring(c.pct)}" transform="rotate(-90 36 36)" stroke-linecap="butt"/>
+        <text x="36" y="40" text-anchor="middle" fill="${co}" font-size="12" font-weight="600">${c.pct}%</text>
+      </svg>
+      <div class="cname">${c.name}</div>
+      <span class="ctag" style="background:${tb};color:${tc}">${tagLabel}</span>
+      <div style="margin-top:6px;display:flex;justify-content:center">${sparkSVG(c.sparks,co)}</div>
+    </div>`;
+  }).join('');
 }
 
 /* ─────────────────────────────────────────
@@ -1238,6 +1286,9 @@ window.addEventListener('resize', () => {
 /* ─────────────────────────────────────────
    TREND CHART
 ───────────────────────────────────────── */
+// Guard: calling new Chart() on a canvas inside a display:none container gives
+// a 0×0 chart that doesn't recover. Build once on first call (when data loads),
+// then update window._trendChart in-place for theme changes.
 function buildTrend(trend){
   if(trendBuilt) return;
   trendBuilt = true;
@@ -1301,9 +1352,11 @@ function setView(v){
   const inEl = document.getElementById('view-' + v);
   inEl.style.display = 'block';
 
-  /* WebKit-safe animation re-trigger */
+  /* WebKit-safe animation re-trigger: setting animation:'none' then reading
+     offsetWidth forces a style-recalculation flush so the browser treats
+     the next assignment as a brand-new animation rather than resuming mid-way. */
   inEl.style.animation = 'none';
-  void inEl.offsetWidth;
+  void inEl.offsetWidth; // force reflow to reset animation state
   inEl.style.animation =
     `${goRight?'slideInRight':'slideInLeft'} .28s cubic-bezier(.22,.68,0,1.1) forwards`;
 
@@ -1403,6 +1456,10 @@ function renderHistory(){
 
 /* ─────────────────────────────────────────
    DATA FETCH
+   ?t= cache-buster: Vercel CDN and some mobile browsers ignore
+   Cache-Control headers on static files despite vercel.json config.
+   results.json is critical-path — nothing renders until it resolves.
+   runs.json is non-critical (History tab only) and fails silently.
 ───────────────────────────────────────── */
 fetch('./data/results.json?t=' + Date.now())
   .then(r => { if(!r.ok) throw new Error(r.status); return r.json(); })
