@@ -1,42 +1,5 @@
 [
   {
-    "runNum": 4,
-    "runId": "R-4",
-    "rate": 90.9,
-    "total": 11,
-    "passed": 10,
-    "failed": 1,
-    "flaky": 0,
-    "duration": "46s",
-    "generatedAt": "2026-04-30T09:52:11.367Z",
-    "suite": "Smoke Tests",
-    "env": "QA",
-    "branch": "main",
-    "compRates": {
-      "Customize List Panel": {
-        "rate": 100,
-        "passed": 2,
-        "failed": 0,
-        "flaky": 0,
-        "total": 2
-      },
-      "Patients Module Smoke": {
-        "rate": 100,
-        "passed": 5,
-        "failed": 0,
-        "flaky": 0,
-        "total": 5
-      },
-      "Login": {
-        "rate": 75,
-        "passed": 3,
-        "failed": 1,
-        "flaky": 0,
-        "total": 4
-      }
-    }
-  },
-  {
     "runNum": 5,
     "runId": "R-5",
     "rate": 90.9,
@@ -343,6 +306,85 @@
     "duration": "2m 2s",
     "generatedAt": "2026-05-08T16:37:46.786Z",
     "suite": "Smoke Tests",
+    "env": "QA",
+    "branch": "main",
+    "compRates": {
+      "CRM Reports": {
+        "rate": 0,
+        "passed": 0,
+        "failed": 17,
+        "flaky": 0,
+        "total": 17
+      },
+      "Dictionary": {
+        "rate": 0,
+        "passed": 0,
+        "failed": 24,
+        "flaky": 0,
+        "total": 24
+      },
+      "External Crm Report Bulk Actions": {
+        "rate": 0,
+        "passed": 0,
+        "failed": 20,
+        "flaky": 0,
+        "total": 20
+      },
+      "External Crm Reports Transmission List": {
+        "rate": 0,
+        "passed": 0,
+        "failed": 18,
+        "flaky": 0,
+        "total": 18
+      },
+      "Patient Bulk Actions": {
+        "rate": 0,
+        "passed": 0,
+        "failed": 4,
+        "flaky": 0,
+        "total": 4
+      },
+      "Report Bulk Actions": {
+        "rate": 0,
+        "passed": 0,
+        "failed": 3,
+        "flaky": 0,
+        "total": 3
+      },
+      "Transmission Group": {
+        "rate": 0,
+        "passed": 0,
+        "failed": 12,
+        "flaky": 0,
+        "total": 12
+      },
+      "User": {
+        "rate": 0,
+        "passed": 0,
+        "failed": 13,
+        "flaky": 0,
+        "total": 13
+      },
+      "User Setting": {
+        "rate": 0,
+        "passed": 0,
+        "failed": 11,
+        "flaky": 0,
+        "total": 11
+      }
+    }
+  },
+  {
+    "runNum": 14,
+    "runId": "R-14",
+    "rate": 0,
+    "total": 122,
+    "passed": 0,
+    "failed": 122,
+    "flaky": 0,
+    "duration": "2m 6s",
+    "generatedAt": "2026-05-08T16:40:32.301Z",
+    "suite": "API Tests",
     "env": "QA",
     "branch": "main",
     "compRates": {
