@@ -1,23 +1,23 @@
 {
-  "runId": "R-14",
-  "generatedAt": "2026-05-08T16:40:32.301Z",
+  "runId": "R-15",
+  "generatedAt": "2026-05-08T17:49:54.880Z",
   "branch": "main",
-  "suite": "API Tests",
+  "suite": "Smoke Tests",
   "env": "QA",
-  "runUrl": "https://github.com/PaceMateLive/web20_webAutomation_PaceMateLive/actions/runs/25565893008",
+  "runUrl": "https://github.com/PaceMateLive/web20_webAutomation_PaceMateLive/actions/runs/25569094658",
   "summary": {
     "total": 122,
     "passed": 0,
     "failed": 122,
     "flaky": 0,
     "rate": 0,
-    "duration": "2m 6s",
-    "prevRunId": "R-13",
+    "duration": "2m 39s",
+    "prevRunId": "R-14",
     "prevRate": 0,
     "prevTotal": 122,
     "prevFailed": 122,
     "prevFlaky": 0,
-    "prevDuration": "2m 2s",
+    "prevDuration": "2m 6s",
     "consecutivePassing": 0
   },
   "comp": [
@@ -203,80 +203,79 @@
     }
   ],
   "hRuns": [
-    "R-10",
     "R-11",
     "R-12",
     "R-13",
-    "R-14"
+    "R-14",
+    "R-15"
   ],
   "hData": [
     [
       100,
       100,
-      100,
+      0,
       0,
       0
     ],
     [
       100,
       100,
-      100,
+      0,
       0,
       0
     ],
     [
       100,
       100,
-      100,
+      0,
       0,
       0
     ],
     [
       100,
       100,
-      100,
+      0,
       0,
       0
     ],
     [
       100,
       100,
-      100,
+      0,
       0,
       0
     ],
     [
       100,
       100,
-      100,
+      0,
       0,
       0
     ],
     [
       100,
       100,
-      100,
+      0,
       0,
       0
     ],
     [
       100,
       100,
-      100,
+      0,
       0,
       0
     ],
     [
       100,
       100,
-      100,
+      0,
       0,
       0
     ]
   ],
   "trend": {
     "labels": [
-      "R-5",
       "R-6",
       "R-7",
       "R-8",
@@ -285,10 +284,10 @@
       "R-11",
       "R-12",
       "R-13",
-      "R-14"
+      "R-14",
+      "R-15"
     ],
     "passed": [
-      10,
       10,
       10,
       10,
@@ -297,6 +296,7 @@
       3,
       3,
       0,
+      0,
       0
     ],
     "failed": [
@@ -304,10 +304,10 @@
       1,
       1,
       1,
-      1,
       8,
       8,
       8,
+      122,
       122,
       122
     ],
@@ -499,7 +499,7 @@
       "comp": "Dictionary",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
+      "dur": "6s",
       "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
     },
     {
@@ -507,7 +507,7 @@
       "comp": "Dictionary",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
+      "dur": "7s",
       "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
     },
     {
@@ -515,7 +515,7 @@
       "comp": "Dictionary",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
+      "dur": "4s",
       "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
     },
     {
@@ -523,7 +523,7 @@
       "comp": "Dictionary",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
+      "dur": "2s",
       "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
     },
     {
@@ -547,7 +547,7 @@
       "comp": "Dictionary",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
+      "dur": "2s",
       "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
     },
     {
@@ -579,7 +579,7 @@
       "comp": "Dictionary",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "1s",
       "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
     },
     {
@@ -587,7 +587,7 @@
       "comp": "Dictionary",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "1s",
       "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
     },
     {
@@ -603,7 +603,7 @@
       "comp": "Dictionary",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
+      "dur": "2s",
       "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
     },
     {
@@ -611,7 +611,7 @@
       "comp": "Dictionary",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
+      "dur": "3s",
       "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
     },
     {
@@ -619,7 +619,7 @@
       "comp": "Dictionary",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
+      "dur": "2s",
       "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
     },
     {
@@ -627,7 +627,7 @@
       "comp": "Dictionary",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
+      "dur": "2s",
       "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
     },
     {
@@ -643,7 +643,7 @@
       "comp": "Dictionary",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
+      "dur": "2s",
       "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
     },
     {
@@ -651,7 +651,7 @@
       "comp": "Dictionary",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
+      "dur": "2s",
       "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
     },
     {
@@ -691,7 +691,7 @@
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
+      "dur": "3s",
       "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
     },
     {
@@ -803,7 +803,7 @@
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
+      "dur": "3s",
       "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
     },
     {
@@ -819,7 +819,7 @@
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
+      "dur": "2s",
       "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
     },
     {
@@ -1147,7 +1147,7 @@
       "comp": "User",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
+      "dur": "15s",
       "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
     },
     {
@@ -1163,7 +1163,7 @@
       "comp": "User",
       "type": "API",
       "status": "failed",
-      "dur": "3s",
+      "dur": "1s",
       "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
     },
     {
@@ -1227,7 +1227,7 @@
       "comp": "User Setting",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
+      "dur": "2s",
       "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
     },
     {
@@ -1235,7 +1235,7 @@
       "comp": "User Setting",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
+      "dur": "2s",
       "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
     },
     {
@@ -1243,7 +1243,7 @@
       "comp": "User Setting",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "1s",
       "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
     },
     {
@@ -1259,7 +1259,7 @@
       "comp": "User Setting",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
+      "dur": "2s",
       "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
     },
     {
@@ -1275,7 +1275,7 @@
       "comp": "User Setting",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
     },
     {
