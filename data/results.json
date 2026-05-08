@@ -1,23 +1,23 @@
 {
-  "runId": "R-17",
-  "generatedAt": "2026-05-08T20:24:20.957Z",
+  "runId": "R-18",
+  "generatedAt": "2026-05-08T20:26:24.601Z",
   "branch": "main",
-  "suite": "Smoke Tests",
+  "suite": "API Tests",
   "env": "QA",
-  "runUrl": "https://github.com/PaceMateLive/web20_webAutomation_PaceMateLive/actions/runs/25577333314",
+  "runUrl": "https://github.com/PaceMateLive/web20_webAutomation_PaceMateLive/actions/runs/25577343377",
   "summary": {
     "total": 122,
     "passed": 7,
     "failed": 115,
     "flaky": 0,
     "rate": 5.7,
-    "duration": "4m 31s",
-    "prevRunId": "R-16",
-    "prevRate": 0,
+    "duration": "6m 14s",
+    "prevRunId": "R-17",
+    "prevRate": 5.7,
     "prevTotal": 122,
-    "prevFailed": 122,
+    "prevFailed": 115,
     "prevFlaky": 0,
-    "prevDuration": "2m 2s",
+    "prevDuration": "4m 31s",
     "consecutivePassing": 0
   },
   "comp": [
@@ -33,11 +33,11 @@
         6,
         6,
         6,
+        0,
+        0,
+        0,
+        0,
         6,
-        0,
-        0,
-        0,
-        0,
         6
       ]
     },
@@ -53,11 +53,11 @@
         4,
         4,
         4,
+        0,
+        0,
+        0,
+        0,
         4,
-        0,
-        0,
-        0,
-        0,
         4
       ]
     },
@@ -73,11 +73,11 @@
         10,
         10,
         10,
+        0,
+        0,
+        0,
+        0,
         10,
-        0,
-        0,
-        0,
-        0,
         10
       ]
     },
@@ -93,11 +93,11 @@
         17,
         17,
         17,
+        0,
+        0,
+        0,
+        0,
         17,
-        0,
-        0,
-        0,
-        0,
         17
       ]
     },
@@ -203,39 +203,39 @@
     }
   ],
   "hRuns": [
-    "R-13",
     "R-14",
     "R-15",
     "R-16",
-    "R-17"
+    "R-17",
+    "R-18"
   ],
   "hData": [
     [
       0,
       0,
       0,
-      0,
+      6,
       6
     ],
     [
       0,
       0,
       0,
-      0,
+      4,
       4
     ],
     [
       0,
       0,
       0,
-      0,
+      10,
       10
     ],
     [
       0,
       0,
       0,
-      0,
+      17,
       17
     ],
     [
@@ -276,7 +276,6 @@
   ],
   "trend": {
     "labels": [
-      "R-8",
       "R-9",
       "R-10",
       "R-11",
@@ -285,11 +284,11 @@
       "R-14",
       "R-15",
       "R-16",
-      "R-17"
+      "R-17",
+      "R-18"
     ],
     "passed": [
       10,
-      10,
       3,
       3,
       3,
@@ -297,11 +296,11 @@
       0,
       0,
       0,
+      7,
       7
     ],
     "failed": [
       1,
-      1,
       8,
       8,
       8,
@@ -309,6 +308,7 @@
       122,
       122,
       122,
+      115,
       115
     ],
     "flaky": [
@@ -331,7 +331,7 @@
       "comp": "CRM Reports",
       "type": "API",
       "status": "failed",
-      "dur": "6s",
+      "dur": "10s",
       "err": "Error: Expected JSON but received HTML. Status: 200"
     },
     {
@@ -339,7 +339,7 @@
       "comp": "CRM Reports",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 200"
     },
     {
@@ -347,7 +347,7 @@
       "comp": "CRM Reports",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 200"
     },
     {
@@ -371,7 +371,7 @@
       "comp": "CRM Reports",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 200"
     },
     {
@@ -379,7 +379,7 @@
       "comp": "CRM Reports",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 200"
     },
     {
@@ -395,7 +395,7 @@
       "comp": "CRM Reports",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
@@ -403,7 +403,7 @@
       "comp": "CRM Reports",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 200"
     },
     {
@@ -411,7 +411,7 @@
       "comp": "CRM Reports",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 200"
     },
     {
@@ -419,7 +419,7 @@
       "comp": "CRM Reports",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
@@ -427,7 +427,7 @@
       "comp": "CRM Reports",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
@@ -443,7 +443,7 @@
       "comp": "CRM Reports",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
@@ -451,7 +451,7 @@
       "comp": "CRM Reports",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
@@ -459,7 +459,7 @@
       "comp": "CRM Reports",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -467,7 +467,7 @@
       "comp": "Dictionary",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 200"
     },
     {
@@ -475,7 +475,7 @@
       "comp": "Dictionary",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "4s",
       "err": "Error: Expected JSON but received HTML. Status: 200"
     },
     {
@@ -483,7 +483,7 @@
       "comp": "Dictionary",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
@@ -499,7 +499,7 @@
       "comp": "Dictionary",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
@@ -507,7 +507,7 @@
       "comp": "Dictionary",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 200"
     },
     {
@@ -523,7 +523,7 @@
       "comp": "Dictionary",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 200"
     },
     {
@@ -531,7 +531,7 @@
       "comp": "Dictionary",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
@@ -539,7 +539,7 @@
       "comp": "Dictionary",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 200"
     },
     {
@@ -547,7 +547,7 @@
       "comp": "Dictionary",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 200"
     },
     {
@@ -555,7 +555,7 @@
       "comp": "Dictionary",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 200"
     },
     {
@@ -563,7 +563,7 @@
       "comp": "Dictionary",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 200"
     },
     {
@@ -571,7 +571,7 @@
       "comp": "Dictionary",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 200"
     },
     {
@@ -579,7 +579,7 @@
       "comp": "Dictionary",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 200"
     },
     {
@@ -587,7 +587,7 @@
       "comp": "Dictionary",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 200"
     },
     {
@@ -595,7 +595,7 @@
       "comp": "Dictionary",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 200"
     },
     {
@@ -603,7 +603,7 @@
       "comp": "Dictionary",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 200"
     },
     {
@@ -619,7 +619,7 @@
       "comp": "Dictionary",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
@@ -627,7 +627,7 @@
       "comp": "Dictionary",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
@@ -643,7 +643,7 @@
       "comp": "Dictionary",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
@@ -651,7 +651,7 @@
       "comp": "Dictionary",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "4s",
       "err": null
     },
     {
@@ -659,7 +659,7 @@
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
@@ -667,7 +667,7 @@
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
@@ -675,7 +675,7 @@
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
@@ -683,7 +683,7 @@
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
@@ -691,7 +691,7 @@
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
@@ -699,7 +699,7 @@
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
@@ -707,7 +707,7 @@
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
@@ -715,7 +715,7 @@
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
@@ -723,7 +723,7 @@
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
@@ -731,7 +731,7 @@
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
@@ -739,7 +739,7 @@
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "failed",
-      "dur": "4s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
@@ -755,7 +755,7 @@
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "5s",
       "err": "Error: expect(received).toBe(expected) // Object.is equality"
     },
     {
@@ -763,7 +763,7 @@
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "5s",
       "err": "Error: expect(received).toBe(expected) // Object.is equality"
     },
     {
@@ -771,7 +771,7 @@
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "4s",
       "err": "Error: expect(received).toBe(expected) // Object.is equality"
     },
     {
@@ -779,7 +779,7 @@
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "4s",
       "err": "Error: expect(received).toBe(expected) // Object.is equality"
     },
     {
@@ -787,7 +787,7 @@
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "5s",
       "err": "Error: expect(received).toBe(expected) // Object.is equality"
     },
     {
@@ -795,7 +795,7 @@
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "6s",
       "err": "Error: expect(received).toBe(expected) // Object.is equality"
     },
     {
@@ -803,7 +803,7 @@
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "5s",
       "err": "Error: expect(received).toBe(expected) // Object.is equality"
     },
     {
@@ -811,7 +811,7 @@
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "5s",
       "err": null
     },
     {
@@ -819,7 +819,7 @@
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "4s",
       "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
@@ -827,7 +827,7 @@
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "4s",
       "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
@@ -835,7 +835,7 @@
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "5s",
       "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
@@ -843,7 +843,7 @@
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "failed",
-      "dur": "3s",
+      "dur": "4s",
       "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
@@ -851,7 +851,7 @@
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "failed",
-      "dur": "3s",
+      "dur": "4s",
       "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
@@ -859,7 +859,7 @@
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "4s",
       "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
@@ -867,7 +867,7 @@
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "4s",
       "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
@@ -875,7 +875,7 @@
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "5s",
       "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
@@ -883,7 +883,7 @@
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "4s",
       "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
@@ -891,7 +891,7 @@
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
@@ -899,7 +899,7 @@
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "7s",
       "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
@@ -907,7 +907,7 @@
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "failed",
-      "dur": "4s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
@@ -915,7 +915,7 @@
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "failed",
-      "dur": "5s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
@@ -931,7 +931,7 @@
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
@@ -939,7 +939,7 @@
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -947,7 +947,7 @@
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -955,7 +955,7 @@
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -963,7 +963,7 @@
       "comp": "Patient Bulk Actions",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
@@ -979,7 +979,7 @@
       "comp": "Patient Bulk Actions",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
@@ -987,7 +987,7 @@
       "comp": "Patient Bulk Actions",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
@@ -995,7 +995,7 @@
       "comp": "Report Bulk Actions",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
@@ -1003,7 +1003,7 @@
       "comp": "Report Bulk Actions",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
@@ -1011,7 +1011,7 @@
       "comp": "Report Bulk Actions",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
@@ -1019,7 +1019,7 @@
       "comp": "Transmission Group",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
@@ -1027,7 +1027,7 @@
       "comp": "Transmission Group",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
@@ -1059,7 +1059,7 @@
       "comp": "Transmission Group",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
@@ -1067,7 +1067,7 @@
       "comp": "Transmission Group",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
@@ -1075,7 +1075,7 @@
       "comp": "Transmission Group",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
@@ -1091,7 +1091,7 @@
       "comp": "Transmission Group",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
@@ -1099,7 +1099,7 @@
       "comp": "Transmission Group",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
@@ -1115,7 +1115,7 @@
       "comp": "User",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 200"
     },
     {
@@ -1131,7 +1131,7 @@
       "comp": "User",
       "type": "API",
       "status": "failed",
-      "dur": "5s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
@@ -1155,7 +1155,7 @@
       "comp": "User",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
@@ -1163,7 +1163,7 @@
       "comp": "User",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
@@ -1171,7 +1171,7 @@
       "comp": "User",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
@@ -1179,7 +1179,7 @@
       "comp": "User",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
@@ -1187,7 +1187,7 @@
       "comp": "User",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
@@ -1195,7 +1195,7 @@
       "comp": "User",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -1227,7 +1227,7 @@
       "comp": "User Setting",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
@@ -1235,7 +1235,7 @@
       "comp": "User Setting",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
@@ -1251,7 +1251,7 @@
       "comp": "User Setting",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 200"
     },
     {
@@ -1259,7 +1259,7 @@
       "comp": "User Setting",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
@@ -1275,7 +1275,7 @@
       "comp": "User Setting",
       "type": "API",
       "status": "failed",
-      "dur": "4s",
+      "dur": "2s",
       "err": "Error: Expected JSON but received HTML. Status: 200"
     },
     {
@@ -1283,7 +1283,7 @@
       "comp": "User Setting",
       "type": "API",
       "status": "failed",
-      "dur": "3s",
+      "dur": "2s",
       "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
@@ -1291,7 +1291,7 @@
       "comp": "User Setting",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
