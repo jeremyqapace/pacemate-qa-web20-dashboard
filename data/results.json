@@ -1,104 +1,104 @@
 {
-  "runId": "R-16",
-  "generatedAt": "2026-05-08T19:04:14.514Z",
+  "runId": "R-17",
+  "generatedAt": "2026-05-08T20:24:20.957Z",
   "branch": "main",
   "suite": "Smoke Tests",
   "env": "QA",
-  "runUrl": "https://github.com/PaceMateLive/web20_webAutomation_PaceMateLive/actions/runs/25572468592",
+  "runUrl": "https://github.com/PaceMateLive/web20_webAutomation_PaceMateLive/actions/runs/25577333314",
   "summary": {
     "total": 122,
-    "passed": 0,
-    "failed": 122,
+    "passed": 7,
+    "failed": 115,
     "flaky": 0,
-    "rate": 0,
-    "duration": "2m 2s",
-    "prevRunId": "R-15",
+    "rate": 5.7,
+    "duration": "4m 31s",
+    "prevRunId": "R-16",
     "prevRate": 0,
     "prevTotal": 122,
     "prevFailed": 122,
     "prevFlaky": 0,
-    "prevDuration": "2m 39s",
+    "prevDuration": "2m 2s",
     "consecutivePassing": 0
   },
   "comp": [
     {
       "name": "CRM Reports",
-      "pct": 0,
-      "passed": 0,
+      "pct": 6,
+      "passed": 1,
       "total": 17,
-      "failed": 17,
+      "failed": 16,
       "flaky": 0,
       "sparks": [
+        6,
+        6,
+        6,
+        6,
+        6,
         0,
         0,
         0,
         0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
+        6
       ]
     },
     {
       "name": "Dictionary",
-      "pct": 0,
-      "passed": 0,
+      "pct": 4,
+      "passed": 1,
       "total": 24,
-      "failed": 24,
+      "failed": 23,
       "flaky": 0,
       "sparks": [
+        4,
+        4,
+        4,
+        4,
+        4,
         0,
         0,
         0,
         0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
+        4
       ]
     },
     {
       "name": "External Crm Report Bulk Actions",
-      "pct": 0,
-      "passed": 0,
+      "pct": 10,
+      "passed": 2,
       "total": 20,
-      "failed": 20,
+      "failed": 18,
       "flaky": 0,
       "sparks": [
+        10,
+        10,
+        10,
+        10,
+        10,
         0,
         0,
         0,
         0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
+        10
       ]
     },
     {
       "name": "External Crm Reports Transmission List",
-      "pct": 0,
-      "passed": 0,
+      "pct": 17,
+      "passed": 3,
       "total": 18,
-      "failed": 18,
+      "failed": 15,
       "flaky": 0,
       "sparks": [
+        17,
+        17,
+        17,
+        17,
+        17,
         0,
         0,
         0,
         0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
+        17
       ]
     },
     {
@@ -203,71 +203,71 @@
     }
   ],
   "hRuns": [
-    "R-12",
     "R-13",
     "R-14",
     "R-15",
-    "R-16"
+    "R-16",
+    "R-17"
   ],
   "hData": [
     [
-      100,
+      0,
+      0,
+      0,
+      0,
+      6
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      4
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      10
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      17
+    ],
+    [
+      0,
       0,
       0,
       0,
       0
     ],
     [
-      100,
       0,
-      0,
-      0,
-      0
-    ],
-    [
-      100,
       0,
       0,
       0,
       0
     ],
     [
-      100,
       0,
-      0,
-      0,
-      0
-    ],
-    [
-      100,
       0,
       0,
       0,
       0
     ],
     [
-      100,
       0,
-      0,
-      0,
-      0
-    ],
-    [
-      100,
       0,
       0,
       0,
       0
     ],
     [
-      100,
       0,
-      0,
-      0,
-      0
-    ],
-    [
-      100,
       0,
       0,
       0,
@@ -276,7 +276,6 @@
   ],
   "trend": {
     "labels": [
-      "R-7",
       "R-8",
       "R-9",
       "R-10",
@@ -285,31 +284,32 @@
       "R-13",
       "R-14",
       "R-15",
-      "R-16"
+      "R-16",
+      "R-17"
     ],
     "passed": [
       10,
       10,
-      10,
       3,
       3,
       3,
       0,
       0,
       0,
-      0
+      0,
+      7
     ],
     "failed": [
       1,
       1,
-      1,
       8,
       8,
       8,
       122,
       122,
       122,
-      122
+      122,
+      115
     ],
     "flaky": [
       0,
@@ -331,912 +331,912 @@
       "comp": "CRM Reports",
       "type": "API",
       "status": "failed",
-      "dur": "3s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "6s",
+      "err": "Error: Expected JSON but received HTML. Status: 200"
     },
     {
       "name": "[CRM List Config] - PMW-002.2 - Get All CRM Reports Views Including Custom",
       "comp": "CRM Reports",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 200"
     },
     {
       "name": "[CRM List Config] - PMW-002.3 - Get Column Configuration for a Specific View",
       "comp": "CRM Reports",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 200"
     },
     {
       "name": "[CRM List Config] - PMW-002.4 - Save View Customization and Verify Success",
       "comp": "CRM Reports",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "3s",
+      "err": "Error: Expected JSON but received HTML. Status: 200"
     },
     {
       "name": "[CRM List Config] - PMW-002.5 - Reset View to Default",
       "comp": "CRM Reports",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "3s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[CRM List Config] - PMW-002.7 - Get All Available Columns for CRM Reports",
       "comp": "CRM Reports",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 200"
     },
     {
       "name": "[CRM List Config] - PMW-002.6 - Toggle Column Visibility Off and Restore",
       "comp": "CRM Reports",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 200"
     },
     {
       "name": "[CRM List Config] - PMW-002.8 - Get All Custom CRM Reports Lists",
       "comp": "CRM Reports",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "3s",
+      "err": "Error: Expected JSON but received HTML. Status: 200"
     },
     {
       "name": "[CRM List Config] - PMW-002.9 - Custom List Full Lifecycle",
       "comp": "CRM Reports",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[CRM List Config] - PMW-002.10 - Get Available Filters for CRM Reports",
       "comp": "CRM Reports",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 200"
     },
     {
       "name": "[CRM List Config] - PMW-002.11 - Get config for non-existent viewId returns 400",
       "comp": "CRM Reports",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 200"
     },
     {
       "name": "[CRM List Config] - PMW-002.12 - Toggle column visibility with invalid column ID returns 200 (server is lenient)",
       "comp": "CRM Reports",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[CRM List Config] - PMW-002.13 - Duplicate list with missing sourceViewId returns 400",
       "comp": "CRM Reports",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[CRM List Config] - PMW-002.14 - Duplicate list with empty list name returns 400",
       "comp": "CRM Reports",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "3s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[CRM List Config] - PMW-002.15 - Reset a non-existent view returns 200 (server is lenient)",
       "comp": "CRM Reports",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[CRM List Config] - PMW-002.16 - Delete a non-existent custom list returns 400",
       "comp": "CRM Reports",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[CRM List Config] - PMW-002.17 - Access without authentication returns 200 with login redirect",
       "comp": "CRM Reports",
       "type": "API",
-      "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "status": "passed",
+      "dur": "2s",
+      "err": null
     },
     {
       "name": "[Dictionary] - PMW-003.1 - Get Clinics for Current User",
       "comp": "Dictionary",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 200"
     },
     {
       "name": "[Dictionary] - PMW-003.2 - Get Clinic Groups (GET)",
       "comp": "Dictionary",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 200"
     },
     {
       "name": "[Dictionary] - PMW-003.3 - Get Clinic Groups via POST with Clinic IDs",
       "comp": "Dictionary",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[Dictionary] - PMW-003.4 - Get Providers (GET)",
       "comp": "Dictionary",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "3s",
+      "err": "Error: Expected JSON but received HTML. Status: 200"
     },
     {
       "name": "[Dictionary] - PMW-003.5 - Get Providers via POST with Clinic IDs",
       "comp": "Dictionary",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[Dictionary] - PMW-003.6 - Get Interpreting Providers (GET)",
       "comp": "Dictionary",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 200"
     },
     {
       "name": "[Dictionary] - PMW-003.7 - Get Interpreting Providers via POST with Clinic IDs",
       "comp": "Dictionary",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "3s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[Dictionary] - PMW-003.8 - Get Ordering Providers (GET)",
       "comp": "Dictionary",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 200"
     },
     {
       "name": "[Dictionary] - PMW-003.9 - Get Ordering Providers via POST with Clinic IDs",
       "comp": "Dictionary",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[Dictionary] - PMW-003.10 - Get Device Vendors",
       "comp": "Dictionary",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 200"
     },
     {
       "name": "[Dictionary] - PMW-003.11 - Get Device Types",
       "comp": "Dictionary",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 200"
     },
     {
       "name": "[Dictionary] - PMW-003.12 - Get Patient Statuses",
       "comp": "Dictionary",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 200"
     },
     {
       "name": "[Dictionary] - PMW-003.13 - Get Device Statuses",
       "comp": "Dictionary",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 200"
     },
     {
       "name": "[Dictionary] - PMW-003.14 - Get Transmission Statuses",
       "comp": "Dictionary",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 200"
     },
     {
       "name": "[Dictionary] - PMW-003.15 - Get Ejection Fraction Modalities",
       "comp": "Dictionary",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 200"
     },
     {
       "name": "[Dictionary] - PMW-003.16 - Get Anticoagulants",
       "comp": "Dictionary",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 200"
     },
     {
       "name": "[Dictionary] - PMW-003.17 - Get Non-Anticoagulants",
       "comp": "Dictionary",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 200"
     },
     {
       "name": "[Dictionary] - PMW-003.18 - Get Billing Items by ID",
       "comp": "Dictionary",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 200"
     },
     {
       "name": "[Dictionary] - PMW-003.19 - Get Battery Statuses by ID",
       "comp": "Dictionary",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "3s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[Dictionary] - PMW-003.20 - Get Groups with non-array clinicIds returns 200 (server is lenient)",
       "comp": "Dictionary",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[Dictionary] - PMW-003.21 - Get Providers with non-numeric clinic IDs returns 200 (server is lenient)",
       "comp": "Dictionary",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[Dictionary] - PMW-003.22 - Get Billing Items for non-existent clinic ID returns 200 with empty list",
       "comp": "Dictionary",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "3s",
+      "err": "Error: Expected JSON but received HTML. Status: 200"
     },
     {
       "name": "[Dictionary] - PMW-003.23 - Get Battery Statuses for non-existent clinic ID returns 200",
       "comp": "Dictionary",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[Dictionary] - PMW-003.24 - Access without authentication returns 200 with login redirect",
       "comp": "Dictionary",
       "type": "API",
-      "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "status": "passed",
+      "dur": "2s",
+      "err": null
     },
     {
       "name": "[BulkActions] - PMW-004.1 - Execute APPROVE via IDS mode returns 200 with valid response structure",
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[BulkActions] - PMW-004.2 - Execute ARCHIVE via IDS mode returns 200 with valid response structure",
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[BulkActions] - PMW-004.3 - Execute ESIGN via IDS mode returns 200 with valid response structure",
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[BulkActions] - PMW-004.4 - Execute APPROVE via VIEW mode (remotesForApproval) returns 400 when view is empty",
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[BulkActions] - PMW-004.5 - Execute ESIGN via VIEW mode (reportsForEsigning) returns 400 when view is empty",
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[BulkActions] - PMW-004.6 - Execute ARCHIVE via VIEW mode (inclinicWorklist) returns 400 when view is empty",
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[BulkActions] - PMW-004.7 - Execute with invalid action type returns 400",
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[BulkActions] - PMW-004.8 - Execute with missing required action field returns 400",
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[BulkActions] - PMW-004.9 - Execute with missing required selection field returns 400",
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[BulkActions] - PMW-004.10 - Execute with invalid mode value returns 400",
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[BulkActions] - PMW-004.11 - Execute with empty IDS array returns 400",
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "4s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[BulkActions] - PMW-004.12 - Execute without authentication returns 200 with login redirect",
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
-      "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "status": "passed",
+      "dur": "3s",
+      "err": null
     },
     {
       "name": "[BulkActions] - PMW-004.13 - Export selected transmissions by IDS returns 401 when user has no clinic access",
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: expect(received).toBe(expected) // Object.is equality"
     },
     {
       "name": "[BulkActions] - PMW-004.14 - Export all from remotesForApproval returns 401 when user has no clinic access",
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: expect(received).toBe(expected) // Object.is equality"
     },
     {
       "name": "[BulkActions] - PMW-004.15 - Export all from reportsForEsigning returns 401 when user has no clinic access",
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: expect(received).toBe(expected) // Object.is equality"
     },
     {
       "name": "[BulkActions] - PMW-004.16 - Export all from inclinicWorklist returns 401 when user has no clinic access",
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: expect(received).toBe(expected) // Object.is equality"
     },
     {
       "name": "[BulkActions] - PMW-004.17 - Export with neither ids nor viewType returns 400",
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: expect(received).toBe(expected) // Object.is equality"
     },
     {
       "name": "[BulkActions] - PMW-004.18 - Export with both ids and viewType returns 401 when user has no clinic access",
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: expect(received).toBe(expected) // Object.is equality"
     },
     {
       "name": "[BulkActions] - PMW-004.19 - Export with invalid viewType returns 401 when user has no clinic access",
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: expect(received).toBe(expected) // Object.is equality"
     },
     {
       "name": "[BulkActions] - PMW-004.20 - Export without authentication returns 200 with login redirect",
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
-      "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "status": "passed",
+      "dur": "2s",
+      "err": null
     },
     {
       "name": "[External CRM Reports] - PMW-005.1 - Get Remotes for Approval with minimal body returns 200 with valid structure",
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[External CRM Reports] - PMW-005.2 - Get Remotes for Approval filtered by clinicIds returns 200",
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[External CRM Reports] - PMW-005.3 - Get Remotes for Approval with date range filter returns 200",
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[External CRM Reports] - PMW-005.4 - Get Remotes for Approval with full filter set returns 200",
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "3s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[External CRM Reports] - PMW-005.5 - Get Remotes for Approval with groupByPatient returns 200",
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "3s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[External CRM Reports] - PMW-005.6 - Get Reports for E-Signing with minimal body returns 200 with valid structure",
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[External CRM Reports] - PMW-005.7 - Get Reports for E-Signing filtered by clinicIds returns 200",
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[External CRM Reports] - PMW-005.8 - Get Reports for E-Signing with pagination and sorting returns 200",
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[External CRM Reports] - PMW-005.9 - Get InClinic Worklist with minimal body returns 200 with valid structure",
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[External CRM Reports] - PMW-005.10 - Get InClinic Worklist filtered by clinicIds returns 200",
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[External CRM Reports] - PMW-005.11 - Get InClinic Worklist with sorting returns 200",
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[External CRM Reports] - PMW-005.12 - Get Remotes for Approval with empty body returns 200 (server is lenient)",
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "4s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[External CRM Reports] - PMW-005.13 - Get Remotes for Approval with invalid clinicIds type returns 200 (server is lenient)",
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "5s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[External CRM Reports] - PMW-005.14 - Get Remotes for Approval with invalid date format returns 200 (server is lenient)",
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[External CRM Reports] - PMW-005.15 - Get Remotes for Approval with recordMax 0 returns 200 with empty data array",
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[External CRM Reports] - PMW-005.16 - Get Remotes for Approval without authentication returns 200 with login redirect",
       "comp": "External Crm Reports Transmission List",
       "type": "API",
-      "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "status": "passed",
+      "dur": "2s",
+      "err": null
     },
     {
       "name": "[External CRM Reports] - PMW-005.17 - Get Reports for E-Signing without authentication returns 200 with login redirect",
       "comp": "External Crm Reports Transmission List",
       "type": "API",
-      "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "status": "passed",
+      "dur": "2s",
+      "err": null
     },
     {
       "name": "[External CRM Reports] - PMW-005.18 - Get InClinic Worklist without authentication returns 200 with login redirect",
       "comp": "External Crm Reports Transmission List",
       "type": "API",
-      "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "status": "passed",
+      "dur": "2s",
+      "err": null
     },
     {
       "name": "[Patient Bulk Actions] - PMW-008.3 - Execute with empty body returns 400",
       "comp": "Patient Bulk Actions",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[Patient Bulk Actions] - PMW-008.4 - Execute with missing action field returns 400",
       "comp": "Patient Bulk Actions",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[Patient Bulk Actions] - PMW-008.5 - Execute with invalid action type returns 400",
       "comp": "Patient Bulk Actions",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[Patient Bulk Actions] - PMW-008.6 - Execute with missing selection field returns 400",
       "comp": "Patient Bulk Actions",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[Report Bulk Actions] - PMW-007.1 - Export Unresolved Reports to CSV",
       "comp": "Report Bulk Actions",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[Report Bulk Actions] - PMW-007.2 - Export Autopromoted Reports to CSV",
       "comp": "Report Bulk Actions",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[Report Bulk Actions] - PMW-007.3 - Export All Reports to CSV",
       "comp": "Report Bulk Actions",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[Transmission] - PMW-006.1 - Get All Transmissions",
       "comp": "Transmission Group",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[Transmission] - PMW-006.2 - Get Unresolved Transmissions",
       "comp": "Transmission Group",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[Transmission] - PMW-006.3 - Get Autopromoted Transmissions",
       "comp": "Transmission Group",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[Transmission] - PMW-006.1a - Get All Transmissions with empty body returns 400",
       "comp": "Transmission Group",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[Transmission] - PMW-006.1b - Get All Transmissions with missing criteria returns 400",
       "comp": "Transmission Group",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "3s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[Transmission] - PMW-006.1c - Get All Transmissions with invalid date form returns 400",
       "comp": "Transmission Group",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[Transmission] - PMW-006.2a - Get Unresolved Transmissions with empty body returns 400",
       "comp": "Transmission Group",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[Transmission] - PMW-006.2b - Get Unresolved Transmissions with missing criteria returns 400",
       "comp": "Transmission Group",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[Transmission] - PMW-006.2c - Get Unresolved Transmissions with invalid date returns 400",
       "comp": "Transmission Group",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[Transmission] - PMW-006.3a - Get Autopromoted Transmissions with empty body returns 400",
       "comp": "Transmission Group",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[Transmission] - PMW-006.3b - Get Autopromoted Transmissions with missing criteria returns 400",
       "comp": "Transmission Group",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[Transmission] - PMW-006.3c - Get Autopromoted Transmissions with invalid date returns 400",
       "comp": "Transmission Group",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[User] - PMW-005.1 - Get Current User Info",
       "comp": "User",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 200"
     },
     {
       "name": "[User] - PMW-005.2 - Copy Clinics Between Users",
       "comp": "User",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "3s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[User] - PMW-005.3 - Copy Roles Between Users",
       "comp": "User",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "5s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[User] - PMW-005.4 - Search Users",
       "comp": "User",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": null
     },
     {
       "name": "[User] - PMW-005.2a - Copy Clinics with empty body returns 400",
       "comp": "User",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[User] - PMW-005.2b - Copy Clinics with null user IDs returns 400",
       "comp": "User",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[User] - PMW-005.2c - Copy Clinics with missing replaceExisting field returns 400",
       "comp": "User",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[User] - PMW-005.3a - Copy Roles with empty body returns 400",
       "comp": "User",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[User] - PMW-005.3b - Copy Roles with null user IDs returns 400",
       "comp": "User",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[User] - PMW-005.3c - Copy Roles with missing replaceExisting returns 400",
       "comp": "User",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[User] - PMW-005.4a - Search Users empty response body",
       "comp": "User",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": null
     },
     {
       "name": "[User] - PMW-005.4b - Search Users with null IDs return 400",
       "comp": "User",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": null
     },
     {
       "name": "[User] - PMW-005.4c - Search Users with null IDs return 400",
       "comp": "User",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[User Setting] - PMW-004.1 - Get Patient Chart Settings",
       "comp": "User Setting",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 200"
     },
     {
       "name": "[User Setting] - PMW-004.2 - Save Patient Chart Settings",
       "comp": "User Setting",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[User Setting] - PMW-004.3 - Clear Patient Chart Settings",
       "comp": "User Setting",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[User Setting] - PMW-004.4 - Update Theme",
@@ -1244,63 +1244,63 @@
       "type": "API",
       "status": "failed",
       "dur": "2s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[User Setting] - PMW-004.5 - Get Theme",
       "comp": "User Setting",
       "type": "API",
       "status": "failed",
-      "dur": "3s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 200"
     },
     {
       "name": "[User Setting] - PMW-004.6 - Update Side Menu Layout",
       "comp": "User Setting",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[User Setting] - PMW-004.7 - Save Favorite Pages",
       "comp": "User Setting",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[User Setting] - PMW-004.8 - Get Favorite Pages",
       "comp": "User Setting",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "4s",
+      "err": "Error: Expected JSON but received HTML. Status: 200"
     },
     {
       "name": "[User Setting] - PMW-004.9 - Clear Favorite Pages",
       "comp": "User Setting",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "3s",
+      "err": "Error: Expected JSON but received HTML. Status: 404"
     },
     {
       "name": "[User Setting] - PMW-004.10 - Save Alerts in Details Bar Setting",
       "comp": "User Setting",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "2s",
+      "err": null
     },
     {
       "name": "[User Setting] - PMW-004.11 - Get Alerts in Details Bar Settings",
       "comp": "User Setting",
       "type": "API",
       "status": "failed",
-      "dur": "1s",
-      "err": "page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL"
+      "dur": "3s",
+      "err": "Error: Expected JSON but received HTML. Status: 200"
     }
   ]
 }
