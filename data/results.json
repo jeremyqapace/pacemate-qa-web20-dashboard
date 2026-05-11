@@ -1,23 +1,23 @@
 {
-  "runId": "R-21",
-  "generatedAt": "2026-05-11T18:10:10.660Z",
+  "runId": "R-22",
+  "generatedAt": "2026-05-11T18:12:18.969Z",
   "branch": "main",
-  "suite": "Smoke Tests",
+  "suite": "API",
   "env": "QA",
-  "runUrl": "https://github.com/PaceMateLive/web20_webAutomation_PaceMateLive/actions/runs/25687919389",
+  "runUrl": "https://github.com/PaceMateLive/web20_webAutomation_PaceMateLive/actions/runs/25687938459",
   "summary": {
     "total": 122,
     "passed": 91,
     "failed": 31,
     "flaky": 0,
     "rate": 74.6,
-    "duration": "4m 47s",
-    "prevRunId": "R-20",
-    "prevRate": 5.7,
+    "duration": "6m",
+    "prevRunId": "R-21",
+    "prevRate": 74.6,
     "prevTotal": 122,
-    "prevFailed": 115,
+    "prevFailed": 31,
     "prevFlaky": 0,
-    "prevDuration": "5m 18s",
+    "prevDuration": "4m 47s",
     "consecutivePassing": 0
   },
   "comp": [
@@ -29,15 +29,15 @@
       "failed": 1,
       "flaky": 0,
       "sparks": [
+        0,
+        0,
+        0,
+        0,
+        6,
+        6,
+        0,
+        6,
         94,
-        0,
-        0,
-        0,
-        0,
-        6,
-        6,
-        0,
-        6,
         94
       ]
     },
@@ -49,15 +49,15 @@
       "failed": 1,
       "flaky": 0,
       "sparks": [
+        0,
+        0,
+        0,
+        0,
+        4,
+        4,
+        0,
+        4,
         96,
-        0,
-        0,
-        0,
-        0,
-        4,
-        4,
-        0,
-        4,
         96
       ]
     },
@@ -69,15 +69,15 @@
       "failed": 2,
       "flaky": 0,
       "sparks": [
+        0,
+        0,
+        0,
+        0,
+        10,
+        10,
+        0,
+        10,
         90,
-        0,
-        0,
-        0,
-        0,
-        10,
-        10,
-        0,
-        10,
         90
       ]
     },
@@ -89,15 +89,15 @@
       "failed": 3,
       "flaky": 0,
       "sparks": [
+        0,
+        0,
+        0,
+        0,
+        17,
+        17,
+        0,
+        17,
         83,
-        0,
-        0,
-        0,
-        0,
-        17,
-        17,
-        0,
-        17,
         83
       ]
     },
@@ -109,15 +109,15 @@
       "failed": 0,
       "flaky": 0,
       "sparks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
         100,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
         100
       ]
     },
@@ -149,15 +149,15 @@
       "failed": 9,
       "flaky": 0,
       "sparks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
         25,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
         25
       ]
     },
@@ -169,15 +169,15 @@
       "failed": 10,
       "flaky": 0,
       "sparks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
         23,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
         23
       ]
     },
@@ -189,60 +189,60 @@
       "failed": 2,
       "flaky": 0,
       "sparks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
         82,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
         82
       ]
     }
   ],
   "hRuns": [
-    "R-17",
     "R-18",
     "R-19",
     "R-20",
-    "R-21"
+    "R-21",
+    "R-22"
   ],
   "hData": [
     [
       6,
-      6,
       0,
       6,
+      94,
       94
     ],
     [
       4,
-      4,
       0,
       4,
+      96,
       96
     ],
     [
       10,
-      10,
       0,
       10,
+      90,
       90
     ],
     [
       17,
-      17,
       0,
       17,
+      83,
       83
     ],
     [
       0,
       0,
       0,
-      0,
+      100,
       100
     ],
     [
@@ -256,27 +256,26 @@
       0,
       0,
       0,
-      0,
+      25,
       25
     ],
     [
       0,
       0,
       0,
-      0,
+      23,
       23
     ],
     [
       0,
       0,
       0,
-      0,
+      82,
       82
     ]
   ],
   "trend": {
     "labels": [
-      "R-12",
       "R-13",
       "R-14",
       "R-15",
@@ -285,10 +284,10 @@
       "R-18",
       "R-19",
       "R-20",
-      "R-21"
+      "R-21",
+      "R-22"
     ],
     "passed": [
-      3,
       0,
       0,
       0,
@@ -297,10 +296,10 @@
       7,
       0,
       7,
+      91,
       91
     ],
     "failed": [
-      8,
       122,
       122,
       122,
@@ -309,6 +308,7 @@
       115,
       168,
       115,
+      31,
       31
     ],
     "flaky": [
@@ -331,7 +331,7 @@
       "comp": "CRM Reports",
       "type": "API",
       "status": "passed",
-      "dur": "5s",
+      "dur": "6s",
       "err": null
     },
     {
@@ -339,7 +339,7 @@
       "comp": "CRM Reports",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -347,7 +347,7 @@
       "comp": "CRM Reports",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "5s",
       "err": null
     },
     {
@@ -355,7 +355,7 @@
       "comp": "CRM Reports",
       "type": "API",
       "status": "passed",
-      "dur": "5s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -363,7 +363,7 @@
       "comp": "CRM Reports",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
+      "dur": "2s",
       "err": null
     },
     {
@@ -371,7 +371,7 @@
       "comp": "CRM Reports",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -379,7 +379,7 @@
       "comp": "CRM Reports",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -395,7 +395,7 @@
       "comp": "CRM Reports",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -403,7 +403,7 @@
       "comp": "CRM Reports",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -411,7 +411,7 @@
       "comp": "CRM Reports",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -435,7 +435,7 @@
       "comp": "CRM Reports",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -451,7 +451,7 @@
       "comp": "CRM Reports",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -467,7 +467,7 @@
       "comp": "Dictionary",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -475,7 +475,7 @@
       "comp": "Dictionary",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -483,7 +483,7 @@
       "comp": "Dictionary",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "9s",
       "err": null
     },
     {
@@ -491,7 +491,7 @@
       "comp": "Dictionary",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -507,7 +507,7 @@
       "comp": "Dictionary",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -515,7 +515,7 @@
       "comp": "Dictionary",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -523,7 +523,7 @@
       "comp": "Dictionary",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -531,7 +531,7 @@
       "comp": "Dictionary",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -563,7 +563,7 @@
       "comp": "Dictionary",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -571,7 +571,7 @@
       "comp": "Dictionary",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "6s",
       "err": null
     },
     {
@@ -579,7 +579,7 @@
       "comp": "Dictionary",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "4s",
       "err": null
     },
     {
@@ -587,7 +587,7 @@
       "comp": "Dictionary",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "4s",
       "err": null
     },
     {
@@ -595,7 +595,7 @@
       "comp": "Dictionary",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -603,7 +603,7 @@
       "comp": "Dictionary",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -611,7 +611,7 @@
       "comp": "Dictionary",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -627,7 +627,7 @@
       "comp": "Dictionary",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -635,7 +635,7 @@
       "comp": "Dictionary",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -643,7 +643,7 @@
       "comp": "Dictionary",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -659,7 +659,7 @@
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -667,7 +667,7 @@
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -683,7 +683,7 @@
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -699,7 +699,7 @@
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -731,7 +731,7 @@
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -755,7 +755,7 @@
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -787,7 +787,7 @@
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -795,7 +795,7 @@
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -819,7 +819,7 @@
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -827,7 +827,7 @@
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -835,7 +835,7 @@
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "7s",
       "err": null
     },
     {
@@ -843,7 +843,7 @@
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "4s",
       "err": null
     },
     {
@@ -851,7 +851,7 @@
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "5s",
       "err": null
     },
     {
@@ -859,7 +859,7 @@
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "4s",
       "err": null
     },
     {
@@ -867,7 +867,7 @@
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "4s",
       "err": null
     },
     {
@@ -875,7 +875,7 @@
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "4s",
       "err": null
     },
     {
@@ -883,7 +883,7 @@
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "4s",
       "err": null
     },
     {
@@ -891,7 +891,7 @@
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "4s",
       "err": null
     },
     {
@@ -899,7 +899,7 @@
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "4s",
       "err": null
     },
     {
@@ -907,7 +907,7 @@
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "4s",
       "err": null
     },
     {
@@ -915,7 +915,7 @@
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "4s",
       "err": null
     },
     {
@@ -923,7 +923,7 @@
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "4s",
       "err": null
     },
     {
@@ -931,7 +931,7 @@
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -939,7 +939,7 @@
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: expect(received).toBe(expected) // Object.is equality"
     },
     {
@@ -947,7 +947,7 @@
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: expect(received).toBe(expected) // Object.is equality"
     },
     {
@@ -979,7 +979,7 @@
       "comp": "Patient Bulk Actions",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -1019,7 +1019,7 @@
       "comp": "Transmission Group",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
+      "dur": "2s",
       "err": null
     },
     {
@@ -1027,7 +1027,7 @@
       "comp": "Transmission Group",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -1051,7 +1051,7 @@
       "comp": "Transmission Group",
       "type": "API",
       "status": "failed",
-      "dur": "4s",
+      "dur": "3s",
       "err": "Error: expect(received).toBe(expected) // Object.is equality"
     },
     {
@@ -1059,7 +1059,7 @@
       "comp": "Transmission Group",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: expect(received).toBe(expected) // Object.is equality"
     },
     {
@@ -1067,7 +1067,7 @@
       "comp": "Transmission Group",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: expect(received).toBe(expected) // Object.is equality"
     },
     {
@@ -1075,7 +1075,7 @@
       "comp": "Transmission Group",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "9s",
       "err": "Error: expect(received).toBe(expected) // Object.is equality"
     },
     {
@@ -1083,7 +1083,7 @@
       "comp": "Transmission Group",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: expect(received).toBe(expected) // Object.is equality"
     },
     {
@@ -1091,7 +1091,7 @@
       "comp": "Transmission Group",
       "type": "API",
       "status": "failed",
-      "dur": "5s",
+      "dur": "2s",
       "err": "Error: expect(received).toBe(expected) // Object.is equality"
     },
     {
@@ -1099,7 +1099,7 @@
       "comp": "Transmission Group",
       "type": "API",
       "status": "failed",
-      "dur": "3s",
+      "dur": "2s",
       "err": "Error: expect(received).toBe(expected) // Object.is equality"
     },
     {
@@ -1107,7 +1107,7 @@
       "comp": "Transmission Group",
       "type": "API",
       "status": "failed",
-      "dur": "3s",
+      "dur": "2s",
       "err": "Error: expect(received).toBe(expected) // Object.is equality"
     },
     {
@@ -1115,7 +1115,7 @@
       "comp": "User",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
+      "dur": "2s",
       "err": null
     },
     {
@@ -1123,7 +1123,7 @@
       "comp": "User",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
+      "dur": "2s",
       "err": null
     },
     {
@@ -1139,7 +1139,7 @@
       "comp": "User",
       "type": "API",
       "status": "failed",
-      "dur": "3s",
+      "dur": "2s",
       "err": null
     },
     {
@@ -1147,7 +1147,7 @@
       "comp": "User",
       "type": "API",
       "status": "failed",
-      "dur": "3s",
+      "dur": "2s",
       "err": "Error: expect(received).toBe(expected) // Object.is equality"
     },
     {
@@ -1155,7 +1155,7 @@
       "comp": "User",
       "type": "API",
       "status": "failed",
-      "dur": "3s",
+      "dur": "2s",
       "err": "Error: expect(received).toBe(expected) // Object.is equality"
     },
     {
@@ -1163,7 +1163,7 @@
       "comp": "User",
       "type": "API",
       "status": "failed",
-      "dur": "3s",
+      "dur": "2s",
       "err": "Error: expect(received).toBe(expected) // Object.is equality"
     },
     {
@@ -1179,7 +1179,7 @@
       "comp": "User",
       "type": "API",
       "status": "failed",
-      "dur": "4s",
+      "dur": "2s",
       "err": "Error: expect(received).toBe(expected) // Object.is equality"
     },
     {
@@ -1187,7 +1187,7 @@
       "comp": "User",
       "type": "API",
       "status": "failed",
-      "dur": "3s",
+      "dur": "2s",
       "err": "Error: expect(received).toBe(expected) // Object.is equality"
     },
     {
@@ -1195,7 +1195,7 @@
       "comp": "User",
       "type": "API",
       "status": "failed",
-      "dur": "3s",
+      "dur": "2s",
       "err": null
     },
     {
@@ -1203,7 +1203,7 @@
       "comp": "User",
       "type": "API",
       "status": "failed",
-      "dur": "3s",
+      "dur": "2s",
       "err": null
     },
     {
@@ -1211,7 +1211,7 @@
       "comp": "User",
       "type": "API",
       "status": "failed",
-      "dur": "5s",
+      "dur": "3s",
       "err": "Error: expect(received).toBe(expected) // Object.is equality"
     },
     {
@@ -1227,7 +1227,7 @@
       "comp": "User Setting",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -1235,7 +1235,7 @@
       "comp": "User Setting",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -1243,7 +1243,7 @@
       "comp": "User Setting",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -1251,7 +1251,7 @@
       "comp": "User Setting",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "4s",
       "err": null
     },
     {
@@ -1259,7 +1259,7 @@
       "comp": "User Setting",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -1267,7 +1267,7 @@
       "comp": "User Setting",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -1299,7 +1299,7 @@
       "comp": "User Setting",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     }
   ]
