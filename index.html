@@ -2850,16 +2850,39 @@
             document.getElementById('bugPmw').textContent = pmw ? '· ' + pmw : '';
             document.getElementById('bugCiLink').href = D?.runUrl || '#';
 
-            // Build method badge
+            // Extract auth context from step names
+            function getAuthContext(t) {
+                if (!t.failedStep && !t.endpoint) return null;
+                // Check all step names for auth hints via the scenario name
+                const scenarioLower = (t.name || '').toLowerCase();
+                if (scenarioLower.includes('without authentication') || scenarioLower.includes('unauthenticated')) return 'Unauthenticated';
+                if (scenarioLower.includes('with authentication') || scenarioLower.includes('authenticated')) return 'Authenticated';
+                if (t.failedStep) {
+                    const stepLower = t.failedStep.toLowerCase();
+                    if (stepLower.includes('unauthenticated')) return 'Unauthenticated';
+                }
+                return 'Authenticated';
+            }
+            const authCtx = getAuthContext(t);
+
+            // Build method badge + auth context
             let endpointHtml = '';
             if (t.endpoint) {
                 const parts = t.endpoint.split(' ');
                 const m = parts[0].toLowerCase();
                 const p = parts.slice(1).join(' ');
+                const authBadge = authCtx
+                    ? '<span style="font-size:10px;font-weight:600;padding:2px 8px;border-radius:4px;margin-left:8px;' +
+                    (authCtx === 'Unauthenticated'
+                        ? 'background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.3);color:#DC2626'
+                        : 'background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.3);color:#059669') +
+                    '">' + authCtx + '</span>'
+                    : '';
                 endpointHtml = '<div class="bug-endpoint-wrap"><div class="bug-lbl">Endpoint</div>' +
                     '<div class="bug-endpoint">' +
                     '<span class="bug-method ' + m + '">' + parts[0] + '</span>' +
                     '<span class="bug-path">' + p + '</span>' +
+                    authBadge +
                     '</div></div>';
             }
 
