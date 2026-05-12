@@ -1,23 +1,23 @@
 {
-  "runId": "R-23",
-  "generatedAt": "2026-05-12T10:08:10.050Z",
+  "runId": "R-24",
+  "generatedAt": "2026-05-12T16:25:56.213Z",
   "branch": "main",
   "suite": "Smoke Tests",
   "env": "QA",
-  "runUrl": "https://github.com/PaceMateLive/web20_webAutomation_PaceMateLive/actions/runs/25727219802",
+  "runUrl": "https://github.com/PaceMateLive/web20_webAutomation_PaceMateLive/actions/runs/25747171880",
   "summary": {
     "total": 122,
     "passed": 91,
     "failed": 31,
     "flaky": 0,
     "rate": 74.6,
-    "duration": "6m 1s",
-    "prevRunId": "R-22",
+    "duration": "5m 18s",
+    "prevRunId": "R-23",
     "prevRate": 74.6,
     "prevTotal": 122,
     "prevFailed": 31,
     "prevFlaky": 0,
-    "prevDuration": "6m",
+    "prevDuration": "6m 1s",
     "consecutivePassing": 0
   },
   "comp": [
@@ -31,11 +31,11 @@
       "sparks": [
         0,
         0,
-        0,
         6,
         6,
         0,
         6,
+        94,
         94,
         94,
         94
@@ -51,11 +51,11 @@
       "sparks": [
         0,
         0,
-        0,
         4,
         4,
         0,
         4,
+        96,
         96,
         96,
         96
@@ -71,11 +71,11 @@
       "sparks": [
         0,
         0,
-        0,
         10,
         10,
         0,
         10,
+        90,
         90,
         90,
         90
@@ -91,11 +91,11 @@
       "sparks": [
         0,
         0,
-        0,
         17,
         17,
         0,
         17,
+        83,
         83,
         83,
         83
@@ -115,7 +115,7 @@
         0,
         0,
         0,
-        0,
+        100,
         100,
         100,
         100
@@ -155,7 +155,7 @@
         0,
         0,
         0,
-        0,
+        25,
         25,
         25,
         25
@@ -175,7 +175,7 @@
         0,
         0,
         0,
-        0,
+        23,
         23,
         23,
         23
@@ -195,7 +195,7 @@
         0,
         0,
         0,
-        0,
+        82,
         82,
         82,
         82
@@ -203,44 +203,44 @@
     }
   ],
   "hRuns": [
-    "R-19",
     "R-20",
     "R-21",
     "R-22",
-    "R-23"
+    "R-23",
+    "R-24"
   ],
   "hData": [
     [
-      0,
       6,
+      94,
       94,
       94,
       94
     ],
     [
-      0,
       4,
+      96,
       96,
       96,
       96
     ],
     [
-      0,
       10,
+      90,
       90,
       90,
       90
     ],
     [
-      0,
       17,
+      83,
       83,
       83,
       83
     ],
     [
       0,
-      0,
+      100,
       100,
       100,
       100
@@ -254,21 +254,21 @@
     ],
     [
       0,
-      0,
+      25,
       25,
       25,
       25
     ],
     [
       0,
-      0,
+      23,
       23,
       23,
       23
     ],
     [
       0,
-      0,
+      82,
       82,
       82,
       82
@@ -276,7 +276,6 @@
   ],
   "trend": {
     "labels": [
-      "R-14",
       "R-15",
       "R-16",
       "R-17",
@@ -285,16 +284,17 @@
       "R-20",
       "R-21",
       "R-22",
-      "R-23"
+      "R-23",
+      "R-24"
     ],
     "passed": [
       0,
       0,
-      0,
       7,
       7,
       0,
       7,
+      91,
       91,
       91,
       91
@@ -302,11 +302,11 @@
     "failed": [
       122,
       122,
-      122,
       115,
       115,
       168,
       115,
+      31,
       31,
       31,
       31
@@ -332,39 +332,54 @@
       "type": "API",
       "status": "passed",
       "dur": "10s",
-      "err": null
+      "err": null,
+      "endpoint": "GET /api/crm_report/listconfig/getDefaultViews",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[CRM List Config] - PMW-002.2 - Get All CRM Reports Views Including Custom",
       "comp": "CRM Reports",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
-      "err": null
+      "dur": "4s",
+      "err": null,
+      "endpoint": "GET /api/crm_report/listconfig/getAllViews",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[CRM List Config] - PMW-002.3 - Get Column Configuration for a Specific View",
       "comp": "CRM Reports",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
-      "err": null
+      "dur": "6s",
+      "err": null,
+      "endpoint": "GET /api/crm_report/listconfig/getConfig/unresolvedRemotes",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[CRM List Config] - PMW-002.4 - Save View Customization and Verify Success",
       "comp": "CRM Reports",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
-      "err": null
+      "dur": "5s",
+      "err": null,
+      "endpoint": "GET /api/crm_report/listconfig/getConfig/unresolvedRemotes",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[CRM List Config] - PMW-002.5 - Reset View to Default",
       "comp": "CRM Reports",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
-      "err": null
+      "dur": "4s",
+      "err": null,
+      "endpoint": "POST /api/crm_report/listconfig/resetView/unresolvedRemotes",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[CRM List Config] - PMW-002.7 - Get All Available Columns for CRM Reports",
@@ -372,7 +387,10 @@
       "type": "API",
       "status": "passed",
       "dur": "3s",
-      "err": null
+      "err": null,
+      "endpoint": "GET /api/crm_report/listconfig/getAvailableColumns",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[CRM List Config] - PMW-002.6 - Toggle Column Visibility Off and Restore",
@@ -380,15 +398,21 @@
       "type": "API",
       "status": "passed",
       "dur": "3s",
-      "err": null
+      "err": null,
+      "endpoint": "GET /api/crm_report/listconfig/getConfig/unresolvedRemotes",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[CRM List Config] - PMW-002.8 - Get All Custom CRM Reports Lists",
       "comp": "CRM Reports",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
-      "err": null
+      "dur": "2s",
+      "err": null,
+      "endpoint": "GET /api/crm_report/listconfig/getCustomLists",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[CRM List Config] - PMW-002.9 - Custom List Full Lifecycle",
@@ -396,7 +420,10 @@
       "type": "API",
       "status": "passed",
       "dur": "3s",
-      "err": null
+      "err": null,
+      "endpoint": "POST /api/crm_report/listconfig/duplicateList",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[CRM List Config] - PMW-002.10 - Get Available Filters for CRM Reports",
@@ -404,95 +431,131 @@
       "type": "API",
       "status": "passed",
       "dur": "3s",
-      "err": null
+      "err": null,
+      "endpoint": "GET /api/crm_report/listconfig/getAvailableFilters",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[CRM List Config] - PMW-002.11 - Get config for non-existent viewId returns 400",
       "comp": "CRM Reports",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
-      "err": null
+      "dur": "2s",
+      "err": null,
+      "endpoint": "GET /api/crm_report/listconfig/getConfig/nonExistentViewId",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[CRM List Config] - PMW-002.12 - Toggle column visibility with invalid column ID returns 200 (server is lenient)",
       "comp": "CRM Reports",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
-      "err": null
+      "dur": "2s",
+      "err": null,
+      "endpoint": "POST /api/crm_report/listconfig/toggleColumnVisibility/unresolvedRemotes",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[CRM List Config] - PMW-002.13 - Duplicate list with missing sourceViewId returns 400",
       "comp": "CRM Reports",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
-      "err": null
+      "dur": "2s",
+      "err": null,
+      "endpoint": "POST /api/crm_report/listconfig/duplicateList",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[CRM List Config] - PMW-002.14 - Duplicate list with empty list name returns 400",
       "comp": "CRM Reports",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
-      "err": null
+      "dur": "2s",
+      "err": null,
+      "endpoint": "POST /api/crm_report/listconfig/duplicateList",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[CRM List Config] - PMW-002.15 - Reset a non-existent view returns 200 (server is lenient)",
       "comp": "CRM Reports",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
-      "err": null
+      "dur": "2s",
+      "err": null,
+      "endpoint": "POST /api/crm_report/listconfig/resetView/nonExistentViewId",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[CRM List Config] - PMW-002.16 - Delete a non-existent custom list returns 400",
       "comp": "CRM Reports",
       "type": "API",
       "status": "passed",
-      "dur": "8s",
-      "err": null
+      "dur": "2s",
+      "err": null,
+      "endpoint": "POST /api/crm_report/listconfig/deleteCustomList/NONEXISTENT_LIST_ID",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[CRM List Config] - PMW-002.17 - Access without authentication returns 200 with login redirect",
       "comp": "CRM Reports",
       "type": "API",
       "status": "failed",
-      "dur": "3s",
-      "err": "Error: expect(received).toBe(expected) // Object.is equality"
+      "dur": "2s",
+      "err": "Error: expect(received).toBe(expected) // Object.is equality",
+      "endpoint": "GET /api/crm_report/listconfig/getDefaultViews",
+      "failedStep": "the response status should be 200",
+      "fullErr": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 200\nReceived: 401\n    at Proxy.<anonymous> (D:\\a\\web20_webAutomation_PaceMateLive\\web20_webAutomation_PaceMateLive\\node_modules\\playwright\\lib\\matchers\\expect.js:213:24)"
     },
     {
       "name": "[Dictionary] - PMW-003.1 - Get Clinics for Current User",
       "comp": "Dictionary",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
-      "err": null
+      "dur": "2s",
+      "err": null,
+      "endpoint": "GET /api/dictionary/clinics",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[Dictionary] - PMW-003.2 - Get Clinic Groups (GET)",
       "comp": "Dictionary",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
-      "err": null
+      "dur": "2s",
+      "err": null,
+      "endpoint": "GET /api/dictionary/groups",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[Dictionary] - PMW-003.3 - Get Clinic Groups via POST with Clinic IDs",
       "comp": "Dictionary",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
-      "err": null
+      "dur": "2s",
+      "err": null,
+      "endpoint": "POST /api/dictionary/groups",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[Dictionary] - PMW-003.4 - Get Providers (GET)",
       "comp": "Dictionary",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
-      "err": null
+      "dur": "2s",
+      "err": null,
+      "endpoint": "GET /api/dictionary/providers",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[Dictionary] - PMW-003.5 - Get Providers via POST with Clinic IDs",
@@ -500,55 +563,76 @@
       "type": "API",
       "status": "passed",
       "dur": "3s",
-      "err": null
+      "err": null,
+      "endpoint": "POST /api/dictionary/providers",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[Dictionary] - PMW-003.6 - Get Interpreting Providers (GET)",
       "comp": "Dictionary",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
-      "err": null
+      "dur": "2s",
+      "err": null,
+      "endpoint": "GET /api/dictionary/interpretingProviders",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[Dictionary] - PMW-003.7 - Get Interpreting Providers via POST with Clinic IDs",
       "comp": "Dictionary",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
-      "err": null
+      "dur": "2s",
+      "err": null,
+      "endpoint": "POST /api/dictionary/interpretingProviders",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[Dictionary] - PMW-003.8 - Get Ordering Providers (GET)",
       "comp": "Dictionary",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
-      "err": null
+      "dur": "2s",
+      "err": null,
+      "endpoint": "GET /api/dictionary/orderingProviders",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[Dictionary] - PMW-003.9 - Get Ordering Providers via POST with Clinic IDs",
       "comp": "Dictionary",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
-      "err": null
+      "dur": "2s",
+      "err": null,
+      "endpoint": "POST /api/dictionary/orderingProviders",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[Dictionary] - PMW-003.10 - Get Device Vendors",
       "comp": "Dictionary",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
-      "err": null
+      "dur": "2s",
+      "err": null,
+      "endpoint": "GET /api/dictionary/vendors",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[Dictionary] - PMW-003.11 - Get Device Types",
       "comp": "Dictionary",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
-      "err": null
+      "dur": "2s",
+      "err": null,
+      "endpoint": "GET /api/dictionary/deviceTypes",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[Dictionary] - PMW-003.12 - Get Patient Statuses",
@@ -556,47 +640,65 @@
       "type": "API",
       "status": "passed",
       "dur": "3s",
-      "err": null
+      "err": null,
+      "endpoint": "GET /api/dictionary/patientStatuses",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[Dictionary] - PMW-003.13 - Get Device Statuses",
       "comp": "Dictionary",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
-      "err": null
+      "dur": "2s",
+      "err": null,
+      "endpoint": "GET /api/dictionary/deviceStatuses",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[Dictionary] - PMW-003.14 - Get Transmission Statuses",
       "comp": "Dictionary",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
-      "err": null
+      "dur": "2s",
+      "err": null,
+      "endpoint": "GET /api/dictionary/transmissionStatuses",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[Dictionary] - PMW-003.15 - Get Ejection Fraction Modalities",
       "comp": "Dictionary",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
-      "err": null
+      "dur": "2s",
+      "err": null,
+      "endpoint": "GET /api/dictionary/modalities",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[Dictionary] - PMW-003.16 - Get Anticoagulants",
       "comp": "Dictionary",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
-      "err": null
+      "dur": "2s",
+      "err": null,
+      "endpoint": "GET /api/dictionary/anticoagulant",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[Dictionary] - PMW-003.17 - Get Non-Anticoagulants",
       "comp": "Dictionary",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
-      "err": null
+      "dur": "2s",
+      "err": null,
+      "endpoint": "GET /api/dictionary/noAnticoagulant",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[Dictionary] - PMW-003.18 - Get Billing Items by ID",
@@ -604,63 +706,87 @@
       "type": "API",
       "status": "passed",
       "dur": "3s",
-      "err": null
+      "err": null,
+      "endpoint": "GET /api/dictionary/billingItems/13",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[Dictionary] - PMW-003.19 - Get Battery Statuses by ID",
       "comp": "Dictionary",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
-      "err": null
+      "dur": "2s",
+      "err": null,
+      "endpoint": "POST /api/dictionary/batteryStatuses/13",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[Dictionary] - PMW-003.20 - Get Groups with non-array clinicIds returns 200 (server is lenient)",
       "comp": "Dictionary",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
-      "err": null
+      "dur": "2s",
+      "err": null,
+      "endpoint": "POST /api/dictionary/groups",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[Dictionary] - PMW-003.21 - Get Providers with non-numeric clinic IDs returns 200 (server is lenient)",
       "comp": "Dictionary",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
-      "err": null
+      "dur": "2s",
+      "err": null,
+      "endpoint": "POST /api/dictionary/providers",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[Dictionary] - PMW-003.22 - Get Billing Items for non-existent clinic ID returns 200 with empty list",
       "comp": "Dictionary",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
-      "err": null
+      "dur": "2s",
+      "err": null,
+      "endpoint": "GET /api/dictionary/billingItems/99999",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[Dictionary] - PMW-003.23 - Get Battery Statuses for non-existent clinic ID returns 200",
       "comp": "Dictionary",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
-      "err": null
+      "dur": "2s",
+      "err": null,
+      "endpoint": "POST /api/dictionary/batteryStatuses/99999",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[Dictionary] - PMW-003.24 - Access without authentication returns 200 with login redirect",
       "comp": "Dictionary",
       "type": "API",
       "status": "failed",
-      "dur": "3s",
-      "err": "Error: expect(received).toBe(expected) // Object.is equality"
+      "dur": "2s",
+      "err": "Error: expect(received).toBe(expected) // Object.is equality",
+      "endpoint": "GET /api/dictionary/deviceTypes",
+      "failedStep": "the response status should be 200",
+      "fullErr": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 200\nReceived: 401\n    at Proxy.<anonymous> (D:\\a\\web20_webAutomation_PaceMateLive\\web20_webAutomation_PaceMateLive\\node_modules\\playwright\\lib\\matchers\\expect.js:213:24)"
     },
     {
       "name": "[BulkActions] - PMW-004.1 - Execute APPROVE via IDS mode returns 200 with valid response structure",
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
-      "err": null
+      "dur": "2s",
+      "err": null,
+      "endpoint": "POST /api/external_crm_report/bulk/execute",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[BulkActions] - PMW-004.2 - Execute ARCHIVE via IDS mode returns 200 with valid response structure",
@@ -668,47 +794,65 @@
       "type": "API",
       "status": "passed",
       "dur": "3s",
-      "err": null
+      "err": null,
+      "endpoint": "POST /api/external_crm_report/bulk/execute",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[BulkActions] - PMW-004.3 - Execute ESIGN via IDS mode returns 200 with valid response structure",
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
-      "err": null
+      "dur": "2s",
+      "err": null,
+      "endpoint": "POST /api/external_crm_report/bulk/execute",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[BulkActions] - PMW-004.4 - Execute APPROVE via VIEW mode (remotesForApproval) returns 400 when view is empty",
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
-      "err": null
+      "dur": "2s",
+      "err": null,
+      "endpoint": "POST /api/external_crm_report/bulk/execute",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[BulkActions] - PMW-004.5 - Execute ESIGN via VIEW mode (reportsForEsigning) returns 400 when view is empty",
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
-      "err": null
+      "dur": "2s",
+      "err": null,
+      "endpoint": "POST /api/external_crm_report/bulk/execute",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[BulkActions] - PMW-004.6 - Execute ARCHIVE via VIEW mode (inclinicWorklist) returns 400 when view is empty",
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
-      "err": null
+      "dur": "2s",
+      "err": null,
+      "endpoint": "POST /api/external_crm_report/bulk/execute",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[BulkActions] - PMW-004.7 - Execute with invalid action type returns 400",
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
-      "err": null
+      "dur": "2s",
+      "err": null,
+      "endpoint": "POST /api/external_crm_report/bulk/execute",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[BulkActions] - PMW-004.8 - Execute with missing required action field returns 400",
@@ -716,7 +860,10 @@
       "type": "API",
       "status": "passed",
       "dur": "2s",
-      "err": null
+      "err": null,
+      "endpoint": "POST /api/external_crm_report/bulk/execute",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[BulkActions] - PMW-004.9 - Execute with missing required selection field returns 400",
@@ -724,47 +871,65 @@
       "type": "API",
       "status": "passed",
       "dur": "2s",
-      "err": null
+      "err": null,
+      "endpoint": "POST /api/external_crm_report/bulk/execute",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[BulkActions] - PMW-004.10 - Execute with invalid mode value returns 400",
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
-      "err": null
+      "dur": "2s",
+      "err": null,
+      "endpoint": "POST /api/external_crm_report/bulk/execute",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[BulkActions] - PMW-004.11 - Execute with empty IDS array returns 400",
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
-      "err": null
+      "dur": "2s",
+      "err": null,
+      "endpoint": "POST /api/external_crm_report/bulk/execute",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[BulkActions] - PMW-004.12 - Execute without authentication returns 200 with login redirect",
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
-      "err": "Error: expect(received).toBe(expected) // Object.is equality"
+      "dur": "3s",
+      "err": "Error: expect(received).toBe(expected) // Object.is equality",
+      "endpoint": "POST /api/external_crm_report/bulk/execute",
+      "failedStep": "the response status should be 200",
+      "fullErr": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 200\nReceived: 401\n    at Proxy.<anonymous> (D:\\a\\web20_webAutomation_PaceMateLive\\web20_webAutomation_PaceMateLive\\node_modules\\playwright\\lib\\matchers\\expect.js:213:24)"
     },
     {
       "name": "[BulkActions] - PMW-004.13 - Export selected transmissions by IDS returns 401 when user has no clinic access",
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
-      "err": null
+      "dur": "3s",
+      "err": null,
+      "endpoint": "POST /api/external_crm_report/bulk/export",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[BulkActions] - PMW-004.14 - Export all from remotesForApproval returns 401 when user has no clinic access",
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
-      "err": null
+      "dur": "2s",
+      "err": null,
+      "endpoint": "POST /api/external_crm_report/bulk/export",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[BulkActions] - PMW-004.15 - Export all from reportsForEsigning returns 401 when user has no clinic access",
@@ -772,7 +937,10 @@
       "type": "API",
       "status": "passed",
       "dur": "2s",
-      "err": null
+      "err": null,
+      "endpoint": "POST /api/external_crm_report/bulk/export",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[BulkActions] - PMW-004.16 - Export all from inclinicWorklist returns 401 when user has no clinic access",
@@ -780,7 +948,10 @@
       "type": "API",
       "status": "passed",
       "dur": "2s",
-      "err": null
+      "err": null,
+      "endpoint": "POST /api/external_crm_report/bulk/export",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[BulkActions] - PMW-004.17 - Export with neither ids nor viewType returns 400",
@@ -788,23 +959,32 @@
       "type": "API",
       "status": "passed",
       "dur": "2s",
-      "err": null
+      "err": null,
+      "endpoint": "POST /api/external_crm_report/bulk/export",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[BulkActions] - PMW-004.18 - Export with both ids and viewType returns 401 when user has no clinic access",
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
-      "err": null
+      "dur": "2s",
+      "err": null,
+      "endpoint": "POST /api/external_crm_report/bulk/export",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[BulkActions] - PMW-004.19 - Export with invalid viewType returns 401 when user has no clinic access",
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
-      "err": null
+      "dur": "2s",
+      "err": null,
+      "endpoint": "POST /api/external_crm_report/bulk/export",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[BulkActions] - PMW-004.20 - Export without authentication returns 200 with login redirect",
@@ -812,55 +992,76 @@
       "type": "API",
       "status": "failed",
       "dur": "2s",
-      "err": "Error: expect(received).toBe(expected) // Object.is equality"
+      "err": "Error: expect(received).toBe(expected) // Object.is equality",
+      "endpoint": "POST /api/external_crm_report/bulk/export",
+      "failedStep": "the response status should be 200",
+      "fullErr": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 200\nReceived: 401\n    at Proxy.<anonymous> (D:\\a\\web20_webAutomation_PaceMateLive\\web20_webAutomation_PaceMateLive\\node_modules\\playwright\\lib\\matchers\\expect.js:213:24)"
     },
     {
       "name": "[External CRM Reports] - PMW-005.1 - Get Remotes for Approval with minimal body returns 200 with valid structure",
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
-      "err": null
+      "dur": "2s",
+      "err": null,
+      "endpoint": "POST /api/transmissions/external-crm-reports/remotesForApproval",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[External CRM Reports] - PMW-005.2 - Get Remotes for Approval filtered by clinicIds returns 200",
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
-      "err": null
+      "dur": "2s",
+      "err": null,
+      "endpoint": "POST /api/transmissions/external-crm-reports/remotesForApproval",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[External CRM Reports] - PMW-005.3 - Get Remotes for Approval with date range filter returns 200",
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
-      "err": null
+      "dur": "2s",
+      "err": null,
+      "endpoint": "POST /api/transmissions/external-crm-reports/remotesForApproval",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[External CRM Reports] - PMW-005.4 - Get Remotes for Approval with full filter set returns 200",
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
-      "err": null
+      "dur": "2s",
+      "err": null,
+      "endpoint": "POST /api/transmissions/external-crm-reports/remotesForApproval",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[External CRM Reports] - PMW-005.5 - Get Remotes for Approval with groupByPatient returns 200",
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
-      "err": null
+      "dur": "2s",
+      "err": null,
+      "endpoint": "POST /api/transmissions/external-crm-reports/remotesForApproval",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[External CRM Reports] - PMW-005.6 - Get Reports for E-Signing with minimal body returns 200 with valid structure",
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
-      "err": null
+      "dur": "2s",
+      "err": null,
+      "endpoint": "POST /api/transmissions/external-crm-reports/reportsForEsigning",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[External CRM Reports] - PMW-005.7 - Get Reports for E-Signing filtered by clinicIds returns 200",
@@ -868,15 +1069,21 @@
       "type": "API",
       "status": "passed",
       "dur": "2s",
-      "err": null
+      "err": null,
+      "endpoint": "POST /api/transmissions/external-crm-reports/reportsForEsigning",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[External CRM Reports] - PMW-005.8 - Get Reports for E-Signing with pagination and sorting returns 200",
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
-      "err": null
+      "dur": "2s",
+      "err": null,
+      "endpoint": "POST /api/transmissions/external-crm-reports/reportsForEsigning",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[External CRM Reports] - PMW-005.9 - Get InClinic Worklist with minimal body returns 200 with valid structure",
@@ -884,151 +1091,208 @@
       "type": "API",
       "status": "passed",
       "dur": "3s",
-      "err": null
+      "err": null,
+      "endpoint": "POST /api/transmissions/external-crm-reports/inclinicWorklist",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[External CRM Reports] - PMW-005.10 - Get InClinic Worklist filtered by clinicIds returns 200",
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "passed",
-      "dur": "7s",
-      "err": null
+      "dur": "2s",
+      "err": null,
+      "endpoint": "POST /api/transmissions/external-crm-reports/inclinicWorklist",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[External CRM Reports] - PMW-005.11 - Get InClinic Worklist with sorting returns 200",
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "passed",
-      "dur": "6s",
-      "err": null
+      "dur": "2s",
+      "err": null,
+      "endpoint": "POST /api/transmissions/external-crm-reports/inclinicWorklist",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[External CRM Reports] - PMW-005.12 - Get Remotes for Approval with empty body returns 200 (server is lenient)",
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "passed",
-      "dur": "4s",
-      "err": null
+      "dur": "2s",
+      "err": null,
+      "endpoint": "POST /api/transmissions/external-crm-reports/remotesForApproval",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[External CRM Reports] - PMW-005.13 - Get Remotes for Approval with invalid clinicIds type returns 200 (server is lenient)",
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
-      "err": null
+      "dur": "2s",
+      "err": null,
+      "endpoint": "POST /api/transmissions/external-crm-reports/remotesForApproval",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[External CRM Reports] - PMW-005.14 - Get Remotes for Approval with invalid date format returns 200 (server is lenient)",
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "passed",
-      "dur": "4s",
-      "err": null
+      "dur": "3s",
+      "err": null,
+      "endpoint": "POST /api/transmissions/external-crm-reports/remotesForApproval",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[External CRM Reports] - PMW-005.15 - Get Remotes for Approval with recordMax 0 returns 200 with empty data array",
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "passed",
-      "dur": "6s",
-      "err": null
+      "dur": "2s",
+      "err": null,
+      "endpoint": "POST /api/transmissions/external-crm-reports/remotesForApproval",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[External CRM Reports] - PMW-005.16 - Get Remotes for Approval without authentication returns 200 with login redirect",
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "failed",
-      "dur": "4s",
-      "err": "Error: expect(received).toBe(expected) // Object.is equality"
+      "dur": "2s",
+      "err": "Error: expect(received).toBe(expected) // Object.is equality",
+      "endpoint": "POST /api/transmissions/external-crm-reports/remotesForApproval",
+      "failedStep": "the response status should be 200",
+      "fullErr": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 200\nReceived: 401\n    at Proxy.<anonymous> (D:\\a\\web20_webAutomation_PaceMateLive\\web20_webAutomation_PaceMateLive\\node_modules\\playwright\\lib\\matchers\\expect.js:213:24)"
     },
     {
       "name": "[External CRM Reports] - PMW-005.17 - Get Reports for E-Signing without authentication returns 200 with login redirect",
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "failed",
-      "dur": "4s",
-      "err": "Error: expect(received).toBe(expected) // Object.is equality"
+      "dur": "3s",
+      "err": "Error: expect(received).toBe(expected) // Object.is equality",
+      "endpoint": "POST /api/transmissions/external-crm-reports/reportsForEsigning",
+      "failedStep": "the response status should be 200",
+      "fullErr": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 200\nReceived: 401\n    at Proxy.<anonymous> (D:\\a\\web20_webAutomation_PaceMateLive\\web20_webAutomation_PaceMateLive\\node_modules\\playwright\\lib\\matchers\\expect.js:213:24)"
     },
     {
       "name": "[External CRM Reports] - PMW-005.18 - Get InClinic Worklist without authentication returns 200 with login redirect",
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "failed",
-      "dur": "4s",
-      "err": "Error: expect(received).toBe(expected) // Object.is equality"
+      "dur": "3s",
+      "err": "Error: expect(received).toBe(expected) // Object.is equality",
+      "endpoint": "POST /api/transmissions/external-crm-reports/inclinicWorklist",
+      "failedStep": "the response status should be 200",
+      "fullErr": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 200\nReceived: 401\n    at Proxy.<anonymous> (D:\\a\\web20_webAutomation_PaceMateLive\\web20_webAutomation_PaceMateLive\\node_modules\\playwright\\lib\\matchers\\expect.js:213:24)"
     },
     {
       "name": "[Patient Bulk Actions] - PMW-008.3 - Execute with empty body returns 400",
       "comp": "Patient Bulk Actions",
       "type": "API",
       "status": "passed",
-      "dur": "5s",
-      "err": null
+      "dur": "2s",
+      "err": null,
+      "endpoint": "POST /api/patient/bulk/execute",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[Patient Bulk Actions] - PMW-008.4 - Execute with missing action field returns 400",
       "comp": "Patient Bulk Actions",
       "type": "API",
       "status": "passed",
-      "dur": "4s",
-      "err": null
+      "dur": "2s",
+      "err": null,
+      "endpoint": "POST /api/patient/bulk/execute",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[Patient Bulk Actions] - PMW-008.5 - Execute with invalid action type returns 400",
       "comp": "Patient Bulk Actions",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
-      "err": null
+      "dur": "2s",
+      "err": null,
+      "endpoint": "POST /api/patient/bulk/execute",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[Patient Bulk Actions] - PMW-008.6 - Execute with missing selection field returns 400",
       "comp": "Patient Bulk Actions",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
-      "err": null
+      "dur": "2s",
+      "err": null,
+      "endpoint": "POST /api/patient/bulk/execute",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[Report Bulk Actions] - PMW-007.1 - Export Unresolved Reports to CSV",
       "comp": "Report Bulk Actions",
       "type": "API",
       "status": "failed",
-      "dur": "9s",
-      "err": "Error: expect(received).toBe(expected) // Object.is equality"
+      "dur": "2s",
+      "err": "Error: expect(received).toBe(expected) // Object.is equality",
+      "endpoint": "POST /api/report/bulk/export",
+      "failedStep": "the response status should be 200",
+      "fullErr": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 200\nReceived: 401\n    at Proxy.<anonymous> (D:\\a\\web20_webAutomation_PaceMateLive\\web20_webAutomation_PaceMateLive\\node_modules\\playwright\\lib\\matchers\\expect.js:213:24)"
     },
     {
       "name": "[Report Bulk Actions] - PMW-007.2 - Export Autopromoted Reports to CSV",
       "comp": "Report Bulk Actions",
       "type": "API",
       "status": "failed",
-      "dur": "3s",
-      "err": "Error: expect(received).toBe(expected) // Object.is equality"
+      "dur": "2s",
+      "err": "Error: expect(received).toBe(expected) // Object.is equality",
+      "endpoint": "POST /api/report/bulk/export",
+      "failedStep": "the response status should be 200",
+      "fullErr": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 200\nReceived: 401\n    at Proxy.<anonymous> (D:\\a\\web20_webAutomation_PaceMateLive\\web20_webAutomation_PaceMateLive\\node_modules\\playwright\\lib\\matchers\\expect.js:213:24)"
     },
     {
       "name": "[Report Bulk Actions] - PMW-007.3 - Export All Reports to CSV",
       "comp": "Report Bulk Actions",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
-      "err": "Error: expect(received).toBe(expected) // Object.is equality"
+      "dur": "3s",
+      "err": "Error: expect(received).toBe(expected) // Object.is equality",
+      "endpoint": "POST /api/report/bulk/export",
+      "failedStep": "the response status should be 200",
+      "fullErr": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 200\nReceived: 401\n    at Proxy.<anonymous> (D:\\a\\web20_webAutomation_PaceMateLive\\web20_webAutomation_PaceMateLive\\node_modules\\playwright\\lib\\matchers\\expect.js:213:24)"
     },
     {
       "name": "[Transmission] - PMW-006.1 - Get All Transmissions",
       "comp": "Transmission Group",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
-      "err": null
+      "dur": "3s",
+      "err": null,
+      "endpoint": "POST /api/transmissions/all",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[Transmission] - PMW-006.2 - Get Unresolved Transmissions",
       "comp": "Transmission Group",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
-      "err": null
+      "dur": "2s",
+      "err": null,
+      "endpoint": "POST /api/transmissions/unresolved",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[Transmission] - PMW-006.3 - Get Autopromoted Transmissions",
@@ -1036,7 +1300,10 @@
       "type": "API",
       "status": "passed",
       "dur": "2s",
-      "err": null
+      "err": null,
+      "endpoint": "POST /api/transmissions/autopromoted",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[Transmission] - PMW-006.1a - Get All Transmissions with empty body returns 400",
@@ -1044,15 +1311,21 @@
       "type": "API",
       "status": "failed",
       "dur": "2s",
-      "err": "Error: expect(received).toBe(expected) // Object.is equality"
+      "err": "Error: expect(received).toBe(expected) // Object.is equality",
+      "endpoint": "POST /api/transmissions/all",
+      "failedStep": "the response status should be 400",
+      "fullErr": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 400\nReceived: 200\n    at Proxy.<anonymous> (D:\\a\\web20_webAutomation_PaceMateLive\\web20_webAutomation_PaceMateLive\\node_modules\\playwright\\lib\\matchers\\expect.js:213:24)"
     },
     {
       "name": "[Transmission] - PMW-006.1b - Get All Transmissions with missing criteria returns 400",
       "comp": "Transmission Group",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
-      "err": "Error: expect(received).toBe(expected) // Object.is equality"
+      "dur": "3s",
+      "err": "Error: expect(received).toBe(expected) // Object.is equality",
+      "endpoint": "POST /api/transmissions/all",
+      "failedStep": "the response status should be 400",
+      "fullErr": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 400\nReceived: 200\n    at Proxy.<anonymous> (D:\\a\\web20_webAutomation_PaceMateLive\\web20_webAutomation_PaceMateLive\\node_modules\\playwright\\lib\\matchers\\expect.js:213:24)"
     },
     {
       "name": "[Transmission] - PMW-006.1c - Get All Transmissions with invalid date form returns 400",
@@ -1060,15 +1333,21 @@
       "type": "API",
       "status": "failed",
       "dur": "2s",
-      "err": "Error: expect(received).toBe(expected) // Object.is equality"
+      "err": "Error: expect(received).toBe(expected) // Object.is equality",
+      "endpoint": "POST /api/transmissions/all",
+      "failedStep": "the response status should be 400",
+      "fullErr": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 400\nReceived: 200\n    at Proxy.<anonymous> (D:\\a\\web20_webAutomation_PaceMateLive\\web20_webAutomation_PaceMateLive\\node_modules\\playwright\\lib\\matchers\\expect.js:213:24)"
     },
     {
       "name": "[Transmission] - PMW-006.2a - Get Unresolved Transmissions with empty body returns 400",
       "comp": "Transmission Group",
       "type": "API",
       "status": "failed",
-      "dur": "3s",
-      "err": "Error: expect(received).toBe(expected) // Object.is equality"
+      "dur": "2s",
+      "err": "Error: expect(received).toBe(expected) // Object.is equality",
+      "endpoint": "POST /api/transmissions/unresolved",
+      "failedStep": "the response status should be 400",
+      "fullErr": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 400\nReceived: 200\n    at Proxy.<anonymous> (D:\\a\\web20_webAutomation_PaceMateLive\\web20_webAutomation_PaceMateLive\\node_modules\\playwright\\lib\\matchers\\expect.js:213:24)"
     },
     {
       "name": "[Transmission] - PMW-006.2b - Get Unresolved Transmissions with missing criteria returns 400",
@@ -1076,7 +1355,10 @@
       "type": "API",
       "status": "failed",
       "dur": "2s",
-      "err": "Error: expect(received).toBe(expected) // Object.is equality"
+      "err": "Error: expect(received).toBe(expected) // Object.is equality",
+      "endpoint": "POST /api/transmissions/unresolved",
+      "failedStep": "the response status should be 400",
+      "fullErr": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 400\nReceived: 200\n    at Proxy.<anonymous> (D:\\a\\web20_webAutomation_PaceMateLive\\web20_webAutomation_PaceMateLive\\node_modules\\playwright\\lib\\matchers\\expect.js:213:24)"
     },
     {
       "name": "[Transmission] - PMW-006.2c - Get Unresolved Transmissions with invalid date returns 400",
@@ -1084,23 +1366,32 @@
       "type": "API",
       "status": "failed",
       "dur": "2s",
-      "err": "Error: expect(received).toBe(expected) // Object.is equality"
+      "err": "Error: expect(received).toBe(expected) // Object.is equality",
+      "endpoint": "POST /api/transmissions/unresolved",
+      "failedStep": "the response status should be 400",
+      "fullErr": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 400\nReceived: 200\n    at Proxy.<anonymous> (D:\\a\\web20_webAutomation_PaceMateLive\\web20_webAutomation_PaceMateLive\\node_modules\\playwright\\lib\\matchers\\expect.js:213:24)"
     },
     {
       "name": "[Transmission] - PMW-006.3a - Get Autopromoted Transmissions with empty body returns 400",
       "comp": "Transmission Group",
       "type": "API",
       "status": "failed",
-      "dur": "3s",
-      "err": "Error: expect(received).toBe(expected) // Object.is equality"
+      "dur": "2s",
+      "err": "Error: expect(received).toBe(expected) // Object.is equality",
+      "endpoint": "POST /api/transmissions/autopromoted",
+      "failedStep": "the response status should be 400",
+      "fullErr": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 400\nReceived: 200\n    at Proxy.<anonymous> (D:\\a\\web20_webAutomation_PaceMateLive\\web20_webAutomation_PaceMateLive\\node_modules\\playwright\\lib\\matchers\\expect.js:213:24)"
     },
     {
       "name": "[Transmission] - PMW-006.3b - Get Autopromoted Transmissions with missing criteria returns 400",
       "comp": "Transmission Group",
       "type": "API",
       "status": "failed",
-      "dur": "3s",
-      "err": "Error: expect(received).toBe(expected) // Object.is equality"
+      "dur": "2s",
+      "err": "Error: expect(received).toBe(expected) // Object.is equality",
+      "endpoint": "POST /api/transmissions/autopromoted",
+      "failedStep": "the response status should be 400",
+      "fullErr": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 400\nReceived: 200\n    at Proxy.<anonymous> (D:\\a\\web20_webAutomation_PaceMateLive\\web20_webAutomation_PaceMateLive\\node_modules\\playwright\\lib\\matchers\\expect.js:213:24)"
     },
     {
       "name": "[Transmission] - PMW-006.3c - Get Autopromoted Transmissions with invalid date returns 400",
@@ -1108,7 +1399,10 @@
       "type": "API",
       "status": "failed",
       "dur": "2s",
-      "err": "Error: expect(received).toBe(expected) // Object.is equality"
+      "err": "Error: expect(received).toBe(expected) // Object.is equality",
+      "endpoint": "POST /api/transmissions/autopromoted",
+      "failedStep": "the response status should be 400",
+      "fullErr": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 400\nReceived: 200\n    at Proxy.<anonymous> (D:\\a\\web20_webAutomation_PaceMateLive\\web20_webAutomation_PaceMateLive\\node_modules\\playwright\\lib\\matchers\\expect.js:213:24)"
     },
     {
       "name": "[User] - PMW-005.1 - Get Current User Info",
@@ -1116,15 +1410,21 @@
       "type": "API",
       "status": "passed",
       "dur": "2s",
-      "err": null
+      "err": null,
+      "endpoint": "GET /api/user/current",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[User] - PMW-005.2 - Copy Clinics Between Users",
       "comp": "User",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
-      "err": null
+      "dur": "2s",
+      "err": null,
+      "endpoint": "POST /api/user/copyClinics",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[User] - PMW-005.3 - Copy Roles Between Users",
@@ -1132,7 +1432,10 @@
       "type": "API",
       "status": "passed",
       "dur": "3s",
-      "err": null
+      "err": null,
+      "endpoint": "POST /api/user/copyRoles",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[User] - PMW-005.4 - Search Users",
@@ -1140,7 +1443,10 @@
       "type": "API",
       "status": "failed",
       "dur": "3s",
-      "err": null
+      "err": null,
+      "endpoint": "POST /api/user/search",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[User] - PMW-005.2a - Copy Clinics with empty body returns 400",
@@ -1148,47 +1454,65 @@
       "type": "API",
       "status": "failed",
       "dur": "3s",
-      "err": "Error: expect(received).toBe(expected) // Object.is equality"
+      "err": "Error: expect(received).toBe(expected) // Object.is equality",
+      "endpoint": "POST /api/user/copyClinics",
+      "failedStep": "the response status should be 400",
+      "fullErr": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 400\nReceived: 200\n    at Proxy.<anonymous> (D:\\a\\web20_webAutomation_PaceMateLive\\web20_webAutomation_PaceMateLive\\node_modules\\playwright\\lib\\matchers\\expect.js:213:24)"
     },
     {
       "name": "[User] - PMW-005.2b - Copy Clinics with null user IDs returns 400",
       "comp": "User",
       "type": "API",
       "status": "failed",
-      "dur": "3s",
-      "err": "Error: expect(received).toBe(expected) // Object.is equality"
+      "dur": "2s",
+      "err": "Error: expect(received).toBe(expected) // Object.is equality",
+      "endpoint": "POST /api/user/copyClinics",
+      "failedStep": "the response status should be 400",
+      "fullErr": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 400\nReceived: 200\n    at Proxy.<anonymous> (D:\\a\\web20_webAutomation_PaceMateLive\\web20_webAutomation_PaceMateLive\\node_modules\\playwright\\lib\\matchers\\expect.js:213:24)"
     },
     {
       "name": "[User] - PMW-005.2c - Copy Clinics with missing replaceExisting field returns 400",
       "comp": "User",
       "type": "API",
       "status": "failed",
-      "dur": "4s",
-      "err": "Error: expect(received).toBe(expected) // Object.is equality"
+      "dur": "2s",
+      "err": "Error: expect(received).toBe(expected) // Object.is equality",
+      "endpoint": "POST /api/user/copyClinics",
+      "failedStep": "the response status should be 400",
+      "fullErr": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 400\nReceived: 200\n    at Proxy.<anonymous> (D:\\a\\web20_webAutomation_PaceMateLive\\web20_webAutomation_PaceMateLive\\node_modules\\playwright\\lib\\matchers\\expect.js:213:24)"
     },
     {
       "name": "[User] - PMW-005.3a - Copy Roles with empty body returns 400",
       "comp": "User",
       "type": "API",
       "status": "failed",
-      "dur": "3s",
-      "err": "Error: expect(received).toBe(expected) // Object.is equality"
+      "dur": "2s",
+      "err": "Error: expect(received).toBe(expected) // Object.is equality",
+      "endpoint": "POST /api/user/copyRoles",
+      "failedStep": "the response status should be 400",
+      "fullErr": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 400\nReceived: 200\n    at Proxy.<anonymous> (D:\\a\\web20_webAutomation_PaceMateLive\\web20_webAutomation_PaceMateLive\\node_modules\\playwright\\lib\\matchers\\expect.js:213:24)"
     },
     {
       "name": "[User] - PMW-005.3b - Copy Roles with null user IDs returns 400",
       "comp": "User",
       "type": "API",
       "status": "failed",
-      "dur": "3s",
-      "err": "Error: expect(received).toBe(expected) // Object.is equality"
+      "dur": "2s",
+      "err": "Error: expect(received).toBe(expected) // Object.is equality",
+      "endpoint": "POST /api/user/copyRoles",
+      "failedStep": "the response status should be 400",
+      "fullErr": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 400\nReceived: 200\n    at Proxy.<anonymous> (D:\\a\\web20_webAutomation_PaceMateLive\\web20_webAutomation_PaceMateLive\\node_modules\\playwright\\lib\\matchers\\expect.js:213:24)"
     },
     {
       "name": "[User] - PMW-005.3c - Copy Roles with missing replaceExisting returns 400",
       "comp": "User",
       "type": "API",
       "status": "failed",
-      "dur": "3s",
-      "err": "Error: expect(received).toBe(expected) // Object.is equality"
+      "dur": "2s",
+      "err": "Error: expect(received).toBe(expected) // Object.is equality",
+      "endpoint": "POST /api/user/copyRoles",
+      "failedStep": "the response status should be 400",
+      "fullErr": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 400\nReceived: 200\n    at Proxy.<anonymous> (D:\\a\\web20_webAutomation_PaceMateLive\\web20_webAutomation_PaceMateLive\\node_modules\\playwright\\lib\\matchers\\expect.js:213:24)"
     },
     {
       "name": "[User] - PMW-005.4a - Search Users empty response body",
@@ -1196,7 +1520,10 @@
       "type": "API",
       "status": "failed",
       "dur": "2s",
-      "err": null
+      "err": null,
+      "endpoint": "POST /api/user/search",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[User] - PMW-005.4b - Search Users with null IDs return 400",
@@ -1204,7 +1531,10 @@
       "type": "API",
       "status": "failed",
       "dur": "2s",
-      "err": null
+      "err": null,
+      "endpoint": "POST /api/user/search",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[User] - PMW-005.4c - Search Users with null IDs return 400",
@@ -1212,7 +1542,10 @@
       "type": "API",
       "status": "failed",
       "dur": "3s",
-      "err": "Error: expect(received).toBe(expected) // Object.is equality"
+      "err": "Error: expect(received).toBe(expected) // Object.is equality",
+      "endpoint": "POST /api/user/search",
+      "failedStep": "the response status should be 400",
+      "fullErr": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 400\nReceived: 200\n    at Proxy.<anonymous> (D:\\a\\web20_webAutomation_PaceMateLive\\web20_webAutomation_PaceMateLive\\node_modules\\playwright\\lib\\matchers\\expect.js:213:24)"
     },
     {
       "name": "[User Setting] - PMW-004.1 - Get Patient Chart Settings",
@@ -1220,7 +1553,10 @@
       "type": "API",
       "status": "passed",
       "dur": "2s",
-      "err": null
+      "err": null,
+      "endpoint": "GET /api/usersetting/patientChart/default",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[User Setting] - PMW-004.2 - Save Patient Chart Settings",
@@ -1228,7 +1564,10 @@
       "type": "API",
       "status": "passed",
       "dur": "2s",
-      "err": null
+      "err": null,
+      "endpoint": "POST /api/usersetting/savePatientChart/default",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[User Setting] - PMW-004.3 - Clear Patient Chart Settings",
@@ -1236,31 +1575,43 @@
       "type": "API",
       "status": "passed",
       "dur": "2s",
-      "err": null
+      "err": null,
+      "endpoint": "POST /api/usersetting/clearPatientChart/default",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[User Setting] - PMW-004.4 - Update Theme",
       "comp": "User Setting",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
-      "err": null
+      "dur": "3s",
+      "err": null,
+      "endpoint": "POST /api/usersetting/updateTheme/dark",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[User Setting] - PMW-004.5 - Get Theme",
       "comp": "User Setting",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
-      "err": null
+      "dur": "3s",
+      "err": null,
+      "endpoint": "GET /api/usersetting/getTheme/default",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[User Setting] - PMW-004.6 - Update Side Menu Layout",
       "comp": "User Setting",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
-      "err": null
+      "dur": "2s",
+      "err": null,
+      "endpoint": "POST /api/usersetting/updateLayout/default",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[User Setting] - PMW-004.7 - Save Favorite Pages",
@@ -1268,7 +1619,10 @@
       "type": "API",
       "status": "failed",
       "dur": "2s",
-      "err": null
+      "err": null,
+      "endpoint": "POST /api/usersetting/saveFavoritePages/default",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[User Setting] - PMW-004.8 - Get Favorite Pages",
@@ -1276,7 +1630,10 @@
       "type": "API",
       "status": "passed",
       "dur": "3s",
-      "err": null
+      "err": null,
+      "endpoint": "GET /api/usersetting/getFavoritePages/default",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[User Setting] - PMW-004.9 - Clear Favorite Pages",
@@ -1284,7 +1641,10 @@
       "type": "API",
       "status": "passed",
       "dur": "2s",
-      "err": null
+      "err": null,
+      "endpoint": "POST /api/usersetting/clearFavoritePages/default",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[User Setting] - PMW-004.10 - Save Alerts in Details Bar Setting",
@@ -1292,15 +1652,21 @@
       "type": "API",
       "status": "failed",
       "dur": "2s",
-      "err": null
+      "err": null,
+      "endpoint": "POST /api/usersetting/saveAlertsInDetailsBar",
+      "failedStep": null,
+      "fullErr": null
     },
     {
       "name": "[User Setting] - PMW-004.11 - Get Alerts in Details Bar Settings",
       "comp": "User Setting",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
-      "err": null
+      "dur": "2s",
+      "err": null,
+      "endpoint": "GET /api/usersetting/getAlertsInDetailsBar",
+      "failedStep": null,
+      "fullErr": null
     }
   ]
 }
