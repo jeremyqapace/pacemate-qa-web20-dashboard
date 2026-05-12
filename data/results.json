@@ -1,23 +1,23 @@
 {
-  "runId": "R-22",
-  "generatedAt": "2026-05-11T18:12:18.969Z",
+  "runId": "R-23",
+  "generatedAt": "2026-05-12T10:08:10.050Z",
   "branch": "main",
-  "suite": "API",
+  "suite": "Smoke Tests",
   "env": "QA",
-  "runUrl": "https://github.com/PaceMateLive/web20_webAutomation_PaceMateLive/actions/runs/25687938459",
+  "runUrl": "https://github.com/PaceMateLive/web20_webAutomation_PaceMateLive/actions/runs/25727219802",
   "summary": {
     "total": 122,
     "passed": 91,
     "failed": 31,
     "flaky": 0,
     "rate": 74.6,
-    "duration": "6m",
-    "prevRunId": "R-21",
+    "duration": "6m 1s",
+    "prevRunId": "R-22",
     "prevRate": 74.6,
     "prevTotal": 122,
     "prevFailed": 31,
     "prevFlaky": 0,
-    "prevDuration": "4m 47s",
+    "prevDuration": "6m",
     "consecutivePassing": 0
   },
   "comp": [
@@ -32,11 +32,11 @@
         0,
         0,
         0,
-        0,
         6,
         6,
         0,
         6,
+        94,
         94,
         94
       ]
@@ -52,11 +52,11 @@
         0,
         0,
         0,
-        0,
         4,
         4,
         0,
         4,
+        96,
         96,
         96
       ]
@@ -72,11 +72,11 @@
         0,
         0,
         0,
-        0,
         10,
         10,
         0,
         10,
+        90,
         90,
         90
       ]
@@ -92,11 +92,11 @@
         0,
         0,
         0,
-        0,
         17,
         17,
         0,
         17,
+        83,
         83,
         83
       ]
@@ -116,7 +116,7 @@
         0,
         0,
         0,
-        0,
+        100,
         100,
         100
       ]
@@ -156,7 +156,7 @@
         0,
         0,
         0,
-        0,
+        25,
         25,
         25
       ]
@@ -176,7 +176,7 @@
         0,
         0,
         0,
-        0,
+        23,
         23,
         23
       ]
@@ -196,52 +196,52 @@
         0,
         0,
         0,
-        0,
+        82,
         82,
         82
       ]
     }
   ],
   "hRuns": [
-    "R-18",
     "R-19",
     "R-20",
     "R-21",
-    "R-22"
+    "R-22",
+    "R-23"
   ],
   "hData": [
     [
-      6,
       0,
       6,
+      94,
       94,
       94
     ],
     [
-      4,
       0,
       4,
+      96,
       96,
       96
     ],
     [
-      10,
       0,
       10,
+      90,
       90,
       90
     ],
     [
-      17,
       0,
       17,
+      83,
       83,
       83
     ],
     [
       0,
       0,
-      0,
+      100,
       100,
       100
     ],
@@ -255,28 +255,27 @@
     [
       0,
       0,
-      0,
+      25,
       25,
       25
     ],
     [
       0,
       0,
-      0,
+      23,
       23,
       23
     ],
     [
       0,
       0,
-      0,
+      82,
       82,
       82
     ]
   ],
   "trend": {
     "labels": [
-      "R-13",
       "R-14",
       "R-15",
       "R-16",
@@ -285,10 +284,10 @@
       "R-19",
       "R-20",
       "R-21",
-      "R-22"
+      "R-22",
+      "R-23"
     ],
     "passed": [
-      0,
       0,
       0,
       0,
@@ -297,10 +296,10 @@
       0,
       7,
       91,
+      91,
       91
     ],
     "failed": [
-      122,
       122,
       122,
       122,
@@ -308,6 +307,7 @@
       115,
       168,
       115,
+      31,
       31,
       31
     ],
@@ -331,7 +331,7 @@
       "comp": "CRM Reports",
       "type": "API",
       "status": "passed",
-      "dur": "6s",
+      "dur": "10s",
       "err": null
     },
     {
@@ -347,7 +347,7 @@
       "comp": "CRM Reports",
       "type": "API",
       "status": "passed",
-      "dur": "5s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -363,7 +363,7 @@
       "comp": "CRM Reports",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -387,7 +387,7 @@
       "comp": "CRM Reports",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -419,7 +419,7 @@
       "comp": "CRM Reports",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -427,7 +427,7 @@
       "comp": "CRM Reports",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -443,7 +443,7 @@
       "comp": "CRM Reports",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -451,7 +451,7 @@
       "comp": "CRM Reports",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
+      "dur": "8s",
       "err": null
     },
     {
@@ -483,7 +483,7 @@
       "comp": "Dictionary",
       "type": "API",
       "status": "passed",
-      "dur": "9s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -499,7 +499,7 @@
       "comp": "Dictionary",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -539,7 +539,7 @@
       "comp": "Dictionary",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -547,7 +547,7 @@
       "comp": "Dictionary",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -555,7 +555,7 @@
       "comp": "Dictionary",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -571,7 +571,7 @@
       "comp": "Dictionary",
       "type": "API",
       "status": "passed",
-      "dur": "6s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -579,7 +579,7 @@
       "comp": "Dictionary",
       "type": "API",
       "status": "passed",
-      "dur": "4s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -587,7 +587,7 @@
       "comp": "Dictionary",
       "type": "API",
       "status": "passed",
-      "dur": "4s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -619,7 +619,7 @@
       "comp": "Dictionary",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -651,7 +651,7 @@
       "comp": "Dictionary",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: expect(received).toBe(expected) // Object.is equality"
     },
     {
@@ -675,7 +675,7 @@
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -707,7 +707,7 @@
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -739,7 +739,7 @@
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -755,7 +755,7 @@
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
+      "dur": "2s",
       "err": null
     },
     {
@@ -763,7 +763,7 @@
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -787,7 +787,7 @@
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
+      "dur": "2s",
       "err": null
     },
     {
@@ -803,7 +803,7 @@
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -835,7 +835,7 @@
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "passed",
-      "dur": "7s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -843,7 +843,7 @@
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "passed",
-      "dur": "4s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -851,7 +851,7 @@
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "passed",
-      "dur": "5s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -859,7 +859,7 @@
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "passed",
-      "dur": "4s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -867,7 +867,7 @@
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "passed",
-      "dur": "4s",
+      "dur": "2s",
       "err": null
     },
     {
@@ -875,7 +875,7 @@
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "passed",
-      "dur": "4s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -883,7 +883,7 @@
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "passed",
-      "dur": "4s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -891,7 +891,7 @@
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "passed",
-      "dur": "4s",
+      "dur": "7s",
       "err": null
     },
     {
@@ -899,7 +899,7 @@
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "passed",
-      "dur": "4s",
+      "dur": "6s",
       "err": null
     },
     {
@@ -915,7 +915,7 @@
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "passed",
-      "dur": "4s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -931,7 +931,7 @@
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
+      "dur": "6s",
       "err": null
     },
     {
@@ -939,7 +939,7 @@
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "failed",
-      "dur": "3s",
+      "dur": "4s",
       "err": "Error: expect(received).toBe(expected) // Object.is equality"
     },
     {
@@ -947,7 +947,7 @@
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "failed",
-      "dur": "3s",
+      "dur": "4s",
       "err": "Error: expect(received).toBe(expected) // Object.is equality"
     },
     {
@@ -955,7 +955,7 @@
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "4s",
       "err": "Error: expect(received).toBe(expected) // Object.is equality"
     },
     {
@@ -963,7 +963,7 @@
       "comp": "Patient Bulk Actions",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "5s",
       "err": null
     },
     {
@@ -971,7 +971,7 @@
       "comp": "Patient Bulk Actions",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "4s",
       "err": null
     },
     {
@@ -987,7 +987,7 @@
       "comp": "Patient Bulk Actions",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -995,7 +995,7 @@
       "comp": "Report Bulk Actions",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "9s",
       "err": "Error: expect(received).toBe(expected) // Object.is equality"
     },
     {
@@ -1003,7 +1003,7 @@
       "comp": "Report Bulk Actions",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: expect(received).toBe(expected) // Object.is equality"
     },
     {
@@ -1035,7 +1035,7 @@
       "comp": "Transmission Group",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
+      "dur": "2s",
       "err": null
     },
     {
@@ -1043,7 +1043,7 @@
       "comp": "Transmission Group",
       "type": "API",
       "status": "failed",
-      "dur": "3s",
+      "dur": "2s",
       "err": "Error: expect(received).toBe(expected) // Object.is equality"
     },
     {
@@ -1051,7 +1051,7 @@
       "comp": "Transmission Group",
       "type": "API",
       "status": "failed",
-      "dur": "3s",
+      "dur": "2s",
       "err": "Error: expect(received).toBe(expected) // Object.is equality"
     },
     {
@@ -1059,7 +1059,7 @@
       "comp": "Transmission Group",
       "type": "API",
       "status": "failed",
-      "dur": "3s",
+      "dur": "2s",
       "err": "Error: expect(received).toBe(expected) // Object.is equality"
     },
     {
@@ -1075,7 +1075,7 @@
       "comp": "Transmission Group",
       "type": "API",
       "status": "failed",
-      "dur": "9s",
+      "dur": "2s",
       "err": "Error: expect(received).toBe(expected) // Object.is equality"
     },
     {
@@ -1083,7 +1083,7 @@
       "comp": "Transmission Group",
       "type": "API",
       "status": "failed",
-      "dur": "3s",
+      "dur": "2s",
       "err": "Error: expect(received).toBe(expected) // Object.is equality"
     },
     {
@@ -1091,7 +1091,7 @@
       "comp": "Transmission Group",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: expect(received).toBe(expected) // Object.is equality"
     },
     {
@@ -1099,7 +1099,7 @@
       "comp": "Transmission Group",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: expect(received).toBe(expected) // Object.is equality"
     },
     {
@@ -1123,7 +1123,7 @@
       "comp": "User",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -1139,7 +1139,7 @@
       "comp": "User",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
@@ -1147,7 +1147,7 @@
       "comp": "User",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: expect(received).toBe(expected) // Object.is equality"
     },
     {
@@ -1155,7 +1155,7 @@
       "comp": "User",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: expect(received).toBe(expected) // Object.is equality"
     },
     {
@@ -1163,7 +1163,7 @@
       "comp": "User",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "4s",
       "err": "Error: expect(received).toBe(expected) // Object.is equality"
     },
     {
@@ -1179,7 +1179,7 @@
       "comp": "User",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: expect(received).toBe(expected) // Object.is equality"
     },
     {
@@ -1187,7 +1187,7 @@
       "comp": "User",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: expect(received).toBe(expected) // Object.is equality"
     },
     {
@@ -1219,7 +1219,7 @@
       "comp": "User Setting",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
+      "dur": "2s",
       "err": null
     },
     {
@@ -1227,7 +1227,7 @@
       "comp": "User Setting",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
+      "dur": "2s",
       "err": null
     },
     {
@@ -1235,7 +1235,7 @@
       "comp": "User Setting",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
+      "dur": "2s",
       "err": null
     },
     {
@@ -1243,7 +1243,7 @@
       "comp": "User Setting",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
+      "dur": "2s",
       "err": null
     },
     {
@@ -1251,7 +1251,7 @@
       "comp": "User Setting",
       "type": "API",
       "status": "passed",
-      "dur": "4s",
+      "dur": "2s",
       "err": null
     },
     {
@@ -1267,7 +1267,7 @@
       "comp": "User Setting",
       "type": "API",
       "status": "failed",
-      "dur": "3s",
+      "dur": "2s",
       "err": null
     },
     {
@@ -1275,7 +1275,7 @@
       "comp": "User Setting",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null
     },
     {
