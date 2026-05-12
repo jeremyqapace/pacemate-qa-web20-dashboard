@@ -1902,6 +1902,331 @@
                 font-size: 56px
             }
         }
+
+        /* ── BUG REPORT MODAL ── */
+        .bug-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, .65);
+            backdrop-filter: blur(3px);
+            z-index: 8000;
+            display: none;
+            align-items: flex-end;
+            justify-content: center;
+            padding: 0;
+            animation: fadeIn .2s ease
+        }
+
+        .bug-overlay.open {
+            display: flex
+        }
+
+        @media(min-width:640px) {
+            .bug-overlay {
+                align-items: center;
+                padding: 20px
+            }
+        }
+
+        .bug-modal {
+            background: var(--card-bg);
+            border: 1.5px solid var(--sc-border);
+            border-radius: 16px 16px 0 0;
+            width: 100%;
+            max-width: 580px;
+            max-height: 92vh;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+            display: flex;
+            flex-direction: column
+        }
+
+        @media(min-width:640px) {
+            .bug-modal {
+                border-radius: 16px;
+                max-height: 82vh
+            }
+        }
+
+        .bug-head {
+            background: var(--card-bg2);
+            padding: 13px 16px;
+            border-bottom: 2px solid var(--border2);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+            flex-shrink: 0
+        }
+
+        .bug-head-title {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text)
+        }
+
+        .bug-head-pmw {
+            font-size: 11px;
+            font-weight: 400;
+            color: var(--text3);
+            margin-left: 4px
+        }
+
+        .bug-close {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: var(--border);
+            border: none;
+            cursor: pointer;
+            font-size: 13px;
+            color: var(--text2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: system-ui;
+            transition: background .15s
+        }
+
+        .bug-close:hover {
+            background: var(--border2)
+        }
+
+        .bug-body {
+            padding: 16px;
+            flex: 1
+        }
+
+        .bug-scenario {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text);
+            line-height: 1.4;
+            margin-bottom: 14px;
+            letter-spacing: -.2px
+        }
+
+        .bug-endpoint-wrap {
+            margin-bottom: 14px
+        }
+
+        .bug-lbl {
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .8px;
+            color: var(--text3);
+            margin-bottom: 6px
+        }
+
+        .bug-endpoint {
+            font-family: monospace;
+            font-size: 12px;
+            background: var(--card-bg2);
+            border: 1.5px solid var(--border);
+            border-radius: 8px;
+            padding: 10px 12px;
+            word-break: break-all;
+            line-height: 1.6;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px
+        }
+
+        .bug-method {
+            display: inline-block;
+            font-size: 10px;
+            font-weight: 700;
+            padding: 2px 7px;
+            border-radius: 4px;
+            flex-shrink: 0;
+            margin-top: 1px
+        }
+
+        .bug-method.get {
+            background: rgba(55, 138, 221, .1);
+            border: 1px solid rgba(55, 138, 221, .3);
+            color: #185FA5
+        }
+
+        .bug-method.post {
+            background: rgba(16, 185, 129, .1);
+            border: 1px solid rgba(16, 185, 129, .3);
+            color: #059669
+        }
+
+        .bug-method.put {
+            background: rgba(245, 158, 11, .1);
+            border: 1px solid rgba(245, 158, 11, .3);
+            color: #B45309
+        }
+
+        .bug-method.delete {
+            background: rgba(239, 68, 68, .1);
+            border: 1px solid rgba(239, 68, 68, .3);
+            color: #DC2626
+        }
+
+        .bug-method.patch {
+            background: rgba(139, 92, 246, .1);
+            border: 1px solid rgba(139, 92, 246, .3);
+            color: #7C3AED
+        }
+
+        .bug-path {
+            color: var(--text);
+            font-size: 12px
+        }
+
+        .bug-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin-bottom: 14px
+        }
+
+        .bug-grid-item {
+            background: var(--card-bg2);
+            border: 1.5px solid var(--border);
+            border-radius: 8px;
+            padding: 9px 12px
+        }
+
+        .bug-grid-lbl {
+            font-size: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: .5px;
+            color: var(--text3);
+            margin-bottom: 3px
+        }
+
+        .bug-grid-val {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text);
+            line-height: 1.3
+        }
+
+        .bug-step-wrap {
+            margin-bottom: 14px
+        }
+
+        .bug-step {
+            font-size: 12px;
+            background: var(--card-bg2);
+            border: 1.5px solid var(--border);
+            border-left: 3px solid #EF4444;
+            border-radius: 0 8px 8px 0;
+            padding: 9px 12px;
+            color: var(--text);
+            font-style: italic;
+            line-height: 1.5
+        }
+
+        .bug-err-wrap {
+            margin-bottom: 14px
+        }
+
+        .bug-err {
+            font-family: monospace;
+            font-size: 11px;
+            background: rgba(239, 68, 68, .04);
+            border: 1.5px solid rgba(239, 68, 68, .2);
+            border-radius: 8px;
+            padding: 10px 12px;
+            color: var(--text);
+            word-break: break-word;
+            white-space: pre-wrap;
+            line-height: 1.7;
+            max-height: 150px;
+            overflow-y: auto
+        }
+
+        .bug-actions {
+            display: flex;
+            gap: 8px;
+            padding: 14px 16px;
+            border-top: 1.5px solid var(--border2);
+            background: var(--card-bg);
+            position: sticky;
+            bottom: 0;
+            flex-shrink: 0
+        }
+
+        .bug-copy {
+            flex: 1;
+            padding: 10px;
+            font-size: 12px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            border: 1.5px solid rgba(200, 24, 74, .35);
+            background: rgba(200, 24, 74, .07);
+            color: #C8184A;
+            font-family: 'Inter', system-ui, sans-serif;
+            transition: all .15s
+        }
+
+        .bug-copy:hover {
+            background: rgba(200, 24, 74, .12)
+        }
+
+        .bug-copy.ok {
+            background: rgba(16, 185, 129, .1);
+            border-color: rgba(16, 185, 129, .4);
+            color: #059669
+        }
+
+        .bug-ci {
+            flex: 1;
+            padding: 10px;
+            font-size: 12px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            border: 1.5px solid var(--border);
+            background: var(--card-bg2);
+            color: var(--text2);
+            font-family: 'Inter', system-ui, sans-serif;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            transition: all .15s
+        }
+
+        .bug-ci:hover {
+            background: var(--tt-hover)
+        }
+
+        .bug-btn {
+            width: 22px;
+            height: 22px;
+            border-radius: 4px;
+            background: rgba(239, 68, 68, .1);
+            border: 1px solid rgba(239, 68, 68, .3);
+            cursor: pointer;
+            font-size: 11px;
+            color: #DC2626;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-family: system-ui;
+            transition: all .15s;
+            vertical-align: middle
+        }
+
+        .bug-btn:hover {
+            background: rgba(239, 68, 68, .2)
+        }
     </style>
 </head>
 
@@ -2356,7 +2681,7 @@
             if (isMobile()) {
                 wrap.innerHTML = Object.entries(byComp).map(([comp, rows]) => { const pass = rows.filter(t => t.status === 'passed').length, pct = Math.round((pass / rows.length) * 100), co = hclr(pct), isOpen = _cvOpenGroups[comp] !== false; return `<div class="rtm-group"><div class="rtm-group-head" onclick="toggleRtmGroup('${comp.replace(/\\/g, '\\\\').replace(/'/g, "\\'")}',this)"><div class="rtm-group-title"><span class="scd"></span>${comp}</div><div class="rtm-group-meta"><span class="rtm-group-rate" style="color:${co}">${pct}%</span><span style="font-size:11px;color:var(--text3)">${pass}/${rows.length}</span><span class="rtm-chev${isOpen ? ' open' : ''}">›</span></div></div><div class="rtm-table-wrap${isOpen ? ' open' : ''}">${rows.map(t => { const pid = extractPmwId(t.name); return `<div class="rtm-card"><div class="rtm-card-top"><div class="rtm-card-name">${cleanCvName(t.name)}</div><span class="spill" style="background:${SB[t.status].bg};color:${SB[t.status].cl};border-color:${SB[t.status].bd};flex-shrink:0"><span class="sdot" style="background:${SC[t.status]}"></span>${SL[t.status]}</span></div><div class="rtm-card-meta">${pid ? `<span class="rtm-pmw">${pid}</span>` : '<span class="rtm-pmw none">No ID</span>'}<span class="type-tag">${t.type}</span><span style="font-size:11px;color:var(--text3)">${t.dur}</span></div></div>` }).join('')}</div></div>` }).join('');
             } else {
-                wrap.innerHTML = Object.entries(byComp).map(([comp, rows]) => { const pass = rows.filter(t => t.status === 'passed').length, pct = Math.round((pass / rows.length) * 100), co = hclr(pct), isOpen = _cvOpenGroups[comp] !== false; const ts = 'font-size:11px;padding:2px 7px;border-radius:4px;border:1px solid rgba(55,138,221,.35);background:rgba(55,138,221,.07);color:#185FA5'; const tableRows = rows.map(t => { const pid = extractPmwId(t.name); return `<tr><td style="padding-left:14px;width:110px">${pid ? `<span class="rtm-pmw">${pid}</span>` : '<span class="rtm-pmw none">—</span>'}</td><td class="rtm-name" title="${t.name.replace(/"/g, '&quot;')}">${cleanCvName(t.name)}</td><td><span style="${ts}">${t.type}</span></td><td><span class="spill" style="background:${SB[t.status].bg};color:${SB[t.status].cl};border-color:${SB[t.status].bd}"><span class="sdot" style="background:${SC[t.status]}"></span>${SL[t.status]}</span></td><td style="color:var(--text3);font-size:11px">${t.dur}</td></tr>` }).join(''); return `<div class="rtm-group"><div class="rtm-group-head" onclick="toggleRtmGroup('${comp.replace(/\\/g, '\\\\').replace(/'/g, "\\'")}',this)"><div class="rtm-group-title"><span class="scd"></span>${comp}<span style="font-size:11px;font-weight:400;color:var(--text3)">${rows.length} test${rows.length === 1 ? '' : 's'}</span></div><div class="rtm-group-meta"><div class="rtm-group-bar"><div class="rtm-group-bar-fill" style="width:${pct}%;background:${co}"></div></div><span class="rtm-group-rate" style="color:${co}">${pct}%</span><span style="font-size:11px;color:var(--text3)">${pass}/${rows.length} passed</span><span class="rtm-chev${isOpen ? ' open' : ''}">›</span></div></div><div class="rtm-table-wrap${isOpen ? ' open' : ''}"><table class="rtm-table"><thead><tr><th style="padding-left:14px">Req ID</th><th>Scenario</th><th style="width:60px">Type</th><th style="width:90px">Status</th><th style="width:70px">Duration</th></tr></thead><tbody>${tableRows}</tbody></table></div></div>` }).join('');
+                wrap.innerHTML = Object.entries(byComp).map(([comp, rows]) => { const pass = rows.filter(t => t.status === 'passed').length, pct = Math.round((pass / rows.length) * 100), co = hclr(pct), isOpen = _cvOpenGroups[comp] !== false; const ts = 'font-size:11px;padding:2px 7px;border-radius:4px;border:1px solid rgba(55,138,221,.35);background:rgba(55,138,221,.07);color:#185FA5'; const tableRows = rows.map(t => { const pid = extractPmwId(t.name); const cvk = 'cv' + Math.random().toString(36).slice(2); (window._bugMap = window._bugMap || {})[cvk] = t; return `<tr><td style="padding-left:14px;width:110px">${pid ? `<span class="rtm-pmw">${pid}</span>` : '<span class="rtm-pmw none">—</span>'}</td><td class="rtm-name" title="${t.name.replace(/"/g, '&quot;')}">${cleanCvName(t.name)}</td><td><span style="${ts}">${t.type}</span></td><td><span class="spill" style="background:${SB[t.status].bg};color:${SB[t.status].cl};border-color:${SB[t.status].bd}"><span class="sdot" style="background:${SC[t.status]}"></span>${SL[t.status]}</span></td><td style="color:var(--text3);font-size:11px">${t.dur}</td><td style="text-align:right;padding-right:8px">${t.status !== 'passed' ? `<button class="bug-btn" title="View bug report" onclick="event.stopPropagation();openBug(window._bugMap['${cvk}'])">🐛</button>` : ''}</td></tr>` }).join(''); return `<div class="rtm-group"><div class="rtm-group-head" onclick="toggleRtmGroup('${comp.replace(/\\/g, '\\\\').replace(/'/g, "\\'")}',this)"><div class="rtm-group-title"><span class="scd"></span>${comp}<span style="font-size:11px;font-weight:400;color:var(--text3)">${rows.length} test${rows.length === 1 ? '' : 's'}</span></div><div class="rtm-group-meta"><div class="rtm-group-bar"><div class="rtm-group-bar-fill" style="width:${pct}%;background:${co}"></div></div><span class="rtm-group-rate" style="color:${co}">${pct}%</span><span style="font-size:11px;color:var(--text3)">${pass}/${rows.length} passed</span><span class="rtm-chev${isOpen ? ' open' : ''}">›</span></div></div><div class="rtm-table-wrap${isOpen ? ' open' : ''}"><table class="rtm-table"><thead><tr><th style="padding-left:14px">Req ID</th><th>Scenario</th><th style="width:60px">Type</th><th style="width:90px">Status</th><th style="width:70px">Duration</th></tr></thead><tbody>${tableRows}</tbody></table></div></div>` }).join('');
             }
         }
         function toggleRtmGroup(comp, headEl) { _cvOpenGroups[comp] = !(_cvOpenGroups[comp] !== false); const wrap = headEl.nextElementSibling, chev = headEl.querySelector('.rtm-chev'), isNowOpen = _cvOpenGroups[comp] !== false; wrap.classList.toggle('open', isNowOpen); if (chev) chev.classList.toggle('open', isNowOpen) }
@@ -2451,7 +2776,7 @@
             const D = window._D, wrap = document.getElementById('testResultsWrap'); if (!wrap) return;
             if (!rows || !rows.length) { const msgs = { all: { h: 'No tests found', s: 'No test data available' }, failed: { h: 'No failures', s: 'Every test passed' }, flaky: { h: 'No flaky tests', s: 'All tests ran deterministically' }, passed: { h: 'No passed tests', s: 'No clean passes recorded' } }; const m = msgs[currentFilter] || msgs.all; wrap.innerHTML = `<div style="text-align:center;padding:2.5rem 1rem"><div style="font-size:14px;font-weight:600;color:var(--text);margin-bottom:5px">${m.h}</div><div style="font-size:12px;color:var(--text3);max-width:280px;margin:0 auto;line-height:1.5">${m.s}</div></div>`; return }
             if (isMobile()) { wrap.innerHTML = `<div class="tt-mobile">${rows.map((t, i) => { const can = t.status !== 'passed' && t.err; return `<div class="tt-card" style="animation-delay:${(i * .03).toFixed(2)}s" onclick="toggleCard(this,${i})"><div class="tt-card-top"><div class="tt-card-name">${t.name}</div><span class="spill" style="background:${SB[t.status].bg};color:${SB[t.status].cl};border-color:${SB[t.status].bd};flex-shrink:0"><span class="sdot" style="background:${SC[t.status]}"></span>${SL[t.status]}</span></div><div class="tt-card-meta"><span class="tt-card-comp">${t.comp}</span><span class="type-tag">${t.type}</span><span class="tt-card-dur">${t.dur}</span></div>${can ? `<div class="tt-exp" id="ttexp-${i}"><div class="tt-exp-lbl">${t.status === 'flaky' ? 'Flakiness Detail' : 'Error Detail'}</div><div class="tt-exp-msg">${t.err}</div><a class="tt-exp-link" href="${window._D && window._D.runUrl || '#'}" target="_blank" onclick="event.stopPropagation()">View in GitHub Actions</a></div>` : ''}</div>` }).join('')}</div>` }
-            else { let html = ''; rows.forEach(t => { const can = t.status !== 'passed' && t.err, ts = 'font-size:11px;padding:2px 8px;border-radius:4px;border:1px solid rgba(55,138,221,.35);background:rgba(55,138,221,.07);color:#185FA5'; html += `<tr class="trow${can ? ' can-expand' : ''}" onclick="expandRowDesktop(this)"><td style="padding-left:20px"><div class="tn-wrap" onmouseenter="showTip(this,'${t.name.replace(/'/g, "&#39;").replace(/"/g, '&quot;')}',event)" onmousemove="moveTip(event)" onmouseleave="hideTip()">${t.name}</div></td><td style="color:var(--text2)">${t.comp}</td><td><span style="${ts}">${t.type}</span></td><td><span class="spill" style="background:${SB[t.status].bg};color:${SB[t.status].cl};border-color:${SB[t.status].bd}"><span class="sdot" style="background:${SC[t.status]}"></span>${SL[t.status]}</span></td><td style="color:var(--text2)">${t.dur}</td><td style="color:var(--text3)">${window._D?.runId || '—'}</td><td style="text-align:right;padding-right:14px">${can ? '<span class="chev">›</span>' : ''}</td></tr>`; if (can) { const isFl = t.status === 'flaky'; html += `<tr class="exp-row" style="display:none"><td colspan="7"><div style="padding:14px 16px;margin-left:20px;background:${isFl ? 'rgba(245,158,11,.04)' : 'rgba(239,68,68,.04)'};border-left:3px solid ${isFl ? '#F59E0B' : '#EF4444'}"><div class="tt-exp-lbl" style="margin-bottom:5px">${isFl ? 'Flakiness Detail' : 'Error Detail'}</div><div class="tt-exp-msg">${t.err}</div><div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px"><span style="font-size:12px;color:var(--text3)">${t.comp} · ${t.type} · ${t.dur}</span><a class="tt-exp-link" href="${window._D?.runUrl || '#'}" target="_blank" onclick="event.stopPropagation()">View in GitHub Actions</a></div></div></td></tr>` } }); wrap.innerHTML = `<table class="tt" style="margin:0"><colgroup><col style="width:37%"><col style="width:14%"><col style="width:9%"><col style="width:14%"><col style="width:10%"><col style="width:9%"><col style="width:7%"></colgroup><thead><tr><th style="padding-left:20px">Test Name</th><th>Component</th><th>Type</th><th>Status</th><th>Duration</th><th>Run</th><th></th></tr></thead><tbody>${html}</tbody></table>` }
+            else { let html = ''; window._bugMap = window._bugMap || {}; rows.forEach((t, ri) => { const can = t.status !== 'passed' && t.err, ts = 'font-size:11px;padding:2px 8px;border-radius:4px;border:1px solid rgba(55,138,221,.35);background:rgba(55,138,221,.07);color:#185FA5'; const bk = 'r' + ri; window._bugMap[bk] = t; html += `<tr class="trow${can ? ' can-expand' : ''}" onclick="expandRowDesktop(this)"><td style="padding-left:20px"><div class="tn-wrap" onmouseenter="showTip(this,'${t.name.replace(/'/g, "&#39;").replace(/"/g, '&quot;')}',event)" onmousemove="moveTip(event)" onmouseleave="hideTip()">${t.name}</div></td><td style="color:var(--text2)">${t.comp}</td><td><span style="${ts}">${t.type}</span></td><td><span class="spill" style="background:${SB[t.status].bg};color:${SB[t.status].cl};border-color:${SB[t.status].bd}"><span class="sdot" style="background:${SC[t.status]}"></span>${SL[t.status]}</span></td><td style="color:var(--text2)">${t.dur}</td><td style="color:var(--text3)">${window._D?.runId || '—'}</td><td style="text-align:right;padding-right:14px;white-space:nowrap">${t.status !== 'passed' ? `<button class="bug-btn" title="View bug report" onclick="event.stopPropagation();openBug(window._bugMap['${bk}'])">🐛</button> ` : ''}${can ? '<span class="chev">›</span>' : ''}</td></tr>`; if (can) { const isFl = t.status === 'flaky'; html += `<tr class="exp-row" style="display:none"><td colspan="7"><div style="padding:14px 16px;margin-left:20px;background:${isFl ? 'rgba(245,158,11,.04)' : 'rgba(239,68,68,.04)'};border-left:3px solid ${isFl ? '#F59E0B' : '#EF4444'}"><div class="tt-exp-lbl" style="margin-bottom:5px">${isFl ? 'Flakiness Detail' : 'Error Detail'}</div><div class="tt-exp-msg">${t.err}</div><div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px"><span style="font-size:12px;color:var(--text3)">${t.comp} · ${t.type} · ${t.dur}</span><a class="tt-exp-link" href="${window._D?.runUrl || '#'}" target="_blank" onclick="event.stopPropagation()">View in GitHub Actions</a></div></div></td></tr>` } }); wrap.innerHTML = `<table class="tt" style="margin:0"><colgroup><col style="width:37%"><col style="width:14%"><col style="width:9%"><col style="width:14%"><col style="width:10%"><col style="width:9%"><col style="width:7%"></colgroup><thead><tr><th style="padding-left:20px">Test Name</th><th>Component</th><th>Type</th><th>Status</th><th>Duration</th><th>Run</th><th></th></tr></thead><tbody>${html}</tbody></table>` }
         }
 
         let _activeDrillComp = null;
@@ -2512,6 +2837,103 @@
             document.getElementById('histList').innerHTML = runs.slice().reverse().map((r, i) => { const rate = r.rate ?? 0, col = hclr(rate), passed = r.passed ?? 0, failed = r.failed ?? 0, flaky = r.flaky ?? 0, total = r.total ?? 0, ago = r.generatedAt ? relativeTime(r.generatedAt) : '', label = r.runNum ? `Run #${r.runNum}` : '—'; return `<div class="rh-row" style="animation-delay:${(i * .06).toFixed(2)}s"><div class="rh-dot" style="background:${col}"></div><div class="rh-body"><div class="rh-top"><span class="rh-id">${label}<span style="font-size:11px;font-weight:400;color:var(--text3)"> ${r.suite || 'Smoke Tests'} · ${r.env || 'Dev'}</span></span><span class="rh-rate" style="color:${col}">${rate}%</span></div><div class="rh-meta">${ago ? ago + ' · ' : ''}${r.branch || 'main'} · ${r.duration || '—'}</div><div class="rh-bar-bg"><div class="rh-bar-fill" style="--bar-w:${rate}%;background:${col};animation-delay:${(.1 + i * .06).toFixed(2)}s"></div></div><div style="display:flex;align-items:center;justify-content:space-between;margin-top:6px;flex-wrap:wrap;gap:6px"><div class="rh-counts"><span class="rh-cnt" style="color:#10B981"><span class="sdot" style="background:#10B981"></span>${passed} passed</span>${failed ? `<span class="rh-cnt" style="color:#EF4444"><span class="sdot" style="background:#EF4444"></span>${failed} failed</span>` : ''} ${flaky ? `<span class="rh-cnt" style="color:#F59E0B"><span class="sdot" style="background:#F59E0B"></span>${flaky} flaky</span>` : ''}<span class="rh-cnt" style="color:var(--text3)">${total} total</span></div><span class="run-id-badge">${r.runId || ''}</span></div></div></div>` }).join('');
         }
 
+
+        /* ── BUG REPORT MODAL ── */
+        let _bugTest = null;
+
+        function openBug(t) {
+            _bugTest = t;
+            const D = window._D;
+            const pmw = extractPmwId(t.name);
+            const name = cleanCvName(t.name);
+
+            document.getElementById('bugPmw').textContent = pmw ? '· ' + pmw : '';
+            document.getElementById('bugCiLink').href = D?.runUrl || '#';
+
+            // Build method badge
+            let endpointHtml = '';
+            if (t.endpoint) {
+                const parts = t.endpoint.split(' ');
+                const m = parts[0].toLowerCase();
+                const p = parts.slice(1).join(' ');
+                endpointHtml = '<div class="bug-endpoint-wrap"><div class="bug-lbl">Endpoint</div>' +
+                    '<div class="bug-endpoint">' +
+                    '<span class="bug-method ' + m + '">' + parts[0] + '</span>' +
+                    '<span class="bug-path">' + p + '</span>' +
+                    '</div></div>';
+            }
+
+            const statusColor = SB[t.status]?.cl || 'var(--text)';
+
+            document.getElementById('bugBody').innerHTML =
+                '<div class="bug-scenario">' + name + '</div>' +
+                endpointHtml +
+                '<div class="bug-grid">' +
+                '<div class="bug-grid-item"><div class="bug-grid-lbl">Component</div><div class="bug-grid-val">' + t.comp + '</div></div>' +
+                '<div class="bug-grid-item"><div class="bug-grid-lbl">Type</div><div class="bug-grid-val">' + t.type + '</div></div>' +
+                '<div class="bug-grid-item"><div class="bug-grid-lbl">Environment</div><div class="bug-grid-val">' + (D?.env || '—') + '</div></div>' +
+                '<div class="bug-grid-item"><div class="bug-grid-lbl">Run</div><div class="bug-grid-val">' + (D?.runId || '—') + '</div></div>' +
+                '<div class="bug-grid-item"><div class="bug-grid-lbl">Status</div><div class="bug-grid-val" style="color:' + statusColor + '">' + (SL[t.status] || t.status) + '</div></div>' +
+                '<div class="bug-grid-item"><div class="bug-grid-lbl">Duration</div><div class="bug-grid-val">' + t.dur + '</div></div>' +
+                '</div>' +
+                (t.failedStep ? '<div class="bug-step-wrap"><div class="bug-lbl">Failed Assertion</div><div class="bug-step">' + t.failedStep + '</div></div>' : '') +
+                (t.fullErr || t.err ? '<div class="bug-err-wrap"><div class="bug-lbl">Error Detail</div><div class="bug-err">' + (t.fullErr || t.err) + '</div></div>' : '');
+
+            const btn = document.getElementById('bugCopyBtn');
+            btn.textContent = '\u{1F4CB} Copy Bug Report';
+            btn.classList.remove('ok');
+
+            document.getElementById('bugOverlay').classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeBug() {
+            document.getElementById('bugOverlay').classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        function copyBug() {
+            const t = _bugTest;
+            const D = window._D;
+            if (!t) return;
+            const pmw = extractPmwId(t.name);
+            const name = cleanCvName(t.name);
+            const lines = [
+                '[BUG] ' + (pmw ? pmw + ' \u2014 ' : '') + name,
+                '',
+                'Environment:   ' + (D?.env || '\u2014'),
+                'Component:     ' + t.comp,
+                'Type:          ' + t.type,
+                t.endpoint ? 'Endpoint:      ' + t.endpoint : null,
+                'Run:           ' + (D?.runId || '\u2014'),
+                'Duration:      ' + t.dur,
+                '',
+                'Status:        ' + (t.status === 'failed' ? 'Failed' : 'Flaky'),
+                t.failedStep ? 'Failed Step:   ' + t.failedStep : null,
+                '',
+                'Error:',
+                t.fullErr || t.err || 'No error details',
+                '',
+                'CI Run: ' + (D?.runUrl || '\u2014'),
+            ].filter(l => l !== null).join('\n');
+
+            navigator.clipboard.writeText(lines).then(function () {
+                var btn = document.getElementById('bugCopyBtn');
+                btn.textContent = '\u2713 Copied!';
+                btn.classList.add('ok');
+                setTimeout(function () {
+                    btn.textContent = '\u{1F4CB} Copy Bug Report';
+                    btn.classList.remove('ok');
+                }, 2000);
+            }).catch(function () {
+                alert('Copy failed — please copy manually from the error detail above.');
+            });
+        }
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') closeBug();
+        });
+
         fetch('./data/results.json?t=' + Date.now())
             .then(r => { if (!r.ok) throw new Error(r.status); return r.json() })
             .then(D => { if (!D || !D.runId) throw new Error('Empty data'); renderAll(D); document.getElementById('loader').classList.add('hide') })
@@ -2522,6 +2944,25 @@
             .then(runs => { window._runs = Array.isArray(runs) ? runs : runs.runs || [] })
             .catch(() => { window._runs = [] });
     </script>
+    <!-- BUG REPORT MODAL -->
+    <div id="bugOverlay" class="bug-overlay" onclick="if(event.target===this)closeBug()">
+        <div class="bug-modal">
+            <div class="bug-head">
+                <div class="bug-head-title">
+                    <span style="font-size:15px">🐛</span>
+                    <span>Bug Report</span>
+                    <span class="bug-head-pmw" id="bugPmw"></span>
+                </div>
+                <button class="bug-close" onclick="closeBug()">&#x2715;</button>
+            </div>
+            <div class="bug-body" id="bugBody"></div>
+            <div class="bug-actions">
+                <button class="bug-copy" id="bugCopyBtn" onclick="copyBug()">&#x1F4CB; Copy Bug Report</button>
+                <a class="bug-ci" id="bugCiLink" href="#" target="_blank">&#x1F517; View in CI</a>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>
