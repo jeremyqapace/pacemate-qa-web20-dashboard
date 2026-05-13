@@ -1548,7 +1548,14 @@
             padding: 10px 12px;
             border-radius: 10px;
             background: var(--card-bg2);
-            border: 1.5px solid var(--border)
+            border: 1.5px solid var(--border);
+            cursor: pointer;
+            transition: border-color .15s, background .15s
+        }
+
+        .risk-row:hover {
+            border-color: rgba(200, 24, 74, .4);
+            background: var(--tt-hover)
         }
 
         .risk-row-bar-wrap {
@@ -2401,6 +2408,184 @@
         .td-info-btn:hover {
             background: rgba(16, 185, 129, .2)
         }
+
+        /* ── HISTORY RUN MODAL ── */
+        .hist-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, .65);
+            backdrop-filter: blur(3px);
+            z-index: 8000;
+            display: none;
+            align-items: flex-end;
+            justify-content: center;
+            animation: fadeIn .2s ease
+        }
+
+        .hist-overlay.open {
+            display: flex
+        }
+
+        @media(min-width:640px) {
+            .hist-overlay {
+                align-items: center;
+                padding: 20px
+            }
+        }
+
+        .hist-modal {
+            background: var(--card-bg);
+            border: 1.5px solid var(--sc-border);
+            border-radius: 16px 16px 0 0;
+            width: 100%;
+            max-width: 540px;
+            max-height: 88vh;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column
+        }
+
+        @media(min-width:640px) {
+            .hist-modal {
+                border-radius: 16px;
+                max-height: 78vh
+            }
+        }
+
+        .hist-head {
+            background: var(--card-bg2);
+            padding: 13px 16px;
+            border-bottom: 2px solid var(--border2);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+            flex-shrink: 0
+        }
+
+        .hist-close {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: var(--border);
+            border: none;
+            cursor: pointer;
+            font-size: 13px;
+            color: var(--text2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: system-ui;
+            transition: background .15s
+        }
+
+        .hist-close:hover {
+            background: var(--border2)
+        }
+
+        .hist-body {
+            padding: 16px;
+            flex: 1
+        }
+
+        .hist-stat-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+            margin-bottom: 16px
+        }
+
+        .hist-stat {
+            background: var(--card-bg2);
+            border: 1.5px solid var(--border);
+            border-radius: 8px;
+            padding: 10px 12px;
+            text-align: center
+        }
+
+        .hist-stat-n {
+            font-size: 24px;
+            font-weight: 600;
+            letter-spacing: -1px;
+            font-variant-numeric: tabular-nums;
+            line-height: 1
+        }
+
+        .hist-stat-l {
+            font-size: 10px;
+            color: var(--text3);
+            text-transform: uppercase;
+            letter-spacing: .6px;
+            margin-top: 3px;
+            font-weight: 600
+        }
+
+        .hist-comp-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 12px
+        }
+
+        .hist-comp-table th {
+            font-size: 10px;
+            font-weight: 600;
+            color: var(--text3);
+            text-align: left;
+            padding: 8px 10px;
+            border-bottom: 1.5px solid var(--border);
+            text-transform: uppercase;
+            letter-spacing: .4px;
+            background: var(--card-bg2)
+        }
+
+        .hist-comp-table td {
+            padding: 9px 10px;
+            border-bottom: 1px solid var(--tt-border);
+            color: var(--text);
+            vertical-align: middle
+        }
+
+        .hist-comp-table tr:last-child td {
+            border-bottom: none
+        }
+
+        .hist-comp-table tr:hover td {
+            background: var(--tt-hover)
+        }
+
+        .hist-actions {
+            padding: 14px 16px;
+            border-top: 1.5px solid var(--border2);
+            background: var(--card-bg);
+            position: sticky;
+            bottom: 0;
+            flex-shrink: 0
+        }
+
+        .hist-ci-btn {
+            width: 100%;
+            padding: 10px;
+            font-size: 12px;
+            font-weight: 600;
+            border-radius: 8px;
+            border: 1.5px solid var(--border);
+            background: var(--card-bg2);
+            color: var(--text2);
+            font-family: 'Inter', system-ui, sans-serif;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            transition: all .15s;
+            cursor: pointer
+        }
+
+        .hist-ci-btn:hover {
+            background: var(--tt-hover)
+        }
     </style>
 </head>
 
@@ -2696,7 +2881,13 @@
             <div class="sc">
                 <div class="sch">
                     <div class="sct"><span class="scd"></span>API Coverage &amp; RTM</div>
-                    <span class="scm" id="cvMeta">Requirement traceability</span>
+                    <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+                        <span class="scm" id="cvMeta">Requirement traceability</span>
+                        <input id="cvSearch" type="text" placeholder="Search tests or PMW ID..."
+                            oninput="onCvSearch(this.value)"
+                            style="font-size:12px;padding:5px 10px;border-radius:8px;border:1.5px solid var(--border);background:var(--card-bg2);color:var(--text);font-family:'Inter',system-ui,sans-serif;width:220px;outline:none;transition:border-color .15s"
+                            onfocus="this.style.borderColor='#C8184A'" onblur="this.style.borderColor='var(--border)'">
+                    </div>
                 </div>
                 <div class="scb">
                     <div class="rtm-summary">
@@ -2747,6 +2938,23 @@
                 <button class="td-close" onclick="closeTd()">&#x2715;</button>
             </div>
             <div class="td-body" id="tdBody"></div>
+        </div>
+    </div>
+
+    <!-- HISTORY RUN MODAL -->
+    <div id="histOverlay" class="hist-overlay" onclick="if(event.target===this)closeHist()">
+        <div class="hist-modal">
+            <div class="hist-head">
+                <div style="display:flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--text)">
+                    <span style="font-size:15px">&#x1F4C8;</span>
+                    <span id="histModalTitle">Run Detail</span>
+                </div>
+                <button class="hist-close" onclick="closeHist()">&#x2715;</button>
+            </div>
+            <div class="hist-body" id="histModalBody"></div>
+            <div class="hist-actions">
+                <a class="hist-ci-btn" id="histCiBtn" href="#" target="_blank">&#x1F517; View in GitHub Actions</a>
+            </div>
         </div>
     </div>
 
@@ -2826,7 +3034,7 @@
     </div>
     <div class="risk-body">
       <div class="risk-rows">
-        ${atRisk.slice(0, 5).map((c, i) => `<div class="risk-row" style="animation-delay:${(i * .06).toFixed(2)}s;opacity:0;animation:fadeUp .4s ease forwards">
+        ${atRisk.slice(0, 5).map((c, i) => `<div class="risk-row" onclick="openRiskComponent('${c.name}')" title="Click to see ${c.name} failures" style="animation-delay:${(i * .06).toFixed(2)}s;opacity:0;animation:fadeUp .4s ease forwards">
           <div class="risk-row-bar-wrap">
             <div class="risk-row-label">${c.name}</div>
             <div class="risk-row-bar-bg"><div class="risk-row-bar-fill" style="--bar-w:${c.pct}%;width:0;background:${hclr(c.pct)}"></div></div>
@@ -2853,7 +3061,11 @@
 
         function renderCoverage(tests) {
             const wrap = document.getElementById('cvWrap'); if (!wrap || !tests) return;
-            const filtered = _cvFilter === 'all' ? tests : tests.filter(t => t.status === _cvFilter);
+            const _baseFiltered = _cvFilter === 'all' ? tests : tests.filter(t => t.status === _cvFilter);
+            const filtered = _cvSearch ? _baseFiltered.filter(t => {
+                const q = _cvSearch;
+                return (t.name || '').toLowerCase().includes(q) || (t.comp || '').toLowerCase().includes(q) || (t.endpoint || '').toLowerCase().includes(q) || extractPmwId(t.name || '').toLowerCase().includes(q);
+            }) : _baseFiltered;
             const withPmw = tests.filter(t => extractPmwId(t.name));
             document.getElementById('cv-fc-all').textContent = tests.length;
             document.getElementById('cv-fc-passed').textContent = tests.filter(t => t.status === 'passed').length;
@@ -3023,7 +3235,7 @@
             const runs = window._runs;
             document.getElementById('histMeta').textContent = (runs && runs.length) ? `${runs.length} run${runs.length === 1 ? '' : 's'} recorded` : '0 runs recorded';
             if (!runs || !runs.length) { document.getElementById('histList').innerHTML = '<div class="rh-empty">No run history yet.</div>'; return }
-            document.getElementById('histList').innerHTML = runs.slice().reverse().map((r, i) => { const rate = r.rate ?? 0, col = hclr(rate), passed = r.passed ?? 0, failed = r.failed ?? 0, flaky = r.flaky ?? 0, total = r.total ?? 0, ago = r.generatedAt ? relativeTime(r.generatedAt) : '', label = r.runNum ? `Run #${r.runNum}` : '—'; return `<div class="rh-row" style="animation-delay:${(i * .06).toFixed(2)}s"><div class="rh-dot" style="background:${col}"></div><div class="rh-body"><div class="rh-top"><span class="rh-id">${label}<span style="font-size:11px;font-weight:400;color:var(--text3)"> ${r.suite || 'Smoke Tests'} · ${r.env || 'Dev'}</span></span><span class="rh-rate" style="color:${col}">${rate}%</span></div><div class="rh-meta">${ago ? ago + ' · ' : ''}${r.branch || 'main'} · ${r.duration || '—'}</div><div class="rh-bar-bg"><div class="rh-bar-fill" style="--bar-w:${rate}%;background:${col};animation-delay:${(.1 + i * .06).toFixed(2)}s"></div></div><div style="display:flex;align-items:center;justify-content:space-between;margin-top:6px;flex-wrap:wrap;gap:6px"><div class="rh-counts"><span class="rh-cnt" style="color:#10B981"><span class="sdot" style="background:#10B981"></span>${passed} passed</span>${failed ? `<span class="rh-cnt" style="color:#EF4444"><span class="sdot" style="background:#EF4444"></span>${failed} failed</span>` : ''} ${flaky ? `<span class="rh-cnt" style="color:#F59E0B"><span class="sdot" style="background:#F59E0B"></span>${flaky} flaky</span>` : ''}<span class="rh-cnt" style="color:var(--text3)">${total} total</span></div><span class="run-id-badge">${r.runId || ''}</span></div></div></div>` }).join('');
+            document.getElementById('histList').innerHTML = runs.slice().reverse().map((r, i) => { const rate = r.rate ?? 0, col = hclr(rate), passed = r.passed ?? 0, failed = r.failed ?? 0, flaky = r.flaky ?? 0, total = r.total ?? 0, ago = r.generatedAt ? relativeTime(r.generatedAt) : '', label = r.runNum ? `Run #${r.runNum}` : '—'; return `<div class="rh-row" style="animation-delay:${(i * .06).toFixed(2)}s;cursor:pointer" onclick="openHistRun(window._runs&&window._runs.slice().reverse()[${i}])" title="Click to see run details"><div class="rh-dot" style="background:${col}"></div><div class="rh-body"><div class="rh-top"><span class="rh-id">${label}<span style="font-size:11px;font-weight:400;color:var(--text3)"> ${r.suite || 'Smoke Tests'} · ${r.env || 'Dev'}</span></span><span class="rh-rate" style="color:${col}">${rate}%</span></div><div class="rh-meta">${ago ? ago + ' · ' : ''}${r.branch || 'main'} · ${r.duration || '—'}</div><div class="rh-bar-bg"><div class="rh-bar-fill" style="--bar-w:${rate}%;background:${col};animation-delay:${(.1 + i * .06).toFixed(2)}s"></div></div><div style="display:flex;align-items:center;justify-content:space-between;margin-top:6px;flex-wrap:wrap;gap:6px"><div class="rh-counts"><span class="rh-cnt" style="color:#10B981"><span class="sdot" style="background:#10B981"></span>${passed} passed</span>${failed ? `<span class="rh-cnt" style="color:#EF4444"><span class="sdot" style="background:#EF4444"></span>${failed} failed</span>` : ''} ${flaky ? `<span class="rh-cnt" style="color:#F59E0B"><span class="sdot" style="background:#F59E0B"></span>${flaky} flaky</span>` : ''}<span class="rh-cnt" style="color:var(--text3)">${total} total</span></div><span class="run-id-badge">${r.runId || ''}</span></div></div></div>` }).join('');
         }
 
 
@@ -3191,8 +3403,88 @@
         }
 
         document.addEventListener('keydown', function (e) {
-            if (e.key === 'Escape') { closeBug(); closeTd(); }
+            if (e.key === 'Escape') { closeBug(); closeTd(); closeHist(); }
         });
+
+
+        /* ── FEATURE 1: Risk row → Coverage tab ── */
+        function openRiskComponent(compName) {
+            // Switch to Coverage tab
+            setView('cv');
+            // Filter to failed
+            var failBtn = document.querySelector('#cvFilterBtns .fbtn.f-fail');
+            if (failBtn) cvFilt('failed', failBtn);
+            // After render, scroll to the component group
+            setTimeout(function () {
+                var groups = document.querySelectorAll('.rtm-group-head');
+                for (var i = 0; i < groups.length; i++) {
+                    var title = groups[i].querySelector('.rtm-group-title');
+                    if (title && title.textContent.trim().indexOf(compName) !== -1) {
+                        groups[i].scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        // Flash highlight
+                        var wrap = groups[i].parentElement;
+                        wrap.style.transition = 'box-shadow .2s';
+                        wrap.style.boxShadow = '0 0 0 2px #C8184A';
+                        setTimeout(function () { wrap.style.boxShadow = ''; }, 1500);
+                        break;
+                    }
+                }
+            }, 350);
+        }
+
+        /* ── FEATURE 2: History run modal ── */
+        function openHistRun(r) {
+            if (!r) return;
+            document.getElementById('histModalTitle').textContent = 'Run ' + (r.runId || r.runNum ? 'R-' + r.runNum : '—');
+            document.getElementById('histCiBtn').href = r.runUrl || '#';
+            if (!r.runUrl) document.getElementById('histCiBtn').style.display = 'none';
+            else document.getElementById('histCiBtn').style.display = 'flex';
+
+            var rate = r.rate || 0;
+            var col = rate >= 95 ? '#10B981' : rate >= 85 ? '#F59E0B' : '#EF4444';
+            var ago = r.generatedAt ? relativeTime(r.generatedAt) : '';
+
+            // Component table rows
+            var compRows = '';
+            if (r.compRates) {
+                var comps = Object.entries(r.compRates).sort(function (a, b) { return a[1].rate - b[1].rate; });
+                compRows = comps.map(function (entry) {
+                    var name = entry[0], c = entry[1];
+                    var cr = c.rate || 0;
+                    var cc = cr >= 95 ? '#10B981' : cr >= 85 ? '#F59E0B' : '#EF4444';
+                    var bar = '<div style="width:60px;height:4px;background:var(--border);border-radius:2px;overflow:hidden;display:inline-block;vertical-align:middle;margin-right:6px"><div style="height:4px;border-radius:2px;background:' + cc + ';width:' + cr + '%"></div></div>';
+                    return '<tr><td style="font-weight:600">' + name + '</td><td>' + bar + '<span style="color:' + cc + ';font-weight:600">' + cr + '%</span></td><td style="color:var(--text3)">' + c.passed + '/' + c.total + '</td><td style="color:#EF4444">' + (c.failed || 0) + ' failed</td></tr>';
+                }).join('');
+            } else {
+                compRows = '<tr><td colspan="4" style="text-align:center;color:var(--text3);padding:1rem">No component data for this run</td></tr>';
+            }
+
+            document.getElementById('histModalBody').innerHTML =
+                '<div style="margin-bottom:6px;font-size:12px;color:var(--text3)">' + (ago ? ago + ' \u00b7 ' : '') + (r.branch || 'main') + ' \u00b7 ' + (r.suite || 'Smoke Tests') + ' \u00b7 ' + (r.env || 'Dev') + '</div>' +
+                '<div class="hist-stat-row">' +
+                '<div class="hist-stat"><div class="hist-stat-n" style="color:' + col + '">' + rate + '%</div><div class="hist-stat-l">Pass Rate</div></div>' +
+                '<div class="hist-stat"><div class="hist-stat-n">' + (r.total || 0) + '</div><div class="hist-stat-l">Total</div></div>' +
+                '<div class="hist-stat"><div class="hist-stat-n" style="color:#EF4444">' + (r.failed || 0) + '</div><div class="hist-stat-l">Failed</div></div>' +
+                '<div class="hist-stat"><div class="hist-stat-n" style="color:var(--text3)">' + (r.duration || '\u2014') + '</div><div class="hist-stat-l">Duration</div></div>' +
+                '</div>' +
+                '<table class="hist-comp-table"><thead><tr><th>Component</th><th>Pass Rate</th><th>Tests</th><th>Issues</th></tr></thead><tbody>' + compRows + '</tbody></table>';
+
+            document.getElementById('histOverlay').classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeHist() {
+            document.getElementById('histOverlay').classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        /* ── FEATURE 3: Coverage search ── */
+        var _cvSearch = '';
+
+        function onCvSearch(val) {
+            _cvSearch = (val || '').toLowerCase().trim();
+            if (window._D) renderCoverage(window._D.tests);
+        }
 
         fetch('./data/results.json?t=' + Date.now())
             .then(r => { if (!r.ok) throw new Error(r.status); return r.json() })
