@@ -1,84 +1,5 @@
 [
   {
-    "runNum": 21,
-    "runId": "R-21",
-    "rate": 74.6,
-    "total": 122,
-    "passed": 91,
-    "failed": 31,
-    "flaky": 0,
-    "duration": "4m 47s",
-    "generatedAt": "2026-05-11T18:10:10.660Z",
-    "suite": "Smoke Tests",
-    "env": "QA",
-    "branch": "main",
-    "compRates": {
-      "CRM Reports": {
-        "rate": 94,
-        "passed": 16,
-        "failed": 1,
-        "flaky": 0,
-        "total": 17
-      },
-      "Dictionary": {
-        "rate": 96,
-        "passed": 23,
-        "failed": 1,
-        "flaky": 0,
-        "total": 24
-      },
-      "External Crm Report Bulk Actions": {
-        "rate": 90,
-        "passed": 18,
-        "failed": 2,
-        "flaky": 0,
-        "total": 20
-      },
-      "External Crm Reports Transmission List": {
-        "rate": 83,
-        "passed": 15,
-        "failed": 3,
-        "flaky": 0,
-        "total": 18
-      },
-      "Patient Bulk Actions": {
-        "rate": 100,
-        "passed": 4,
-        "failed": 0,
-        "flaky": 0,
-        "total": 4
-      },
-      "Report Bulk Actions": {
-        "rate": 0,
-        "passed": 0,
-        "failed": 3,
-        "flaky": 0,
-        "total": 3
-      },
-      "Transmission Group": {
-        "rate": 25,
-        "passed": 3,
-        "failed": 9,
-        "flaky": 0,
-        "total": 12
-      },
-      "User": {
-        "rate": 23,
-        "passed": 3,
-        "failed": 10,
-        "flaky": 0,
-        "total": 13
-      },
-      "User Setting": {
-        "rate": 82,
-        "passed": 9,
-        "failed": 2,
-        "flaky": 0,
-        "total": 11
-      }
-    }
-  },
-  {
     "runNum": 22,
     "runId": "R-22",
     "rate": 74.6,
@@ -784,6 +705,99 @@
         "rate": 82,
         "passed": 9,
         "failed": 2,
+        "flaky": 0,
+        "total": 11
+      }
+    }
+  },
+  {
+    "runNum": 31,
+    "runId": "R-31",
+    "rate": 85.1,
+    "total": 168,
+    "passed": 143,
+    "failed": 25,
+    "flaky": 0,
+    "duration": "8m 37s",
+    "generatedAt": "2026-05-13T14:29:38.562Z",
+    "suite": "Smoke Tests",
+    "env": "QA",
+    "branch": "3/merge",
+    "compRates": {
+      "CRM Reports": {
+        "rate": 100,
+        "passed": 17,
+        "failed": 0,
+        "flaky": 0,
+        "total": 17
+      },
+      "Dictionary": {
+        "rate": 100,
+        "passed": 24,
+        "failed": 0,
+        "flaky": 0,
+        "total": 24
+      },
+      "External Crm Report Bulk Actions": {
+        "rate": 85,
+        "passed": 17,
+        "failed": 3,
+        "flaky": 0,
+        "total": 20
+      },
+      "External Crm Reports Inclinic": {
+        "rate": 100,
+        "passed": 12,
+        "failed": 0,
+        "flaky": 0,
+        "total": 12
+      },
+      "External Crm Reports List Config": {
+        "rate": 100,
+        "passed": 34,
+        "failed": 0,
+        "flaky": 0,
+        "total": 34
+      },
+      "External Crm Reports Transmission List": {
+        "rate": 100,
+        "passed": 18,
+        "failed": 0,
+        "flaky": 0,
+        "total": 18
+      },
+      "Patient Bulk Actions": {
+        "rate": 100,
+        "passed": 4,
+        "failed": 0,
+        "flaky": 0,
+        "total": 4
+      },
+      "Report Bulk Actions": {
+        "rate": 0,
+        "passed": 0,
+        "failed": 3,
+        "flaky": 0,
+        "total": 3
+      },
+      "Transmission Group": {
+        "rate": 25,
+        "passed": 3,
+        "failed": 9,
+        "flaky": 0,
+        "total": 12
+      },
+      "User": {
+        "rate": 23,
+        "passed": 3,
+        "failed": 10,
+        "flaky": 0,
+        "total": 13
+      },
+      "User Setting": {
+        "rate": 100,
+        "passed": 11,
+        "failed": 0,
         "flaky": 0,
         "total": 11
       }
