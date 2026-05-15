@@ -1,23 +1,23 @@
 {
-  "runId": "R-45",
-  "generatedAt": "2026-05-15T18:52:24.462Z",
+  "runId": "R-46",
+  "generatedAt": "2026-05-15T19:48:03.338Z",
   "branch": "main",
   "suite": "Smoke Tests",
   "env": "QA",
-  "runUrl": "https://github.com/PaceMateLive/web20_webAutomation_PaceMateLive/actions/runs/25935123560",
+  "runUrl": "https://github.com/PaceMateLive/web20_webAutomation_PaceMateLive/actions/runs/25937506117",
   "summary": {
     "total": 168,
     "passed": 154,
     "failed": 14,
     "flaky": 0,
     "rate": 91.7,
-    "duration": "6m 2s",
-    "prevRunId": "R-44",
-    "prevRate": 86.3,
+    "duration": "8m 20s",
+    "prevRunId": "R-45",
+    "prevRate": 91.7,
     "prevTotal": 168,
-    "prevFailed": 23,
+    "prevFailed": 14,
     "prevFlaky": 0,
-    "prevDuration": "10m 48s",
+    "prevDuration": "6m 2s",
     "consecutivePassing": 0
   },
   "comp": [
@@ -34,7 +34,7 @@
         94,
         94,
         94,
-        94,
+        100,
         100,
         100,
         100,
@@ -54,7 +54,7 @@
         96,
         96,
         96,
-        96,
+        100,
         100,
         100,
         100,
@@ -74,7 +74,7 @@
         90,
         90,
         90,
-        90,
+        100,
         100,
         100,
         100,
@@ -134,7 +134,7 @@
         83,
         83,
         83,
-        83,
+        100,
         100,
         100,
         100,
@@ -156,8 +156,8 @@
         100,
         100,
         100,
-        100,
         75,
+        100,
         100
       ]
     },
@@ -197,7 +197,7 @@
         25,
         25,
         25,
-        25,
+        42,
         42
       ]
     },
@@ -217,7 +217,7 @@
         23,
         23,
         23,
-        23,
+        69,
         69
       ]
     },
@@ -234,7 +234,7 @@
         82,
         82,
         82,
-        82,
+        100,
         100,
         100,
         100,
@@ -243,29 +243,22 @@
     }
   ],
   "hRuns": [
-    "R-41",
     "R-42",
     "R-43",
     "R-44",
-    "R-45"
+    "R-45",
+    "R-46"
   ],
   "hData": [
     [
-      94,
       100,
-      100,
-      100,
-      100
-    ],
-    [
-      96,
       100,
       100,
       100,
       100
     ],
     [
-      90,
+      100,
       100,
       100,
       100,
@@ -286,7 +279,7 @@
       100
     ],
     [
-      83,
+      100,
       100,
       100,
       100,
@@ -294,9 +287,16 @@
     ],
     [
       100,
+      100,
+      100,
+      100,
+      100
+    ],
+    [
       100,
       100,
       75,
+      100,
       100
     ],
     [
@@ -310,18 +310,18 @@
       25,
       25,
       25,
-      25,
+      42,
       42
     ],
     [
       23,
       23,
       23,
-      23,
+      69,
       69
     ],
     [
-      82,
+      100,
       100,
       100,
       100,
@@ -330,7 +330,6 @@
   ],
   "trend": {
     "labels": [
-      "R-36",
       "R-37",
       "R-38",
       "R-39",
@@ -339,10 +338,10 @@
       "R-42",
       "R-43",
       "R-44",
-      "R-45"
+      "R-45",
+      "R-46"
     ],
     "passed": [
-      91,
       91,
       91,
       91,
@@ -351,6 +350,7 @@
       146,
       146,
       145,
+      154,
       154
     ],
     "failed": [
@@ -359,10 +359,10 @@
       31,
       31,
       31,
-      31,
       22,
       22,
       23,
+      14,
       14
     ],
     "flaky": [
@@ -385,12 +385,13 @@
       "comp": "CRM Reports",
       "type": "API",
       "status": "passed",
-      "dur": "6s",
+      "dur": "7s",
       "err": null,
       "endpoint": "GET /api/crm_report/listconfig/getDefaultViews",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[CRM List Config] - PMW-002.2 - Get All CRM Reports Views Including Custom",
@@ -402,31 +403,34 @@
       "endpoint": "GET /api/crm_report/listconfig/getAllViews",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[CRM List Config] - PMW-002.3 - Get Column Configuration for a Specific View",
       "comp": "CRM Reports",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
+      "dur": "11s",
       "err": null,
       "endpoint": "GET /api/crm_report/listconfig/getConfig/unresolvedRemotes",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[CRM List Config] - PMW-002.4 - Save View Customization and Verify Success",
       "comp": "CRM Reports",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
+      "dur": "4s",
       "err": null,
       "endpoint": "GET /api/crm_report/listconfig/getConfig/unresolvedRemotes",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[CRM List Config] - PMW-002.5 - Reset View to Default",
@@ -438,7 +442,8 @@
       "endpoint": "POST /api/crm_report/listconfig/resetView/unresolvedRemotes",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[CRM List Config] - PMW-002.7 - Get All Available Columns for CRM Reports",
@@ -450,43 +455,47 @@
       "endpoint": "GET /api/crm_report/listconfig/getAvailableColumns",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[CRM List Config] - PMW-002.6 - Toggle Column Visibility Off and Restore",
       "comp": "CRM Reports",
       "type": "API",
       "status": "passed",
-      "dur": "9s",
+      "dur": "3s",
       "err": null,
       "endpoint": "GET /api/crm_report/listconfig/getConfig/unresolvedRemotes",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[CRM List Config] - PMW-002.8 - Get All Custom CRM Reports Lists",
       "comp": "CRM Reports",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "GET /api/crm_report/listconfig/getCustomLists",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[CRM List Config] - PMW-002.9 - Custom List Full Lifecycle",
       "comp": "CRM Reports",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
+      "dur": "5s",
       "err": null,
       "endpoint": "POST /api/crm_report/listconfig/duplicateList",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[CRM List Config] - PMW-002.10 - Get Available Filters for CRM Reports",
@@ -498,67 +507,73 @@
       "endpoint": "GET /api/crm_report/listconfig/getAvailableFilters",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[CRM List Config] - PMW-002.11 - Get config for non-existent viewId returns 400",
       "comp": "CRM Reports",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "GET /api/crm_report/listconfig/getConfig/nonExistentViewId",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[CRM List Config] - PMW-002.12 - Toggle column visibility with invalid column ID returns 200 (server is lenient)",
       "comp": "CRM Reports",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/crm_report/listconfig/toggleColumnVisibility/unresolvedRemotes",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[CRM List Config] - PMW-002.13 - Duplicate list with missing sourceViewId returns 400",
       "comp": "CRM Reports",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/crm_report/listconfig/duplicateList",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[CRM List Config] - PMW-002.14 - Duplicate list with empty list name returns 400",
       "comp": "CRM Reports",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/crm_report/listconfig/duplicateList",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[CRM List Config] - PMW-002.15 - Reset a non-existent view returns 200 (server is lenient)",
       "comp": "CRM Reports",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/crm_report/listconfig/resetView/nonExistentViewId",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[CRM List Config] - PMW-002.16 - Delete a non-existent custom list returns 400",
@@ -570,19 +585,21 @@
       "endpoint": "POST /api/crm_report/listconfig/deleteCustomList/NONEXISTENT_LIST_ID",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[CRM List Config] - PMW-002.17 - Access without authentication returns 401",
       "comp": "CRM Reports",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "GET /api/crm_report/listconfig/getDefaultViews",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Dictionary] - PMW-003.1 - Get Clinics for Current User",
@@ -594,7 +611,8 @@
       "endpoint": "GET /api/dictionary/clinics",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Dictionary] - PMW-003.2 - Get Clinic Groups (GET)",
@@ -606,19 +624,21 @@
       "endpoint": "GET /api/dictionary/groups",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Dictionary] - PMW-003.3 - Get Clinic Groups via POST with Clinic IDs",
       "comp": "Dictionary",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/dictionary/groups",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Dictionary] - PMW-003.4 - Get Providers (GET)",
@@ -630,7 +650,8 @@
       "endpoint": "GET /api/dictionary/providers",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Dictionary] - PMW-003.5 - Get Providers via POST with Clinic IDs",
@@ -642,7 +663,8 @@
       "endpoint": "POST /api/dictionary/providers",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Dictionary] - PMW-003.6 - Get Interpreting Providers (GET)",
@@ -654,19 +676,21 @@
       "endpoint": "GET /api/dictionary/interpretingProviders",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Dictionary] - PMW-003.7 - Get Interpreting Providers via POST with Clinic IDs",
       "comp": "Dictionary",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/dictionary/interpretingProviders",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Dictionary] - PMW-003.8 - Get Ordering Providers (GET)",
@@ -678,55 +702,60 @@
       "endpoint": "GET /api/dictionary/orderingProviders",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Dictionary] - PMW-003.9 - Get Ordering Providers via POST with Clinic IDs",
       "comp": "Dictionary",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/dictionary/orderingProviders",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Dictionary] - PMW-003.10 - Get Device Vendors",
       "comp": "Dictionary",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "GET /api/dictionary/vendors",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Dictionary] - PMW-003.11 - Get Device Types",
       "comp": "Dictionary",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "5s",
       "err": null,
       "endpoint": "GET /api/dictionary/deviceTypes",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Dictionary] - PMW-003.12 - Get Patient Statuses",
       "comp": "Dictionary",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "GET /api/dictionary/patientStatuses",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Dictionary] - PMW-003.13 - Get Device Statuses",
@@ -738,7 +767,8 @@
       "endpoint": "GET /api/dictionary/deviceStatuses",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Dictionary] - PMW-003.14 - Get Transmission Statuses",
@@ -750,67 +780,73 @@
       "endpoint": "GET /api/dictionary/transmissionStatuses",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Dictionary] - PMW-003.15 - Get Ejection Fraction Modalities",
       "comp": "Dictionary",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "GET /api/dictionary/modalities",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Dictionary] - PMW-003.16 - Get Anticoagulants",
       "comp": "Dictionary",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "GET /api/dictionary/anticoagulant",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Dictionary] - PMW-003.17 - Get Non-Anticoagulants",
       "comp": "Dictionary",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "GET /api/dictionary/noAnticoagulant",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Dictionary] - PMW-003.18 - Get Billing Items by ID",
       "comp": "Dictionary",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "GET /api/dictionary/billingItems/13",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Dictionary] - PMW-003.19 - Get Battery Statuses by ID",
       "comp": "Dictionary",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/dictionary/batteryStatuses/13",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Dictionary] - PMW-003.20 - Get Groups with non-array clinicIds returns 200 (server is lenient)",
@@ -822,7 +858,8 @@
       "endpoint": "POST /api/dictionary/groups",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Dictionary] - PMW-003.21 - Get Providers with non-numeric clinic IDs returns 200 (server is lenient)",
@@ -834,7 +871,8 @@
       "endpoint": "POST /api/dictionary/providers",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Dictionary] - PMW-003.22 - Get Billing Items for non-existent clinic ID returns 200 with empty list",
@@ -846,31 +884,34 @@
       "endpoint": "GET /api/dictionary/billingItems/99999",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Dictionary] - PMW-003.23 - Get Battery Statuses for non-existent clinic ID returns 200",
       "comp": "Dictionary",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/dictionary/batteryStatuses/99999",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Dictionary] - PMW-003.24 - Access without authentication returns 401",
       "comp": "Dictionary",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "GET /api/dictionary/deviceTypes",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[BulkActions] - PMW-004.1 - Execute APPROVE via IDS mode returns 200 with valid response structure",
@@ -882,247 +923,268 @@
       "endpoint": "POST /api/external_crm_report/bulk/execute",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[BulkActions] - PMW-004.2 - Execute ARCHIVE via IDS mode returns 200 with valid response structure",
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
+      "dur": "6s",
       "err": null,
       "endpoint": "POST /api/external_crm_report/bulk/execute",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[BulkActions] - PMW-004.3 - Execute ESIGN via IDS mode returns 200 with valid response structure",
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
+      "dur": "6s",
       "err": null,
       "endpoint": "POST /api/external_crm_report/bulk/execute",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[BulkActions] - PMW-004.4 - Execute APPROVE via VIEW mode (remotesForApproval) returns 400 when view is empty",
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "5s",
       "err": null,
       "endpoint": "POST /api/external_crm_report/bulk/execute",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[BulkActions] - PMW-004.5 - Execute ESIGN via VIEW mode (reportsForEsigning) returns 400 when view is empty",
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "4s",
       "err": null,
       "endpoint": "POST /api/external_crm_report/bulk/execute",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[BulkActions] - PMW-004.6 - Execute ARCHIVE via VIEW mode (inclinicWorklist) returns 400 when view is empty",
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "4s",
       "err": null,
       "endpoint": "POST /api/external_crm_report/bulk/execute",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[BulkActions] - PMW-004.7 - Execute with invalid action type returns 400",
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "4s",
       "err": null,
       "endpoint": "POST /api/external_crm_report/bulk/execute",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[BulkActions] - PMW-004.8 - Execute with missing required action field returns 400",
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "4s",
       "err": null,
       "endpoint": "POST /api/external_crm_report/bulk/execute",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[BulkActions] - PMW-004.9 - Execute with missing required selection field returns 400",
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "4s",
       "err": null,
       "endpoint": "POST /api/external_crm_report/bulk/execute",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[BulkActions] - PMW-004.10 - Execute with invalid mode value returns 400",
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "4s",
       "err": null,
       "endpoint": "POST /api/external_crm_report/bulk/execute",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[BulkActions] - PMW-004.11 - Execute with empty IDS array returns 400",
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "4s",
       "err": null,
       "endpoint": "POST /api/external_crm_report/bulk/execute",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[BulkActions] - PMW-004.12 - Execute without authentication returns 401",
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "4s",
       "err": null,
       "endpoint": "POST /api/external_crm_report/bulk/execute",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[BulkActions] - PMW-004.13 - Export selected transmissions by IDS returns 401 when user has no clinic access",
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/external_crm_report/bulk/export",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[BulkActions] - PMW-004.14 - Export all from remotesForApproval returns 401 when user has no clinic access",
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/external_crm_report/bulk/export",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[BulkActions] - PMW-004.15 - Export all from reportsForEsigning returns 401 when user has no clinic access",
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "4s",
       "err": null,
       "endpoint": "POST /api/external_crm_report/bulk/export",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[BulkActions] - PMW-004.16 - Export all from inclinicWorklist returns 401 when user has no clinic access",
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/external_crm_report/bulk/export",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[BulkActions] - PMW-004.17 - Export with neither ids nor viewType returns 400",
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/external_crm_report/bulk/export",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[BulkActions] - PMW-004.18 - Export with both ids and viewType returns 401 when user has no clinic access",
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/external_crm_report/bulk/export",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[BulkActions] - PMW-004.19 - Export with invalid viewType returns 401 when user has no clinic access",
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/external_crm_report/bulk/export",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[BulkActions] - PMW-004.20 - Export without authentication returns 401",
       "comp": "External Crm Report Bulk Actions",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/external_crm_report/bulk/export",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[InClinic] - PMW-006.1 - Delete InClinic report with valid ID returns 401 when user has no clinic access",
       "comp": "External Crm Reports Inclinic",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/transmissions/external-crm-reports/inclinic/deleteReport",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[InClinic] - PMW-006.2 - Delete InClinic report with missing id returns 400",
@@ -1134,7 +1196,8 @@
       "endpoint": "POST /api/transmissions/external-crm-reports/inclinic/deleteReport",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[InClinic] - PMW-006.3 - Delete InClinic report without authentication returns 401",
@@ -1146,7 +1209,8 @@
       "endpoint": "POST /api/transmissions/external-crm-reports/inclinic/deleteReport",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[InClinic] - PMW-006.4 - Delete report and mark no show with valid ID returns 401 when user has no clinic access",
@@ -1158,7 +1222,8 @@
       "endpoint": "POST /api/transmissions/external-crm-reports/inclinic/deleteReportAndMarkNoShow",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[InClinic] - PMW-006.5 - Delete report and mark no show with missing id returns 400",
@@ -1170,7 +1235,8 @@
       "endpoint": "POST /api/transmissions/external-crm-reports/inclinic/deleteReportAndMarkNoShow",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[InClinic] - PMW-006.6 - Delete report and mark no show without authentication returns 401",
@@ -1182,7 +1248,8 @@
       "endpoint": "POST /api/transmissions/external-crm-reports/inclinic/deleteReportAndMarkNoShow",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[InClinic] - PMW-006.7 - Update appointment date returns 401 when user has no clinic access",
@@ -1194,43 +1261,47 @@
       "endpoint": "POST /api/transmissions/external-crm-reports/inclinic/updateAppointmentDate",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[InClinic] - PMW-006.8 - Update appointment date with missing appointmentDate returns 400",
       "comp": "External Crm Reports Inclinic",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/transmissions/external-crm-reports/inclinic/updateAppointmentDate",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[InClinic] - PMW-006.9 - Update appointment date with missing id returns 400",
       "comp": "External Crm Reports Inclinic",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/transmissions/external-crm-reports/inclinic/updateAppointmentDate",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[InClinic] - PMW-006.10 - Update appointment date with invalid date format returns 400",
       "comp": "External Crm Reports Inclinic",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/transmissions/external-crm-reports/inclinic/updateAppointmentDate",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[InClinic] - PMW-006.11 - Update appointment date with empty body returns 400",
@@ -1242,7 +1313,8 @@
       "endpoint": "POST /api/transmissions/external-crm-reports/inclinic/updateAppointmentDate",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[InClinic] - PMW-006.12 - Update appointment date without authentication returns 401",
@@ -1254,7 +1326,8 @@
       "endpoint": "POST /api/transmissions/external-crm-reports/inclinic/updateAppointmentDate",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Ext CRM List Config] - PMW-008.1 - Get config for remotesForApproval returns 200 with valid structure",
@@ -1266,91 +1339,99 @@
       "endpoint": "GET /api/external_crm_report/listconfig/getConfig/remotesForApproval",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Ext CRM List Config] - PMW-008.2 - Get config for reportsForEsigning returns 200",
       "comp": "External Crm Reports List Config",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "GET /api/external_crm_report/listconfig/getConfig/reportsForEsigning",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Ext CRM List Config] - PMW-008.3 - Get config for inclinicWorklist returns 200",
       "comp": "External Crm Reports List Config",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "GET /api/external_crm_report/listconfig/getConfig/inclinicWorklist",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Ext CRM List Config] - PMW-008.4 - Get config with non-existent viewId returns 400",
       "comp": "External Crm Reports List Config",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "GET /api/external_crm_report/listconfig/getConfig/nonExistentView",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Ext CRM List Config] - PMW-008.5 - Get config without authentication returns 401",
       "comp": "External Crm Reports List Config",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "GET /api/external_crm_report/listconfig/getConfig/remotesForApproval",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Ext CRM List Config] - PMW-008.6 - Save view customization returns 400 for nurse_clinic_admin (insufficient permissions)",
       "comp": "External Crm Reports List Config",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/external_crm_report/listconfig/saveViewCustomization/remotesForApproval",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Ext CRM List Config] - PMW-008.7 - Save view customization with non-existent viewId returns 400",
       "comp": "External Crm Reports List Config",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/external_crm_report/listconfig/saveViewCustomization/nonExistentView",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Ext CRM List Config] - PMW-008.8 - Save view customization without authentication returns 401",
       "comp": "External Crm Reports List Config",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/external_crm_report/listconfig/saveViewCustomization/remotesForApproval",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Ext CRM List Config] - PMW-008.9 - Reset view for remotesForApproval returns 200",
@@ -1362,19 +1443,21 @@
       "endpoint": "POST /api/external_crm_report/listconfig/resetView/remotesForApproval",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Ext CRM List Config] - PMW-008.10 - Reset view with non-existent viewId returns 200 (server is lenient)",
       "comp": "External Crm Reports List Config",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/external_crm_report/listconfig/resetView/nonExistentView",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Ext CRM List Config] - PMW-008.11 - Reset view without authentication returns 401",
@@ -1386,115 +1469,125 @@
       "endpoint": "POST /api/external_crm_report/listconfig/resetView/remotesForApproval",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Ext CRM List Config] - PMW-008.12 - Toggle column visibility using stored column id returns 200",
       "comp": "External Crm Reports List Config",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "GET /api/external_crm_report/listconfig/getConfig/remotesForApproval",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Ext CRM List Config] - PMW-008.13 - Toggle column with invalid columnId returns 200 (server is lenient)",
       "comp": "External Crm Reports List Config",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/external_crm_report/listconfig/toggleColumnVisibility/remotesForApproval",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Ext CRM List Config] - PMW-008.14 - Toggle column with non-existent viewId returns 400",
       "comp": "External Crm Reports List Config",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/external_crm_report/listconfig/toggleColumnVisibility/nonExistentView",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Ext CRM List Config] - PMW-008.15 - Toggle column without authentication returns 401",
       "comp": "External Crm Reports List Config",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/external_crm_report/listconfig/toggleColumnVisibility/remotesForApproval",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Ext CRM List Config] - PMW-008.16 - Get default views returns 200 with non-empty list",
       "comp": "External Crm Reports List Config",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "GET /api/external_crm_report/listconfig/getDefaultViews",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Ext CRM List Config] - PMW-008.17 - Get default views without authentication returns 401",
       "comp": "External Crm Reports List Config",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "GET /api/external_crm_report/listconfig/getDefaultViews",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Ext CRM List Config] - PMW-008.18 - Get all views returns 200 with non-empty list",
       "comp": "External Crm Reports List Config",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "GET /api/external_crm_report/listconfig/getAllViews",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Ext CRM List Config] - PMW-008.19 - Get all views without authentication returns 401",
       "comp": "External Crm Reports List Config",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "GET /api/external_crm_report/listconfig/getAllViews",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Ext CRM List Config] - PMW-008.20 - Get available columns returns 200 with non-empty list",
       "comp": "External Crm Reports List Config",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "GET /api/external_crm_report/listconfig/getAvailableColumns",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Ext CRM List Config] - PMW-008.21 - Get available columns without authentication returns 401",
@@ -1506,19 +1599,21 @@
       "endpoint": "GET /api/external_crm_report/listconfig/getAvailableColumns",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Ext CRM List Config] - PMW-008.22 - Get custom lists returns 200 with a list",
       "comp": "External Crm Reports List Config",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "GET /api/external_crm_report/listconfig/getCustomLists",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Ext CRM List Config] - PMW-008.23 - Get custom lists without authentication returns 401",
@@ -1530,7 +1625,8 @@
       "endpoint": "GET /api/external_crm_report/listconfig/getCustomLists",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Ext CRM List Config] - PMW-008.24 - Duplicate list returns 400 for nurse_clinic_admin (insufficient permissions)",
@@ -1542,7 +1638,8 @@
       "endpoint": "POST /api/external_crm_report/listconfig/duplicateList",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Ext CRM List Config] - PMW-008.26 - Duplicate list with missing sourceViewId returns 400",
@@ -1554,7 +1651,8 @@
       "endpoint": "POST /api/external_crm_report/listconfig/duplicateList",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Ext CRM List Config] - PMW-008.27 - Duplicate list without authentication returns 401",
@@ -1566,31 +1664,34 @@
       "endpoint": "POST /api/external_crm_report/listconfig/duplicateList",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Ext CRM List Config] - PMW-008.29 - Update name of non-existent custom list returns 400",
       "comp": "External Crm Reports List Config",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
+      "dur": "2s",
       "err": null,
       "endpoint": "POST /api/external_crm_report/listconfig/updateCustomListName/nonExistentViewId",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Ext CRM List Config] - PMW-008.30 - Update custom list name without authentication returns 401",
       "comp": "External Crm Reports List Config",
       "type": "API",
       "status": "passed",
-      "dur": "3s",
+      "dur": "2s",
       "err": null,
       "endpoint": "POST /api/external_crm_report/listconfig/updateCustomListName/someViewId",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Ext CRM List Config] - PMW-008.32 - Update non-existent custom list returns 400",
@@ -1602,31 +1703,34 @@
       "endpoint": "POST /api/external_crm_report/listconfig/updateCustomList/nonExistentViewId",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Ext CRM List Config] - PMW-008.33 - Update custom list without authentication returns 401",
       "comp": "External Crm Reports List Config",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/external_crm_report/listconfig/updateCustomList/someViewId",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Ext CRM List Config] - PMW-008.35 - Delete non-existent custom list returns 400",
       "comp": "External Crm Reports List Config",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/external_crm_report/listconfig/deleteCustomList/nonExistentViewId",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Ext CRM List Config] - PMW-008.36 - Delete custom list without authentication returns 401",
@@ -1638,19 +1742,21 @@
       "endpoint": "POST /api/external_crm_report/listconfig/deleteCustomList/someViewId",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Ext CRM List Config] - PMW-008.37 - Get available filters returns 200 with required filter fields",
       "comp": "External Crm Reports List Config",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "GET /api/external_crm_report/listconfig/getAvailableFilters",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Ext CRM List Config] - PMW-008.38 - Get available filters without authentication returns 401",
@@ -1662,223 +1768,242 @@
       "endpoint": "GET /api/external_crm_report/listconfig/getAvailableFilters",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[External CRM Reports] - PMW-005.1 - Get Remotes for Approval with minimal body returns 200 with valid structure",
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "4s",
       "err": null,
       "endpoint": "POST /api/transmissions/external-crm-reports/remotesForApproval",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[External CRM Reports] - PMW-005.2 - Get Remotes for Approval filtered by clinicIds returns 200",
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/transmissions/external-crm-reports/remotesForApproval",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[External CRM Reports] - PMW-005.3 - Get Remotes for Approval with date range filter returns 200",
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/transmissions/external-crm-reports/remotesForApproval",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[External CRM Reports] - PMW-005.4 - Get Remotes for Approval with full filter set returns 200",
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/transmissions/external-crm-reports/remotesForApproval",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[External CRM Reports] - PMW-005.5 - Get Remotes for Approval with groupByPatient returns 200",
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/transmissions/external-crm-reports/remotesForApproval",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[External CRM Reports] - PMW-005.6 - Get Reports for E-Signing with minimal body returns 200 with valid structure",
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/transmissions/external-crm-reports/reportsForEsigning",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[External CRM Reports] - PMW-005.7 - Get Reports for E-Signing filtered by clinicIds returns 200",
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/transmissions/external-crm-reports/reportsForEsigning",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[External CRM Reports] - PMW-005.8 - Get Reports for E-Signing with pagination and sorting returns 200",
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/transmissions/external-crm-reports/reportsForEsigning",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[External CRM Reports] - PMW-005.9 - Get InClinic Worklist with minimal body returns 200 with valid structure",
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/transmissions/external-crm-reports/inclinicWorklist",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[External CRM Reports] - PMW-005.10 - Get InClinic Worklist filtered by clinicIds returns 200",
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/transmissions/external-crm-reports/inclinicWorklist",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[External CRM Reports] - PMW-005.11 - Get InClinic Worklist with sorting returns 200",
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/transmissions/external-crm-reports/inclinicWorklist",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[External CRM Reports] - PMW-005.12 - Get Remotes for Approval with empty body returns 200 (server is lenient)",
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/transmissions/external-crm-reports/remotesForApproval",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[External CRM Reports] - PMW-005.13 - Get Remotes for Approval with invalid clinicIds type returns 200 (server is lenient)",
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/transmissions/external-crm-reports/remotesForApproval",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[External CRM Reports] - PMW-005.14 - Get Remotes for Approval with invalid date format returns 200 (server is lenient)",
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/transmissions/external-crm-reports/remotesForApproval",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[External CRM Reports] - PMW-005.15 - Get Remotes for Approval with recordMax 0 returns 200 with empty data array",
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/transmissions/external-crm-reports/remotesForApproval",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[External CRM Reports] - PMW-005.16 - Get Remotes for Approval without authentication returns 401",
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/transmissions/external-crm-reports/remotesForApproval",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[External CRM Reports] - PMW-005.17 - Get Reports for E-Signing without authentication returns 401",
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/transmissions/external-crm-reports/reportsForEsigning",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[External CRM Reports] - PMW-005.18 - Get InClinic Worklist without authentication returns 401",
       "comp": "External Crm Reports Transmission List",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/transmissions/external-crm-reports/inclinicWorklist",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Patient Bulk Actions] - PMW-008.3 - Execute with empty body returns 400",
@@ -1890,19 +2015,21 @@
       "endpoint": "POST /api/patient/bulk/execute",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Patient Bulk Actions] - PMW-008.4 - Execute with missing action field returns 400",
       "comp": "Patient Bulk Actions",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/patient/bulk/execute",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Patient Bulk Actions] - PMW-008.5 - Execute with invalid action type returns 400",
@@ -1914,55 +2041,60 @@
       "endpoint": "POST /api/patient/bulk/execute",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Patient Bulk Actions] - PMW-008.6 - Execute with missing selection field returns 400",
       "comp": "Patient Bulk Actions",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/patient/bulk/execute",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Report Bulk Actions] - PMW-007.1 - Export Unresolved Reports to CSV",
       "comp": "Report Bulk Actions",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Got 401",
       "endpoint": "POST /api/report/bulk/export",
       "failedStep": "the response status should be 200",
       "fullErr": "Error: Got 401",
-      "payload": "{\"resultCode\":\"-1\",\"message\":\"Access denied: No clinic access\",\"navigationUrl\":null,\"result\":null}"
+      "payload": "{\"resultCode\":\"-1\",\"message\":\"Access denied: No clinic access\",\"navigationUrl\":null,\"result\":null}",
+      "requestPayload": "{\"viewType\":\"unresolved\",\"format\":\"csv\"}"
     },
     {
       "name": "[Report Bulk Actions] - PMW-007.2 - Export Autopromoted Reports to CSV",
       "comp": "Report Bulk Actions",
       "type": "API",
       "status": "failed",
-      "dur": "3s",
+      "dur": "2s",
       "err": "Error: Got 401",
       "endpoint": "POST /api/report/bulk/export",
       "failedStep": "the response status should be 200",
       "fullErr": "Error: Got 401",
-      "payload": "{\"resultCode\":\"-1\",\"message\":\"Access denied: No clinic access\",\"navigationUrl\":null,\"result\":null}"
+      "payload": "{\"resultCode\":\"-1\",\"message\":\"Access denied: No clinic access\",\"navigationUrl\":null,\"result\":null}",
+      "requestPayload": "{\"viewType\":\"autopromoted\",\"format\":\"csv\"}"
     },
     {
       "name": "[Report Bulk Actions] - PMW-007.3 - Export All Reports to CSV",
       "comp": "Report Bulk Actions",
       "type": "API",
       "status": "failed",
-      "dur": "3s",
+      "dur": "2s",
       "err": "Error: Got 401",
       "endpoint": "POST /api/report/bulk/export",
       "failedStep": "the response status should be 200",
       "fullErr": "Error: Got 401",
-      "payload": "{\"resultCode\":\"-1\",\"message\":\"Access denied: No clinic access\",\"navigationUrl\":null,\"result\":null}"
+      "payload": "{\"resultCode\":\"-1\",\"message\":\"Access denied: No clinic access\",\"navigationUrl\":null,\"result\":null}",
+      "requestPayload": "{\"viewType\":\"all\",\"format\":\"csv\"}"
     },
     {
       "name": "[Transmission] - PMW-006.1 - Get All Transmissions",
@@ -1974,7 +2106,8 @@
       "endpoint": "POST /api/transmissions/all",
       "failedStep": "the response status should be 200",
       "fullErr": "Error: Got 400",
-      "payload": "{\"resultCode\":\"BAD_REQUEST\",\"message\":\"Invalid API endpoint. Please specify a valid event.\",\"navigationUrl\":null,\"result\":null}"
+      "payload": "{\"resultCode\":\"BAD_REQUEST\",\"message\":\"Invalid API endpoint. Please specify a valid event.\",\"navigationUrl\":null,\"result\":null}",
+      "requestPayload": "{\"clinicIds\":[13,48,52,53,87],\"startDate\":\"[DATE]\",\"endDate\":\"[DATE]\",\"criteria\":{\"recordStart\":0,\"recordMax\":100}}"
     },
     {
       "name": "[Transmission] - PMW-006.2 - Get Unresolved Transmissions",
@@ -1986,115 +2119,125 @@
       "endpoint": "POST /api/transmissions/unresolved",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Transmission] - PMW-006.3 - Get Autopromoted Transmissions",
       "comp": "Transmission Group",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/transmissions/autopromoted",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Transmission] - PMW-006.1a - Get All Transmissions with empty body returns 400",
       "comp": "Transmission Group",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/transmissions/all",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Transmission] - PMW-006.1b - Get All Transmissions with missing criteria returns 400",
       "comp": "Transmission Group",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "4s",
       "err": null,
       "endpoint": "POST /api/transmissions/all",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Transmission] - PMW-006.1c - Get All Transmissions with invalid date form returns 400",
       "comp": "Transmission Group",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/transmissions/all",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[Transmission] - PMW-006.2a - Get Unresolved Transmissions with empty body returns 400",
       "comp": "Transmission Group",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "4s",
       "err": "Error: Got 200",
       "endpoint": "POST /api/transmissions/unresolved",
       "failedStep": "the response status should be 400",
       "fullErr": "Error: Got 200",
-      "payload": "{\"totalCount\":0,\"recordStart\":null,\"recordMax\":500,\"data\":[],\"config\":{\"columns\":[{\"isLocked\":true,\"canShowHide\":false,\"id\":\"actions\",\"label\":\"Actions\",\"field\":\"actions\",\"isSortable\":false,\"width\":\"auto\",\"sortDirection\":null},{\"isLocked\":true,\"canShowHide\":false,\"id\":\"patient\",\"label\":\"Patient\",\"field\":\"patient\",\"isSortable\":true,\"width\":\"auto\",\"sortDirection\":null},{\"isLocked\":true,\"canShowHide\":false,\"id\":\"reportDate\",\"label\":\"Report Date\",\"field\":\"reportDate\",\"isSortable\":true,\"width\":\"auto\","
+      "payload": "{\"totalCount\":0,\"recordStart\":null,\"recordMax\":500,\"data\":[],\"config\":{\"columns\":[{\"isLocked\":true,\"canShowHide\":false,\"id\":\"actions\",\"label\":\"Actions\",\"field\":\"actions\",\"isSortable\":false,\"width\":\"auto\",\"sortDirection\":null},{\"isLocked\":true,\"canShowHide\":false,\"id\":\"patient\",\"label\":\"Patient\",\"field\":\"patient\",\"isSortable\":true,\"width\":\"auto\",\"sortDirection\":null},{\"isLocked\":true,\"canShowHide\":false,\"id\":\"reportDate\",\"label\":\"Report Date\",\"field\":\"reportDate\",\"isSortable\":true,\"width\":\"auto\",",
+      "requestPayload": "{}"
     },
     {
       "name": "[Transmission] - PMW-006.2b - Get Unresolved Transmissions with missing criteria returns 400",
       "comp": "Transmission Group",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Got 200",
       "endpoint": "POST /api/transmissions/unresolved",
       "failedStep": "the response status should be 400",
       "fullErr": "Error: Got 200",
-      "payload": "{\"totalCount\":0,\"recordStart\":null,\"recordMax\":500,\"data\":[],\"config\":{\"columns\":[{\"isLocked\":true,\"canShowHide\":false,\"id\":\"actions\",\"label\":\"Actions\",\"field\":\"actions\",\"isSortable\":false,\"width\":\"auto\",\"sortDirection\":null},{\"isLocked\":true,\"canShowHide\":false,\"id\":\"patient\",\"label\":\"Patient\",\"field\":\"patient\",\"isSortable\":true,\"width\":\"auto\",\"sortDirection\":null},{\"isLocked\":true,\"canShowHide\":false,\"id\":\"reportDate\",\"label\":\"Report Date\",\"field\":\"reportDate\",\"isSortable\":true,\"width\":\"auto\","
+      "payload": "{\"totalCount\":0,\"recordStart\":null,\"recordMax\":500,\"data\":[],\"config\":{\"columns\":[{\"isLocked\":true,\"canShowHide\":false,\"id\":\"actions\",\"label\":\"Actions\",\"field\":\"actions\",\"isSortable\":false,\"width\":\"auto\",\"sortDirection\":null},{\"isLocked\":true,\"canShowHide\":false,\"id\":\"patient\",\"label\":\"Patient\",\"field\":\"patient\",\"isSortable\":true,\"width\":\"auto\",\"sortDirection\":null},{\"isLocked\":true,\"canShowHide\":false,\"id\":\"reportDate\",\"label\":\"Report Date\",\"field\":\"reportDate\",\"isSortable\":true,\"wi",
+      "requestPayload": "{\"clinicIds\":[13,48,52,53,87],\"startDate\":\"[DATE]\",\"endDate\":\"[DATE]\"}"
     },
     {
       "name": "[Transmission] - PMW-006.2c - Get Unresolved Transmissions with invalid date returns 400",
       "comp": "Transmission Group",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Got 200",
       "endpoint": "POST /api/transmissions/unresolved",
       "failedStep": "the response status should be 400",
       "fullErr": "Error: Got 200",
-      "payload": "{\"totalCount\":0,\"recordStart\":0,\"recordMax\":100,\"data\":[],\"config\":{\"columns\":[{\"isLocked\":true,\"canShowHide\":false,\"id\":\"actions\",\"label\":\"Actions\",\"field\":\"actions\",\"isSortable\":false,\"width\":\"auto\",\"sortDirection\":null},{\"isLocked\":true,\"canShowHide\":false,\"id\":\"patient\",\"label\":\"Patient\",\"field\":\"patient\",\"isSortable\":true,\"width\":\"auto\",\"sortDirection\":null},{\"isLocked\":true,\"canShowHide\":false,\"id\":\"reportDate\",\"label\":\"Report Date\",\"field\":\"reportDate\",\"isSortable\":true,\"width\":\"auto\",\"so"
+      "payload": "{\"totalCount\":0,\"recordStart\":0,\"recordMax\":100,\"data\":[],\"config\":{\"columns\":[{\"isLocked\":true,\"canShowHide\":false,\"id\":\"actions\",\"label\":\"Actions\",\"field\":\"actions\",\"isSortable\":false,\"width\":\"auto\",\"sortDirection\":null},{\"isLocked\":true,\"canShowHide\":false,\"id\":\"patient\",\"label\":\"Patient\",\"field\":\"patient\",\"isSortable\":true,\"width\":\"auto\",\"sortDirection\":null},{\"isLocked\":true,\"canShowHide\":false,\"id\":\"reportDate\",\"label\":\"Report Da",
+      "requestPayload": "{\"clinicIds\":[13,48,52,53,87],\"startDate\":\"invalid-date\",\"endDate\":\"invalid-date\",\"criteria\":{\"recordStart\":0,\"recordMax\":100}}"
     },
     {
       "name": "[Transmission] - PMW-006.3a - Get Autopromoted Transmissions with empty body returns 400",
       "comp": "Transmission Group",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Got 200",
       "endpoint": "POST /api/transmissions/autopromoted",
       "failedStep": "the response status should be 400",
       "fullErr": "Error: Got 200",
-      "payload": "{\"totalCount\":0,\"recordStart\":null,\"recordMax\":500,\"data\":[],\"config\":{\"columns\":[{\"isLocked\":true,\"canShowHide\":false,\"id\":\"actions\",\"label\":\"Actions\",\"field\":\"actions\",\"isSortable\":false,\"width\":\"auto\",\"sortDirection\":null},{\"isLocked\":true,\"canShowHide\":false,\"id\":\"patient\",\"label\":\"Patient\",\"field\":\"patient\",\"isSortable\":true,\"width\":\"auto\",\"sortDirection\":null},{\"isLocked\":true,\"canShowHide\":true,\"id\":\"alerts\",\"label\":\"Alerts\",\"field\":\"alerts\",\"isSortable\":true,\"width\":\"auto\",\"sortDirection"
+      "payload": "{\"totalCount\":0,\"recordStart\":null,\"recordMax\":500,\"data\":[],\"config\":{\"columns\":[{\"isLocked\":true,\"canShowHide\":false,\"id\":\"actions\",\"label\":\"Actions\",\"field\":\"actions\",\"isSortable\":false,\"width\":\"auto\",\"sortDirection\":null},{\"isLocked\":true,\"canShowHide\":false,\"id\":\"patient\",\"label\":\"Patient\",\"field\":\"patient\",\"isSortable\":true,\"width\":\"auto\",\"sortDirection\":null},{\"isLocked\":true,\"canShowHide\":true,\"id\":\"alerts\",\"label\":\"Alerts\",\"field\":\"alerts\",\"isSortable\":true,\"width\":\"auto\",\"sortDirection",
+      "requestPayload": "{}"
     },
     {
       "name": "[Transmission] - PMW-006.3b - Get Autopromoted Transmissions with missing criteria returns 400",
       "comp": "Transmission Group",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Got 200",
       "endpoint": "POST /api/transmissions/autopromoted",
       "failedStep": "the response status should be 400",
       "fullErr": "Error: Got 200",
-      "payload": "{\"totalCount\":0,\"recordStart\":null,\"recordMax\":500,\"data\":[],\"config\":{\"columns\":[{\"isLocked\":true,\"canShowHide\":false,\"id\":\"actions\",\"label\":\"Actions\",\"field\":\"actions\",\"isSortable\":false,\"width\":\"auto\",\"sortDirection\":null},{\"isLocked\":true,\"canShowHide\":false,\"id\":\"patient\",\"label\":\"Patient\",\"field\":\"patient\",\"isSortable\":true,\"width\":\"auto\",\"sortDirection\":null},{\"isLocked\":true,\"canShowHide\":true,\"id\":\"alerts\",\"label\":\"Alerts\",\"field\":\"alerts\",\"isSortable\":true,\"width\":\"auto\",\"sortDirection"
+      "payload": "{\"totalCount\":0,\"recordStart\":null,\"recordMax\":500,\"data\":[],\"config\":{\"columns\":[{\"isLocked\":true,\"canShowHide\":false,\"id\":\"actions\",\"label\":\"Actions\",\"field\":\"actions\",\"isSortable\":false,\"width\":\"auto\",\"sortDirection\":null},{\"isLocked\":true,\"canShowHide\":false,\"id\":\"patient\",\"label\":\"Patient\",\"field\":\"patient\",\"isSortable\":true,\"width\":\"auto\",\"sortDirection\":null},{\"isLocked\":true,\"canShowHide\":true,\"id\":\"alerts\",\"label\":\"Alerts\",\"field\":\"alerts\",\"isSortable\":true,\"width\":\"auto\",\"s",
+      "requestPayload": "{\"clinicIds\":[13,48,52,53,87],\"startDate\":\"[DATE]\",\"endDate\":\"[DATE]\"}"
     },
     {
       "name": "[Transmission] - PMW-006.3c - Get Autopromoted Transmissions with invalid date returns 400",
@@ -2106,7 +2249,8 @@
       "endpoint": "POST /api/transmissions/autopromoted",
       "failedStep": "the response status should be 400",
       "fullErr": "Error: Got 200",
-      "payload": "{\"totalCount\":0,\"recordStart\":0,\"recordMax\":100,\"data\":[],\"config\":{\"columns\":[{\"isLocked\":true,\"canShowHide\":false,\"id\":\"actions\",\"label\":\"Actions\",\"field\":\"actions\",\"isSortable\":false,\"width\":\"auto\",\"sortDirection\":null},{\"isLocked\":true,\"canShowHide\":false,\"id\":\"patient\",\"label\":\"Patient\",\"field\":\"patient\",\"isSortable\":true,\"width\":\"auto\",\"sortDirection\":null},{\"isLocked\":true,\"canShowHide\":true,\"id\":\"alerts\",\"label\":\"Alerts\",\"field\":\"alerts\",\"isSortable\":true,\"width\":\"auto\",\"sortDirection\":n"
+      "payload": "{\"totalCount\":0,\"recordStart\":0,\"recordMax\":100,\"data\":[],\"config\":{\"columns\":[{\"isLocked\":true,\"canShowHide\":false,\"id\":\"actions\",\"label\":\"Actions\",\"field\":\"actions\",\"isSortable\":false,\"width\":\"auto\",\"sortDirection\":null},{\"isLocked\":true,\"canShowHide\":false,\"id\":\"patient\",\"label\":\"Patient\",\"field\":\"patient\",\"isSortable\":true,\"width\":\"auto\",\"sortDirection\":null},{\"isLocked\":true,\"canShowHide\":true,\"id\":\"alerts\",\"label\":\"Alerts\",\"field",
+      "requestPayload": "{\"clinicIds\":[13,48,52,53,87],\"startDate\":\"invalid-date\",\"endDate\":\"invalid-date\",\"criteria\":{\"recordStart\":0,\"recordMax\":100}}"
     },
     {
       "name": "[User] - PMW-005.1 - Get Current User Info",
@@ -2118,31 +2262,34 @@
       "endpoint": "GET /api/user/current",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[User] - PMW-005.2 - Copy Clinics Between Users",
       "comp": "User",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/user/copyClinics",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[User] - PMW-005.3 - Copy Roles Between Users",
       "comp": "User",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/user/copyRoles",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[User] - PMW-005.4 - Search Users",
@@ -2154,91 +2301,99 @@
       "endpoint": "POST /api/user/search",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[User] - PMW-005.2a - Copy Clinics with empty body returns 400",
       "comp": "User",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/user/copyClinics",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[User] - PMW-005.2b - Copy Clinics with null user IDs returns 400",
       "comp": "User",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/user/copyClinics",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[User] - PMW-005.2c - Copy Clinics with missing replaceExisting field returns 400",
       "comp": "User",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/user/copyClinics",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[User] - PMW-005.3a - Copy Roles with empty body returns 400",
       "comp": "User",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/user/copyRoles",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[User] - PMW-005.3b - Copy Roles with null user IDs returns 400",
       "comp": "User",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "9s",
       "err": null,
       "endpoint": "POST /api/user/copyRoles",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[User] - PMW-005.3c - Copy Roles with missing replaceExisting returns 400",
       "comp": "User",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "5s",
       "err": null,
       "endpoint": "POST /api/user/copyRoles",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[User] - PMW-005.4a - Search Users empty response body",
       "comp": "User",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/user/search",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[User] - PMW-005.4b - Search Users with null IDs return 400",
@@ -2250,151 +2405,164 @@
       "endpoint": "POST /api/user/search",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[User] - PMW-005.4c - Search Users with null IDs return 400",
       "comp": "User",
       "type": "API",
       "status": "failed",
-      "dur": "2s",
+      "dur": "3s",
       "err": "Error: Got 200",
       "endpoint": "POST /api/user/search",
       "failedStep": "the response status should be 400",
       "fullErr": "Error: Got 200",
-      "payload": "[{\"id\":773,\"firstName\":\"Ivan\",\"lastName\":\"Aboian\",\"namePrefix\":null,\"userName\":\"ivan.aboian@pacemate.com\",\"email\":\"ivan.aboian@pacemate.com\",\"displayName\":\"Ivan Aboian\",\"status\":1,\"statusAsString\":\"Active\",\"lastLoggedIn\":\"May 15, 2026, 10:33:27 AM\",\"roles\":[{\"roleName\":\"ADMIN\",\"permissions\":null,\"id\":1},{\"roleName\":\"CLINIC ADMIN\",\"permissions\":null,\"id\":20},{\"roleName\":\"AUTO PROMOTE\",\"permissions\":null,\"id\":28},{\"roleName\":\"INCLINIC\",\"permissions\":null,\"id\":38}],\"permissions\":[],\"esigningEnabled"
+      "payload": "[{\"id\":773,\"firstName\":\"Ivan\",\"lastName\":\"Aboian\",\"namePrefix\":null,\"userName\":\"ivan.aboian@pacemate.com\",\"email\":\"ivan.aboian@pacemate.com\",\"displayName\":\"Ivan Aboian\",\"status\":1,\"statusAsString\":\"Active\",\"lastLoggedIn\":\"May 15, 2026, 10:33:27 AM\",\"roles\":[{\"roleName\":\"ADMIN\",\"permissions\":null,\"id\":1},{\"roleName\":\"CLINIC ADMIN\",\"permissions\":null,\"id\":20},{\"roleName\":\"AUTO PROMOTE\",\"permissions\":null,\"id\":28},{\"roleName\":\"INCLINIC\",\"permissions\":null,\"id\":38}],\"permissions\":[],\"esigningEnabled",
+      "requestPayload": null
     },
     {
       "name": "[User Setting] - PMW-007.1 - Get Patient Chart Settings",
       "comp": "User Setting",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "GET /api/usersetting/patientChart/default",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[User Setting] - PMW-007.2 - Save Patient Chart Settings",
       "comp": "User Setting",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/usersetting/savePatientChart/default",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[User Setting] - PMW-007.3 - Clear Patient Chart Settings",
       "comp": "User Setting",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/usersetting/clearPatientChart/default",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[User Setting] - PMW-007.4 - Update Theme",
       "comp": "User Setting",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/usersetting/updateTheme/dark",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[User Setting] - PMW-007.5 - Get Theme",
       "comp": "User Setting",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "GET /api/usersetting/getTheme/default",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[User Setting] - PMW-007.6 - Update Side Menu Layout",
       "comp": "User Setting",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/usersetting/updateLayout/default",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[User Setting] - PMW-007.7 - Save Favorite Pages",
       "comp": "User Setting",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/usersetting/saveFavoritePages/default",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[User Setting] - PMW-007.8 - Get Favorite Pages",
       "comp": "User Setting",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "GET /api/usersetting/getFavoritePages/default",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[User Setting] - PMW-007.9 - Clear Favorite Pages",
       "comp": "User Setting",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/usersetting/clearFavoritePages/default",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[User Setting] - PMW-007.10 - Save Alerts in Details Bar Setting",
       "comp": "User Setting",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "POST /api/usersetting/saveAlertsInDetailsBar",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     },
     {
       "name": "[User Setting] - PMW-007.11 - Get Alerts in Details Bar Settings",
       "comp": "User Setting",
       "type": "API",
       "status": "passed",
-      "dur": "2s",
+      "dur": "3s",
       "err": null,
       "endpoint": "GET /api/usersetting/getAlertsInDetailsBar",
       "failedStep": null,
       "fullErr": null,
-      "payload": null
+      "payload": null,
+      "requestPayload": null
     }
   ]
 }
