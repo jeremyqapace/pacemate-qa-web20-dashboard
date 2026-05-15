@@ -2606,25 +2606,6 @@
             max-height: 120px;
             overflow-y: auto
         }
-
-        .bug-request-wrap {
-            margin-bottom: 14px
-        }
-
-        .bug-request {
-            font-family: monospace;
-            font-size: 11px;
-            background: rgba(139, 92, 246, .04);
-            border: 1.5px solid rgba(139, 92, 246, .2);
-            border-radius: 8px;
-            padding: 10px 12px;
-            color: var(--text);
-            word-break: break-word;
-            white-space: pre-wrap;
-            line-height: 1.7;
-            max-height: 120px;
-            overflow-y: auto
-        }
     </style>
 </head>
 
@@ -3361,26 +3342,16 @@
             document.getElementById('bugPmw').textContent = pmw ? '· ' + pmw : '';
             document.getElementById('bugCiLink').href = D?.runUrl || '#';
 
-            // Build method badge + auth context
+            // Build method badge
             let endpointHtml = '';
             if (t.endpoint) {
                 const parts = t.endpoint.split(' ');
                 const m = parts[0].toLowerCase();
                 const p = parts.slice(1).join(' ');
-                const sLow = (t.name || '').toLowerCase();
-                const isUnauth = sLow.includes('without authentication') || sLow.includes('unauthenticated') ||
-                    (t.failedStep && t.failedStep.toLowerCase().includes('unauthenticated'));
-                const authLabel = isUnauth ? 'Unauthenticated' : 'Authenticated';
-                const authColor = isUnauth ? '#DC2626' : '#059669';
-                const authBg = isUnauth ? 'rgba(239,68,68,.1)' : 'rgba(16,185,129,.1)';
-                const authBrd = isUnauth ? 'rgba(239,68,68,.3)' : 'rgba(16,185,129,.3)';
-                const authBadge = '<span style="font-size:10px;font-weight:600;padding:2px 8px;border-radius:4px;margin-left:8px;' +
-                    'background:' + authBg + ';border:1px solid ' + authBrd + ';color:' + authColor + '">' + authLabel + '</span>';
                 endpointHtml = '<div class="bug-endpoint-wrap"><div class="bug-lbl">Endpoint</div>' +
                     '<div class="bug-endpoint">' +
                     '<span class="bug-method ' + m + '">' + parts[0] + '</span>' +
                     '<span class="bug-path">' + p + '</span>' +
-                    authBadge +
                     '</div></div>';
             }
 
@@ -3398,7 +3369,6 @@
                 '<div class="bug-grid-item"><div class="bug-grid-lbl">Duration</div><div class="bug-grid-val">' + t.dur + '</div></div>' +
                 '</div>' +
                 (t.failedStep ? '<div class="bug-step-wrap"><div class="bug-lbl">Failed Assertion</div><div class="bug-step">' + t.failedStep + '</div></div>' : '') +
-                (t.requestPayload ? '<div class="bug-request-wrap"><div class="bug-lbl">Request Payload</div><div class="bug-request">' + t.requestPayload + '</div></div>' : '') +
                 (t.payload ? '<div class="bug-payload-wrap"><div class="bug-lbl">Response Payload</div><div class="bug-payload">' + t.payload + '</div></div>' : '') +
                 (t.fullErr || t.err ? '<div class="bug-err-wrap"><div class="bug-lbl">Error Detail</div><div class="bug-err">' + (t.fullErr || t.err) + '</div></div>' : '');
 
@@ -3433,7 +3403,6 @@
                 '',
                 'Status:        ' + (t.status === 'failed' ? 'Failed' : 'Flaky'),
                 t.failedStep ? 'Failed Step:   ' + t.failedStep : null,
-                t.requestPayload ? 'Request:       ' + t.requestPayload : null,
                 t.payload ? 'Payload:       ' + t.payload : null,
                 '',
                 'Error:',

@@ -2606,25 +2606,6 @@
             max-height: 120px;
             overflow-y: auto
         }
-
-        .bug-request-wrap {
-            margin-bottom: 14px
-        }
-
-        .bug-request {
-            font-family: monospace;
-            font-size: 11px;
-            background: rgba(139, 92, 246, .04);
-            border: 1.5px solid rgba(139, 92, 246, .2);
-            border-radius: 8px;
-            padding: 10px 12px;
-            color: var(--text);
-            word-break: break-word;
-            white-space: pre-wrap;
-            line-height: 1.7;
-            max-height: 120px;
-            overflow-y: auto
-        }
     </style>
 </head>
 
@@ -3398,7 +3379,6 @@
                 '<div class="bug-grid-item"><div class="bug-grid-lbl">Duration</div><div class="bug-grid-val">' + t.dur + '</div></div>' +
                 '</div>' +
                 (t.failedStep ? '<div class="bug-step-wrap"><div class="bug-lbl">Failed Assertion</div><div class="bug-step">' + t.failedStep + '</div></div>' : '') +
-                (t.requestPayload ? '<div class="bug-request-wrap"><div class="bug-lbl">Request Payload</div><div class="bug-request">' + t.requestPayload + '</div></div>' : '') +
                 (t.payload ? '<div class="bug-payload-wrap"><div class="bug-lbl">Response Payload</div><div class="bug-payload">' + t.payload + '</div></div>' : '') +
                 (t.fullErr || t.err ? '<div class="bug-err-wrap"><div class="bug-lbl">Error Detail</div><div class="bug-err">' + (t.fullErr || t.err) + '</div></div>' : '');
 
@@ -3433,7 +3413,6 @@
                 '',
                 'Status:        ' + (t.status === 'failed' ? 'Failed' : 'Flaky'),
                 t.failedStep ? 'Failed Step:   ' + t.failedStep : null,
-                t.requestPayload ? 'Request:       ' + t.requestPayload : null,
                 t.payload ? 'Payload:       ' + t.payload : null,
                 '',
                 'Error:',
