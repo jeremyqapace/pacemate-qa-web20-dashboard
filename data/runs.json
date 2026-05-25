@@ -1,98 +1,5 @@
 [
   {
-    "runNum": 55,
-    "runId": "R-55",
-    "rate": 91.7,
-    "total": 168,
-    "passed": 154,
-    "failed": 14,
-    "flaky": 0,
-    "duration": "7m 44s",
-    "generatedAt": "2026-05-20T14:09:50.906Z",
-    "suite": "Smoke Tests",
-    "env": "QA",
-    "branch": "main",
-    "compRates": {
-      "CRM Reports": {
-        "rate": 100,
-        "passed": 17,
-        "failed": 0,
-        "flaky": 0,
-        "total": 17
-      },
-      "Dictionary": {
-        "rate": 100,
-        "passed": 24,
-        "failed": 0,
-        "flaky": 0,
-        "total": 24
-      },
-      "External Crm Report Bulk Actions": {
-        "rate": 100,
-        "passed": 20,
-        "failed": 0,
-        "flaky": 0,
-        "total": 20
-      },
-      "External Crm Reports Inclinic": {
-        "rate": 100,
-        "passed": 12,
-        "failed": 0,
-        "flaky": 0,
-        "total": 12
-      },
-      "External Crm Reports List Config": {
-        "rate": 100,
-        "passed": 34,
-        "failed": 0,
-        "flaky": 0,
-        "total": 34
-      },
-      "External Crm Reports Transmission List": {
-        "rate": 100,
-        "passed": 18,
-        "failed": 0,
-        "flaky": 0,
-        "total": 18
-      },
-      "Patient Bulk Actions": {
-        "rate": 100,
-        "passed": 4,
-        "failed": 0,
-        "flaky": 0,
-        "total": 4
-      },
-      "Report Bulk Actions": {
-        "rate": 0,
-        "passed": 0,
-        "failed": 3,
-        "flaky": 0,
-        "total": 3
-      },
-      "Transmission Group": {
-        "rate": 42,
-        "passed": 5,
-        "failed": 7,
-        "flaky": 0,
-        "total": 12
-      },
-      "User": {
-        "rate": 69,
-        "passed": 9,
-        "failed": 4,
-        "flaky": 0,
-        "total": 13
-      },
-      "User Setting": {
-        "rate": 100,
-        "passed": 11,
-        "failed": 0,
-        "flaky": 0,
-        "total": 11
-      }
-    }
-  },
-  {
     "runNum": 56,
     "runId": "R-56",
     "rate": 91.7,
@@ -846,6 +753,99 @@
     "flaky": 0,
     "duration": "2m 11s",
     "generatedAt": "2026-05-25T18:48:31.828Z",
+    "suite": "Smoke Tests",
+    "env": "QA",
+    "branch": "main",
+    "compRates": {
+      "CRM Reports": {
+        "rate": 0,
+        "passed": 0,
+        "failed": 17,
+        "flaky": 0,
+        "total": 17
+      },
+      "Dictionary": {
+        "rate": 0,
+        "passed": 0,
+        "failed": 24,
+        "flaky": 0,
+        "total": 24
+      },
+      "External Crm Report Bulk Actions": {
+        "rate": 0,
+        "passed": 0,
+        "failed": 20,
+        "flaky": 0,
+        "total": 20
+      },
+      "External Crm Reports Inclinic": {
+        "rate": 0,
+        "passed": 0,
+        "failed": 12,
+        "flaky": 0,
+        "total": 12
+      },
+      "External Crm Reports List Config": {
+        "rate": 0,
+        "passed": 0,
+        "failed": 34,
+        "flaky": 0,
+        "total": 34
+      },
+      "External Crm Reports Transmission List": {
+        "rate": 0,
+        "passed": 0,
+        "failed": 18,
+        "flaky": 0,
+        "total": 18
+      },
+      "Patient Bulk Actions": {
+        "rate": 0,
+        "passed": 0,
+        "failed": 4,
+        "flaky": 0,
+        "total": 4
+      },
+      "Report Bulk Actions": {
+        "rate": 0,
+        "passed": 0,
+        "failed": 7,
+        "flaky": 0,
+        "total": 7
+      },
+      "Transmission Group": {
+        "rate": 0,
+        "passed": 0,
+        "failed": 12,
+        "flaky": 0,
+        "total": 12
+      },
+      "User": {
+        "rate": 0,
+        "passed": 0,
+        "failed": 13,
+        "flaky": 0,
+        "total": 13
+      },
+      "User Setting": {
+        "rate": 0,
+        "passed": 0,
+        "failed": 11,
+        "flaky": 0,
+        "total": 11
+      }
+    }
+  },
+  {
+    "runNum": 65,
+    "runId": "R-65",
+    "rate": 0,
+    "total": 172,
+    "passed": 0,
+    "failed": 172,
+    "flaky": 0,
+    "duration": "1m 12s",
+    "generatedAt": "2026-05-25T23:27:52.411Z",
     "suite": "Smoke Tests",
     "env": "QA",
     "branch": "main",
