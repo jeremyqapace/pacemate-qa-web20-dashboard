@@ -1,98 +1,5 @@
 [
   {
-    "runNum": 69,
-    "runId": "R-69",
-    "rate": 0,
-    "total": 172,
-    "passed": 0,
-    "failed": 172,
-    "flaky": 0,
-    "duration": "7m 26s",
-    "generatedAt": "2026-05-26T17:55:04.372Z",
-    "suite": "API Tests",
-    "env": "QA",
-    "branch": "main",
-    "compRates": {
-      "CRM Reports": {
-        "rate": 0,
-        "passed": 0,
-        "failed": 17,
-        "flaky": 0,
-        "total": 17
-      },
-      "Dictionary": {
-        "rate": 0,
-        "passed": 0,
-        "failed": 24,
-        "flaky": 0,
-        "total": 24
-      },
-      "External Crm Report Bulk Actions": {
-        "rate": 0,
-        "passed": 0,
-        "failed": 20,
-        "flaky": 0,
-        "total": 20
-      },
-      "External Crm Reports Inclinic": {
-        "rate": 0,
-        "passed": 0,
-        "failed": 12,
-        "flaky": 0,
-        "total": 12
-      },
-      "External Crm Reports List Config": {
-        "rate": 0,
-        "passed": 0,
-        "failed": 34,
-        "flaky": 0,
-        "total": 34
-      },
-      "External Crm Reports Transmission List": {
-        "rate": 0,
-        "passed": 0,
-        "failed": 18,
-        "flaky": 0,
-        "total": 18
-      },
-      "Patient Bulk Actions": {
-        "rate": 0,
-        "passed": 0,
-        "failed": 4,
-        "flaky": 0,
-        "total": 4
-      },
-      "Report Bulk Actions": {
-        "rate": 0,
-        "passed": 0,
-        "failed": 7,
-        "flaky": 0,
-        "total": 7
-      },
-      "Transmission Group": {
-        "rate": 0,
-        "passed": 0,
-        "failed": 12,
-        "flaky": 0,
-        "total": 12
-      },
-      "User": {
-        "rate": 0,
-        "passed": 0,
-        "failed": 13,
-        "flaky": 0,
-        "total": 13
-      },
-      "User Setting": {
-        "rate": 0,
-        "passed": 0,
-        "failed": 11,
-        "flaky": 0,
-        "total": 11
-      }
-    }
-  },
-  {
     "runNum": 70,
     "runId": "R-70",
     "rate": 91.9,
@@ -924,6 +831,99 @@
         "rate": 100,
         "passed": 11,
         "failed": 0,
+        "flaky": 0,
+        "total": 11
+      }
+    }
+  },
+  {
+    "runNum": 79,
+    "runId": "R-79",
+    "rate": 0,
+    "total": 172,
+    "passed": 0,
+    "failed": 172,
+    "flaky": 0,
+    "duration": "5m 37s",
+    "generatedAt": "2026-05-27T23:36:29.235Z",
+    "suite": "Smoke Tests",
+    "env": "DEV1",
+    "branch": "main",
+    "compRates": {
+      "CRM Reports": {
+        "rate": 0,
+        "passed": 0,
+        "failed": 17,
+        "flaky": 0,
+        "total": 17
+      },
+      "Dictionary": {
+        "rate": 0,
+        "passed": 0,
+        "failed": 24,
+        "flaky": 0,
+        "total": 24
+      },
+      "External Crm Report Bulk Actions": {
+        "rate": 0,
+        "passed": 0,
+        "failed": 20,
+        "flaky": 0,
+        "total": 20
+      },
+      "External Crm Reports Inclinic": {
+        "rate": 0,
+        "passed": 0,
+        "failed": 12,
+        "flaky": 0,
+        "total": 12
+      },
+      "External Crm Reports List Config": {
+        "rate": 0,
+        "passed": 0,
+        "failed": 34,
+        "flaky": 0,
+        "total": 34
+      },
+      "External Crm Reports Transmission List": {
+        "rate": 0,
+        "passed": 0,
+        "failed": 18,
+        "flaky": 0,
+        "total": 18
+      },
+      "Patient Bulk Actions": {
+        "rate": 0,
+        "passed": 0,
+        "failed": 4,
+        "flaky": 0,
+        "total": 4
+      },
+      "Report Bulk Actions": {
+        "rate": 0,
+        "passed": 0,
+        "failed": 7,
+        "flaky": 0,
+        "total": 7
+      },
+      "Transmission Group": {
+        "rate": 0,
+        "passed": 0,
+        "failed": 12,
+        "flaky": 0,
+        "total": 12
+      },
+      "User": {
+        "rate": 0,
+        "passed": 0,
+        "failed": 13,
+        "flaky": 0,
+        "total": 13
+      },
+      "User Setting": {
+        "rate": 0,
+        "passed": 0,
+        "failed": 11,
         "flaky": 0,
         "total": 11
       }
