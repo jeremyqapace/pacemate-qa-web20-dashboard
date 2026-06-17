@@ -2625,112 +2625,6 @@
             max-height: 120px;
             overflow-y: auto
         }
-
-        /* ── LAYER STRIP (Overview) ── */
-        .layer-strip {
-            margin-top: 14px;
-            display: flex;
-            flex-direction: column;
-            gap: 8px
-        }
-
-        .layer-strip-lbl {
-            font-size: 10px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: .9px;
-            color: rgba(255, 255, 255, .42)
-        }
-
-        .layer-row {
-            display: flex;
-            align-items: center;
-            gap: 10px
-        }
-
-        .layer-row-name {
-            font-size: 11px;
-            font-weight: 700;
-            color: rgba(255, 255, 255, .75);
-            width: 30px;
-            flex-shrink: 0;
-            letter-spacing: .3px
-        }
-
-        .layer-row-track {
-            flex: 1;
-            height: 6px;
-            background: rgba(255, 255, 255, .09);
-            border-radius: 3px;
-            overflow: hidden;
-            min-width: 0
-        }
-
-        .layer-row-fill {
-            height: 6px;
-            border-radius: 3px;
-            width: 0;
-            animation: barGrow .65s cubic-bezier(.22, .68, 0, 1) forwards
-        }
-
-        @media(prefers-reduced-motion:reduce) {
-            .layer-row-fill {
-                animation: none;
-                width: var(--bar-w) !important
-            }
-        }
-
-        .layer-row-stat {
-            font-size: 11px;
-            font-weight: 600;
-            font-variant-numeric: tabular-nums;
-            flex-shrink: 0;
-            white-space: nowrap;
-            letter-spacing: -.1px
-        }
-
-        /* ── LAYER FILTER PILLS (Report + Coverage) ── */
-        .lyr-filter {
-            display: inline-flex;
-            border: 1.5px solid var(--border);
-            border-radius: 9px;
-            overflow: hidden;
-            flex-shrink: 0
-        }
-
-        .lyr-btn {
-            padding: 7px 13px;
-            font-size: 11px;
-            font-weight: 600;
-            border: none;
-            cursor: pointer;
-            font-family: 'Inter', system-ui, sans-serif;
-            color: var(--text3);
-            background: var(--fbtn-bg);
-            transition: background .15s, color .15s;
-            min-height: 34px;
-            letter-spacing: .2px;
-            border-right: 1.5px solid var(--border)
-        }
-
-        .lyr-btn:last-child {
-            border-right: none
-        }
-
-        .lyr-btn.on {
-            background: #C8184A;
-            color: #fff
-        }
-
-        .lyr-btn:active {
-            opacity: .8
-        }
-
-        .rtm-pmw.unmapped {
-            color: #B45309;
-            background: rgba(245, 158, 11, .08);
-            border-color: rgba(245, 158, 11, .3)
-        }
     </style>
 </head>
 
@@ -2825,7 +2719,6 @@
                     </div>
                     <div class="hdiv"></div>
                     <div class="hfoot" id="heroFoot">Loading run data...</div>
-                    <div id="layerStrip" class="layer-strip" style="display:none"></div>
                 </div>
             </div>
         </div>
@@ -2992,22 +2885,15 @@
             <div class="sc">
                 <div class="sch">
                     <div class="sct"><span class="scd"></span>Test Results</div>
-                    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
-                        <div class="lyr-filter" id="rrLayerBtns">
-                            <button class="lyr-btn on" onclick="layerFilt('all',this)">All</button>
-                            <button class="lyr-btn" onclick="layerFilt('ui',this)">UI</button>
-                            <button class="lyr-btn" onclick="layerFilt('api',this)">API</button>
-                        </div>
-                        <div class="fbtns" id="rrStatusBtns">
-                            <button class="fbtn on" onclick="filt('all',this)">All <span class="fcnt"
-                                    id="fc-all">0</span></button>
-                            <button class="fbtn f-fail" onclick="filt('failed',this)">Failed <span class="fcnt"
-                                    id="fc-failed">0</span></button>
-                            <button class="fbtn f-flaky" onclick="filt('flaky',this)">Flaky <span class="fcnt"
-                                    id="fc-flaky">0</span></button>
-                            <button class="fbtn f-pass" onclick="filt('passed',this)">Passed <span class="fcnt"
-                                    id="fc-passed">0</span></button>
-                        </div>
+                    <div class="fbtns">
+                        <button class="fbtn on" onclick="filt('all',this)">All <span class="fcnt"
+                                id="fc-all">0</span></button>
+                        <button class="fbtn f-fail" onclick="filt('failed',this)">Failed <span class="fcnt"
+                                id="fc-failed">0</span></button>
+                        <button class="fbtn f-flaky" onclick="filt('flaky',this)">Flaky <span class="fcnt"
+                                id="fc-flaky">0</span></button>
+                        <button class="fbtn f-pass" onclick="filt('passed',this)">Passed <span class="fcnt"
+                                id="fc-passed">0</span></button>
                     </div>
                 </div>
                 <div id="testResultsWrap" style="padding:0"></div>
@@ -3036,11 +2922,6 @@
                     <div class="sct"><span class="scd"></span>API Coverage &amp; RTM</div>
                     <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
                         <span class="scm" id="cvMeta">Requirement traceability</span>
-                        <div class="lyr-filter" id="cvLayerBtns">
-                            <button class="lyr-btn on" onclick="cvLayerFilt('all',this)">All</button>
-                            <button class="lyr-btn" onclick="cvLayerFilt('ui',this)">UI</button>
-                            <button class="lyr-btn" onclick="cvLayerFilt('api',this)">API</button>
-                        </div>
                         <input id="cvSearch" type="text" placeholder="Search tests or PMW ID..."
                             oninput="onCvSearch(this.value)"
                             style="font-size:12px;padding:5px 10px;border-radius:8px;border:1.5px solid var(--border);background:var(--card-bg2);color:var(--text);font-family:'Inter',system-ui,sans-serif;width:220px;outline:none;transition:border-color .15s"
@@ -3137,7 +3018,6 @@
         const isMobile = () => window.innerWidth < 640;
         let currentView = 'ov', currentFilter = 'all', trendBuilt = false, _heroInterval = null, _resizeTimer = null;
         let _cvFilter = 'all', _cvOpenGroups = {};
-        let _rrLayer = 'all', _cvLayer = 'all';
 
         (function () { const saved = localStorage.getItem('qa-theme') || 'light'; document.documentElement.setAttribute('data-theme', saved); document.addEventListener('DOMContentLoaded', () => { document.getElementById('themeBtn').textContent = saved === 'dark' ? '☀️' : '🌙' }) })();
 
@@ -3163,29 +3043,6 @@
         function countUpText(el, to, suffix = '', dur = 500) { if (!el) return; const s = performance.now(); const step = n => { const p = Math.min((n - s) / dur, 1), e = 1 - Math.pow(1 - p, 3); el.textContent = Math.round(to * e) + suffix; if (p < 1) requestAnimationFrame(step) }; requestAnimationFrame(step) }
         function playRing(rate, failed, flaky, total) { const C = 502.7, passLen = C * (rate / 100), failLen = total > 0 ? C * (failed / total) : 0, flakyLen = total > 0 ? C * (flaky / total) : 0; const el = document.getElementById('rPass'); let t0 = null; const ease = t => 1 - Math.pow(1 - t, 3); const step = ts => { if (!t0) t0 = ts; const p = Math.min((ts - t0) / 1400, 1), len = passLen * ease(p); el.style.strokeDasharray = `${len.toFixed(2)} ${(C - len).toFixed(2)}`; if (p < 1) requestAnimationFrame(step) }; el.style.strokeDasharray = '0 502.7'; requestAnimationFrame(step); const failEl = document.getElementById('rFail'), flakyEl = document.getElementById('rFlaky'); failEl.style.strokeDasharray = `${failLen.toFixed(2)} ${(C - failLen).toFixed(2)}`; failEl.style.strokeDashoffset = (-passLen).toFixed(2); flakyEl.style.strokeDasharray = `${flakyLen.toFixed(2)} ${(C - flakyLen).toFixed(2)}`; flakyEl.style.strokeDashoffset = (-(passLen + failLen)).toFixed(2) }
         function renderReadinessBadge(rate) { const el = document.getElementById('readinessBadge'); if (!el) return; const ready = rate >= RELEASE_THRESHOLD; el.style.display = 'block'; el.innerHTML = `<span style="display:inline-flex;align-items:center;gap:5px;font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;padding:4px 11px;border-radius:99px;background:${ready ? 'rgba(16,185,129,.18)' : 'rgba(239,68,68,.18)'};color:${ready ? '#10B981' : '#EF4444'};border:1.5px solid ${ready ? 'rgba(16,185,129,.5)' : 'rgba(239,68,68,.5)'}">${ready ? '✓' : '✗'} ${ready ? 'Ready to Deploy' : 'Not Ready'}<span style="font-size:9px;font-weight:500;opacity:.7">${rate}% / ${RELEASE_THRESHOLD}%</span></span>` }
-
-        /* ── LAYER STRIP (Overview) ── */
-        function renderLayerStrip(layers) {
-            const el = document.getElementById('layerStrip');
-            if (!el) return;
-            if (!layers || (!layers.ui && !layers.api)) { el.style.display = 'none'; return; }
-            const ui = layers.ui || { rate: 0, passed: 0, total: 0 };
-            const api = layers.api || { rate: 0, passed: 0, total: 0 };
-            const rows = [];
-            if (ui.total > 0) rows.push({ name: 'UI', rate: ui.rate, passed: ui.passed, total: ui.total });
-            if (api.total > 0) rows.push({ name: 'API', rate: api.rate, passed: api.passed, total: api.total });
-            if (!rows.length) { el.style.display = 'none'; return; }
-            el.style.display = 'block';
-            el.innerHTML = '<div class="layer-strip-lbl">Pass rate by layer</div>' +
-                rows.map(r => {
-                    const co = hclr(r.rate);
-                    return '<div class="layer-row">' +
-                        '<span class="layer-row-name">' + r.name + '</span>' +
-                        '<div class="layer-row-track"><div class="layer-row-fill" style="--bar-w:' + r.rate + '%;background:' + co + '"></div></div>' +
-                        '<span class="layer-row-stat" style="color:' + co + '">' + r.rate + '% · ' + r.passed + '/' + r.total + '</span>' +
-                        '</div>';
-                }).join('');
-        }
 
         /* ── RISK SUMMARY (director view) ── */
         function renderRiskSummary(comp, rate) {
@@ -3243,35 +3100,32 @@
 
         function renderCoverage(tests) {
             const wrap = document.getElementById('cvWrap'); if (!wrap || !tests) return;
-            const _layerScoped = _cvLayer === 'all' ? tests : tests.filter(t => (t.type || '').toUpperCase() === _cvLayer.toUpperCase());
-            const _baseFiltered = _cvFilter === 'all' ? _layerScoped : _layerScoped.filter(t => t.status === _cvFilter);
+            const _baseFiltered = _cvFilter === 'all' ? tests : tests.filter(t => t.status === _cvFilter);
             const filtered = _cvSearch ? _baseFiltered.filter(t => {
                 const q = _cvSearch;
-                return (t.name || '').toLowerCase().includes(q) || (t.comp || '').toLowerCase().includes(q) || (t.endpoint || '').toLowerCase().includes(q) || (extractPmwId(t.name || '') || '').toLowerCase().includes(q);
+                return (t.name || '').toLowerCase().includes(q) || (t.comp || '').toLowerCase().includes(q) || (t.endpoint || '').toLowerCase().includes(q) || extractPmwId(t.name || '').toLowerCase().includes(q);
             }) : _baseFiltered;
-            const showApiCols = _cvLayer !== 'ui';
-            const withPmw = _layerScoped.filter(t => extractPmwId(t.name));
-            document.getElementById('cv-fc-all').textContent = _layerScoped.length;
-            document.getElementById('cv-fc-passed').textContent = _layerScoped.filter(t => t.status === 'passed').length;
-            document.getElementById('cv-fc-failed').textContent = _layerScoped.filter(t => t.status === 'failed').length;
-            document.getElementById('cv-fc-flaky').textContent = _layerScoped.filter(t => t.status === 'flaky').length;
-            document.getElementById('cv-total').textContent = _layerScoped.length;
+            const withPmw = tests.filter(t => extractPmwId(t.name));
+            document.getElementById('cv-fc-all').textContent = tests.length;
+            document.getElementById('cv-fc-passed').textContent = tests.filter(t => t.status === 'passed').length;
+            document.getElementById('cv-fc-failed').textContent = tests.filter(t => t.status === 'failed').length;
+            document.getElementById('cv-fc-flaky').textContent = tests.filter(t => t.status === 'flaky').length;
+            document.getElementById('cv-total').textContent = tests.length;
             document.getElementById('cv-reqs').textContent = withPmw.length;
-            document.getElementById('cv-pass').textContent = _layerScoped.filter(t => t.status === 'passed').length;
-            document.getElementById('cv-fail').textContent = _layerScoped.filter(t => t.status === 'failed').length;
+            document.getElementById('cv-pass').textContent = tests.filter(t => t.status === 'passed').length;
+            document.getElementById('cv-fail').textContent = tests.filter(t => t.status === 'failed').length;
             const D = window._D;
-            document.getElementById('cvMeta').textContent = `${D ? D.runId : '—'} · ${_layerScoped.length} scenarios · ${withPmw.length} with PMW ID`;
+            document.getElementById('cvMeta').textContent = `${D ? D.runId : '—'} · ${tests.length} scenarios · ${withPmw.length} with PMW ID`;
             const byComp = {}; filtered.forEach(t => { if (!byComp[t.comp]) byComp[t.comp] = []; byComp[t.comp].push(t) });
             if (!filtered.length) { wrap.innerHTML = '<div class="rtm-empty">No tests match this filter.</div>'; return }
             if (isMobile()) {
-                wrap.innerHTML = Object.entries(byComp).map(([comp, rows]) => { const pass = rows.filter(t => t.status === 'passed').length, pct = Math.round((pass / rows.length) * 100), co = hclr(pct), isOpen = _cvOpenGroups[comp] !== false; return `<div class="rtm-group"><div class="rtm-group-head" onclick="toggleRtmGroup('${comp.replace(/\\/g, '\\\\').replace(/'/g, "\\'")}',this)"><div class="rtm-group-title"><span class="scd"></span>${comp}</div><div class="rtm-group-meta"><span class="rtm-group-rate" style="color:${co}">${pct}%</span><span style="font-size:11px;color:var(--text3)">${pass}/${rows.length}</span><span class="rtm-chev${isOpen ? ' open' : ''}">›</span></div></div><div class="rtm-table-wrap${isOpen ? ' open' : ''}">${rows.map(t => { const pid = extractPmwId(t.name); const pidCell = pid ? `<span class="rtm-pmw">${pid}</span>` : (showApiCols ? '<span class="rtm-pmw none">No ID</span>' : ''); return `<div class="rtm-card"><div class="rtm-card-top"><div class="rtm-card-name">${cleanCvName(t.name)}</div><span class="spill" style="background:${SB[t.status].bg};color:${SB[t.status].cl};border-color:${SB[t.status].bd};flex-shrink:0"><span class="sdot" style="background:${SC[t.status]}"></span>${SL[t.status]}</span></div><div class="rtm-card-meta">${pidCell}<span class="type-tag">${t.type}</span><span style="font-size:11px;color:var(--text3)">${t.dur}</span></div></div>` }).join('')}</div></div>` }).join('');
+                wrap.innerHTML = Object.entries(byComp).map(([comp, rows]) => { const pass = rows.filter(t => t.status === 'passed').length, pct = Math.round((pass / rows.length) * 100), co = hclr(pct), isOpen = _cvOpenGroups[comp] !== false; return `<div class="rtm-group"><div class="rtm-group-head" onclick="toggleRtmGroup('${comp.replace(/\\/g, '\\\\').replace(/'/g, "\\'")}',this)"><div class="rtm-group-title"><span class="scd"></span>${comp}</div><div class="rtm-group-meta"><span class="rtm-group-rate" style="color:${co}">${pct}%</span><span style="font-size:11px;color:var(--text3)">${pass}/${rows.length}</span><span class="rtm-chev${isOpen ? ' open' : ''}">›</span></div></div><div class="rtm-table-wrap${isOpen ? ' open' : ''}">${rows.map(t => { const pid = extractPmwId(t.name); return `<div class="rtm-card"><div class="rtm-card-top"><div class="rtm-card-name">${cleanCvName(t.name)}</div><span class="spill" style="background:${SB[t.status].bg};color:${SB[t.status].cl};border-color:${SB[t.status].bd};flex-shrink:0"><span class="sdot" style="background:${SC[t.status]}"></span>${SL[t.status]}</span></div><div class="rtm-card-meta">${pid ? `<span class="rtm-pmw">${pid}</span>` : '<span class="rtm-pmw none">No ID</span>'}<span class="type-tag">${t.type}</span><span style="font-size:11px;color:var(--text3)">${t.dur}</span></div></div>` }).join('')}</div></div>` }).join('');
             } else {
-                wrap.innerHTML = Object.entries(byComp).map(([comp, rows]) => { const pass = rows.filter(t => t.status === 'passed').length, pct = Math.round((pass / rows.length) * 100), co = hclr(pct), isOpen = _cvOpenGroups[comp] !== false; const ts = 'font-size:11px;padding:2px 7px;border-radius:4px;border:1px solid rgba(55,138,221,.35);background:rgba(55,138,221,.07);color:#185FA5'; const tableRows = rows.map(t => { const pid = extractPmwId(t.name); const cvk = 'cv' + Math.random().toString(36).slice(2); (window._bugMap = window._bugMap || {})[cvk] = t; const pidCell = pid ? `<span class="rtm-pmw">${pid}</span>` : '<span class="rtm-pmw none">—</span>'; const endCell = showApiCols ? `<td style="width:90px">${t.endpoint ? `<span style="font-size:10px;font-family:monospace;color:var(--text2)">${t.endpoint.split(' ')[0]}</span>` : '<span style="color:var(--text3);font-size:11px">—</span>'}</td>` : ''; const pmwCell = showApiCols ? `<td style="padding-left:14px;width:110px">${pidCell}</td>` : ''; return `<tr><td class="rtm-name" title="${t.name.replace(/"/g, '&quot;')}"${showApiCols ? '' : ' style="padding-left:14px"'}>${cleanCvName(t.name)}</td><td><span style="${ts}">${t.type}</span></td>${endCell}<td><span class="spill" style="background:${SB[t.status].bg};color:${SB[t.status].cl};border-color:${SB[t.status].bd}"><span class="sdot" style="background:${SC[t.status]}"></span>${SL[t.status]}</span></td><td style="color:var(--text3);font-size:11px">${t.dur}</td><td style="text-align:right;padding-right:8px">${t.status === 'passed' ? `<button class="td-info-btn" title="View test detail" onclick="event.stopPropagation();openTd(window._bugMap['${cvk}'])">&#x2139;</button>` : `<button class="bug-btn" title="View bug report" onclick="event.stopPropagation();openBug(window._bugMap['${cvk}'])">&#x1F41B;</button>`}</td></tr>` }).join(''); const headEnd = showApiCols ? '<th style="width:90px">Endpoint</th>' : ''; const headReq = showApiCols ? '<th style="padding-left:14px">Req ID</th>' : ''; return `<div class="rtm-group"><div class="rtm-group-head" onclick="toggleRtmGroup('${comp.replace(/\\/g, '\\\\').replace(/'/g, "\\'")}',this)"><div class="rtm-group-title"><span class="scd"></span>${comp}<span style="font-size:11px;font-weight:400;color:var(--text3)">${rows.length} test${rows.length === 1 ? '' : 's'}</span></div><div class="rtm-group-meta"><div class="rtm-group-bar"><div class="rtm-group-bar-fill" style="width:${pct}%;background:${co}"></div></div><span class="rtm-group-rate" style="color:${co}">${pct}%</span><span style="font-size:11px;color:var(--text3)">${pass}/${rows.length} passed</span><span class="rtm-chev${isOpen ? ' open' : ''}">›</span></div></div><div class="rtm-table-wrap${isOpen ? ' open' : ''}"><table class="rtm-table"><thead><tr>${headReq}<th${showApiCols ? '' : ' style="padding-left:14px"'}>Scenario</th><th style="width:60px">Type</th>${headEnd}<th style="width:90px">Status</th><th style="width:70px">Duration</th><th style="width:40px"></th></tr></thead><tbody>${tableRows}</tbody></table></div></div>` }).join('');
+                wrap.innerHTML = Object.entries(byComp).map(([comp, rows]) => { const pass = rows.filter(t => t.status === 'passed').length, pct = Math.round((pass / rows.length) * 100), co = hclr(pct), isOpen = _cvOpenGroups[comp] !== false; const ts = 'font-size:11px;padding:2px 7px;border-radius:4px;border:1px solid rgba(55,138,221,.35);background:rgba(55,138,221,.07);color:#185FA5'; const tableRows = rows.map(t => { const pid = extractPmwId(t.name); const cvk = 'cv' + Math.random().toString(36).slice(2); (window._bugMap = window._bugMap || {})[cvk] = t; return `<tr><td style="padding-left:14px;width:110px">${pid ? `<span class="rtm-pmw">${pid}</span>` : '<span class="rtm-pmw none">—</span>'}</td><td class="rtm-name" title="${t.name.replace(/"/g, '&quot;')}">${cleanCvName(t.name)}</td><td><span style="${ts}">${t.type}</span></td><td><span class="spill" style="background:${SB[t.status].bg};color:${SB[t.status].cl};border-color:${SB[t.status].bd}"><span class="sdot" style="background:${SC[t.status]}"></span>${SL[t.status]}</span></td><td style="color:var(--text3);font-size:11px">${t.dur}</td><td style="text-align:right;padding-right:8px">${t.status === 'passed' ? `<button class="td-info-btn" title="View test detail" onclick="event.stopPropagation();openTd(window._bugMap['${cvk}'])">&#x2139;</button>` : `<button class="bug-btn" title="View bug report" onclick="event.stopPropagation();openBug(window._bugMap['${cvk}'])">&#x1F41B;</button>`}</td></tr>` }).join(''); return `<div class="rtm-group"><div class="rtm-group-head" onclick="toggleRtmGroup('${comp.replace(/\\/g, '\\\\').replace(/'/g, "\\'")}',this)"><div class="rtm-group-title"><span class="scd"></span>${comp}<span style="font-size:11px;font-weight:400;color:var(--text3)">${rows.length} test${rows.length === 1 ? '' : 's'}</span></div><div class="rtm-group-meta"><div class="rtm-group-bar"><div class="rtm-group-bar-fill" style="width:${pct}%;background:${co}"></div></div><span class="rtm-group-rate" style="color:${co}">${pct}%</span><span style="font-size:11px;color:var(--text3)">${pass}/${rows.length} passed</span><span class="rtm-chev${isOpen ? ' open' : ''}">›</span></div></div><div class="rtm-table-wrap${isOpen ? ' open' : ''}"><table class="rtm-table"><thead><tr><th style="padding-left:14px">Req ID</th><th>Scenario</th><th style="width:60px">Type</th><th style="width:90px">Status</th><th style="width:70px">Duration</th></tr></thead><tbody>${tableRows}</tbody></table></div></div>` }).join('');
             }
         }
         function toggleRtmGroup(comp, headEl) { _cvOpenGroups[comp] = !(_cvOpenGroups[comp] !== false); const wrap = headEl.nextElementSibling, chev = headEl.querySelector('.rtm-chev'), isNowOpen = _cvOpenGroups[comp] !== false; wrap.classList.toggle('open', isNowOpen); if (chev) chev.classList.toggle('open', isNowOpen) }
         function cvFilt(f, btn) { document.querySelectorAll('#cvFilterBtns .fbtn').forEach(b => b.classList.remove('on')); btn.classList.add('on'); _cvFilter = f; if (window._D) renderCoverage(window._D.tests) }
-        function cvLayerFilt(l, btn) { document.querySelectorAll('#cvLayerBtns .lyr-btn').forEach(b => b.classList.remove('on')); btn.classList.add('on'); _cvLayer = l; if (window._D) renderCoverage(window._D.tests) }
 
         /* ── RENDER ALL ── */
         function renderAll(D) {
@@ -3287,7 +3141,6 @@
             document.getElementById('heroStreak').textContent = D.summary.consecutivePassing > 0 ? `${D.summary.consecutivePassing} passing streak` : 'No previous run';
             playRing(rate, D.summary.failed, D.summary.flaky, D.summary.total);
             renderReadinessBadge(rate);
-            renderLayerStrip(D.layers);
             countUp(document.getElementById('cn-total'), D.summary.total);
             countUp(document.getElementById('cn-pass'), D.summary.passed);
             countUp(document.getElementById('cn-fail'), D.summary.failed);
@@ -3320,7 +3173,7 @@
             document.getElementById('analysisMeta').textContent = `Last ${D.trend.labels.length} Run${D.trend.labels.length === 1 ? '' : 's'}`;
             document.getElementById('vn-sub').textContent = `Health summary · ${D.runId}`;
             window._D = D;
-            renderTestResults(applyRrLayer(D.tests));
+            renderTestResults(D.tests);
             buildTrend(D.trend);
             setTimeout(() => armReveal('ov'), 60);
             clearInterval(_heroInterval);
@@ -3359,19 +3212,6 @@
             }).join('');
         }
 
-        /* ── Layer filter helpers (Report) ── */
-        function applyRrLayer(rows) {
-            if (_rrLayer === 'all') return rows;
-            return rows.filter(t => (t.type || '').toUpperCase() === _rrLayer.toUpperCase());
-        }
-        function layerFilt(l, btn) {
-            document.querySelectorAll('#rrLayerBtns .lyr-btn').forEach(b => b.classList.remove('on'));
-            btn.classList.add('on'); _rrLayer = l;
-            const D = window._D; if (!D) return;
-            const base = applyRrLayer(D.tests);
-            renderTestResults(currentFilter === 'all' ? base : base.filter(t => t.status === currentFilter));
-        }
-
         function renderTestResults(rows) {
             const D = window._D, wrap = document.getElementById('testResultsWrap'); if (!wrap) return;
             if (!rows || !rows.length) { const msgs = { all: { h: 'No tests found', s: 'No test data available' }, failed: { h: 'No failures', s: 'Every test passed' }, flaky: { h: 'No flaky tests', s: 'All tests ran deterministically' }, passed: { h: 'No passed tests', s: 'No clean passes recorded' } }; const m = msgs[currentFilter] || msgs.all; wrap.innerHTML = `<div style="text-align:center;padding:2.5rem 1rem"><div style="font-size:14px;font-weight:600;color:var(--text);margin-bottom:5px">${m.h}</div><div style="font-size:12px;color:var(--text3);max-width:280px;margin:0 auto;line-height:1.5">${m.s}</div></div>`; return }
@@ -3397,9 +3237,9 @@
         function toggleDrillCard(el, i) { const exp = document.getElementById('ttexp-drill-' + i); if (!exp) return; exp.classList.toggle('open') }
         function toggleCard(el, i) { const exp = document.getElementById('ttexp-' + i); if (!exp) return; exp.classList.toggle('open') }
         function expandRowDesktop(tr) { hideTip(); if (!tr.classList.contains('can-expand')) return; const er = tr.nextElementSibling; if (!er || !er.classList.contains('exp-row')) return; const open = er.style.display === 'none' || !er.style.display; er.style.display = open ? 'table-row' : 'none'; const ch = tr.querySelector('.chev'); if (ch) ch.style.transform = open ? 'rotate(90deg)' : 'rotate(0)' }
-        function filt(f, btn) { document.querySelectorAll('#rrStatusBtns .fbtn').forEach(b => b.classList.remove('on')); btn.classList.add('on'); currentFilter = f; const D = window._D; if (!D) return; const base = applyRrLayer(D.tests); renderTestResults(f === 'all' ? base : base.filter(t => t.status === f)) }
+        function filt(f, btn) { document.querySelectorAll('.fbtn').forEach(b => b.classList.remove('on')); btn.classList.add('on'); currentFilter = f; const D = window._D; if (!D) return; renderTestResults(f === 'all' ? D.tests : D.tests.filter(t => t.status === f)) }
 
-        window.addEventListener('resize', () => { clearTimeout(_resizeTimer); _resizeTimer = setTimeout(() => { const D = window._D; if (!D) return; const base = applyRrLayer(D.tests); renderTestResults(currentFilter === 'all' ? base : base.filter(t => t.status === currentFilter)); if (_activeDrillComp) openDrill(_activeDrillComp); if (currentView === 'cv') renderCoverage(D.tests); if (currentView === 'ov') { renderOvCompCards(D.comp); renderRiskSummary(D.comp, D.summary.rate); renderLayerStrip(D.layers) } }, 150) });
+        window.addEventListener('resize', () => { clearTimeout(_resizeTimer); _resizeTimer = setTimeout(() => { const D = window._D; if (!D) return; renderTestResults(currentFilter === 'all' ? D.tests : D.tests.filter(t => t.status === currentFilter)); if (_activeDrillComp) openDrill(_activeDrillComp); if (currentView === 'cv') renderCoverage(D.tests); if (currentView === 'ov') { renderOvCompCards(D.comp); renderRiskSummary(D.comp, D.summary.rate) } }, 150) });
 
         function buildTrend(trend) {
             if (trendBuilt) return; trendBuilt = true;
@@ -3422,7 +3262,7 @@
             const subs = { ov: `Health summary · ${D ? D.runId : 'loading...'}`, rr: `Test detail · ${D ? D.runId : '...'} · ${D ? D.tests.length : 0} tests`, hi: `All runs · ${window._runs ? window._runs.length : 0} total`, cv: `Requirements traceability · ${D ? D.runId : '—'}` };
             document.getElementById('vn-title').textContent = titles[v];
             document.getElementById('vn-sub').textContent = subs[v];
-            if (v === 'ov' && D) { playRing(D.summary.rate, D.summary.failed, D.summary.flaky, D.summary.total); renderReadinessBadge(D.summary.rate); renderLayerStrip(D.layers); countUp(document.getElementById('cn-total'), D.summary.total); countUp(document.getElementById('cn-pass'), D.summary.passed); countUp(document.getElementById('cn-fail'), D.summary.failed); countUp(document.getElementById('cn-flaky'), D.summary.flaky) }
+            if (v === 'ov' && D) { playRing(D.summary.rate, D.summary.failed, D.summary.flaky, D.summary.total); renderReadinessBadge(D.summary.rate); countUp(document.getElementById('cn-total'), D.summary.total); countUp(document.getElementById('cn-pass'), D.summary.passed); countUp(document.getElementById('cn-fail'), D.summary.failed); countUp(document.getElementById('cn-flaky'), D.summary.flaky) }
             if (v === 'hi') renderHistory();
             if (v === 'rr' && D) renderCompCards(D.comp);
             if (v === 'cv' && D) renderCoverage(D.tests);
