@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-06-23T18:17:11.633Z",
+  "generatedAt": "2026-06-23T18:40:50.475Z",
   "summary": {
     "totalRequirements": 14,
-    "withAutomatedCoverage": 0,
-    "withoutAutomatedCoverage": 14,
-    "totalAutomatedScenarios": 0,
-    "notMappedScenarioCount": 0,
-    "featureFilesScanned": 7
+    "withAutomatedCoverage": 4,
+    "withoutAutomatedCoverage": 10,
+    "totalAutomatedScenarios": 21,
+    "notMappedScenarioCount": 4,
+    "featureFilesScanned": 6
   },
   "requirements": [
     {
@@ -33,16 +33,6 @@
       ]
     },
     {
-      "id": "crm-reports-internal",
-      "scenarioCount": 0,
-      "files": [],
-      "hasAutomatedCoverage": false,
-      "hasPrd": true,
-      "prdTitles": [
-        "PRD: PaceMate CRM Reports Space (Internal Users)"
-      ]
-    },
-    {
       "id": "global-search",
       "scenarioCount": 0,
       "files": [],
@@ -60,16 +50,6 @@
       "hasAutomatedCoverage": false,
       "hasPrd": false,
       "prdTitles": []
-    },
-    {
-      "id": "left-nav",
-      "scenarioCount": 0,
-      "files": [],
-      "hasAutomatedCoverage": false,
-      "hasPrd": true,
-      "prdTitles": [
-        "PRD: New Left Navigation System (Vue.js)"
-      ]
     },
     {
       "id": "lists-shared",
@@ -94,16 +74,6 @@
       ]
     },
     {
-      "id": "patients-list",
-      "scenarioCount": 0,
-      "files": [],
-      "hasAutomatedCoverage": false,
-      "hasPrd": true,
-      "prdTitles": [
-        "PRD: Patients Space"
-      ]
-    },
-    {
       "id": "report-history",
       "scenarioCount": 0,
       "files": [],
@@ -112,20 +82,6 @@
       "prdTitles": [
         "PRD: Report History",
         "Feature Spec: Report History"
-      ]
-    },
-    {
-      "id": "report-viewer",
-      "scenarioCount": 0,
-      "files": [],
-      "hasAutomatedCoverage": false,
-      "hasPrd": true,
-      "prdTitles": [
-        "PRD: Report Page (Report Viewer)",
-        "PRD: Email Clinic & Share Report - Report Page (Web20)",
-        "PRD: Preliminary Report - Report Page (Web20)",
-        "Component Specification: ObservationNotesEditor",
-        "PRD: Recall Mitigation v2.0 (2026-04-29)"
       ]
     },
     {
@@ -153,25 +109,71 @@
       "hasAutomatedCoverage": false,
       "hasPrd": false,
       "prdTitles": []
+    },
+    {
+      "id": "crm-reports-internal",
+      "scenarioCount": 2,
+      "files": [
+        "Dashboard_Smoke.feature"
+      ],
+      "hasAutomatedCoverage": true,
+      "hasPrd": true,
+      "prdTitles": [
+        "PRD: PaceMate CRM Reports Space (Internal Users)"
+      ]
+    },
+    {
+      "id": "left-nav",
+      "scenarioCount": 7,
+      "files": [
+        "sidebarNavigation.feature"
+      ],
+      "hasAutomatedCoverage": true,
+      "hasPrd": true,
+      "prdTitles": [
+        "PRD: New Left Navigation System (Vue.js)"
+      ]
+    },
+    {
+      "id": "patients-list",
+      "scenarioCount": 7,
+      "files": [
+        "customize-list.feature",
+        "patients.feature"
+      ],
+      "hasAutomatedCoverage": true,
+      "hasPrd": true,
+      "prdTitles": [
+        "PRD: Patients Space"
+      ]
+    },
+    {
+      "id": "report-viewer",
+      "scenarioCount": 5,
+      "files": [
+        "ReportViewer_Smoke.feature"
+      ],
+      "hasAutomatedCoverage": true,
+      "hasPrd": true,
+      "prdTitles": [
+        "PRD: Report Page (Report Viewer)",
+        "PRD: Email Clinic & Share Report - Report Page (Web20)",
+        "PRD: Preliminary Report - Report Page (Web20)",
+        "Component Specification: ObservationNotesEditor",
+        "PRD: Recall Mitigation v2.0 (2026-04-29)"
+      ]
     }
   ],
   "notMapped": {
-    "scenarioCount": 0,
-    "files": []
+    "scenarioCount": 4,
+    "files": [
+      "login.feature"
+    ]
   },
   "warnings": {
-    "untaggedFiles": [
-      "customize-list.feature",
-      "Dashboard_Smoke.feature",
-      "login.feature",
-      "PatientDetails_Smoke.feature",
-      "ReportViewer_Smoke.feature",
-      "sidebarNavigation.feature"
-    ],
+    "untaggedFiles": [],
     "unknownTags": [],
     "parseErrors": [],
-    "emptyFiles": [
-      "patients.feature"
-    ]
+    "emptyFiles": []
   }
 }
