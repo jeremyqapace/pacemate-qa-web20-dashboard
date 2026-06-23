@@ -1,0 +1,177 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-06-23T18:10:59.373Z",
+  "summary": {
+    "totalRequirements": 14,
+    "withAutomatedCoverage": 0,
+    "withoutAutomatedCoverage": 14,
+    "totalAutomatedScenarios": 0,
+    "notMappedScenarioCount": 0,
+    "featureFilesScanned": 7
+  },
+  "requirements": [
+    {
+      "id": "common-patient",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": true,
+      "prdTitles": [
+        "DDR: Patient Name Display Format Standard",
+        "DDR: Patient Cell Design (Conditional Tooltip Display)",
+        "PRD: Billing Item Modal (Section 12 — Permissions)"
+      ]
+    },
+    {
+      "id": "crm-reports-external",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": true,
+      "prdTitles": [
+        "PRD: CRM Reports Space (Customer Users)"
+      ]
+    },
+    {
+      "id": "crm-reports-internal",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": true,
+      "prdTitles": [
+        "PRD: PaceMate CRM Reports Space (Internal Users)"
+      ]
+    },
+    {
+      "id": "global-search",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": true,
+      "prdTitles": [
+        "PRD: Global Search",
+        "Addendum [6/1/2026] (Search Commit Model)"
+      ]
+    },
+    {
+      "id": "home",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": false,
+      "prdTitles": []
+    },
+    {
+      "id": "left-nav",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": true,
+      "prdTitles": [
+        "PRD: New Left Navigation System (Vue.js)"
+      ]
+    },
+    {
+      "id": "lists-shared",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": true,
+      "prdTitles": [
+        "PRD: List Format, Styling and Functionality",
+        "DDR: List Filter & Column Actions Standard",
+        "DDR: Filter Settings - Legacy JSP to WEB20 Transition"
+      ]
+    },
+    {
+      "id": "patient-chart",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": true,
+      "prdTitles": [
+        "PRD: New Patient Workflow Overview"
+      ]
+    },
+    {
+      "id": "patients-list",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": true,
+      "prdTitles": [
+        "PRD: Patients Space"
+      ]
+    },
+    {
+      "id": "report-history",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": true,
+      "prdTitles": [
+        "PRD: Report History",
+        "Feature Spec: Report History"
+      ]
+    },
+    {
+      "id": "report-viewer",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": true,
+      "prdTitles": [
+        "PRD: Report Page (Report Viewer)",
+        "PRD: Email Clinic & Share Report - Report Page (Web20)",
+        "PRD: Preliminary Report - Report Page (Web20)",
+        "Component Specification: ObservationNotesEditor",
+        "PRD: Recall Mitigation v2.0 (2026-04-29)"
+      ]
+    },
+    {
+      "id": "reports-space-shared",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": false,
+      "prdTitles": []
+    },
+    {
+      "id": "site-header",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": true,
+      "prdTitles": [
+        "PRD: New Global Site Header"
+      ]
+    },
+    {
+      "id": "training-video",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": false,
+      "prdTitles": []
+    }
+  ],
+  "notMapped": {
+    "scenarioCount": 0,
+    "files": []
+  },
+  "warnings": {
+    "untaggedFiles": [
+      "customize-list.feature",
+      "Dashboard_Smoke.feature",
+      "login.feature",
+      "PatientDetails_Smoke.feature",
+      "ReportViewer_Smoke.feature",
+      "sidebarNavigation.feature"
+    ],
+    "unknownTags": [],
+    "parseErrors": [],
+    "emptyFiles": [
+      "patients.feature"
+    ]
+  }
+}
