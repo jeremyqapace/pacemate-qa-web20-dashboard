@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-06-23T23:42:08.894Z",
+  "generatedAt": "2026-06-24T02:23:45.994Z",
   "summary": {
     "totalRequirements": 14,
     "withAutomatedCoverage": 4,
@@ -156,7 +156,7 @@
       "hasAutomatedCoverage": true,
       "hasPrd": true,
       "prdTitles": [
-        "PRD: Report Page (Report Viewer)",
+        "PRD: ZZZ Test Page",
         "PRD: Email Clinic & Share Report - Report Page (Web20)",
         "PRD: Preliminary Report - Report Page (Web20)",
         "Component Specification: ObservationNotesEditor",
