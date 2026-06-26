@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-06-26T14:19:41.442Z",
+  "generatedAt": "2026-06-26T19:10:56.483Z",
   "summary": {
-    "totalRequirements": 14,
+    "totalRequirements": 16,
     "withAutomatedCoverage": 4,
-    "withoutAutomatedCoverage": 10,
+    "withoutAutomatedCoverage": 12,
     "totalAutomatedScenarios": 21,
     "notMappedScenarioCount": 4,
     "featureFilesScanned": 6
@@ -64,6 +64,16 @@
       ]
     },
     {
+      "id": "manual-emr-update",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": true,
+      "prdTitles": [
+        "PRD: Manual EMR Patient Data Update (WEB20)"
+      ]
+    },
+    {
       "id": "patient-chart",
       "scenarioCount": 0,
       "files": [],
@@ -82,6 +92,16 @@
       "prdTitles": [
         "PRD: Report History",
         "Feature Spec: Report History"
+      ]
+    },
+    {
+      "id": "report-status-event-log",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": true,
+      "prdTitles": [
+        "PRD: Report Status & Event Log (Audit Trail)"
       ]
     },
     {
@@ -157,6 +177,7 @@
       "hasPrd": true,
       "prdTitles": [
         "PRD: Report Page (Report Viewer)",
+        "PRD: Report Assistant - Data Tab (Report Page / Web20)",
         "PRD: Email Clinic & Share Report - Report Page (Web20)",
         "PRD: Preliminary Report - Report Page (Web20)",
         "Component Specification: ObservationNotesEditor",
