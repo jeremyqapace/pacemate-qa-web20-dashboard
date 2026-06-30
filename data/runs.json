@@ -1,79 +1,5 @@
 [
   {
-    "runNum": 159,
-    "runId": "R-159",
-    "rate": 32,
-    "total": 25,
-    "passed": 8,
-    "failed": 17,
-    "flaky": 0,
-    "duration": "14m 20s",
-    "generatedAt": "2026-06-25T00:11:59.232Z",
-    "suite": "Smoke + API",
-    "env": "DEV1",
-    "branch": "main",
-    "compRates": {
-      "Dashboard Module Smoke": {
-        "rate": 0,
-        "passed": 0,
-        "failed": 2,
-        "flaky": 0,
-        "total": 2
-      },
-      "Report Viewer Module Smoke": {
-        "rate": 0,
-        "passed": 0,
-        "failed": 5,
-        "flaky": 0,
-        "total": 5
-      },
-      "Customize List Panel": {
-        "rate": 0,
-        "passed": 0,
-        "failed": 2,
-        "flaky": 0,
-        "total": 2
-      },
-      "Login": {
-        "rate": 75,
-        "passed": 3,
-        "failed": 1,
-        "flaky": 0,
-        "total": 4
-      },
-      "Patients Module Smoke": {
-        "rate": 0,
-        "passed": 0,
-        "failed": 5,
-        "flaky": 0,
-        "total": 5
-      },
-      "Web 2.0 Sidebar Navigation Smoke": {
-        "rate": 71,
-        "passed": 5,
-        "failed": 2,
-        "flaky": 0,
-        "total": 7
-      }
-    },
-    "layers": {
-      "ui": {
-        "total": 25,
-        "passed": 8,
-        "failed": 17,
-        "flaky": 0,
-        "rate": 32
-      },
-      "api": {
-        "total": 0,
-        "passed": 0,
-        "failed": 0,
-        "flaky": 0,
-        "rate": 0
-      }
-    }
-  },
-  {
     "runNum": 160,
     "runId": "R-160",
     "rate": 78.7,
@@ -1429,6 +1355,80 @@
         "failed": 16,
         "flaky": 0,
         "rate": 90.7
+      }
+    }
+  },
+  {
+    "runNum": 169,
+    "runId": "R-169",
+    "rate": 0,
+    "total": 25,
+    "passed": 0,
+    "failed": 25,
+    "flaky": 0,
+    "duration": "25m 42s",
+    "generatedAt": "2026-06-30T14:44:35.139Z",
+    "suite": "Smoke + API",
+    "env": "DEV1",
+    "branch": "main",
+    "compRates": {
+      "Dashboard Module Smoke": {
+        "rate": 0,
+        "passed": 0,
+        "failed": 2,
+        "flaky": 0,
+        "total": 2
+      },
+      "Report Viewer Module Smoke": {
+        "rate": 0,
+        "passed": 0,
+        "failed": 5,
+        "flaky": 0,
+        "total": 5
+      },
+      "Customize List Panel": {
+        "rate": 0,
+        "passed": 0,
+        "failed": 2,
+        "flaky": 0,
+        "total": 2
+      },
+      "Login": {
+        "rate": 0,
+        "passed": 0,
+        "failed": 4,
+        "flaky": 0,
+        "total": 4
+      },
+      "Patients Module Smoke": {
+        "rate": 0,
+        "passed": 0,
+        "failed": 5,
+        "flaky": 0,
+        "total": 5
+      },
+      "Web 2.0 Sidebar Navigation Smoke": {
+        "rate": 0,
+        "passed": 0,
+        "failed": 7,
+        "flaky": 0,
+        "total": 7
+      }
+    },
+    "layers": {
+      "ui": {
+        "total": 25,
+        "passed": 0,
+        "failed": 25,
+        "flaky": 0,
+        "rate": 0
+      },
+      "api": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0,
+        "flaky": 0,
+        "rate": 0
       }
     }
   }
