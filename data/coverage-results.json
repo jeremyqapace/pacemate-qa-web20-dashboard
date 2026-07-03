@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-03T13:57:16.364Z",
+  "generatedAt": "2026-07-03T18:55:14.065Z",
   "summary": {
-    "totalRequirements": 16,
+    "totalRequirements": 17,
     "withAutomatedCoverage": 4,
-    "withoutAutomatedCoverage": 12,
+    "withoutAutomatedCoverage": 13,
     "totalAutomatedScenarios": 21,
     "notMappedScenarioCount": 4,
     "featureFilesScanned": 6
@@ -50,6 +50,16 @@
       "hasAutomatedCoverage": false,
       "hasPrd": false,
       "prdTitles": []
+    },
+    {
+      "id": "image-file-upload",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": true,
+      "prdTitles": [
+        "PRD: Image File Upload Support for PaceMateLIVE"
+      ]
     },
     {
       "id": "lists-shared",
@@ -178,6 +188,7 @@
       "prdTitles": [
         "PRD: Report Page (Report Viewer)",
         "PRD: Report Assistant - Data Tab (Report Page / Web20)",
+        "PRD: PaceMate Echo (Report-Level AI Assistant)",
         "PRD: Email Clinic & Share Report - Report Page (Web20)",
         "PRD: Preliminary Report - Report Page (Web20)",
         "Component Specification: ObservationNotesEditor",
