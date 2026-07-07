@@ -1,15 +1,25 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-07T14:14:32.716Z",
+  "generatedAt": "2026-07-07T19:30:15.514Z",
   "summary": {
-    "totalRequirements": 17,
+    "totalRequirements": 19,
     "withAutomatedCoverage": 4,
-    "withoutAutomatedCoverage": 13,
+    "withoutAutomatedCoverage": 15,
     "totalAutomatedScenarios": 21,
     "notMappedScenarioCount": 4,
     "featureFilesScanned": 6
   },
   "requirements": [
+    {
+      "id": "ambulatory-space",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": true,
+      "prdTitles": [
+        "PRD: PaceMate Ambulatory Space"
+      ]
+    },
     {
       "id": "common-patient",
       "scenarioCount": 0,
@@ -112,6 +122,16 @@
       "hasPrd": true,
       "prdTitles": [
         "PRD: Report Status & Event Log (Audit Trail)"
+      ]
+    },
+    {
+      "id": "report-viewer-echo",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": true,
+      "prdTitles": [
+        "PRD: PaceMate Echo (Report-Level AI Assistant)"
       ]
     },
     {
