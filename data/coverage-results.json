@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-08T14:05:39.077Z",
+  "generatedAt": "2026-07-08T19:00:43.280Z",
   "summary": {
-    "totalRequirements": 19,
+    "totalRequirements": 20,
     "withAutomatedCoverage": 4,
-    "withoutAutomatedCoverage": 15,
+    "withoutAutomatedCoverage": 16,
     "totalAutomatedScenarios": 21,
     "notMappedScenarioCount": 4,
     "featureFilesScanned": 6
@@ -91,6 +91,16 @@
       "hasPrd": true,
       "prdTitles": [
         "PRD: Manual EMR Patient Data Update (WEB20)"
+      ]
+    },
+    {
+      "id": "notes-space",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": true,
+      "prdTitles": [
+        "PRD: Notes Space"
       ]
     },
     {
