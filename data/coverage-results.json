@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-09T14:34:39.510Z",
+  "generatedAt": "2026-07-09T19:09:34.892Z",
   "summary": {
-    "totalRequirements": 20,
+    "totalRequirements": 21,
     "withAutomatedCoverage": 4,
-    "withoutAutomatedCoverage": 16,
+    "withoutAutomatedCoverage": 17,
     "totalAutomatedScenarios": 21,
     "notMappedScenarioCount": 4,
     "featureFilesScanned": 6
@@ -18,6 +18,16 @@
       "hasPrd": true,
       "prdTitles": [
         "PRD: PaceMate Ambulatory Space"
+      ]
+    },
+    {
+      "id": "billing-space",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": true,
+      "prdTitles": [
+        "PRD: Billing Space (v1.0, 2026-07-07)"
       ]
     },
     {
