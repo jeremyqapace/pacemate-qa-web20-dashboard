@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-14T14:03:46.397Z",
+  "generatedAt": "2026-07-14T18:58:23.212Z",
   "summary": {
-    "totalRequirements": 21,
+    "totalRequirements": 22,
     "withAutomatedCoverage": 4,
-    "withoutAutomatedCoverage": 17,
+    "withoutAutomatedCoverage": 18,
     "totalAutomatedScenarios": 21,
     "notMappedScenarioCount": 4,
     "featureFilesScanned": 6
@@ -29,6 +29,14 @@
       "prdTitles": [
         "PRD: Billing Space (v1.0, 2026-07-07)"
       ]
+    },
+    {
+      "id": "bulk-report-response-shared",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": false,
+      "prdTitles": []
     },
     {
       "id": "common-patient",
