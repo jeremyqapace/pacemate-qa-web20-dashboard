@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-20T14:09:41.618Z",
+  "generatedAt": "2026-07-20T19:14:33.713Z",
   "summary": {
-    "totalRequirements": 23,
+    "totalRequirements": 24,
     "withAutomatedCoverage": 4,
-    "withoutAutomatedCoverage": 19,
+    "withoutAutomatedCoverage": 20,
     "totalAutomatedScenarios": 21,
     "notMappedScenarioCount": 4,
     "featureFilesScanned": 6
@@ -132,13 +132,24 @@
       ]
     },
     {
+      "id": "notes-tab",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": true,
+      "prdTitles": [
+        "PRD: Notes Tab (Patient Chart)"
+      ]
+    },
+    {
       "id": "patient-chart",
       "scenarioCount": 0,
       "files": [],
       "hasAutomatedCoverage": false,
       "hasPrd": true,
       "prdTitles": [
-        "PRD: New Patient Workflow Overview"
+        "PRD: New Patient Workflow Overview",
+        "PRD: Patient Profile Tab (Patient Chart)"
       ]
     },
     {
