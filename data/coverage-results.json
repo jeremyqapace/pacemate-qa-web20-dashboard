@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-23T14:11:42.881Z",
+  "generatedAt": "2026-07-23T19:08:02.537Z",
   "summary": {
-    "totalRequirements": 24,
+    "totalRequirements": 25,
     "withAutomatedCoverage": 4,
-    "withoutAutomatedCoverage": 20,
+    "withoutAutomatedCoverage": 21,
     "totalAutomatedScenarios": 21,
     "notMappedScenarioCount": 4,
     "featureFilesScanned": 6
@@ -140,6 +140,14 @@
       "prdTitles": [
         "PRD: Notes Tab (Patient Chart)"
       ]
+    },
+    {
+      "id": "paceart-historical-tab",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": false,
+      "prdTitles": []
     },
     {
       "id": "patient-chart",
