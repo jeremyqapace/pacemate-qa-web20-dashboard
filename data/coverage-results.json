@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-29T14:15:32.759Z",
+  "generatedAt": "2026-07-29T19:00:29.820Z",
   "summary": {
-    "totalRequirements": 25,
+    "totalRequirements": 26,
     "withAutomatedCoverage": 4,
-    "withoutAutomatedCoverage": 21,
+    "withoutAutomatedCoverage": 22,
     "totalAutomatedScenarios": 21,
     "notMappedScenarioCount": 4,
     "featureFilesScanned": 6
@@ -143,6 +143,14 @@
     },
     {
       "id": "paceart-historical-tab",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": false,
+      "prdTitles": []
+    },
+    {
+      "id": "paceart-triage",
       "scenarioCount": 0,
       "files": [],
       "hasAutomatedCoverage": false,
