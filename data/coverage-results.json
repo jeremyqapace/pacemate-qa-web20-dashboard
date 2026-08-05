@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-05T14:06:25.422Z",
+  "generatedAt": "2026-08-05T19:12:15.854Z",
   "summary": {
-    "totalRequirements": 26,
+    "totalRequirements": 27,
     "withAutomatedCoverage": 4,
-    "withoutAutomatedCoverage": 22,
+    "withoutAutomatedCoverage": 23,
     "totalAutomatedScenarios": 21,
     "notMappedScenarioCount": 4,
     "featureFilesScanned": 6
@@ -80,6 +80,14 @@
         "PRD: Global Search",
         "Addendum [6/1/2026] (Search Commit Model)"
       ]
+    },
+    {
+      "id": "grouped-table-shared",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": false,
+      "prdTitles": []
     },
     {
       "id": "home",
