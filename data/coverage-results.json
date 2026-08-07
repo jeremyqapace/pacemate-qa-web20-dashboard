@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-07T13:59:31.295Z",
+  "generatedAt": "2026-08-07T18:51:25.873Z",
   "summary": {
     "totalRequirements": 27,
     "withAutomatedCoverage": 4,
@@ -37,7 +37,7 @@
       "hasAutomatedCoverage": false,
       "hasPrd": true,
       "prdTitles": [
-        "PRD: Billing Space (v1.0, 2026-07-07)"
+        "PRD: Billing Space (DRAFT for Review, 2026-07-25)"
       ]
     },
     {
