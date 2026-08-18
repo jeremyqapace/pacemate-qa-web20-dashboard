@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-18T13:51:03.847Z",
+  "generatedAt": "2026-08-18T18:43:10.097Z",
   "summary": {
-    "totalRequirements": 27,
+    "totalRequirements": 28,
     "withAutomatedCoverage": 4,
-    "withoutAutomatedCoverage": 23,
+    "withoutAutomatedCoverage": 24,
     "totalAutomatedScenarios": 21,
     "notMappedScenarioCount": 4,
     "featureFilesScanned": 6
@@ -224,6 +224,14 @@
       "prdTitles": [
         "PRD: New Global Site Header"
       ]
+    },
+    {
+      "id": "state-panel-shared",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": false,
+      "prdTitles": []
     },
     {
       "id": "training-video",
