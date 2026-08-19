@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-19T13:57:04.201Z",
+  "generatedAt": "2026-08-19T18:38:19.832Z",
   "summary": {
-    "totalRequirements": 28,
+    "totalRequirements": 30,
     "withAutomatedCoverage": 4,
-    "withoutAutomatedCoverage": 24,
+    "withoutAutomatedCoverage": 26,
     "totalAutomatedScenarios": 21,
     "notMappedScenarioCount": 4,
     "featureFilesScanned": 6
@@ -68,6 +68,16 @@
       "hasPrd": true,
       "prdTitles": [
         "PRD: CRM Reports Space (Customer Users)"
+      ]
+    },
+    {
+      "id": "devices-tab",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": true,
+      "prdTitles": [
+        "PRD: Devices Tab (Patient Chart)"
       ]
     },
     {
@@ -205,6 +215,16 @@
       "hasPrd": true,
       "prdTitles": [
         "PRD: PaceMate Echo (Report-Level AI Assistant)"
+      ]
+    },
+    {
+      "id": "report-viewer-list-panel",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": true,
+      "prdTitles": [
+        "PRD: Report Page - Queue Bar Removal and Enhanced List Breadcrumb (List Panel Access)"
       ]
     },
     {
