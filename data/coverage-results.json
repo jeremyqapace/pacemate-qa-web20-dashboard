@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-27T17:19:21.789Z",
+  "generatedAt": "2026-08-27T21:57:07.706Z",
   "summary": {
-    "totalRequirements": 30,
+    "totalRequirements": 31,
     "withAutomatedCoverage": 4,
-    "withoutAutomatedCoverage": 26,
+    "withoutAutomatedCoverage": 27,
     "totalAutomatedScenarios": 21,
     "notMappedScenarioCount": 4,
     "featureFilesScanned": 6
@@ -229,6 +229,14 @@
     },
     {
       "id": "reports-space-shared",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": false,
+      "prdTitles": []
+    },
+    {
+      "id": "shared-date-formatting",
       "scenarioCount": 0,
       "files": [],
       "hasAutomatedCoverage": false,
