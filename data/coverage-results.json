@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-28T17:32:59.437Z",
+  "generatedAt": "2026-08-28T21:57:26.778Z",
   "summary": {
-    "totalRequirements": 31,
+    "totalRequirements": 32,
     "withAutomatedCoverage": 4,
-    "withoutAutomatedCoverage": 27,
+    "withoutAutomatedCoverage": 28,
     "totalAutomatedScenarios": 21,
     "notMappedScenarioCount": 4,
     "featureFilesScanned": 6
@@ -237,6 +237,14 @@
     },
     {
       "id": "shared-date-formatting",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": false,
+      "prdTitles": []
+    },
+    {
+      "id": "shared-list-config-transport",
       "scenarioCount": 0,
       "files": [],
       "hasAutomatedCoverage": false,
