@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-31T13:51:01.808Z",
+  "generatedAt": "2026-08-31T18:52:20.513Z",
   "summary": {
-    "totalRequirements": 32,
+    "totalRequirements": 33,
     "withAutomatedCoverage": 4,
-    "withoutAutomatedCoverage": 28,
+    "withoutAutomatedCoverage": 29,
     "totalAutomatedScenarios": 21,
     "notMappedScenarioCount": 4,
     "featureFilesScanned": 6
@@ -67,7 +67,8 @@
       "hasAutomatedCoverage": false,
       "hasPrd": true,
       "prdTitles": [
-        "PRD: CRM Reports Space (Customer Users)"
+        "PRD: CRM Reports Space (Customer Users)",
+        "PRD: Create Report (WEB20)"
       ]
     },
     {
@@ -158,6 +159,14 @@
       "prdTitles": [
         "PRD: Notes Tab (Patient Chart)"
       ]
+    },
+    {
+      "id": "overlay-dismissal-shared",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": false,
+      "prdTitles": []
     },
     {
       "id": "paceart-historical-tab",
