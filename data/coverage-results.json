@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-01T13:52:25.903Z",
+  "generatedAt": "2026-09-01T18:51:46.422Z",
   "summary": {
-    "totalRequirements": 33,
+    "totalRequirements": 34,
     "withAutomatedCoverage": 4,
-    "withoutAutomatedCoverage": 29,
+    "withoutAutomatedCoverage": 30,
     "totalAutomatedScenarios": 21,
     "notMappedScenarioCount": 4,
     "featureFilesScanned": 6
@@ -272,6 +272,14 @@
     },
     {
       "id": "state-panel-shared",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": false,
+      "prdTitles": []
+    },
+    {
+      "id": "table-cells-shared",
       "scenarioCount": 0,
       "files": [],
       "hasAutomatedCoverage": false,
