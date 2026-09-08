@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-08T13:47:17.606Z",
+  "generatedAt": "2026-09-08T18:52:34.641Z",
   "summary": {
-    "totalRequirements": 35,
+    "totalRequirements": 37,
     "withAutomatedCoverage": 4,
-    "withoutAutomatedCoverage": 31,
+    "withoutAutomatedCoverage": 33,
     "totalAutomatedScenarios": 21,
     "notMappedScenarioCount": 4,
     "featureFilesScanned": 6
@@ -59,6 +59,22 @@
         "DDR: Patient Cell Design (Conditional Tooltip Display)",
         "PRD: Billing Item Modal (Section 12 — Permissions)"
       ]
+    },
+    {
+      "id": "create-report-time-input",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": false,
+      "prdTitles": []
+    },
+    {
+      "id": "create-report-wizard-shared",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": false,
+      "prdTitles": []
     },
     {
       "id": "crm-reports-external",
