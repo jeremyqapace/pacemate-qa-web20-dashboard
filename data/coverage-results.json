@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-09T13:47:12.404Z",
+  "generatedAt": "2026-09-09T18:49:17.761Z",
   "summary": {
-    "totalRequirements": 37,
+    "totalRequirements": 40,
     "withAutomatedCoverage": 4,
-    "withoutAutomatedCoverage": 33,
+    "withoutAutomatedCoverage": 36,
     "totalAutomatedScenarios": 21,
     "notMappedScenarioCount": 4,
     "featureFilesScanned": 6
@@ -96,6 +96,24 @@
       "prdTitles": [
         "PRD: Devices Tab (Patient Chart)"
       ]
+    },
+    {
+      "id": "feature-toggle-system",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": true,
+      "prdTitles": [
+        "Feature Toggle System PRD (local file, no ClickUp doc)"
+      ]
+    },
+    {
+      "id": "filter-persistence-shared",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": false,
+      "prdTitles": []
     },
     {
       "id": "global-search",
@@ -221,6 +239,14 @@
         "PRD: Report History",
         "Feature Spec: Report History"
       ]
+    },
+    {
+      "id": "report-list-panel-endpoint",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": false,
+      "prdTitles": []
     },
     {
       "id": "report-status-event-log",
