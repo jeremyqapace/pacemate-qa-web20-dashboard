@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-14T13:56:22.529Z",
+  "generatedAt": "2026-09-14T18:59:28.782Z",
   "summary": {
-    "totalRequirements": 41,
+    "totalRequirements": 43,
     "withAutomatedCoverage": 4,
-    "withoutAutomatedCoverage": 37,
+    "withoutAutomatedCoverage": 39,
     "totalAutomatedScenarios": 21,
     "notMappedScenarioCount": 4,
     "featureFilesScanned": 6
@@ -69,6 +69,14 @@
       "prdTitles": []
     },
     {
+      "id": "create-report-date-picker",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": false,
+      "prdTitles": []
+    },
+    {
       "id": "create-report-time-input",
       "scenarioCount": 0,
       "files": [],
@@ -104,6 +112,14 @@
       "prdTitles": [
         "PRD: Devices Tab (Patient Chart)"
       ]
+    },
+    {
+      "id": "dictionary-api-shared",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": false,
+      "prdTitles": []
     },
     {
       "id": "feature-toggle-system",
