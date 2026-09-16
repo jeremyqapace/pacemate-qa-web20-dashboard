@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-16T13:59:57.264Z",
+  "generatedAt": "2026-09-16T18:49:06.084Z",
   "summary": {
-    "totalRequirements": 43,
+    "totalRequirements": 48,
     "withAutomatedCoverage": 4,
-    "withoutAutomatedCoverage": 39,
+    "withoutAutomatedCoverage": 44,
     "totalAutomatedScenarios": 21,
     "notMappedScenarioCount": 4,
     "featureFilesScanned": 6
@@ -102,6 +102,22 @@
         "PRD: CRM Reports Space (Customer Users)",
         "PRD: Create Report (WEB20)"
       ]
+    },
+    {
+      "id": "cross-cutting-api-shared",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": false,
+      "prdTitles": []
+    },
+    {
+      "id": "csv-export-encoding-shared",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": false,
+      "prdTitles": []
     },
     {
       "id": "devices-tab",
@@ -220,6 +236,14 @@
     },
     {
       "id": "overlay-dismissal-shared",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": false,
+      "prdTitles": []
+    },
+    {
+      "id": "paceart-archive-shared",
       "scenarioCount": 0,
       "files": [],
       "hasAutomatedCoverage": false,
@@ -353,6 +377,14 @@
       "prdTitles": []
     },
     {
+      "id": "statread",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": false,
+      "prdTitles": []
+    },
+    {
       "id": "table-cells-shared",
       "scenarioCount": 0,
       "files": [],
@@ -362,6 +394,14 @@
     },
     {
       "id": "training-video",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": false,
+      "prdTitles": []
+    },
+    {
+      "id": "visit-id",
       "scenarioCount": 0,
       "files": [],
       "hasAutomatedCoverage": false,
