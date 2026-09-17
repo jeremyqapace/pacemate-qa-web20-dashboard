@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-17T13:55:55.344Z",
+  "generatedAt": "2026-09-17T18:53:45.940Z",
   "summary": {
-    "totalRequirements": 48,
+    "totalRequirements": 50,
     "withAutomatedCoverage": 4,
-    "withoutAutomatedCoverage": 44,
+    "withoutAutomatedCoverage": 46,
     "totalAutomatedScenarios": 21,
     "notMappedScenarioCount": 4,
     "featureFilesScanned": 6
@@ -61,6 +61,16 @@
       ]
     },
     {
+      "id": "create-report",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": true,
+      "prdTitles": [
+        "PRD: Create Report (WEB20)"
+      ]
+    },
+    {
       "id": "create-report-api",
       "scenarioCount": 0,
       "files": [],
@@ -99,8 +109,7 @@
       "hasAutomatedCoverage": false,
       "hasPrd": true,
       "prdTitles": [
-        "PRD: CRM Reports Space (Customer Users)",
-        "PRD: Create Report (WEB20)"
+        "PRD: CRM Reports Space (Customer Users)"
       ]
     },
     {
@@ -352,6 +361,14 @@
     },
     {
       "id": "shared-recalls",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": false,
+      "prdTitles": []
+    },
+    {
+      "id": "shared-tab-bar",
       "scenarioCount": 0,
       "files": [],
       "hasAutomatedCoverage": false,
