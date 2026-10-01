@@ -1,79 +1,5 @@
 [
   {
-    "runNum": 361,
-    "runId": "R-361",
-    "rate": 16,
-    "total": 25,
-    "passed": 4,
-    "failed": 21,
-    "flaky": 0,
-    "duration": "15m 28s",
-    "generatedAt": "2026-09-28T14:09:38.346Z",
-    "suite": "Smoke + API",
-    "env": "DEV1",
-    "branch": "main",
-    "compRates": {
-      "Dashboard Module Smoke": {
-        "rate": 0,
-        "passed": 0,
-        "failed": 2,
-        "flaky": 0,
-        "total": 2
-      },
-      "Report Viewer Module Smoke": {
-        "rate": 0,
-        "passed": 0,
-        "failed": 5,
-        "flaky": 0,
-        "total": 5
-      },
-      "Customize List Panel": {
-        "rate": 0,
-        "passed": 0,
-        "failed": 2,
-        "flaky": 0,
-        "total": 2
-      },
-      "Login": {
-        "rate": 75,
-        "passed": 3,
-        "failed": 1,
-        "flaky": 0,
-        "total": 4
-      },
-      "Patients Module Smoke": {
-        "rate": 0,
-        "passed": 0,
-        "failed": 5,
-        "flaky": 0,
-        "total": 5
-      },
-      "Web 2.0 Sidebar Navigation Smoke": {
-        "rate": 14,
-        "passed": 1,
-        "failed": 6,
-        "flaky": 0,
-        "total": 7
-      }
-    },
-    "layers": {
-      "ui": {
-        "total": 25,
-        "passed": 4,
-        "failed": 21,
-        "flaky": 0,
-        "rate": 16
-      },
-      "api": {
-        "total": 0,
-        "passed": 0,
-        "failed": 0,
-        "flaky": 0,
-        "rate": 0
-      }
-    }
-  },
-  {
     "runNum": 362,
     "runId": "R-362",
     "rate": 69.5,
@@ -1291,6 +1217,157 @@
     "flaky": 0,
     "duration": "25m 41s",
     "generatedAt": "2026-10-01T13:51:00.377Z",
+    "suite": "Smoke + API",
+    "env": "DEV1",
+    "branch": "main",
+    "compRates": {
+      "Dashboard Module Smoke": {
+        "rate": 0,
+        "passed": 0,
+        "failed": 2,
+        "flaky": 0,
+        "total": 2
+      },
+      "Report Viewer Module Smoke": {
+        "rate": 0,
+        "passed": 0,
+        "failed": 5,
+        "flaky": 0,
+        "total": 5
+      },
+      "Customize List Panel": {
+        "rate": 0,
+        "passed": 0,
+        "failed": 2,
+        "flaky": 0,
+        "total": 2
+      },
+      "Login": {
+        "rate": 75,
+        "passed": 3,
+        "failed": 1,
+        "flaky": 0,
+        "total": 4
+      },
+      "Patients Module Smoke": {
+        "rate": 0,
+        "passed": 0,
+        "failed": 5,
+        "flaky": 0,
+        "total": 5
+      },
+      "Web 2.0 Sidebar Navigation Smoke": {
+        "rate": 14,
+        "passed": 1,
+        "failed": 6,
+        "flaky": 0,
+        "total": 7
+      },
+      "CRM Reports": {
+        "rate": 6,
+        "passed": 1,
+        "failed": 16,
+        "flaky": 0,
+        "total": 17
+      },
+      "Dictionary": {
+        "rate": 100,
+        "passed": 24,
+        "failed": 0,
+        "flaky": 0,
+        "total": 24
+      },
+      "External Crm Report Bulk Actions": {
+        "rate": 100,
+        "passed": 20,
+        "failed": 0,
+        "flaky": 0,
+        "total": 20
+      },
+      "External Crm Reports Inclinic": {
+        "rate": 100,
+        "passed": 12,
+        "failed": 0,
+        "flaky": 0,
+        "total": 12
+      },
+      "External Crm Reports List Config": {
+        "rate": 97,
+        "passed": 33,
+        "failed": 1,
+        "flaky": 0,
+        "total": 34
+      },
+      "External Crm Reports Transmission List": {
+        "rate": 100,
+        "passed": 18,
+        "failed": 0,
+        "flaky": 0,
+        "total": 18
+      },
+      "Patient Bulk Actions": {
+        "rate": 100,
+        "passed": 4,
+        "failed": 0,
+        "flaky": 0,
+        "total": 4
+      },
+      "Report Bulk Actions": {
+        "rate": 57,
+        "passed": 4,
+        "failed": 3,
+        "flaky": 0,
+        "total": 7
+      },
+      "Transmission Group": {
+        "rate": 25,
+        "passed": 3,
+        "failed": 9,
+        "flaky": 0,
+        "total": 12
+      },
+      "User": {
+        "rate": 69,
+        "passed": 9,
+        "failed": 4,
+        "flaky": 0,
+        "total": 13
+      },
+      "User Setting": {
+        "rate": 100,
+        "passed": 11,
+        "failed": 0,
+        "flaky": 0,
+        "total": 11
+      }
+    },
+    "layers": {
+      "ui": {
+        "total": 25,
+        "passed": 4,
+        "failed": 21,
+        "flaky": 0,
+        "rate": 16
+      },
+      "api": {
+        "total": 172,
+        "passed": 139,
+        "failed": 33,
+        "flaky": 0,
+        "rate": 80.8
+      }
+    }
+  },
+  {
+    "runNum": 371,
+    "runId": "R-371",
+    "rate": 72.6,
+    "total": 197,
+    "passed": 143,
+    "failed": 54,
+    "flaky": 0,
+    "duration": "28m 44s",
+    "generatedAt": "2026-10-01T18:56:13.281Z",
     "suite": "Smoke + API",
     "env": "DEV1",
     "branch": "main",
