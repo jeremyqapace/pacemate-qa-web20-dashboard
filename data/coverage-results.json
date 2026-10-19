@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-19T14:07:16.929Z",
+  "generatedAt": "2026-10-19T18:56:59.860Z",
   "summary": {
-    "totalRequirements": 50,
+    "totalRequirements": 72,
     "withAutomatedCoverage": 5,
-    "withoutAutomatedCoverage": 45,
+    "withoutAutomatedCoverage": 67,
     "totalAutomatedScenarios": 34,
     "notMappedScenarioCount": 4,
     "featureFilesScanned": 7
@@ -28,6 +28,16 @@
       "hasPrd": true,
       "prdTitles": [
         "PRD: Analytics Space (WEB20)"
+      ]
+    },
+    {
+      "id": "billing-item-modal-v2",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": true,
+      "prdTitles": [
+        "PRD: Billing Item Modal V2 (Per-CPT Updates and Device List Support)"
       ]
     },
     {
@@ -57,7 +67,26 @@
       "prdTitles": [
         "DDR: Patient Name Display Format Standard",
         "DDR: Patient Cell Design (Conditional Tooltip Display)",
-        "PRD: Billing Item Modal (Section 12 — Permissions)"
+        "PRD: Billing Item Modal (Section 12 — Permissions)",
+        "PRD: Billing Item Modal V2 (Per-CPT Updates and Device List Support)"
+      ]
+    },
+    {
+      "id": "common-wizard",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": false,
+      "prdTitles": []
+    },
+    {
+      "id": "create-patient-device",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": true,
+      "prdTitles": [
+        "PRD: Create Patient/Create Device Workflow (WEB20)"
       ]
     },
     {
@@ -129,12 +158,33 @@
       ]
     },
     {
+      "id": "diagnosis-codes",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": true,
+      "prdTitles": [
+        "PRD: Diagnosis Codes, Phase 1 (Patient Chart Tab and Report Page Modal)",
+        "PRD: Diagnosis Codes, Phase 2 (Patient Chart Tab and Report Page Modal)"
+      ]
+    },
+    {
       "id": "dictionary-api-shared",
       "scenarioCount": 0,
       "files": [],
       "hasAutomatedCoverage": false,
       "hasPrd": false,
       "prdTitles": []
+    },
+    {
+      "id": "emr-errors-space",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": true,
+      "prdTitles": [
+        "PRD: EMR Errors Space"
+      ]
     },
     {
       "id": "feature-toggle-system",
@@ -174,6 +224,16 @@
       "prdTitles": []
     },
     {
+      "id": "heart-failure-space",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": true,
+      "prdTitles": [
+        "PRD: Heart Failure Space"
+      ]
+    },
+    {
       "id": "home",
       "scenarioCount": 0,
       "files": [],
@@ -192,6 +252,14 @@
       ]
     },
     {
+      "id": "list-config-service-shared",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": false,
+      "prdTitles": []
+    },
+    {
       "id": "lists-shared",
       "scenarioCount": 0,
       "files": [],
@@ -202,6 +270,14 @@
         "DDR: List Filter & Column Actions Standard",
         "DDR: Filter Settings - Legacy JSP to WEB20 Transition"
       ]
+    },
+    {
+      "id": "local-login",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": false,
+      "prdTitles": []
     },
     {
       "id": "manual-emr-update",
@@ -258,12 +334,31 @@
       "prdTitles": []
     },
     {
+      "id": "paceart-lead-device-parity",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": false,
+      "prdTitles": []
+    },
+    {
       "id": "paceart-triage",
       "scenarioCount": 0,
       "files": [],
       "hasAutomatedCoverage": false,
       "hasPrd": false,
       "prdTitles": []
+    },
+    {
+      "id": "patient-cell-shared",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": true,
+      "prdTitles": [
+        "DDR: Patient Name Display Format Standard",
+        "DDR: Patient Cell Design (Conditional Tooltip Display)"
+      ]
     },
     {
       "id": "patient-chart",
@@ -277,6 +372,22 @@
       ]
     },
     {
+      "id": "report-bulk-export-base",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": false,
+      "prdTitles": []
+    },
+    {
+      "id": "report-family-shared-sql",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": false,
+      "prdTitles": []
+    },
+    {
       "id": "report-history",
       "scenarioCount": 0,
       "files": [],
@@ -286,6 +397,14 @@
         "PRD: Report History",
         "Feature Spec: Report History"
       ]
+    },
+    {
+      "id": "report-list-filter-skeleton",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": false,
+      "prdTitles": []
     },
     {
       "id": "report-list-panel-endpoint",
@@ -334,7 +453,67 @@
       "prdTitles": []
     },
     {
+      "id": "server-clock",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": false,
+      "prdTitles": []
+    },
+    {
+      "id": "shared-column-header",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": true,
+      "prdTitles": [
+        "PRD: EMR Errors Space"
+      ]
+    },
+    {
+      "id": "shared-column-state-persistence",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": false,
+      "prdTitles": []
+    },
+    {
       "id": "shared-date-formatting",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": false,
+      "prdTitles": []
+    },
+    {
+      "id": "shared-device-cell",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": true,
+      "prdTitles": [
+        "PRD: EMR Errors Space"
+      ]
+    },
+    {
+      "id": "shared-device-status-pill",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": false,
+      "prdTitles": []
+    },
+    {
+      "id": "shared-inline-field-validation",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": false,
+      "prdTitles": []
+    },
+    {
+      "id": "shared-leave-page-guards",
       "scenarioCount": 0,
       "files": [],
       "hasAutomatedCoverage": false,
@@ -351,6 +530,14 @@
     },
     {
       "id": "shared-recalls",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": false,
+      "prdTitles": []
+    },
+    {
+      "id": "shared-string-helpers",
       "scenarioCount": 0,
       "files": [],
       "hasAutomatedCoverage": false,
@@ -406,6 +593,16 @@
       "hasAutomatedCoverage": false,
       "hasPrd": false,
       "prdTitles": []
+    },
+    {
+      "id": "upload-reports",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": true,
+      "prdTitles": [
+        "PRD: Upload Reports"
+      ]
     },
     {
       "id": "visit-id",
