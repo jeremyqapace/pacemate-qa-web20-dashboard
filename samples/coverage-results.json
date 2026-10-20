@@ -1,0 +1,83 @@
+{
+ "generatedAt": "2026-06-23T19:13:16.080Z",
+ "summary": {
+  "totalRequirements": 8,
+  "withAutomatedCoverage": 6,
+  "withoutAutomatedCoverage": 2,
+  "totalAutomatedScenarios": 25
+ },
+ "requirements": [
+  {
+   "id": "PRD-Billing",
+   "hasAutomatedCoverage": false,
+   "hasPrd": true,
+   "files": [],
+   "scenarioCount": 0
+  },
+  {
+   "id": "PRD-Notes",
+   "hasAutomatedCoverage": false,
+   "hasPrd": false,
+   "files": [],
+   "scenarioCount": 0
+  },
+  {
+   "id": "PRD-Customize-List",
+   "hasAutomatedCoverage": true,
+   "hasPrd": true,
+   "files": [
+    "customize-list.feature"
+   ],
+   "scenarioCount": 2
+  },
+  {
+   "id": "PRD-Dashboard",
+   "hasAutomatedCoverage": true,
+   "hasPrd": true,
+   "files": [
+    "dashboard.feature"
+   ],
+   "scenarioCount": 2
+  },
+  {
+   "id": "PRD-Login",
+   "hasAutomatedCoverage": true,
+   "hasPrd": true,
+   "files": [
+    "login.feature"
+   ],
+   "scenarioCount": 4
+  },
+  {
+   "id": "PRD-Patients",
+   "hasAutomatedCoverage": true,
+   "hasPrd": true,
+   "files": [
+    "patients.feature"
+   ],
+   "scenarioCount": 5
+  },
+  {
+   "id": "PRD-Report-Viewer",
+   "hasAutomatedCoverage": true,
+   "hasPrd": true,
+   "files": [
+    "report-viewer.feature"
+   ],
+   "scenarioCount": 5
+  },
+  {
+   "id": "PRD-Sidebar-Navigation",
+   "hasAutomatedCoverage": true,
+   "hasPrd": true,
+   "files": [
+    "sidebar.feature"
+   ],
+   "scenarioCount": 7
+  }
+ ],
+ "notMapped": {
+  "scenarioCount": 0,
+  "files": []
+ }
+}

@@ -1,0 +1,2081 @@
+{
+ "runId": "R-152",
+ "generatedAt": "2026-06-23T19:13:16.080Z",
+ "branch": "main",
+ "suite": "Smoke + API",
+ "env": "DEV1",
+ "summary": {
+  "total": 197,
+  "passed": 170,
+  "failed": 27,
+  "flaky": 0,
+  "rate": 86.3,
+  "duration": "16m 43s",
+  "prevRate": 86.3,
+  "prevRunId": "R-151",
+  "prevFailed": 27,
+  "prevFlaky": 0
+ },
+ "comp": [
+  {
+   "name": "Dashboard Module Smoke",
+   "total": 2,
+   "passed": 1,
+   "failed": 1,
+   "flaky": 0,
+   "pct": 50
+  },
+  {
+   "name": "Report Viewer Module Smoke",
+   "total": 5,
+   "passed": 5,
+   "failed": 0,
+   "flaky": 0,
+   "pct": 100
+  },
+  {
+   "name": "Customize List Panel",
+   "total": 2,
+   "passed": 0,
+   "failed": 2,
+   "flaky": 0,
+   "pct": 0
+  },
+  {
+   "name": "Login",
+   "total": 4,
+   "passed": 3,
+   "failed": 1,
+   "flaky": 0,
+   "pct": 75
+  },
+  {
+   "name": "Patients Module Smoke",
+   "total": 5,
+   "passed": 0,
+   "failed": 5,
+   "flaky": 0,
+   "pct": 0
+  },
+  {
+   "name": "Web 2.0 Sidebar Navigation Smoke",
+   "total": 7,
+   "passed": 5,
+   "failed": 2,
+   "flaky": 0,
+   "pct": 71
+  },
+  {
+   "name": "CRM Reports",
+   "total": 17,
+   "passed": 17,
+   "failed": 0,
+   "flaky": 0,
+   "pct": 100
+  },
+  {
+   "name": "Dictionary",
+   "total": 24,
+   "passed": 24,
+   "failed": 0,
+   "flaky": 0,
+   "pct": 100
+  },
+  {
+   "name": "External Crm Report Bulk Actions",
+   "total": 20,
+   "passed": 20,
+   "failed": 0,
+   "flaky": 0,
+   "pct": 100
+  },
+  {
+   "name": "External Crm Reports Inclinic",
+   "total": 12,
+   "passed": 12,
+   "failed": 0,
+   "flaky": 0,
+   "pct": 100
+  },
+  {
+   "name": "External Crm Reports List Config",
+   "total": 34,
+   "passed": 34,
+   "failed": 0,
+   "flaky": 0,
+   "pct": 100
+  },
+  {
+   "name": "External Crm Reports Transmission List",
+   "total": 18,
+   "passed": 18,
+   "failed": 0,
+   "flaky": 0,
+   "pct": 100
+  },
+  {
+   "name": "Patient Bulk Actions",
+   "total": 4,
+   "passed": 4,
+   "failed": 0,
+   "flaky": 0,
+   "pct": 100
+  },
+  {
+   "name": "Report Bulk Actions",
+   "total": 7,
+   "passed": 4,
+   "failed": 3,
+   "flaky": 0,
+   "pct": 57
+  },
+  {
+   "name": "Transmission Group",
+   "total": 12,
+   "passed": 3,
+   "failed": 9,
+   "flaky": 0,
+   "pct": 25
+  },
+  {
+   "name": "User",
+   "total": 13,
+   "passed": 9,
+   "failed": 4,
+   "flaky": 0,
+   "pct": 69
+  },
+  {
+   "name": "User Setting",
+   "total": 11,
+   "passed": 11,
+   "failed": 0,
+   "flaky": 0,
+   "pct": 100
+  }
+ ],
+ "hRuns": [
+  "R-148",
+  "R-149",
+  "R-150",
+  "R-151",
+  "R-152"
+ ],
+ "hData": [
+  [
+   50,
+   50,
+   50,
+   0,
+   50
+  ],
+  [
+   100,
+   100,
+   100,
+   100,
+   100
+  ],
+  [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  [
+   75,
+   75,
+   75,
+   75,
+   75
+  ],
+  [
+   0,
+   0,
+   0
+  ],
+  [
+   86,
+   86,
+   86,
+   86,
+   71
+  ],
+  [
+   100,
+   100,
+   100,
+   100,
+   100
+  ],
+  [
+   100,
+   100,
+   100,
+   100,
+   100
+  ],
+  [
+   100,
+   100,
+   100,
+   100,
+   100
+  ],
+  [
+   100,
+   100,
+   100,
+   100,
+   100
+  ],
+  [
+   100,
+   100,
+   100,
+   100,
+   100
+  ],
+  [
+   100,
+   100,
+   100,
+   100,
+   100
+  ],
+  [
+   100,
+   100,
+   100,
+   100,
+   100
+  ],
+  [
+   57,
+   57,
+   57,
+   57,
+   57
+  ],
+  [
+   25,
+   25,
+   25,
+   25,
+   25
+  ],
+  [
+   69,
+   69,
+   69,
+   69,
+   69
+  ],
+  [
+   100,
+   100,
+   100,
+   100,
+   100
+  ]
+ ],
+ "flaky": [],
+ "tests": [
+  {
+   "name": "PMW-210.1 - Patients list loads with default columns",
+   "comp": "Patients Module Smoke",
+   "type": "UI",
+   "status": "failed",
+   "dur": "18.3s",
+   "err": "TimeoutError: locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for getByRole('table', { name: 'Patients' }) to be visible",
+   "failedStep": "Then the patients page should be ready"
+  },
+  {
+   "name": "PMW-210.2 - Search patients by last name",
+   "comp": "Patients Module Smoke",
+   "type": "UI",
+   "status": "failed",
+   "dur": "13.6s",
+   "err": "TimeoutError: locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for getByRole('table', { name: 'Patients' }) to be visible",
+   "failedStep": "Then the patients page should be ready"
+  },
+  {
+   "name": "PMW-210.3 - Open patient details from the list",
+   "comp": "Patients Module Smoke",
+   "type": "UI",
+   "status": "failed",
+   "dur": "23.9s",
+   "err": "TimeoutError: locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for getByRole('table', { name: 'Patients' }) to be visible",
+   "failedStep": "Then the patients page should be ready"
+  },
+  {
+   "name": "PMW-210.4 - Filter patients by provider",
+   "comp": "Patients Module Smoke",
+   "type": "UI",
+   "status": "failed",
+   "dur": "15.4s",
+   "err": "TimeoutError: locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for getByRole('table', { name: 'Patients' }) to be visible",
+   "failedStep": "Then the patients page should be ready"
+  },
+  {
+   "name": "PMW-210.5 - Paginate the patient list",
+   "comp": "Patients Module Smoke",
+   "type": "UI",
+   "status": "failed",
+   "dur": "12.3s",
+   "err": "TimeoutError: locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for getByRole('table', { name: 'Patients' }) to be visible",
+   "failedStep": "Then the patients page should be ready"
+  },
+  {
+   "name": "PMW-214.1 - Customize panel opens from the list toolbar",
+   "comp": "Customize List Panel",
+   "type": "UI",
+   "status": "failed",
+   "dur": "24.1s",
+   "err": "Error: expect(locator).toBeVisible() failed\n\nLocator: getByRole('dialog', { name: 'Customize list' })\nExpected: visible\nTimeout: 10000ms",
+   "failedStep": "Then the customize list panel page should be ready"
+  },
+  {
+   "name": "PMW-214.2 - Saved column order persists after reload",
+   "comp": "Customize List Panel",
+   "type": "UI",
+   "status": "failed",
+   "dur": "42.1s",
+   "err": "Error: expect(locator).toBeVisible() failed\n\nLocator: getByRole('dialog', { name: 'Customize list' })\nExpected: visible\nTimeout: 10000ms",
+   "failedStep": "Then the customize list panel page should be ready"
+  },
+  {
+   "name": "PMW-201.1 - Dashboard widgets load",
+   "comp": "Dashboard Module Smoke",
+   "type": "UI",
+   "status": "passed",
+   "dur": "32.6s",
+   "err": "",
+   "failedStep": ""
+  },
+  {
+   "name": "PMW-201.2 - Transmission count matches the list",
+   "comp": "Dashboard Module Smoke",
+   "type": "UI",
+   "status": "failed",
+   "dur": "36.8s",
+   "err": "Error: expect(received).toBe(expected)\n\nExpected: 42\nReceived: 41",
+   "failedStep": "Then the dashboard page should be ready"
+  },
+  {
+   "name": "Login with valid credentials",
+   "comp": "Login",
+   "type": "UI",
+   "status": "passed",
+   "dur": "11.2s",
+   "err": "",
+   "failedStep": ""
+  },
+  {
+   "name": "Login rejects a bad password",
+   "comp": "Login",
+   "type": "UI",
+   "status": "passed",
+   "dur": "22.9s",
+   "err": "",
+   "failedStep": ""
+  },
+  {
+   "name": "Logout clears the session",
+   "comp": "Login",
+   "type": "UI",
+   "status": "passed",
+   "dur": "13.2s",
+   "err": "",
+   "failedStep": ""
+  },
+  {
+   "name": "Session timeout redirects to login",
+   "comp": "Login",
+   "type": "UI",
+   "status": "failed",
+   "dur": "16.0s",
+   "err": "TimeoutError: page.waitForURL: Timeout 30000ms exceeded.\nwaiting for navigation to \"**/login\" until \"load\"",
+   "failedStep": "Then the login page should be ready"
+  },
+  {
+   "name": "PMW-220.1 - Report viewer opens a PDF report",
+   "comp": "Report Viewer Module Smoke",
+   "type": "UI",
+   "status": "passed",
+   "dur": "6.9s",
+   "err": "",
+   "failedStep": ""
+  },
+  {
+   "name": "PMW-220.2 - Zoom controls change the page scale",
+   "comp": "Report Viewer Module Smoke",
+   "type": "UI",
+   "status": "passed",
+   "dur": "10.9s",
+   "err": "",
+   "failedStep": ""
+  },
+  {
+   "name": "PMW-220.3 - Download button saves the report",
+   "comp": "Report Viewer Module Smoke",
+   "type": "UI",
+   "status": "passed",
+   "dur": "37.3s",
+   "err": "",
+   "failedStep": ""
+  },
+  {
+   "name": "PMW-220.4 - Next and previous page work",
+   "comp": "Report Viewer Module Smoke",
+   "type": "UI",
+   "status": "passed",
+   "dur": "33.7s",
+   "err": "",
+   "failedStep": ""
+  },
+  {
+   "name": "PMW-220.5 - Close returns to the report list",
+   "comp": "Report Viewer Module Smoke",
+   "type": "UI",
+   "status": "passed",
+   "dur": "32.8s",
+   "err": "",
+   "failedStep": ""
+  },
+  {
+   "name": "Sidebar opens Home",
+   "comp": "Web 2.0 Sidebar Navigation Smoke",
+   "type": "UI",
+   "status": "passed",
+   "dur": "32.6s",
+   "err": "",
+   "failedStep": ""
+  },
+  {
+   "name": "Sidebar opens Patients All",
+   "comp": "Web 2.0 Sidebar Navigation Smoke",
+   "type": "UI",
+   "status": "passed",
+   "dur": "10.2s",
+   "err": "",
+   "failedStep": ""
+  },
+  {
+   "name": "Sidebar opens CRM Reports",
+   "comp": "Web 2.0 Sidebar Navigation Smoke",
+   "type": "UI",
+   "status": "passed",
+   "dur": "14.5s",
+   "err": "",
+   "failedStep": ""
+  },
+  {
+   "name": "Sidebar opens Ambulatory",
+   "comp": "Web 2.0 Sidebar Navigation Smoke",
+   "type": "UI",
+   "status": "passed",
+   "dur": "26.2s",
+   "err": "",
+   "failedStep": ""
+  },
+  {
+   "name": "Sidebar opens Notes",
+   "comp": "Web 2.0 Sidebar Navigation Smoke",
+   "type": "UI",
+   "status": "passed",
+   "dur": "30.1s",
+   "err": "",
+   "failedStep": ""
+  },
+  {
+   "name": "Sidebar opens Billing items",
+   "comp": "Web 2.0 Sidebar Navigation Smoke",
+   "type": "UI",
+   "status": "failed",
+   "dur": "39.9s",
+   "err": "Error: expect(page).toHaveURL(expected) failed\n\nExpected pattern: /\\/billing\\/all/\nReceived string: \"https://dev1.pacemate.com/home\"",
+   "failedStep": "Then the web 2.0 sidebar navigation smoke page should be ready"
+  },
+  {
+   "name": "Sidebar opens System Alerts",
+   "comp": "Web 2.0 Sidebar Navigation Smoke",
+   "type": "UI",
+   "status": "failed",
+   "dur": "40.8s",
+   "err": "Error: expect(page).toHaveURL(expected) failed\n\nExpected pattern: /\\/system-alerts/\nReceived string: \"https://dev1.pacemate.com/home\"",
+   "failedStep": "Then the web 2.0 sidebar navigation smoke page should be ready"
+  },
+  {
+   "name": "CRM Reports endpoint check 1",
+   "comp": "CRM Reports",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "CRM Reports endpoint check 2",
+   "comp": "CRM Reports",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "CRM Reports endpoint check 3",
+   "comp": "CRM Reports",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "CRM Reports endpoint check 4",
+   "comp": "CRM Reports",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "CRM Reports endpoint check 5",
+   "comp": "CRM Reports",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "CRM Reports endpoint check 6",
+   "comp": "CRM Reports",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "CRM Reports endpoint check 7",
+   "comp": "CRM Reports",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "CRM Reports endpoint check 8",
+   "comp": "CRM Reports",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "CRM Reports endpoint check 9",
+   "comp": "CRM Reports",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "CRM Reports endpoint check 10",
+   "comp": "CRM Reports",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "CRM Reports endpoint check 11",
+   "comp": "CRM Reports",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "CRM Reports endpoint check 12",
+   "comp": "CRM Reports",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "CRM Reports endpoint check 13",
+   "comp": "CRM Reports",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "CRM Reports endpoint check 14",
+   "comp": "CRM Reports",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "CRM Reports endpoint check 15",
+   "comp": "CRM Reports",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "CRM Reports endpoint check 16",
+   "comp": "CRM Reports",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "CRM Reports endpoint check 17",
+   "comp": "CRM Reports",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "Dictionary endpoint check 1",
+   "comp": "Dictionary",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "Dictionary endpoint check 2",
+   "comp": "Dictionary",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "Dictionary endpoint check 3",
+   "comp": "Dictionary",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "Dictionary endpoint check 4",
+   "comp": "Dictionary",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "Dictionary endpoint check 5",
+   "comp": "Dictionary",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "Dictionary endpoint check 6",
+   "comp": "Dictionary",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "Dictionary endpoint check 7",
+   "comp": "Dictionary",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "Dictionary endpoint check 8",
+   "comp": "Dictionary",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "Dictionary endpoint check 9",
+   "comp": "Dictionary",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "Dictionary endpoint check 10",
+   "comp": "Dictionary",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "Dictionary endpoint check 11",
+   "comp": "Dictionary",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "Dictionary endpoint check 12",
+   "comp": "Dictionary",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "Dictionary endpoint check 13",
+   "comp": "Dictionary",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "Dictionary endpoint check 14",
+   "comp": "Dictionary",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "Dictionary endpoint check 15",
+   "comp": "Dictionary",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "Dictionary endpoint check 16",
+   "comp": "Dictionary",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "Dictionary endpoint check 17",
+   "comp": "Dictionary",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "Dictionary endpoint check 18",
+   "comp": "Dictionary",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "Dictionary endpoint check 19",
+   "comp": "Dictionary",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "Dictionary endpoint check 20",
+   "comp": "Dictionary",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "Dictionary endpoint check 21",
+   "comp": "Dictionary",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "Dictionary endpoint check 22",
+   "comp": "Dictionary",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "Dictionary endpoint check 23",
+   "comp": "Dictionary",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "Dictionary endpoint check 24",
+   "comp": "Dictionary",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Report Bulk Actions endpoint check 1",
+   "comp": "External Crm Report Bulk Actions",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Report Bulk Actions endpoint check 2",
+   "comp": "External Crm Report Bulk Actions",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Report Bulk Actions endpoint check 3",
+   "comp": "External Crm Report Bulk Actions",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Report Bulk Actions endpoint check 4",
+   "comp": "External Crm Report Bulk Actions",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Report Bulk Actions endpoint check 5",
+   "comp": "External Crm Report Bulk Actions",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Report Bulk Actions endpoint check 6",
+   "comp": "External Crm Report Bulk Actions",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Report Bulk Actions endpoint check 7",
+   "comp": "External Crm Report Bulk Actions",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Report Bulk Actions endpoint check 8",
+   "comp": "External Crm Report Bulk Actions",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Report Bulk Actions endpoint check 9",
+   "comp": "External Crm Report Bulk Actions",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Report Bulk Actions endpoint check 10",
+   "comp": "External Crm Report Bulk Actions",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Report Bulk Actions endpoint check 11",
+   "comp": "External Crm Report Bulk Actions",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Report Bulk Actions endpoint check 12",
+   "comp": "External Crm Report Bulk Actions",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Report Bulk Actions endpoint check 13",
+   "comp": "External Crm Report Bulk Actions",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Report Bulk Actions endpoint check 14",
+   "comp": "External Crm Report Bulk Actions",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Report Bulk Actions endpoint check 15",
+   "comp": "External Crm Report Bulk Actions",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Report Bulk Actions endpoint check 16",
+   "comp": "External Crm Report Bulk Actions",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Report Bulk Actions endpoint check 17",
+   "comp": "External Crm Report Bulk Actions",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Report Bulk Actions endpoint check 18",
+   "comp": "External Crm Report Bulk Actions",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Report Bulk Actions endpoint check 19",
+   "comp": "External Crm Report Bulk Actions",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Report Bulk Actions endpoint check 20",
+   "comp": "External Crm Report Bulk Actions",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports Inclinic endpoint check 1",
+   "comp": "External Crm Reports Inclinic",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports Inclinic endpoint check 2",
+   "comp": "External Crm Reports Inclinic",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports Inclinic endpoint check 3",
+   "comp": "External Crm Reports Inclinic",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports Inclinic endpoint check 4",
+   "comp": "External Crm Reports Inclinic",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports Inclinic endpoint check 5",
+   "comp": "External Crm Reports Inclinic",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports Inclinic endpoint check 6",
+   "comp": "External Crm Reports Inclinic",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports Inclinic endpoint check 7",
+   "comp": "External Crm Reports Inclinic",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports Inclinic endpoint check 8",
+   "comp": "External Crm Reports Inclinic",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports Inclinic endpoint check 9",
+   "comp": "External Crm Reports Inclinic",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports Inclinic endpoint check 10",
+   "comp": "External Crm Reports Inclinic",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports Inclinic endpoint check 11",
+   "comp": "External Crm Reports Inclinic",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports Inclinic endpoint check 12",
+   "comp": "External Crm Reports Inclinic",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports List Config endpoint check 1",
+   "comp": "External Crm Reports List Config",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports List Config endpoint check 2",
+   "comp": "External Crm Reports List Config",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports List Config endpoint check 3",
+   "comp": "External Crm Reports List Config",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports List Config endpoint check 4",
+   "comp": "External Crm Reports List Config",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports List Config endpoint check 5",
+   "comp": "External Crm Reports List Config",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports List Config endpoint check 6",
+   "comp": "External Crm Reports List Config",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports List Config endpoint check 7",
+   "comp": "External Crm Reports List Config",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports List Config endpoint check 8",
+   "comp": "External Crm Reports List Config",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports List Config endpoint check 9",
+   "comp": "External Crm Reports List Config",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports List Config endpoint check 10",
+   "comp": "External Crm Reports List Config",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports List Config endpoint check 11",
+   "comp": "External Crm Reports List Config",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports List Config endpoint check 12",
+   "comp": "External Crm Reports List Config",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports List Config endpoint check 13",
+   "comp": "External Crm Reports List Config",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports List Config endpoint check 14",
+   "comp": "External Crm Reports List Config",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports List Config endpoint check 15",
+   "comp": "External Crm Reports List Config",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports List Config endpoint check 16",
+   "comp": "External Crm Reports List Config",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports List Config endpoint check 17",
+   "comp": "External Crm Reports List Config",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports List Config endpoint check 18",
+   "comp": "External Crm Reports List Config",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports List Config endpoint check 19",
+   "comp": "External Crm Reports List Config",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports List Config endpoint check 20",
+   "comp": "External Crm Reports List Config",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports List Config endpoint check 21",
+   "comp": "External Crm Reports List Config",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports List Config endpoint check 22",
+   "comp": "External Crm Reports List Config",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports List Config endpoint check 23",
+   "comp": "External Crm Reports List Config",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports List Config endpoint check 24",
+   "comp": "External Crm Reports List Config",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports List Config endpoint check 25",
+   "comp": "External Crm Reports List Config",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports List Config endpoint check 26",
+   "comp": "External Crm Reports List Config",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports List Config endpoint check 27",
+   "comp": "External Crm Reports List Config",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports List Config endpoint check 28",
+   "comp": "External Crm Reports List Config",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports List Config endpoint check 29",
+   "comp": "External Crm Reports List Config",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports List Config endpoint check 30",
+   "comp": "External Crm Reports List Config",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports List Config endpoint check 31",
+   "comp": "External Crm Reports List Config",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports List Config endpoint check 32",
+   "comp": "External Crm Reports List Config",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports List Config endpoint check 33",
+   "comp": "External Crm Reports List Config",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports List Config endpoint check 34",
+   "comp": "External Crm Reports List Config",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports Transmission List endpoint check 1",
+   "comp": "External Crm Reports Transmission List",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports Transmission List endpoint check 2",
+   "comp": "External Crm Reports Transmission List",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports Transmission List endpoint check 3",
+   "comp": "External Crm Reports Transmission List",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports Transmission List endpoint check 4",
+   "comp": "External Crm Reports Transmission List",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports Transmission List endpoint check 5",
+   "comp": "External Crm Reports Transmission List",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports Transmission List endpoint check 6",
+   "comp": "External Crm Reports Transmission List",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports Transmission List endpoint check 7",
+   "comp": "External Crm Reports Transmission List",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports Transmission List endpoint check 8",
+   "comp": "External Crm Reports Transmission List",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports Transmission List endpoint check 9",
+   "comp": "External Crm Reports Transmission List",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports Transmission List endpoint check 10",
+   "comp": "External Crm Reports Transmission List",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports Transmission List endpoint check 11",
+   "comp": "External Crm Reports Transmission List",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports Transmission List endpoint check 12",
+   "comp": "External Crm Reports Transmission List",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports Transmission List endpoint check 13",
+   "comp": "External Crm Reports Transmission List",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports Transmission List endpoint check 14",
+   "comp": "External Crm Reports Transmission List",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports Transmission List endpoint check 15",
+   "comp": "External Crm Reports Transmission List",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports Transmission List endpoint check 16",
+   "comp": "External Crm Reports Transmission List",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports Transmission List endpoint check 17",
+   "comp": "External Crm Reports Transmission List",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "External Crm Reports Transmission List endpoint check 18",
+   "comp": "External Crm Reports Transmission List",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "Patient Bulk Actions endpoint check 1",
+   "comp": "Patient Bulk Actions",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "Patient Bulk Actions endpoint check 2",
+   "comp": "Patient Bulk Actions",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "Patient Bulk Actions endpoint check 3",
+   "comp": "Patient Bulk Actions",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "Patient Bulk Actions endpoint check 4",
+   "comp": "Patient Bulk Actions",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "Report Bulk Actions endpoint check 1",
+   "comp": "Report Bulk Actions",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "Report Bulk Actions endpoint check 2",
+   "comp": "Report Bulk Actions",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "Report Bulk Actions endpoint check 3",
+   "comp": "Report Bulk Actions",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "Report Bulk Actions endpoint check 4",
+   "comp": "Report Bulk Actions",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "Report Bulk Actions endpoint check 5",
+   "comp": "Report Bulk Actions",
+   "type": "API",
+   "status": "failed",
+   "dur": "0.4s",
+   "err": "Expected 200, got 500",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "Report Bulk Actions endpoint check 6",
+   "comp": "Report Bulk Actions",
+   "type": "API",
+   "status": "failed",
+   "dur": "0.4s",
+   "err": "Expected 200, got 500",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "Report Bulk Actions endpoint check 7",
+   "comp": "Report Bulk Actions",
+   "type": "API",
+   "status": "failed",
+   "dur": "0.4s",
+   "err": "Expected 200, got 500",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "Transmission Group endpoint check 1",
+   "comp": "Transmission Group",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "Transmission Group endpoint check 2",
+   "comp": "Transmission Group",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "Transmission Group endpoint check 3",
+   "comp": "Transmission Group",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "Transmission Group endpoint check 4",
+   "comp": "Transmission Group",
+   "type": "API",
+   "status": "failed",
+   "dur": "0.4s",
+   "err": "Expected 200, got 500",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "Transmission Group endpoint check 5",
+   "comp": "Transmission Group",
+   "type": "API",
+   "status": "failed",
+   "dur": "0.4s",
+   "err": "Expected 200, got 500",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "Transmission Group endpoint check 6",
+   "comp": "Transmission Group",
+   "type": "API",
+   "status": "failed",
+   "dur": "0.4s",
+   "err": "Expected 200, got 500",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "Transmission Group endpoint check 7",
+   "comp": "Transmission Group",
+   "type": "API",
+   "status": "failed",
+   "dur": "0.4s",
+   "err": "Expected 200, got 500",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "Transmission Group endpoint check 8",
+   "comp": "Transmission Group",
+   "type": "API",
+   "status": "failed",
+   "dur": "0.4s",
+   "err": "Expected 200, got 500",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "Transmission Group endpoint check 9",
+   "comp": "Transmission Group",
+   "type": "API",
+   "status": "failed",
+   "dur": "0.4s",
+   "err": "Expected 200, got 500",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "Transmission Group endpoint check 10",
+   "comp": "Transmission Group",
+   "type": "API",
+   "status": "failed",
+   "dur": "0.4s",
+   "err": "Expected 200, got 500",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "Transmission Group endpoint check 11",
+   "comp": "Transmission Group",
+   "type": "API",
+   "status": "failed",
+   "dur": "0.4s",
+   "err": "Expected 200, got 500",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "Transmission Group endpoint check 12",
+   "comp": "Transmission Group",
+   "type": "API",
+   "status": "failed",
+   "dur": "0.4s",
+   "err": "Expected 200, got 500",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "User endpoint check 1",
+   "comp": "User",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "User endpoint check 2",
+   "comp": "User",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "User endpoint check 3",
+   "comp": "User",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "User endpoint check 4",
+   "comp": "User",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "User endpoint check 5",
+   "comp": "User",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "User endpoint check 6",
+   "comp": "User",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "User endpoint check 7",
+   "comp": "User",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "User endpoint check 8",
+   "comp": "User",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "User endpoint check 9",
+   "comp": "User",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "User endpoint check 10",
+   "comp": "User",
+   "type": "API",
+   "status": "failed",
+   "dur": "0.4s",
+   "err": "Expected 200, got 500",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "User endpoint check 11",
+   "comp": "User",
+   "type": "API",
+   "status": "failed",
+   "dur": "0.4s",
+   "err": "Expected 200, got 500",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "User endpoint check 12",
+   "comp": "User",
+   "type": "API",
+   "status": "failed",
+   "dur": "0.4s",
+   "err": "Expected 200, got 500",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "User endpoint check 13",
+   "comp": "User",
+   "type": "API",
+   "status": "failed",
+   "dur": "0.4s",
+   "err": "Expected 200, got 500",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "User Setting endpoint check 1",
+   "comp": "User Setting",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "User Setting endpoint check 2",
+   "comp": "User Setting",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "User Setting endpoint check 3",
+   "comp": "User Setting",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "User Setting endpoint check 4",
+   "comp": "User Setting",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "User Setting endpoint check 5",
+   "comp": "User Setting",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "User Setting endpoint check 6",
+   "comp": "User Setting",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "User Setting endpoint check 7",
+   "comp": "User Setting",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "User Setting endpoint check 8",
+   "comp": "User Setting",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "User Setting endpoint check 9",
+   "comp": "User Setting",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "User Setting endpoint check 10",
+   "comp": "User Setting",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  },
+  {
+   "name": "User Setting endpoint check 11",
+   "comp": "User Setting",
+   "type": "API",
+   "status": "passed",
+   "dur": "0.4s",
+   "err": "",
+   "endpoint": "GET /api/x"
+  }
+ ],
+ "trend": {
+  "labels": [],
+  "passed": [],
+  "failed": [],
+  "flaky": []
+ },
+ "layers": {
+  "ui": {
+   "total": 25,
+   "passed": 14,
+   "failed": 11,
+   "flaky": 0,
+   "rate": 56
+  },
+  "api": {
+   "total": 172,
+   "passed": 156,
+   "failed": 16,
+   "flaky": 0,
+   "rate": 90.7
+  }
+ }
+}
