@@ -1,0 +1,29 @@
+# Checks data/ every time CI pushes new results, and every weekday morning.
+# The morning run fails if no new results arrived, so a stalled pipeline
+# shows up as a failed workflow (GitHub emails you) instead of going unnoticed.
+name: Data check
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'data/**'
+  schedule:
+    - cron: '0 14 * * 1-5'   # 14:00 UTC, about 10am Eastern, Monday to Friday
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Check data after a push
+        if: github.event_name != 'schedule'
+        run: node scripts/check-data.mjs data
+      - name: Check data is fresh (scheduled)
+        if: github.event_name == 'schedule'
+        run: node scripts/check-data.mjs data --fail-if-stale --stale-hours 36

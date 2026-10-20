@@ -1,0 +1,13 @@
+{
+  "name": "pacemate-dashboard-tests",
+  "private": true,
+  "description": "Playwright checks for the QA dashboard. Run from this folder: npm test",
+  "scripts": {
+    "test": "playwright test",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.10.2",
+    "@playwright/test": "1.56.0"
+  }
+}
