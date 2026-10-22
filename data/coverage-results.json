@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-22T14:07:24.230Z",
+  "generatedAt": "2026-10-22T18:49:22.297Z",
   "summary": {
-    "totalRequirements": 72,
+    "totalRequirements": 73,
     "withAutomatedCoverage": 5,
-    "withoutAutomatedCoverage": 67,
+    "withoutAutomatedCoverage": 68,
     "totalAutomatedScenarios": 36,
     "notMappedScenarioCount": 4,
     "featureFilesScanned": 7
@@ -177,6 +177,14 @@
       "prdTitles": []
     },
     {
+      "id": "echo-certificate-delivery",
+      "scenarioCount": 0,
+      "files": [],
+      "hasAutomatedCoverage": false,
+      "hasPrd": false,
+      "prdTitles": []
+    },
+    {
       "id": "emr-errors-space",
       "scenarioCount": 0,
       "files": [],
@@ -238,8 +246,10 @@
       "scenarioCount": 0,
       "files": [],
       "hasAutomatedCoverage": false,
-      "hasPrd": false,
-      "prdTitles": []
+      "hasPrd": true,
+      "prdTitles": [
+        "PRD: WEB20 Home Page, Get Started Section v2"
+      ]
     },
     {
       "id": "image-file-upload",
@@ -591,8 +601,10 @@
       "scenarioCount": 0,
       "files": [],
       "hasAutomatedCoverage": false,
-      "hasPrd": false,
-      "prdTitles": []
+      "hasPrd": true,
+      "prdTitles": [
+        "PRD: WEB20 Home Page, Get Started Section v2"
+      ]
     },
     {
       "id": "upload-reports",
