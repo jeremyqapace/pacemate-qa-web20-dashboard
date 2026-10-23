@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-23T15:33:23.800Z",
+  "generatedAt": "2026-10-23T17:24:21.754Z",
   "summary": {
     "totalRequirements": 73,
     "withAutomatedCoverage": 5,
     "withoutAutomatedCoverage": 68,
-    "totalAutomatedScenarios": 36,
+    "totalAutomatedScenarios": 41,
     "notMappedScenarioCount": 4,
     "featureFilesScanned": 7
   },
@@ -638,7 +638,7 @@
     },
     {
       "id": "crm-reports-internal",
-      "scenarioCount": 16,
+      "scenarioCount": 21,
       "files": [
         "Dashboard_Smoke.feature"
       ],
